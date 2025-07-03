@@ -42,6 +42,12 @@ proxy-groups:
     interval: 300
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
 
+  - name: 节点选择 (手动选择)
+    type: select
+    use:
+      - sub1
+      - sub2
+
   - name: 媒体专线 (自动测速)
     type: url-test
     use:
@@ -51,6 +57,12 @@ proxy-groups:
     interval: 300
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
 
+  - name: 媒体专线 (手动选择)
+    type: select
+    use:
+      - sub1
+      - sub2
+
   - name: ChatGPT专线 (自动测速)
     type: url-test
     use:
@@ -59,18 +71,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     filter: ^(?!.*(香港|剩余流量|套餐到期|距离下次|本站)).*$
-
-  - name: 节点选择 (手动选择)
-    type: select
-    use:
-      - sub1
-      - sub2
-
-  - name: 媒体专线 (手动选择)
-    type: select
-    use:
-      - sub1
-      - sub2
 
   - name: ChatGPT专线 (手动选择)
     type: select
