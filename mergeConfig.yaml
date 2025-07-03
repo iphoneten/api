@@ -4,6 +4,11 @@ allow-lan: true
 mode: rule
 log-level: info
 
+profile:
+  store-selected: true
+  store-fake-ip: true
+  proxy-groups-mode: true
+
 proxy-providers:
   sub1:
     type: http
@@ -25,72 +30,12 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 
-proxy-groups:
-  - name: 自动选择
-    type: url-test
-    include-all: true
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
-
-  - name: 节点选择 (自动测速)
-    type: url-test
-    use:
-      - sub1
-      - sub2
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
-
-  - name: 节点选择 (手动选择)
-    type: select
-    use:
-      - sub1
-      - sub2
-
-  - name: 媒体专线 (自动测速)
-    type: url-test
-    use:
-      - sub1
-      - sub2
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
-
-  - name: 媒体专线 (手动选择)
-    type: select
-    use:
-      - sub1
-      - sub2
-
-  - name: ChatGPT专线 (自动测速)
-    type: url-test
-    use:
-      - sub1
-      - sub2
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    filter: ^(?!.*(香港|剩余流量|套餐到期|距离下次|本站)).*$
-
-  - name: ChatGPT专线 (手动选择)
-    type: select
-    use:
-      - sub1
-      - sub2
-
 rule-providers:
-  adblock_custom:
+  adblockmihomo:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml"
-    path: ./ruleset/adblock_custom.yaml
-    interval: 86400
-
-  adblock_loyal:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./ruleset/adblock_loyal.yaml
+    path: ./ruleset/adblockmihomo.yaml
     interval: 86400
 
   EasyList:
@@ -121,39 +66,96 @@ rule-providers:
     path: ./ruleset/ProgramAD.yaml
     interval: 86400
 
+  adblock_loyal:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/adblock_loyal.yaml
+    interval: 86400
+
+proxy-groups:
+  - name: 自动选择
+    type: url-test
+    use:
+      - sub1
+      - sub2
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|香港)).*$
+
+  - name: 节点选择
+    type: select
+    proxies:
+      - 自动选择
+    use:
+      - sub1
+      - sub2
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|香港)).*$
+
+  - name: 媒体自动测速
+    type: url-test
+    use:
+      - sub1
+      - sub2
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|香港)).*$
+
+  - name: 媒体专线
+    type: select
+    proxies:
+      - 媒体自动测速
+    use:
+      - sub1
+      - sub2
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|香港)).*$
+
+  - name: ChatGPT自动测速
+    type: url-test
+    use:
+      - sub1
+      - sub2
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
+
+  - name: ChatGPT专线
+    type: select
+    proxies:
+      - ChatGPT自动测速
+    use:
+      - sub1
+      - sub2
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
+
 rules:
-  - RULE-SET,adblock_custom,REJECT
-  - RULE-SET,adblock_loyal,REJECT
+  # 去广告，先于所有其他规则生效
+  - RULE-SET,adblockmihomo,REJECT
   - RULE-SET,EasyList,REJECT
   - RULE-SET,EasyListChina,REJECT
   - RULE-SET,EasyPrivacy,REJECT
   - RULE-SET,ProgramAD,REJECT
+  - RULE-SET,adblock_loyal,REJECT
+
+  # ChatGPT 专线流量
+  - DOMAIN-SUFFIX,openai.com,ChatGPT专线
+  - DOMAIN-SUFFIX,api.openai.com,ChatGPT专线
+  - DOMAIN-SUFFIX,chat.openai.com,ChatGPT专线
 
   # 媒体分流
-  - DOMAIN-SUFFIX,netflix.com,媒体专线 (自动测速)
-  - DOMAIN-SUFFIX,netflix.net,媒体专线 (自动测速)
-  - DOMAIN-SUFFIX,netflixdnstest0.com,媒体专线 (自动测速)
-  - DOMAIN-SUFFIX,netflixdnstest1.com,媒体专线 (自动测速)
-  - DOMAIN-SUFFIX,youtube.com,媒体专线 (自动测速)
-  - DOMAIN-SUFFIX,youtu.be,媒体专线 (自动测速)
-  - DOMAIN-SUFFIX,disneyplus.com,媒体专线 (自动测速)
-  - DOMAIN-SUFFIX,spotify.com,媒体专线 (自动测速)
-  - DOMAIN-SUFFIX,twitch.tv,媒体专线 (自动测速)
-  - DOMAIN-SUFFIX,hulu.com,媒体专线 (自动测速)
-  - DOMAIN-SUFFIX,amazonvideo.com,媒体专线 (自动测速)
+  - DOMAIN-SUFFIX,youtube.com,媒体专线
+  - DOMAIN-SUFFIX,youtu.be,媒体专线
+  - DOMAIN-SUFFIX,netflix.com,媒体专线
+  - DOMAIN-SUFFIX,spotify.com,媒体专线
+  - DOMAIN-SUFFIX,disneyplus.com,媒体专线
 
-  # ChatGPT 专线
-  - DOMAIN-SUFFIX,chat.openai.com,ChatGPT专线 (自动测速)
-  - DOMAIN-SUFFIX,api.openai.com,ChatGPT专线 (自动测速)
-  - DOMAIN-SUFFIX,openai.com,ChatGPT专线 (自动测速)
-
-  # 其他重要网站
-  - DOMAIN-SUFFIX,google.com,节点选择 (自动测速)
-  - DOMAIN-SUFFIX,twitter.com,节点选择 (自动测速)
-  - DOMAIN-SUFFIX,facebook.com,节点选择 (自动测速)
+  # 常用国外网站
+  - DOMAIN-SUFFIX,google.com,节点选择
+  - DOMAIN-SUFFIX,twitter.com,节点选择
+  - DOMAIN-SUFFIX,facebook.com,节点选择
 
   # 国内直连
   - GEOIP,CN,DIRECT
 
-  # 默认走节点选择 (自动测速)
-  - MATCH,节点选择 (自动测速)
+  # 默认走节点选择
+  - MATCH,节点选择
