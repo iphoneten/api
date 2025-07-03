@@ -1,0 +1,159 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+
+proxy-providers:
+  sub1:
+    type: http
+    url: "http://103.35.189.118:7001/s/5f5e1da567141708ea8cd71576119aae"
+    interval: 3600
+    path: ./providers/sub1.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+  sub2:
+    type: http
+    url: "https://truenet.eu.org/api/v1/client/subscribe?token=8830e5752dba79adb77d3a66ddfcc78c"
+    interval: 3600
+    path: ./providers/sub2.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+proxy-groups:
+  - name: 自动选择
+    type: url-test
+    include-all: true
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
+
+  - name: 节点选择 (自动测速)
+    type: url-test
+    use:
+      - sub1
+      - sub2
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
+
+  - name: 媒体专线 (自动测速)
+    type: url-test
+    use:
+      - sub1
+      - sub2
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
+
+  - name: ChatGPT专线 (自动测速)
+    type: url-test
+    use:
+      - sub1
+      - sub2
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    filter: ^(?!.*(香港|剩余流量|套餐到期|距离下次|本站)).*$
+
+  - name: 节点选择 (手动选择)
+    type: select
+    use:
+      - sub1
+      - sub2
+
+  - name: 媒体专线 (手动选择)
+    type: select
+    use:
+      - sub1
+      - sub2
+
+  - name: ChatGPT专线 (手动选择)
+    type: select
+    use:
+      - sub1
+      - sub2
+
+rule-providers:
+  adblock_custom:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml"
+    path: ./ruleset/adblock_custom.yaml
+    interval: 86400
+
+  adblock_loyal:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/adblock_loyal.yaml
+    interval: 86400
+
+  EasyList:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyList.yaml"
+    path: ./ruleset/EasyList.yaml
+    interval: 86400
+
+  EasyListChina:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyListChina.yaml"
+    path: ./ruleset/EasyListChina.yaml
+    interval: 86400
+
+  EasyPrivacy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyPrivacy.yaml"
+    path: ./ruleset/EasyPrivacy.yaml
+    interval: 86400
+
+  ProgramAD:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/ProgramAD.yaml"
+    path: ./ruleset/ProgramAD.yaml
+    interval: 86400
+
+rules:
+  - RULE-SET,adblock_custom,REJECT
+  - RULE-SET,adblock_loyal,REJECT
+  - RULE-SET,EasyList,REJECT
+  - RULE-SET,EasyListChina,REJECT
+  - RULE-SET,EasyPrivacy,REJECT
+  - RULE-SET,ProgramAD,REJECT
+
+  # 媒体分流
+  - DOMAIN-SUFFIX,netflix.com,媒体专线 (自动测速)
+  - DOMAIN-SUFFIX,netflix.net,媒体专线 (自动测速)
+  - DOMAIN-SUFFIX,netflixdnstest0.com,媒体专线 (自动测速)
+  - DOMAIN-SUFFIX,netflixdnstest1.com,媒体专线 (自动测速)
+  - DOMAIN-SUFFIX,youtube.com,媒体专线 (自动测速)
+  - DOMAIN-SUFFIX,youtu.be,媒体专线 (自动测速)
+  - DOMAIN-SUFFIX,disneyplus.com,媒体专线 (自动测速)
+  - DOMAIN-SUFFIX,spotify.com,媒体专线 (自动测速)
+  - DOMAIN-SUFFIX,twitch.tv,媒体专线 (自动测速)
+  - DOMAIN-SUFFIX,hulu.com,媒体专线 (自动测速)
+  - DOMAIN-SUFFIX,amazonvideo.com,媒体专线 (自动测速)
+
+  # ChatGPT 专线
+  - DOMAIN-SUFFIX,chat.openai.com,ChatGPT专线 (自动测速)
+  - DOMAIN-SUFFIX,api.openai.com,ChatGPT专线 (自动测速)
+  - DOMAIN-SUFFIX,openai.com,ChatGPT专线 (自动测速)
+
+  # 其他重要网站
+  - DOMAIN-SUFFIX,google.com,节点选择 (自动测速)
+  - DOMAIN-SUFFIX,twitter.com,节点选择 (自动测速)
+  - DOMAIN-SUFFIX,facebook.com,节点选择 (自动测速)
+
+  # 国内直连
+  - GEOIP,CN,DIRECT
+
+  # 默认走节点选择 (自动测速)
+  - MATCH,节点选择 (自动测速)
