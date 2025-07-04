@@ -13,9 +13,10 @@ profile:
 proxies:
 
 proxy-providers:
-  sub2:
+
+  sub1:
     type: http
-    url: "http://103.35.189.118:7001/s/5f5e1da567141708ea8cd71576119aae"
+    url: "https://truenet.eu.org/api/v1/client/subscribe?token=8830e5752dba79adb77d3a66ddfcc78c"
     interval: 86400
     path: ./providers/sub1.yaml
     health-check:
@@ -23,11 +24,21 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 
-  sub1:
+  sub2:
     type: http
-    url: "https://truenet.eu.org/api/v1/client/subscribe?token=8830e5752dba79adb77d3a66ddfcc78c"
+    url: "http://103.35.189.118:7001/s/5f5e1da567141708ea8cd71576119aae"
     interval: 86400
     path: ./providers/sub2.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  
+  sub3:
+    type: http
+    url: "https://fly0001.buzz/gateway/feitu?token=683f680c7af5ba86219d276a2ff3d1b7"
+    interval: 86400
+    path: ./providers/sub3.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -93,7 +104,7 @@ rule-providers:
 proxy-groups:
   - name: 自动选择
     type: url-test
-    use: [sub1, sub2]
+    use: [sub1, sub2, sub3]
     url: http://www.gstatic.com/generate_204
     interval: 300
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
@@ -101,12 +112,12 @@ proxy-groups:
   - name: 节点选择
     type: select
     proxies: [自动选择]
-    use: [sub1, sub2]
+    use: [sub1, sub2, sub3]
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
 
   - name: 媒体自动测速
     type: url-test
-    use: [sub1, sub2]
+    use: [sub1, sub2, sub3]
     url: http://www.gstatic.com/generate_204
     interval: 300
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
@@ -114,12 +125,12 @@ proxy-groups:
   - name: 媒体专线
     type: select
     proxies: [媒体自动测速]
-    use: [sub1, sub2]
+    use: [sub1, sub2, sub3]
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
 
   - name: ChatGPT自动测速
     type: url-test
-    use: [sub1, sub2]
+    use: [sub1, sub2, sub3]
     url: http://www.gstatic.com/generate_204
     interval: 300
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|香港)).*$
@@ -127,7 +138,7 @@ proxy-groups:
   - name: ChatGPT专线
     type: select
     proxies: [ChatGPT自动测速]
-    use: [sub1, sub2]
+    use: [sub1, sub2, sub3]
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|香港)).*$
 
 rules:
