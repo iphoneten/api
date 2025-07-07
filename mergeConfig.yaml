@@ -104,7 +104,7 @@ rule-providers:
 proxy-groups:
   - name: 自动选择
     type: url-test
-    use: [sub1, sub2, sub3]
+    use: [sub1, sub2]
     url: http://www.gstatic.com/generate_204
     interval: 300
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
@@ -112,12 +112,12 @@ proxy-groups:
   - name: 节点选择
     type: select
     proxies: [自动选择]
-    use: [sub1, sub2, sub3]
+    use: [sub1, sub2]
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
 
   - name: 媒体自动测速
     type: url-test
-    use: [sub1, sub2, sub3]
+    use: [sub1, sub2]
     url: http://www.gstatic.com/generate_204
     interval: 300
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
@@ -125,12 +125,12 @@ proxy-groups:
   - name: 媒体专线
     type: select
     proxies: [媒体自动测速]
-    use: [sub1, sub2, sub3]
+    use: [sub1, sub2]
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
 
   - name: ChatGPT自动测速
     type: url-test
-    use: [sub1, sub2, sub3]
+    use: [sub1, sub2]
     url: http://www.gstatic.com/generate_204
     interval: 300
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|香港)).*$
@@ -138,7 +138,7 @@ proxy-groups:
   - name: ChatGPT专线
     type: select
     proxies: [ChatGPT自动测速]
-    use: [sub1, sub2, sub3]
+    use: [sub1, sub2]
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|香港)).*$
 
 rules:
