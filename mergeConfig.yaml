@@ -45,6 +45,13 @@ proxy-providers:
       interval: 300
 
 rule-providers:
+  AntiAd:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml"
+    path: ./ruleset/AntiAd.yaml
+    interval: 86400
+
   banAD:
     type: http
     behavior: classical
@@ -150,6 +157,7 @@ rules:
   - RULE-SET,ProgramAD,REJECT
   - RULE-SET,adblock_loyal,REJECT
   - RULE-SET,banAD,REJECT
+  - RULE-SET,AntiAd,REJECT
 
   - DOMAIN-SUFFIX,chat.openai.com,ChatGPT专线
   - DOMAIN-SUFFIX,api.openai.com,ChatGPT专线
