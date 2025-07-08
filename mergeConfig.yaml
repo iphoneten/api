@@ -108,6 +108,13 @@ rule-providers:
     path: ./ruleset/adblock_loyal.yaml
     interval: 86400
 
+  AI:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/AI.yaml"
+    path: ./ruleset/AI.yaml
+    interval: 86400
+
 proxy-groups:
   - name: 自动选择
     type: url-test
@@ -135,16 +142,16 @@ proxy-groups:
     use: [sub1, sub2]
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
 
-  - name: ChatGPT自动测速
+  - name: AI自动测速
     type: url-test
     use: [sub1, sub2]
     url: http://www.gstatic.com/generate_204
     interval: 300
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|香港)).*$
 
-  - name: ChatGPT专线
+  - name: AI专线
     type: select
-    proxies: [ChatGPT自动测速]
+    proxies: [AI自动测速]
     use: [sub1, sub2]
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|香港)).*$
 
@@ -159,9 +166,10 @@ rules:
   - RULE-SET,banAD,REJECT
   - RULE-SET,AntiAd,REJECT
 
-  - DOMAIN-SUFFIX,chat.openai.com,ChatGPT专线
-  - DOMAIN-SUFFIX,api.openai.com,ChatGPT专线
-  - DOMAIN-SUFFIX,openai.com,ChatGPT专线
+  - RULE-SET,AI,AI专线
+  - DOMAIN-SUFFIX,chat.openai.com,AI专线
+  - DOMAIN-SUFFIX,api.openai.com,AI专线
+  - DOMAIN-SUFFIX,openai.com,AI专线
 
   - DOMAIN-SUFFIX,netflix.com,媒体专线
   - DOMAIN-SUFFIX,youtube.com,媒体专线
@@ -171,6 +179,7 @@ rules:
   - DOMAIN-SUFFIX,hulu.com,媒体专线
   - DOMAIN-SUFFIX,twitch.tv,媒体专线
   - DOMAIN-SUFFIX,amazonvideo.com,媒体专线
+  - DOMAIN-SUFFIX,music.youtube.com,媒体专线
 
   - DOMAIN-SUFFIX,google.com,节点选择
   - DOMAIN-SUFFIX,twitter.com,节点选择
