@@ -131,18 +131,17 @@ proxy-groups:
     use: [sub1, sub2]
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
 
-  - name: 媒体负载均衡
-    type: load-balance
+  - name: 媒体自动选择
+    type: url-test
     use: [sub1, sub2]
     url: http://www.gstatic.com/generate_204
     interval: 300
-    strategy: round-robin
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
 
   - name: 媒体专线
     type: select
     proxies:
-      - 媒体负载均衡
+      - 媒体自动选择
     use: [sub1, sub2]
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
 
