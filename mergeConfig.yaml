@@ -43,6 +43,15 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+ sub4:
+    type: http
+    url: "https://new.crosswall.dpdns.org/submit/4b3304076c7fae78481aeedf07c6770e"
+    interval: 86400
+    path: ./providers/sub4.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
 
 rule-providers:
   AntiAd:
@@ -122,41 +131,41 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     # strategy: round-robin # 轮询方式，可选 'consistent-hashing'
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
   - name: 节点选择
     type: select
     proxies: 
       - 自动选择
-    use: [sub1, sub2, sub3]
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外)).*$
+    use: [sub1, sub2, sub3, sub4]
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
   - name: 媒体自动选择
     type: url-test
     use: [sub1, sub2]
     url: http://www.gstatic.com/generate_204
     interval: 300
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
   - name: 媒体专线
     type: select
     proxies:
       - 媒体自动选择
-    use: [sub1, sub2, sub3]
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外)).*$
+    use: [sub1, sub2, sub3, sub4]
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
   - name: AI自动测速
     type: url-test
     use: [sub1, sub2]
     url: http://www.gstatic.com/generate_204
     interval: 300
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|香港)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|香港)).*$
 
   - name: AI专线
     type: select
     proxies: [AI自动测速]
-    use: [sub1, sub2, sub3]
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外)).*$
+    use: [sub1, sub2, sub3, sub4]
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
 rules:
   - RULE-SET,AD,REJECT
