@@ -122,41 +122,41 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     strategy: round-robin # 轮询方式，可选 'consistent-hashing'
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注)).*$
 
   - name: 节点选择
     type: select
     proxies: 
       - 自动选择
     use: [sub1, sub2, sub3]
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注)).*$
 
   - name: 媒体自动选择
     type: url-test
     use: [sub1, sub2, sub3]
     url: http://www.gstatic.com/generate_204
     interval: 300
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注)).*$
 
   - name: 媒体专线
     type: select
     proxies:
       - 媒体自动选择
     use: [sub1, sub2, sub3]
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注)).*$
 
   - name: AI自动测速
     type: url-test
     use: [sub1, sub2, sub3]
     url: http://www.gstatic.com/generate_204
     interval: 300
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|香港)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|香港)).*$
 
   - name: AI专线
     type: select
     proxies: [AI自动测速]
     use: [sub1, sub2, sub3]
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注)).*$
 
 rules:
   - RULE-SET,AD,REJECT
