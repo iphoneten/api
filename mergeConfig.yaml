@@ -117,11 +117,11 @@ rule-providers:
 
 proxy-groups:
   - name: 自动选择
-    type: load-balance
+    type: url-test
     use: [sub1, sub2, sub3]
     url: http://www.gstatic.com/generate_204
     interval: 300
-    strategy: round-robin # 轮询方式，可选 'consistent-hashing'
+    # strategy: round-robin # 轮询方式，可选 'consistent-hashing'
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注)).*$
 
   - name: 节点选择
