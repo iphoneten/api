@@ -117,11 +117,12 @@ rule-providers:
 
 proxy-groups:
   - name: 自动选择
-    type: url-test
+    # type: url-test
+    type: load-balance
     use: [sub1, sub2]
     url: http://www.gstatic.com/generate_204
     interval: 300
-    # strategy: round-robin # 轮询方式，可选 'consistent-hashing'
+    strategy: consistent-hashing # 轮询方式，可选 'consistent-hashing' 'round-robin'
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
   - name: 节点选择
@@ -131,32 +132,32 @@ proxy-groups:
     use: [sub1, sub2, sub3]
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
-  - name: 媒体自动选择
-    type: url-test
-    use: [sub1, sub2]
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
+  # - name: 媒体自动选择
+  #   type: url-test
+  #   use: [sub1, sub2]
+  #   url: http://www.gstatic.com/generate_204
+  #   interval: 300
+  #   filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
-  - name: 媒体专线
-    type: select
-    proxies:
-      - 媒体自动选择
-    use: [sub1, sub2, sub3]
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
+  # - name: 媒体专线
+  #   type: select
+  #   proxies:
+  #     - 媒体自动选择
+  #   use: [sub1, sub2, sub3]
+  #   filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
-  - name: AI自动测速
-    type: url-test
-    use: [sub1, sub2]
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|香港)).*$
+  # - name: AI自动测速
+  #   type: url-test
+  #   use: [sub1, sub2]
+  #   url: http://www.gstatic.com/generate_204
+  #   interval: 300
+  #   filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|香港)).*$
 
-  - name: AI专线
-    type: select
-    proxies: [AI自动测速]
-    use: [sub1, sub2, sub3]
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
+  # - name: AI专线
+  #   type: select
+  #   proxies: [AI自动测速]
+  #   use: [sub1, sub2, sub3]
+  #   filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
 rules:
   - RULE-SET,AD,REJECT
@@ -169,24 +170,24 @@ rules:
   - RULE-SET,banAD,REJECT
   - RULE-SET,AntiAd,REJECT
 
-  - RULE-SET,AI,AI专线
-  - DOMAIN-SUFFIX,chat.openai.com,AI专线
-  - DOMAIN-SUFFIX,api.openai.com,AI专线
-  - DOMAIN-SUFFIX,openai.com,AI专线
+  # - RULE-SET,AI,AI专线
+  # - DOMAIN-SUFFIX,chat.openai.com,AI专线
+  # - DOMAIN-SUFFIX,api.openai.com,AI专线
+  # - DOMAIN-SUFFIX,openai.com,AI专线
 
-  - DOMAIN-SUFFIX,netflix.com,媒体专线
-  - DOMAIN-SUFFIX,youtube.com,媒体专线
-  - DOMAIN-SUFFIX,youtu.be,媒体专线
-  - DOMAIN-SUFFIX,disneyplus.com,媒体专线
-  - DOMAIN-SUFFIX,spotify.com,媒体专线
-  - DOMAIN-SUFFIX,hulu.com,媒体专线
-  - DOMAIN-SUFFIX,twitch.tv,媒体专线
-  - DOMAIN-SUFFIX,amazonvideo.com,媒体专线
-  - DOMAIN-SUFFIX,music.youtube.com,媒体专线
+  # - DOMAIN-SUFFIX,netflix.com,媒体专线
+  # - DOMAIN-SUFFIX,youtube.com,媒体专线
+  # - DOMAIN-SUFFIX,youtu.be,媒体专线
+  # - DOMAIN-SUFFIX,disneyplus.com,媒体专线
+  # - DOMAIN-SUFFIX,spotify.com,媒体专线
+  # - DOMAIN-SUFFIX,hulu.com,媒体专线
+  # - DOMAIN-SUFFIX,twitch.tv,媒体专线
+  # - DOMAIN-SUFFIX,amazonvideo.com,媒体专线
+  # - DOMAIN-SUFFIX,music.youtube.com,媒体专线
 
-  - DOMAIN-SUFFIX,google.com,节点选择
-  - DOMAIN-SUFFIX,twitter.com,节点选择
-  - DOMAIN-SUFFIX,facebook.com,节点选择
+  # - DOMAIN-SUFFIX,google.com,节点选择
+  # - DOMAIN-SUFFIX,twitter.com,节点选择
+  # - DOMAIN-SUFFIX,facebook.com,节点选择
 
   # 新增的直连规则
   - DOMAIN-SUFFIX,local,DIRECT
@@ -200,6 +201,6 @@ rules:
   - IP-CIDR6,fe80::/10,DIRECT
   - DOMAIN-SUFFIX,cn,DIRECT
   - DOMAIN-KEYWORD,-cn,DIRECT
-  
+  - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,节点选择
