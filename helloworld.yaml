@@ -1,0 +1,214 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+tcp-concurrent: true
+unified-delay: true
+external-controller: '127.0.0.1:9090'
+
+dns:
+    enabled: true
+    listen: '127.0.0.1:3653'
+    ipv6: false
+    enhanced-mode: redir-host
+    nameserver: [8.8.8.8, 8.8.4.4, 1.1.1.1, 208.67.222.222]
+    use-hosts: true
+    hosts: { mtalk.google.com: [142.251.170.188, 108.177.125.188], alt1-mtalk.google.com: 192.178.164.188, alt2-mtalk.google.com: 192.178.164.188, alt3-mtalk.google.com: 192.178.164.188, alt4-mtalk.google.com: 192.178.164.188, alt5-mtalk.google.com: 192.178.164.188, alt6-mtalk.google.com: 192.178.164.188, alt7-mtalk.google.com: 192.178.164.188, alt8-mtalk.google.com: 192.178.131.188 }
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+  proxy-groups-mode: true
+
+proxies:
+
+proxy-providers:
+
+  sub1:
+    type: http
+    url: "https://truenet.eu.org/api/v1/client/subscribe?token=8830e5752dba79adb77d3a66ddfcc78c"
+    interval: 86400
+    path: ./providers/sub1.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+  sub2:
+    type: http
+    url: "http://103.35.189.118:7001/s/5f5e1da567141708ea8cd71576119aae"
+    interval: 86400
+    path: ./providers/sub2.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  
+  sub3:
+    type: http
+    url: "https://mihomo.haxtop.ggff.net/?template=https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default.yaml&url=https://pm.enjoy.cloudns.biz/api/v1/subscribe?token=l0b4i8i44u2kzlbh&target=clash&list=1&mihomo=true"
+    interval: 86400
+    path: ./providers/sub3.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+rule-providers:
+  AntiAd:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml"
+    path: ./ruleset/AntiAd.yaml
+    interval: 86400
+
+  banAD:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/BanAD.yaml"
+    path: ./ruleset/BanAD.yaml
+    interval: 86400
+
+  adblockmihomo:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml"
+    path: ./ruleset/adblockmihomo.yaml
+    interval: 86400
+
+  AD:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/AD.yaml"
+    path: ./ruleset/AD.yaml
+    interval: 86400
+
+  EasyList:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyList.yaml"
+    path: ./ruleset/EasyList.yaml
+    interval: 86400
+
+  EasyListChina:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyListChina.yaml"
+    path: ./ruleset/EasyListChina.yaml
+    interval: 86400
+
+  EasyPrivacy:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyPrivacy.yaml"
+    path: ./ruleset/EasyPrivacy.yaml
+    interval: 86400
+
+  ProgramAD:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/ProgramAD.yaml"
+    path: ./ruleset/ProgramAD.yaml
+    interval: 86400
+
+  adblock_loyal:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/adblock_loyal.yaml
+    interval: 86400
+
+  AI:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/AI.yaml"
+    path: ./ruleset/AI.yaml
+    interval: 86400
+
+proxy-groups:
+  - name: 节点选择
+    type: select
+    proxies:  
+      - 自动选择
+    use: [sub1, sub2, sub3]
+    url: https://www.google.com/generate_204
+    timeout: 5000
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
+
+  - name: 自动选择
+    type: url-test
+    use: [sub1, sub2]
+    interval: 60
+    url: https://www.google.com/generate_204
+    max-failed-times: 3
+    timeout: 5000 
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
+
+  - name: AI专线
+    type: select
+    proxies: 
+      - AI自动测速
+    use: [sub1, sub2, sub3]
+    timeout: 5000 
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
+
+  - name: AI自动测速
+    type: url-test
+    use: [sub1]
+    url: https://www.google.com/generate_204
+    interval: 60
+    max-failed-times: 3
+    timeout: 5000 
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|香港)).*$
+
+
+rules:
+  - RULE-SET,AD,REJECT
+  - RULE-SET,adblockmihomo,REJECT
+  - RULE-SET,EasyList,REJECT
+  - RULE-SET,EasyListChina,REJECT
+  - RULE-SET,EasyPrivacy,REJECT
+  - RULE-SET,ProgramAD,REJECT
+  - RULE-SET,adblock_loyal,REJECT
+  - RULE-SET,banAD,REJECT
+  - RULE-SET,AntiAd,REJECT
+
+  # - RULE-SET,AI,AI专线
+  - DOMAIN-SUFFIX,chat.openai.com,AI专线
+  - DOMAIN-SUFFIX,api.openai.com,AI专线
+  - DOMAIN-SUFFIX,openai.com,AI专线
+  - DOMAIN-SUFFIX,aistudio.google.com,AI专线
+  - DOMAIN-SUFFIX,ai.google.dev,AI专线
+  - DOMAIN-SUFFIX,gemini.google.com,AI专线
+
+  
+  # - DOMAIN-SUFFIX,netflix.com,媒体专线
+  # - DOMAIN-SUFFIX,youtube.com,媒体专线
+  # - DOMAIN-SUFFIX,youtu.be,媒体专线
+  # - DOMAIN-SUFFIX,disneyplus.com,媒体专线
+  # - DOMAIN-SUFFIX,spotify.com,媒体专线
+  # - DOMAIN-SUFFIX,hulu.com,媒体专线
+  # - DOMAIN-SUFFIX,twitch.tv,媒体专线
+  # - DOMAIN-SUFFIX,amazonvideo.com,媒体专线
+  # - DOMAIN-SUFFIX,music.youtube.com,媒体专线
+
+  # - DOMAIN-SUFFIX,google.com,节点选择
+  # - DOMAIN-SUFFIX,twitter.com,节点选择
+  # - DOMAIN-SUFFIX,facebook.com,节点选择
+
+  # 新增的直连规则
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,17.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,节点选择
