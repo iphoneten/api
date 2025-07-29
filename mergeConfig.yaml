@@ -14,15 +14,15 @@ proxies:
 
 proxy-providers:
 
-  sub1:
-    type: http
-    url: "https://truenet.eu.org/api/v1/client/subscribe?token=8830e5752dba79adb77d3a66ddfcc78c"
-    interval: 86400
-    path: ./providers/sub1.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+  # sub1:
+  #   type: http
+  #   url: "https://truenet.eu.org/api/v1/client/subscribe?token=8830e5752dba79adb77d3a66ddfcc78c"
+  #   interval: 86400
+  #   path: ./providers/sub1.yaml
+  #   health-check:
+  #     enable: true
+  #     url: http://www.gstatic.com/generate_204
+  #     interval: 300
 
   sub2:
     type: http
@@ -117,23 +117,23 @@ rule-providers:
 
 proxy-groups:
   - name: 自动选择
-    # type: url-test
-    type: load-balance
-    use: [sub1, sub2]
-    interval: 20
-    strategy: consistent-hashing # 轮询方式，可选 'consistent-hashing' 'round-robin'
+    type: url-test
+    # type: load-balance
+    use: [sub2, sub3]
+    interval: 120
+    # strategy: consistent-hashing # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'https://www.google.com/generate_204'
     max-failed-times: 3
-    timeout: 10000 
+    timeout: 5000 
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
   - name: 节点选择
     type: select
     proxies: 
       - 自动选择
-    use: [sub1, sub2, sub3]
+    use: [ sub2, sub3]
     url: 'https://www.google.com/generate_204'
-    timeout: 10000
+    timeout: 5000
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
   # - name: 媒体自动选择
