@@ -22,38 +22,10 @@ profile:
   proxy-groups-mode: true
 
 proxies:
-
+ - { name: Test, type: trojan, server: 1.1.1.1, port: 80, password: 892da692-565d-4225-82ef-f913d6ddc360, udp: true, sni: 1.1.1.1 }
+    
 proxy-providers:
 
-  sub1:
-    type: http
-    url: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default.yaml"
-    interval: 86400
-    path: ./providers/sub1.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-
-  sub2:
-    type: http
-    url: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default.yaml"
-    interval: 86400
-    path: ./providers/sub2.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  
-  sub3:
-    type: http
-    url: "https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default.yaml"
-    interval: 86400
-    path: ./providers/sub3.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
 
 rule-providers:
   AntiAd:
@@ -131,37 +103,19 @@ proxy-groups:
     type: select
     proxies:  
       - 自动选择
-    use: [sub1, sub2, sub3]
+      - Test
     url: https://www.google.com/generate_204
     timeout: 5000
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
 
   - name: 自动选择
     type: url-test
-    use: [sub1, sub2]
+    proxies: [Test]
     interval: 60
     url: https://www.google.com/generate_204
     max-failed-times: 3
     timeout: 5000 
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
-
-  - name: AI专线
-    type: select
-    proxies: 
-      - AI自动测速
-    use: [sub1, sub2, sub3]
-    timeout: 5000 
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
-
-  - name: AI自动测速
-    type: url-test
-    use: [sub1]
-    url: https://www.google.com/generate_204
-    interval: 60
-    max-failed-times: 3
-    timeout: 5000 
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|香港)).*$
-
 
 rules:
   - RULE-SET,AD,REJECT
@@ -174,28 +128,6 @@ rules:
   - RULE-SET,banAD,REJECT
   - RULE-SET,AntiAd,REJECT
 
-  # - RULE-SET,AI,AI专线
-  - DOMAIN-SUFFIX,chat.openai.com,AI专线
-  - DOMAIN-SUFFIX,api.openai.com,AI专线
-  - DOMAIN-SUFFIX,openai.com,AI专线
-  - DOMAIN-SUFFIX,aistudio.google.com,AI专线
-  - DOMAIN-SUFFIX,ai.google.dev,AI专线
-  - DOMAIN-SUFFIX,gemini.google.com,AI专线
-
-  
-  # - DOMAIN-SUFFIX,netflix.com,媒体专线
-  # - DOMAIN-SUFFIX,youtube.com,媒体专线
-  # - DOMAIN-SUFFIX,youtu.be,媒体专线
-  # - DOMAIN-SUFFIX,disneyplus.com,媒体专线
-  # - DOMAIN-SUFFIX,spotify.com,媒体专线
-  # - DOMAIN-SUFFIX,hulu.com,媒体专线
-  # - DOMAIN-SUFFIX,twitch.tv,媒体专线
-  # - DOMAIN-SUFFIX,amazonvideo.com,媒体专线
-  # - DOMAIN-SUFFIX,music.youtube.com,媒体专线
-
-  # - DOMAIN-SUFFIX,google.com,节点选择
-  # - DOMAIN-SUFFIX,twitter.com,节点选择
-  # - DOMAIN-SUFFIX,facebook.com,节点选择
 
   # 新增的直连规则
   - DOMAIN-SUFFIX,local,DIRECT
