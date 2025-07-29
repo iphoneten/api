@@ -128,7 +128,7 @@ proxy-groups:
   - name: 自动选择
     type: url-test
     # type: load-balance
-    use: [sub2, sub3]
+    use: [sub2]
     interval: 120
     # strategy: consistent-hashing # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'https://www.google.com/generate_204'
@@ -140,7 +140,7 @@ proxy-groups:
     type: select
     proxies: 
       - 自动选择
-    use: [sub1, sub2, sub3]
+    use: [sub2, sub3]
     url: 'https://www.google.com/generate_204'
     timeout: 5000
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
