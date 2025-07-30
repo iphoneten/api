@@ -23,6 +23,16 @@ proxy-providers:
   #     url: http://www.gstatic.com/generate_204
   #     interval: 300
 
+  sub1:
+    type: http
+    url: "https://gw.dport.top/api/v1/client/subscribe?token=6639392c6b01847be520a231d274ff40"
+    interval: 86400
+    path: ./providers/sub1.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
   sub2:
     type: http
     url: "http://103.35.189.118:7001/s/5f5e1da567141708ea8cd71576119aae"
@@ -118,7 +128,7 @@ proxy-groups:
   - name: 自动选择
     type: url-test
     # type: load-balance
-    use: [sub2]
+    use: [sub2, sub1]
     interval: 120
     # strategy: consistent-hashing # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'https://www.google.com/generate_204'
@@ -130,7 +140,7 @@ proxy-groups:
     type: select
     proxies: 
       - 自动选择
-    use: [sub2, sub3]
+    use: [sub2, sub3, sub1]
     url: 'https://www.google.com/generate_204'
     timeout: 5000
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
