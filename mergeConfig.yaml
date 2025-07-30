@@ -128,8 +128,8 @@ proxy-groups:
   - name: 自动选择
     type: url-test
     # type: load-balance
-    use: [sub2, sub1]
-    interval: 300
+    use: [sub2]
+    interval: 600
     # strategy: consistent-hashing # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'https://www.google.com/generate_204'
     max-failed-times: 3
