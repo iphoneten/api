@@ -35,7 +35,8 @@ proxy-providers:
 
   sub2:
     type: http
-    url: "http://103.35.189.118:7001/s/5f5e1da567141708ea8cd71576119aae"
+    # url: "http://103.35.189.118:7001/s/5f5e1da567141708ea8cd71576119aae"
+    url: "https://slimy-janine-lirtpass-0136632c.koyeb.app/share/sub/dingyue_Center_home-isp?token=oBE-Y90S7nSyNkpKqKsT3"
     interval: 86400
     path: ./providers/sub2.yaml
     health-check:
@@ -53,15 +54,15 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
       
-  # sub4:
-  #   type: http
-  #   url: "https://twilight-bonus-ddef.wowoo74110.workers.dev/bd1a4c0b-afb3-4855-b4bc-2dd74fbc2486/cl"
-  #   interval: 86400
-  #   path: ./providers/sub4.yaml
-  #   health-check:
-  #     enable: true
-  #     url: http://www.gstatic.com/generate_204
-  #     interval: 300
+  sub4:
+    type: http
+    url: "https://slimy-janine-lirtpass-0136632c.koyeb.app/share/sub/dingyue_Center_zijian-auto?token=Ujl3hLbG6Ef2ZsbMy_cLI"
+    interval: 86400
+    path: ./providers/sub4.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
     
 rule-providers:
   AntiAd:
@@ -131,7 +132,7 @@ proxy-groups:
   - name: 自动选择
     type: url-test
     # type: load-balance
-    use: [sub2]
+    use: [sub2, sub3, sub1, sub4]
     interval: 600
     # strategy: consistent-hashing # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'https://www.google.com/generate_204'
@@ -143,7 +144,7 @@ proxy-groups:
     type: select
     proxies: 
       - 自动选择
-    use: [sub2, sub3, sub1]
+    use: [sub2, sub3, sub1, sub4]
     url: 'https://www.google.com/generate_204'
     timeout: 5000
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
