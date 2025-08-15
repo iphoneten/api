@@ -128,12 +128,20 @@ rule-providers:
     interval: 86400
     
 proxy-groups:
-  - name: 自动选择
-    type: url-test
-    # type: load-balance
+  - name: 负载均衡
+    type: load-balance
     use: [sub3, sub1, sub4]
     interval: 600
-    # strategy: consistent-hashing # 轮询方式，可选 'consistent-hashing' 'round-robin'
+    strategy: round-robin # 轮询方式，可选 'consistent-hashing' 'round-robin'
+    url: 'https://www.google.com/generate_204'
+    max-failed-times: 3
+    timeout: 5000 
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
+
+  - name: 自动选择
+    type: url-test
+    use: [sub3, sub1, sub4]
+    interval: 600
     url: 'https://www.google.com/generate_204'
     max-failed-times: 3
     timeout: 5000 
@@ -141,7 +149,8 @@ proxy-groups:
 
   - name: 节点选择
     type: select
-    proxies: 
+    proxies:
+      - 负载均衡
       - 自动选择
     use: [sub3, sub1, sub4]
     url: 'https://www.google.com/generate_204'
