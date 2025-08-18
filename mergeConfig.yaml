@@ -140,7 +140,7 @@ rule-providers:
 proxy-groups:
   - name: 负载均衡
     type: load-balance
-    use: [sub3, sub1, sub4]
+    use: [sub3, sub1, sub4, sub2]
     interval: 600
     strategy: round-robin # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'https://www.google.com/generate_204'
@@ -150,7 +150,7 @@ proxy-groups:
 
   - name: 自动选择
     type: url-test
-    use: [sub3, sub1, sub4]
+    use: [sub3, sub1, sub4, sub2]
     interval: 600
     url: 'https://www.google.com/generate_204'
     max-failed-times: 3
