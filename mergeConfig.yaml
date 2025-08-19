@@ -22,16 +22,6 @@ profile:
 proxies:
 
 proxy-providers:
-  # sub1:
-  #   type: http
-  #   url: "https://truenet.eu.org/api/v1/client/subscribe?token=8830e5752dba79adb77d3a66ddfcc78c"
-  #   interval: 86400
-  #   path: ./providers/sub1.yaml
-  #   health-check:
-  #     enable: true
-  #     url: http://www.gstatic.com/generate_204
-  #     interval: 300
-
   sub1:
     type: http
     url: "https://gw.dport.top/api/v1/client/subscribe?token=6639392c6b01847be520a231d274ff40"
@@ -68,6 +58,17 @@ proxy-providers:
     url: "https://slimy-janine-lirtpass-0136632c.koyeb.app/share/sub/dingyue_Center_zijian-auto?token=Ujl3hLbG6Ef2ZsbMy_cLI"
     interval: 86400
     path: ./providers/sub4.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      
+  sub5:
+    type: http
+    # url: "https://truenet.eu.org/api/v1/client/subscribe?token=8830e5752dba79adb77d3a66ddfcc78c"
+    url: "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml"
+    interval: 86400
+    path: ./providers/sub5.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -140,7 +141,7 @@ rule-providers:
 proxy-groups:
   - name: 负载均衡
     type: load-balance
-    use: [sub3, sub1, sub4, sub2]
+    use: [sub3, sub1, sub4, sub2, sub5]
     interval: 600
     strategy: round-robin # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'https://www.google.com/generate_204'
@@ -150,7 +151,7 @@ proxy-groups:
 
   - name: 自动选择
     type: url-test
-    use: [sub3, sub1, sub4, sub2]
+    use: [sub3, sub1, sub4, sub2, sub5]
     interval: 600
     url: 'https://www.google.com/generate_204'
     max-failed-times: 3
