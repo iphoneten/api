@@ -1,0 +1,54 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+proxies:
+- name: SCPUS2
+  type: vmess
+  server: test3.flha.ru
+  port: 80
+  uuid: 0730d4e1-3c84-4e06-8b2c-22ab4f591ff6
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /0730d4e1-3c84-4e06-8b2c-22ab4f591ff6-vm?ed=2048
+    headers:
+      Host: sims-museum-mental-listening.trycloudflare.com
+- name: SCPUS2_1
+  type: vmess
+  server: 104.16.0.0
+  port: 443
+  uuid: 58b78d40-aaaf-43a5-8263-d8c3a07e241e
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /58b78d40-aaaf-43a5-8263-d8c3a07e241e-vm?ed=2048
+    headers:
+      Host: managed-lucy-booking-standard.trycloudflare.com
+  tls: true
+  servername: managed-lucy-booking-standard.trycloudflare.com
+- name: '%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2001'
+  type: hysteria2
+  server: 9jclv1.225313.xyz
+  port: 32525
+  password: hysteria2://435e90c0-bfeb-45b7-bcc4-cad22a4ceb63
+  udp: true
+  sni: 9jclv1.225313.xyz
+proxy-groups:
+- name: Proxy
+  type: select
+  proxies:
+  - SCPUS2
+  - SCPUS2_1
+  - '%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2001'
+  url: https://www.google.com/generate_204
+  timeout: 5000
+rules:
+- GEOIP,CN,DIRECT
+- MATCH,Proxy
