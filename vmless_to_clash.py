@@ -8,7 +8,6 @@ import urllib.parse
 proxy_links = [
     "vmess://eyJ2IjoiMiIsInBzIjoiU0NQVVMyIiwiYWRkIjoidGVzdDMuZmxoYS5ydSIsInBvcnQiOjgwLCJpZCI6IjA3MzBkNGUxLTNjODQtNGUwNi04YjJjLTIyYWI0ZjU5MWZmNiIsImFpZCI6MCwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0Ijoic2ltcy1tdXNldW0tbWVudGFsLWxpc3RlbmluZy50cnljbG91ZGZsYXJlLmNvbSIsInBhdGgiOiIvMDczMGQ0ZTEtM2M4NC00ZTA2LThiMmMtMjJhYjRmNTkxZmY2LXZtP2VkPTIwNDgifQ==",
     "vmess://eyAidiI6ICIyIiwgInBzIjogIlNDUFVTMiIsICJhZGQiOiAiMTA0LjE2LjAuMCIsICJwb3J0IjogIjQ0MyIsICJpZCI6ICI1OGI3OGQ0MC1hYWFmLTQzYTUtODI2My1kOGMzYTA3ZTI0MWUiLCAiYWlkIjogIjAiLCAic2N5IjogImF1dG8iLCAibmV0IjogIndzIiwgInR5cGUiOiAibm9uZSIsICJob3N0IjogIm1hbmFnZWQtbHVjeS1ib29raW5nLXN0YW5kYXJkLnRyeWNsb3VkZmxhcmUuY29tIiwgInBhdGgiOiAiLzU4Yjc4ZDQwLWFhYWYtNDNhNS04MjYzLWQ4YzNhMDdlMjQxZS12bT9lZD0yMDQ4IiwgInRscyI6ICJ0bHMiLCAic25pIjogIm1hbmFnZWQtbHVjeS1ib29raW5nLXN0YW5kYXJkLnRyeWNsb3VkZmxhcmUuY29tIiwgImFscG4iOiAiIiwgImZwIjogIiJ9Cg==",
-    "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogInNpIHZtZXNzLXdzIiwNCiAgImFkZCI6ICJ0ZXN0LmZsaGEucnUiLA0KICAicG9ydCI6ICI4MCIsDQogICJpZCI6ICIyYmFiNmI4Zi04ZDZlLTQ2M2EtODMzMS1iOWRlM2Q1NjkyMWQiLA0KICAiYWlkIjogIjAiLA0KICAic2N5IjogIm5vbmUiLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAiYXV0byIsDQogICJob3N0IjogInRlc3QuZmxoYS5ydSIsDQogICJwYXRoIjogIi8yYmFiNmI4Zi04ZDZlLTQ2M2EtODMzMS1iOWRlM2Q1NjkyMWQtdm1lc3MiLA0KICAidGxzOiAiIiwNCiAgInNuaSI6ICIiLA0KICAiYWxwbiI6ICIiLA0KICAiZnAiOiAiINCn0=",
     "hysteria2://435e90c0-bfeb-45b7-bcc4-cad22a4ceb63@9jclv1.225313.xyz:32525?sni=9jclv1.225313.xyz#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2001",
 ]
 
@@ -27,7 +26,7 @@ clash_config = {
             "type": "select",
             "proxies": [],
             "url": "https://www.google.com/generate_204",
-            "timeout": 5000,
+            # "timeout": 5000,
         }
     ],
     "rules": ["GEOIP,CN,DIRECT", "MATCH,Proxy"],
@@ -117,9 +116,10 @@ def parse_hysteria2_link(link_str):
         # Split into auth_server_port and params_name
         if "#" in link_str:
             core_part, node_name = link_str.split("#", 1)
+            node_name = urllib.parse.unquote(node_name)
         else:
             core_part = link_str
-            node_name = "Unnamed Hysteria2 Node"
+            node_name = "Hysteria2"
 
         if "?" in core_part:
             auth_server_port, query_string = core_part.split("?", 1)
