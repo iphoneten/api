@@ -63,16 +63,16 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
       
-  # sub5:
-  #   type: http
-  #   # url: "https://truenet.eu.org/api/v1/client/subscribe?token=8830e5752dba79adb77d3a66ddfcc78c"
-  #   url: "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml"
-  #   interval: 86400
-  #   path: ./providers/sub5.yaml
-  #   health-check:
-  #     enable: true
-  #     url: http://www.gstatic.com/generate_204
-  #     interval: 300
+  sub5:
+    type: http
+    # url: "https://truenet.eu.org/api/v1/client/subscribe?token=8830e5752dba79adb77d3a66ddfcc78c"
+    url: "https://raw.githubusercontent.com/iphoneten/api/refs/heads/main/config.yaml"
+    interval: 86400
+    path: ./providers/sub5.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
     
 rule-providers:
   AntiAd:
