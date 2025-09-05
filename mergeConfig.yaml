@@ -65,16 +65,15 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
       
-  # sub5:
-  #   type: http
-  #   # url: "https://truenet.eu.org/api/v1/client/subscribe?token=8830e5752dba79adb77d3a66ddfcc78c"
-  #   url: "https://raw.githubusercontent.com/iphoneten/api/refs/heads/main/config.yaml"
-  #   interval: 86400
-  #   path: ./providers/sub5.yaml
-  #   health-check:
-  #     enable: true
-  #     url: http://www.gstatic.com/generate_204
-  #     interval: 300
+  sub5:
+    type: http
+    url: "https://raw.githubusercontent.com/iphoneten/api/refs/heads/main/config.yaml"
+    interval: 86400
+    path: ./providers/sub5.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
     
 rule-providers:
   AntiAd:
@@ -143,7 +142,7 @@ rule-providers:
 proxy-groups:
   - name: 负载均衡
     type: load-balance
-    use: [sub2, sub1, sub3, sub4]
+    use: [sub2, sub1, sub3, sub4, sub5]
     interval: 600
     strategy: round-robin # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'https://www.google.com/generate_204'
@@ -153,7 +152,7 @@ proxy-groups:
 
   - name: 自动选择
     type: url-test
-    use: [sub2, sub1, sub3, sub4]
+    use: [sub2, sub1, sub3, sub4, sub5]
     interval: 600
     url: 'https://www.google.com/generate_204'
     max-failed-times: 3
@@ -165,7 +164,7 @@ proxy-groups:
     proxies:
       - 负载均衡
       - 自动选择
-    use: [sub2, sub1, sub3, sub4]
+    use: [sub2, sub1, sub3, sub4, sub5]
     url: 'https://www.google.com/generate_204'
     timeout: 5000
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
