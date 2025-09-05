@@ -4,12 +4,33 @@ import yaml
 import uuid
 import re
 import urllib.parse
+import requests
 
-proxy_links = [
-    "vmess://eyJ2IjoiMiIsInBzIjoiU0NQVVMyIiwiYWRkIjoidGVzdDMuZmxoYS5ydSIsInBvcnQiOjgwLCJpZCI6IjA3MzBkNGUxLTNjODQtNGUwNi04YjJjLTIyYWI0ZjU5MWZmNiIsImFpZCI6MCwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0Ijoic2ltcy1tdXNldW0tbWVudGFsLWxpc3RlbmluZy50cnljbG91ZGZsYXJlLmNvbSIsInBhdGgiOiIvMDczMGQ0ZTEtM2M4NC00ZTA2LThiMmMtMjJhYjRmNTkxZmY2LXZtP2VkPTIwNDgifQ==",
-    "vmess://eyAidiI6ICIyIiwgInBzIjogIlNDUFVTMiIsICJhZGQiOiAiMTA0LjE2LjAuMCIsICJwb3J0IjogIjQ0MyIsICJpZCI6ICI1OGI3OGQ0MC1hYWFmLTQzYTUtODI2My1kOGMzYTA3ZTI0MWUiLCAiYWlkIjogIjAiLCAic2N5IjogImF1dG8iLCAibmV0IjogIndzIiwgInR5cGUiOiAibm9uZSIsICJob3N0IjogIm1hbmFnZWQtbHVjeS1ib29raW5nLXN0YW5kYXJkLnRyeWNsb3VkZmxhcmUuY29tIiwgInBhdGgiOiAiLzU4Yjc4ZDQwLWFhYWYtNDNhNS04MjYzLWQ4YzNhMDdlMjQxZS12bT9lZD0yMDQ4IiwgInRscyI6ICJ0bHMiLCAic25pIjogIm1hbmFnZWQtbHVjeS1ib29raW5nLXN0YW5kYXJkLnRyeWNsb3VkZmxhcmUuY29tIiwgImFscG4iOiAiIiwgImZwIjogIiJ9Cg==",
-    "hysteria2://435e90c0-bfeb-45b7-bcc4-cad22a4ceb63@9jclv1.225313.xyz:32525?sni=9jclv1.225313.xyz#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2001",
+# proxy_links = [
+#     "vmess://eyJ2IjoiMiIsInBzIjoiU0NQVVMyIiwiYWRkIjoidGVzdDMuZmxoYS5ydSIsInBvcnQiOjgwLCJpZCI6IjA3MzBkNGUxLTNjODQtNGUwNi04YjJjLTIyYWI0ZjU5MWZmNiIsImFpZCI6MCwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0Ijoic2ltcy1tdXNldW0tbWVudGFsLWxpc3RlbmluZy50cnljbG91ZGZsYXJlLmNvbSIsInBhdGgiOiIvMDczMGQ0ZTEtM2M4NC00ZTA2LThiMmMtMjJhYjRmNTkxZmY2LXZtP2VkPTIwNDgifQ==",
+#     "vmess://eyAidiI6ICIyIiwgInBzIjogIlNDUFVTMiIsICJhZGQiOiAiMTA0LjE2LjAuMCIsICJwb3J0IjogIjQ0MyIsICJpZCI6ICI1OGI3OGQ0MC1hYWFmLTQzYTUtODI2My1kOGMzYTA3ZTI0MWUiLCAiYWlkIjogIjAiLCAic2N5IjogImF1dG8iLCAibmV0IjogIndzIiwgInR5cGUiOiAibm9uZSIsICJob3N0IjogIm1hbmFnZWQtbHVjeS1ib29raW5nLXN0YW5kYXJkLnRyeWNsb3VkZmxhcmUuY29tIiwgInBhdGgiOiAiLzU4Yjc4ZDQwLWFhYWYtNDNhNS04MjYzLWQ4YzNhMDdlMjQxZS12bT9lZD0yMDQ4IiwgInRscyI6ICJ0bHMiLCAic25pIjogIm1hbmFnZWQtbHVjeS1ib29raW5nLXN0YW5kYXJkLnRyeWNsb3VkZmxhcmUuY29tIiwgImFscG4iOiAiIiwgImZwIjogIiJ9Cg==",
+#     "hysteria2://435e90c0-bfeb-45b7-bcc4-cad22a4ceb63@9jclv1.225313.xyz:32525?sni=9jclv1.225313.xyz#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2001",
+# ]
+
+def fetch_and_decode_vmess_links(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an HTTPError for bad responses (4xx or 5xx)
+        encoded_content = response.text
+        decoded_content = base64.b64decode(encoded_content).decode("utf-8")
+        links = decoded_content.strip().split('\n')
+        return links
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching links from {url}: {e}")
+        return []
+
+SUB_URLs = [
+    "https://proxypool.dmit.dpdns.org/vmess/sub",
+    # "https://proxypool.dmit.dpdns.org/ss/sub",
 ]
+proxy_links = []
+for url in SUB_URLs:
+    proxy_links.extend(fetch_and_decode_vmess_links(url))
 
 # 初始化Clash配置
 clash_config = {
