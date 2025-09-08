@@ -137,14 +137,15 @@ def write_clash_config(filtered_proxies, filename="config.yaml"): # {{ edit_1 }}
         print(f"Error writing to file '{filename}': {e}")
 
 if __name__ == "__main__":
-    url = "https://proxypool.dmit.dpdns.org/clash/proxies?type=ss,vmess,trojan,hysteria2"
+    url = "https://proxypool.dmit.dpdns.org/clash/proxies?type=vmess,hysteria2"
     web_content = fetch_proxies_from_url(url)
 
     if web_content:
         all_proxies = get_proxies_from_content(web_content)
         if all_proxies:
             print(f"Found {len(all_proxies)} proxies from the source.")
-            filtered_proxies = filter_failed_nodes(all_proxies, speed_threshold_mb=5.0)
+            filtered_proxies = all_proxies 
+            # filter_failed_nodes(all_proxies, speed_threshold_mb=5.0)
             print(f"Filtered down to {len(filtered_proxies)} proxies.")
             write_clash_config(filtered_proxies) # {{ edit_2 }}
         else:
