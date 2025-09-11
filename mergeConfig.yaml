@@ -22,15 +22,15 @@ profile:
 proxies:
 
 proxy-providers:
-  sub1:
-    type: http
-    url: "https://long-morning-d1bb.wowoo74110.workers.dev/86c50e3a-5b87-49dd-bd20-03c7f2735e40/cl"
-    interval: 86400
-    path: ./providers/sub1.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+  # sub1:
+  #   type: http
+  #   url: "https://long-morning-d1bb.wowoo74110.workers.dev/86c50e3a-5b87-49dd-bd20-03c7f2735e40/cl"
+  #   interval: 86400
+  #   path: ./providers/sub1.yaml
+  #   health-check:
+  #     enable: true
+  #     url: http://www.gstatic.com/generate_204
+  #     interval: 300
 
   sub2:
     type: http
@@ -53,16 +53,16 @@ proxy-providers:
   #     url: http://www.gstatic.com/generate_204
   #     interval: 300
       
-  sub4:
-    type: http
-    # url: "https://slimy-janine-lirtpass-0136632c.koyeb.app/share/sub/dingyue_Center_zijian-auto?token=Ujl3hLbG6Ef2ZsbMy_cLI"
-    url: "https://sub.dmit.dpdns.org/share/sub/dingyue_Center_zijian_auto?token=xgy1nCsG7xgerdecv4QRn"
-    interval: 86400
-    path: ./providers/sub4.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+  # sub4:
+  #   type: http
+  #   # url: "https://slimy-janine-lirtpass-0136632c.koyeb.app/share/sub/dingyue_Center_zijian-auto?token=Ujl3hLbG6Ef2ZsbMy_cLI"
+  #   url: "https://sub.dmit.dpdns.org/share/sub/dingyue_Center_zijian_auto?token=xgy1nCsG7xgerdecv4QRn"
+  #   interval: 86400
+  #   path: ./providers/sub4.yaml
+  #   health-check:
+  #     enable: true
+  #     url: http://www.gstatic.com/generate_204
+  #     interval: 300
       
   sub5:
     type: http
@@ -141,7 +141,7 @@ rule-providers:
 proxy-groups:
   - name: 负载均衡
     type: load-balance
-    use: [sub2, sub1, sub4, sub5]
+    use: [sub2, sub5]
     interval: 3000
     strategy: round-robin # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'https://www.google.com/generate_204'
@@ -151,7 +151,7 @@ proxy-groups:
 
   - name: 自动选择
     type: url-test
-    use: [sub2, sub1, sub4, sub5]
+    use: [sub2, sub5]
     interval: 3000
     url: 'https://www.google.com/generate_204'
     max-failed-times: 3
@@ -163,7 +163,7 @@ proxy-groups:
     proxies:
       - 自动选择
       - 负载均衡
-    use: [sub2, sub1, sub4, sub5]
+    use: [sub2, sub5]
     url: 'https://www.google.com/generate_204'
     timeout: 5000
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|🔒|免费|推广)).*$
