@@ -12,7 +12,9 @@ on:
 jobs:
   run-python-script:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write # 赋予写入仓库内容的权限
+    
     steps:
     # 第一步：检出（下载）你的代码到虚拟机环境
     - name: Checkout repository
