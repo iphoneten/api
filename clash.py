@@ -1,7 +1,7 @@
 import yaml
 import re
 import requests
-
+import socket # 新增：导入 socket 模块
 
 # Function to fetch web content from the given URL
 def fetch_proxies_from_url(url):
@@ -26,26 +26,47 @@ def get_proxies_from_content(content):
         return []
 
 
-# Function to filter out failed nodes
-def filter_failed_nodes(proxies, speed_threshold_mb=5.0):
-    """Filters out proxies based on a speed threshold in their name."""
-    filtered_proxies = []
+def test_proxy_tcp_reachability(host, port, timeout=3):
+    """
+    Tests if the given host and port are TCP reachable.
+    Returns True if reachable, False otherwise.
+    """
+    try:
+        with socket.create_connection((host, port), timeout) as sock:
+            return True
+    except (socket.timeout, ConnectionRefusedError, OSError):
+        return False
+
+def filter_unreachable_proxies(proxies, timeout=5):
+    """
+    Filters out proxies whose server and port are not TCP reachable.
+    """
+    reachable_proxies = []
     for proxy in proxies:
-        name = proxy.get("name", "")
-        match = re.search(r"\|([\d.]+)Mb", name)
-        if match:
-            speed_mb = float(match.group(1))
-            if speed_mb >= speed_threshold_mb:
-                filtered_proxies.append(proxy)
-            else:
-                print(
-                    f"Excluding proxy '{name}' due to low speed: {speed_mb} Mb < {speed_threshold_mb} Mb"
-                )
+        server = proxy.get("server")
+        port = proxy.get("port")
+        name = proxy.get("name", "Unknown Proxy")
+
+        if not server or not port:
+            print(f"Skipping TCP connectivity test for '{name}' due to missing server or port.")
+            reachable_proxies.append(proxy) # 如果信息缺失，暂时不进行过滤
+            continue
+
+        # Convert port to int if it's a string
+        if isinstance(port, str):
+            try:
+                port = int(port)
+            except ValueError:
+                print(f"Skipping TCP connectivity test for '{name}' due to invalid port format: {port}.")
+                reachable_proxies.append(proxy)
+                continue
+
+        if test_proxy_tcp_reachability(server, port, timeout):
+            print(f"Proxy '{name}' ({server}:{port}) is TCP reachable.")
+            reachable_proxies.append(proxy)
         else:
-            # If no speed information, include it by default or exclude it based on policy
-            print(f"Including proxy '{name}' (no speed information found).")
-            filtered_proxies.append(proxy)
-    return filtered_proxies
+            print(f"Excluding proxy '{name}' ({server}:{port}) as it is NOT TCP reachable.")
+    return reachable_proxies
 
 
 # Function to write the complete Clash configuration to a YAML file
@@ -100,10 +121,10 @@ if __name__ == "__main__":
         all_proxies = get_proxies_from_content(web_content)
         if all_proxies:
             print(f"Found {len(all_proxies)} proxies from the source.")
-            filtered_proxies = all_proxies
-            # filter_failed_nodes(all_proxies, speed_threshold_mb=5.0)
-            print(f"Filtered down to {len(filtered_proxies)} proxies.")
-            write_clash_config(filtered_proxies)  # {{ edit_2 }}
+            # Apply TCP reachability filtering
+            final_proxies = filter_unreachable_proxies(all_proxies, timeout=5)
+            print(f"Filtered to {len(final_proxies)} proxies after TCP reachability check.")
+            write_clash_config(final_proxies)
         else:
             print("No proxies found or an error occurred during parsing.")
     else:
