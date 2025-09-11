@@ -1,7 +1,9 @@
 import yaml
 import re
 import requests
-import socket # 新增：导入 socket 模块
+import socket  # 新增：导入 socket 模块
+import concurrent.futures  # 新增：导入 concurrent.futures 模块
+
 
 # Function to fetch web content from the given URL
 def fetch_proxies_from_url(url):
@@ -37,36 +39,97 @@ def test_proxy_tcp_reachability(host, port, timeout=3):
     except (socket.timeout, ConnectionRefusedError, OSError):
         return False
 
-def filter_unreachable_proxies(proxies, timeout=5):
+
+def filter_unreachable_proxies(proxies, timeout=5, max_workers=10):
     """
-    Filters out proxies whose server and port are not TCP reachable.
+    Filters out proxies whose server and port are not TCP reachable, using concurrent testing.
     """
     reachable_proxies = []
-    for proxy in proxies:
-        server = proxy.get("server")
-        port = proxy.get("port")
-        name = proxy.get("name", "Unknown Proxy")
 
-        if not server or not port:
-            print(f"Skipping TCP connectivity test for '{name}' due to missing server or port.")
-            reachable_proxies.append(proxy) # 如果信息缺失，暂时不进行过滤
-            continue
+    # Prepare futures for concurrent execution
+    future_to_proxy = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        for proxy in proxies:
+            server = proxy.get("server")
+            port = proxy.get("port")
+            name = proxy.get("name", "Unknown Proxy")
 
-        # Convert port to int if it's a string
-        if isinstance(port, str):
-            try:
-                port = int(port)
-            except ValueError:
-                print(f"Skipping TCP connectivity test for '{name}' due to invalid port format: {port}.")
+            if not server or not port:
+                print(
+                    f"Skipping TCP connectivity test for '{name}' due to missing server or port. Including it by default."
+                )
                 reachable_proxies.append(proxy)
                 continue
 
-        if test_proxy_tcp_reachability(server, port, timeout):
-            print(f"Proxy '{name}' ({server}:{port}) is TCP reachable.")
-            reachable_proxies.append(proxy)
-        else:
-            print(f"Excluding proxy '{name}' ({server}:{port}) as it is NOT TCP reachable.")
+            # Convert port to int if it's a string
+            if isinstance(port, str):
+                try:
+                    port = int(port)
+                except ValueError:
+                    print(
+                        f"Skipping TCP connectivity test for '{name}' due to invalid port format: {port}. Including it by default."
+                    )
+                    reachable_proxies.append(proxy)
+                    continue
+
+            # Submit task to the thread pool
+            future = executor.submit(test_proxy_tcp_reachability, server, port, timeout)
+            future_to_proxy[future] = proxy
+
+        # Process results as they complete
+        for future in concurrent.futures.as_completed(future_to_proxy):
+            proxy = future_to_proxy[future]
+            name = proxy.get("name", "Unknown Proxy")
+            server = proxy.get("server")
+            port = proxy.get("port")
+
+            try:
+                is_reachable = future.result()
+                if is_reachable:
+                    print(f"Proxy '{name}' ({server}:{port}) is TCP reachable.")
+                    reachable_proxies.append(proxy)
+                else:
+                    print(
+                        f"Excluding proxy '{name}' ({server}:{port}) as it is NOT TCP reachable."
+                    )
+            except Exception as exc:
+                print(
+                    f"Proxy '{name}' ({server}:{port}) generated an exception during test: {exc}. Excluding it."
+                )
+
     return reachable_proxies
+
+
+# def filter_unreachable_proxies(proxies, timeout=5):
+#     """
+#     Filters out proxies whose server and port are not TCP reachable.
+#     """
+#     reachable_proxies = []
+#     for proxy in proxies:
+#         server = proxy.get("server")
+#         port = proxy.get("port")
+#         name = proxy.get("name", "Unknown Proxy")
+
+#         if not server or not port:
+#             print(f"Skipping TCP connectivity test for '{name}' due to missing server or port.")
+#             reachable_proxies.append(proxy) # 如果信息缺失，暂时不进行过滤
+#             continue
+
+#         # Convert port to int if it's a string
+#         if isinstance(port, str):
+#             try:
+#                 port = int(port)
+#             except ValueError:
+#                 print(f"Skipping TCP connectivity test for '{name}' due to invalid port format: {port}.")
+#                 reachable_proxies.append(proxy)
+#                 continue
+
+#         if test_proxy_tcp_reachability(server, port, timeout):
+#             print(f"Proxy '{name}' ({server}:{port}) is TCP reachable.")
+#             reachable_proxies.append(proxy)
+#         else:
+#             print(f"Excluding proxy '{name}' ({server}:{port}) as it is NOT TCP reachable.")
+#     return reachable_proxies
 
 
 # Function to write the complete Clash configuration to a YAML file
@@ -114,7 +177,7 @@ def write_clash_config(filtered_proxies, filename="config.yaml"):  # {{ edit_1 }
 
 
 if __name__ == "__main__":
-    url = "https://proxypool.dmit.dpdns.org/clash/proxies?type=vmess,hysteria2"
+    url = "https://proxypool.dmit.dpdns.org/clash/proxies?type=vmess,hysteria2,ss,ssr,trojan"
     web_content = fetch_proxies_from_url(url)
 
     if web_content:
@@ -123,7 +186,9 @@ if __name__ == "__main__":
             print(f"Found {len(all_proxies)} proxies from the source.")
             # Apply TCP reachability filtering
             final_proxies = filter_unreachable_proxies(all_proxies, timeout=5)
-            print(f"Filtered to {len(final_proxies)} proxies after TCP reachability check.")
+            print(
+                f"Filtered to {len(final_proxies)} proxies after TCP reachability check."
+            )
             write_clash_config(final_proxies)
         else:
             print("No proxies found or an error occurred during parsing.")
