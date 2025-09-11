@@ -32,30 +32,31 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 
-  # sub2:
-  #   type: http
-  #   url: "http://103.35.189.118:7001/s/85245e4d0ee6d77ea2e0b4dfda5a9d0e"
-  #   interval: 86400
-  #   path: ./providers/sub2.yaml
-  #   health-check:
-  #     enable: true
-  #     url: http://www.gstatic.com/generate_204
-  #     interval: 300
-  
-  sub3:
+  sub2:
     type: http
-    # url: "https://slimy-janine-lirtpass-0136632c.koyeb.app/share/sub/dingyue_Center_home-isp?token=oBE-Y90S7nSyNkpKqKsT3"
-    url: "http://slimy-janine-lirtpass-0136632c.koyeb.app/share/sub/dingyue_Center_post0905?token=B8jTZtcVAygnioiF9d125"
+    url: "https://xship.top/v1/subscribe?starlink=SSYI1sE1b_KXI4PALsNsuyqQ"
     interval: 86400
-    path: ./providers/sub3.yaml
+    path: ./providers/sub2.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+  
+  # sub3:
+  #   type: http
+  #   # url: "https://slimy-janine-lirtpass-0136632c.koyeb.app/share/sub/dingyue_Center_home-isp?token=oBE-Y90S7nSyNkpKqKsT3"
+  #   url: "http://slimy-janine-lirtpass-0136632c.koyeb.app/share/sub/dingyue_Center_post0905?token=B8jTZtcVAygnioiF9d125"
+  #   interval: 86400
+  #   path: ./providers/sub3.yaml
+  #   health-check:
+  #     enable: true
+  #     url: http://www.gstatic.com/generate_204
+  #     interval: 300
       
   sub4:
     type: http
-    url: "https://slimy-janine-lirtpass-0136632c.koyeb.app/share/sub/dingyue_Center_zijian-auto?token=Ujl3hLbG6Ef2ZsbMy_cLI"
+    # url: "https://slimy-janine-lirtpass-0136632c.koyeb.app/share/sub/dingyue_Center_zijian-auto?token=Ujl3hLbG6Ef2ZsbMy_cLI"
+    url: "https://sub.dmit.dpdns.org/share/sub/dingyue_Center_zijian_auto?token=xgy1nCsG7xgerdecv4QRn"
     interval: 86400
     path: ./providers/sub4.yaml
     health-check:
@@ -140,32 +141,32 @@ rule-providers:
 proxy-groups:
   - name: 负载均衡
     type: load-balance
-    use: [sub1, sub3, sub4, sub5]
+    use: [sub2, sub1, sub4, sub5]
     interval: 3000
     strategy: round-robin # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'https://www.google.com/generate_204'
     max-failed-times: 3
     timeout: 5000 
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|🔒|免费|推广)).*$
 
   - name: 自动选择
     type: url-test
-    use: [sub1, sub3, sub4, sub5]
+    use: [sub2, sub1, sub4, sub5]
     interval: 3000
     url: 'https://www.google.com/generate_204'
     max-failed-times: 3
     timeout: 5000 
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|🔒|免费|推广)).*$
 
   - name: 节点选择
     type: select
     proxies:
       - 自动选择
       - 负载均衡
-    use: [sub1, sub3, sub4, sub5]
+    use: [sub2, sub1, sub4, sub5]
     url: 'https://www.google.com/generate_204'
     timeout: 5000
-    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组)).*$
+    filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|🔒|免费|推广)).*$
 
   # - name: 媒体自动选择
   #   type: url-test
