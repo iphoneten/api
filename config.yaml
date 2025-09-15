@@ -5,20 +5,6 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: _05 |34.03Mb
-  server: 142.93.238.172
-  type: ss
-  port: 80
-  udp: true
-  password: mdPIrGoRyIAP97jWwIkRSn
-  cipher: chacha20-ietf-poly1305
-- name: 🇧🇪BE_07 |49.64Mb
-  server: 192.71.249.71
-  type: ss
-  country: 🇧🇪BE
-  port: 989
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
 - name: 🇩🇪DE_10 | 9.85Mb
   server: 212.224.125.154
   type: ss
@@ -26,8 +12,8 @@ proxies:
   port: 57456
   password: fe166c5b3465540f
   cipher: chacha20-ietf-poly1305
-- name: 🇩🇪DE_11 | 0.43Mb
-  server: 18.159.61.225
+- name: 🇩🇪DE_08 | 3.54Mb
+  server: 54.93.205.2
   type: ss
   country: 🇩🇪DE
   port: 443
@@ -47,8 +33,22 @@ proxies:
   port: 443
   password: amazonskr05
   cipher: aes-256-cfb
-- name: 🇩🇪DE_08 | 3.54Mb
-  server: 54.93.205.2
+- name: _05 |34.03Mb
+  server: 142.93.238.172
+  type: ss
+  port: 80
+  udp: true
+  password: mdPIrGoRyIAP97jWwIkRSn
+  cipher: chacha20-ietf-poly1305
+- name: 🇩🇪DE_11 | 0.43Mb
+  server: 18.159.61.225
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: 🇩🇪DE_16 | 5.49Mb
+  server: 18.193.115.141
   type: ss
   country: 🇩🇪DE
   port: 443
@@ -61,6 +61,22 @@ proxies:
   port: 443
   password: amazonskr05
   cipher: aes-256-cfb
+- name: 🇩🇪DE_15 | 2.22Mb
+  server: 18.199.92.80
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: Relay_-🇺🇸US_01 |86.41Mb
+  server: gyus.aifjj.asia
+  type: hysteria2
+  port: 30249
+  udp: true
+  password: 79dc600a-b63b-4406-bd79-f5f7fb0c0e52
+  auth: 79dc600a-b63b-4406-bd79-f5f7fb0c0e52
+  sni: gyus.aifjj.asia
+  skip-cert-verify: true
 - name: 🇪🇸ES_17 | 3.03Mb
   server: 5.188.181.41
   type: ss
@@ -75,27 +91,6 @@ proxies:
   port: 443
   password: amazonskr05
   cipher: aes-256-cfb
-- name: 🇩🇪DE_15 | 2.22Mb
-  server: 18.199.92.80
-  type: ss
-  country: 🇩🇪DE
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: 🇩🇪DE_16 | 5.49Mb
-  server: 18.193.115.141
-  type: ss
-  country: 🇩🇪DE
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: 🇫🇮FI_19 | 9.26Mb
-  server: 94.237.105.27
-  type: ss
-  country: 🇫🇮FI
-  port: 8443
-  password: Qcsukn6qSHlKiTnh08a9Cb
-  cipher: chacha20-ietf-poly1305
 - name: 🇫🇮FI_18 |36.21Mb
   server: 65.21.243.22
   type: ss
@@ -110,27 +105,13 @@ proxies:
   port: 443
   password: bBmY8pBEH84DLOwbOzyCaL
   cipher: chacha20-ietf-poly1305
-- name: 🇫🇷FR_21
-  server: 62.210.88.22
+- name: 🇫🇮FI_19 | 9.26Mb
+  server: 94.237.105.27
   type: ss
-  country: 🇫🇷FR
-  port: 443
-  password: CJXCIudNfb4fCHdNOEXQCX
+  country: 🇫🇮FI
+  port: 8443
+  password: Qcsukn6qSHlKiTnh08a9Cb
   cipher: chacha20-ietf-poly1305
-- name: 🇮🇪IE_29 | 3.23Mb
-  server: 34.243.228.158
-  type: ss
-  country: 🇮🇪IE
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: 🇮🇪IE_28 |14.89Mb
-  server: 3.254.154.32
-  type: ss
-  country: 🇮🇪IE
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
 - name: 🇫🇷FR_20
   server: 62.210.88.22
   type: ss
@@ -138,13 +119,20 @@ proxies:
   port: 443
   password: 6B6O4ts0stERkPBsofaVAk
   cipher: chacha20-ietf-poly1305
-- name: 🇮🇸IS_30 | 0.80Mb
-  server: 37.235.49.152
+- name: 🇫🇷FR_21
+  server: 62.210.88.22
   type: ss
-  country: 🇮🇸IS
-  port: 990
-  password: f8f7aCzcPKbsF8p3
+  country: 🇫🇷FR
+  port: 443
+  password: CJXCIudNfb4fCHdNOEXQCX
   cipher: chacha20-ietf-poly1305
+- name: 🇮🇪IE_28 |14.89Mb
+  server: 3.254.154.32
+  type: ss
+  country: 🇮🇪IE
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
 - name: 🇭🇰HK_25 |141.04Mb
   server: 103.149.183.154
   type: ss
@@ -152,6 +140,20 @@ proxies:
   port: 8388
   password: asd123456
   cipher: chacha20-ietf
+- name: 🇮🇪IE_29 | 3.23Mb
+  server: 34.243.228.158
+  type: ss
+  country: 🇮🇪IE
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: 🇮🇸IS_30 | 0.80Mb
+  server: 37.235.49.152
+  type: ss
+  country: 🇮🇸IS
+  port: 990
+  password: f8f7aCzcPKbsF8p3
+  cipher: chacha20-ietf-poly1305
 - name: 🇱🇹LT_32 |33.11Mb
   server: 45.87.175.10
   type: ss
@@ -159,18 +161,6 @@ proxies:
   port: 8080
   password: oZIoA69Q8yhcQV8ka3Pa3A
   cipher: chacha20-ietf-poly1305
-- name: 🇮🇩ID_27 | 7.39Mb
-  server: 154.90.49.57
-  type: vmess
-  country: 🇮🇩ID
-  port: 58868
-  uuid: fbffeb6b-b5e5-4f77-8888-c7919fbeb0ad
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
 - name: 🇳🇴NO_33 | 2.17Mb
   server: 185.213.23.226
   type: ss
@@ -178,6 +168,13 @@ proxies:
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
+- name: 🇱🇹LT_31 | 2.29Mb
+  server: 192.36.61.59
+  type: ss
+  country: 🇱🇹LT
+  port: 990
+  password: f8f7aCzcPKbsF8p3
+  cipher: chacha20-ietf-poly1305
 - name: 🇵🇱PL_34 |33.02Mb
   server: 217.30.10.18
   type: ss
@@ -206,22 +203,6 @@ proxies:
   port: 9031
   password: BwcAUZk8hUFAkDGN
   cipher: aes-256-cfb
-- name: 🇱🇹LT_31 | 2.29Mb
-  server: 192.36.61.59
-  type: ss
-  country: 🇱🇹LT
-  port: 990
-  password: f8f7aCzcPKbsF8p3
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇺🇸US_01 |86.41Mb
-  server: gyus.aifjj.asia
-  type: hysteria2
-  port: 30249
-  udp: true
-  password: 79dc600a-b63b-4406-bd79-f5f7fb0c0e52
-  auth: 79dc600a-b63b-4406-bd79-f5f7fb0c0e52
-  sni: gyus.aifjj.asia
-  skip-cert-verify: true
 - name: 🇵🇱PL_38 |42.28Mb
   server: 217.30.10.70
   type: ss
@@ -250,13 +231,6 @@ proxies:
   port: 443
   password: amazonskr05
   cipher: aes-256-cfb
-- name: 🇺🇸US_50 | 2.31Mb
-  server: 64.74.163.218
-  type: ss
-  country: 🇺🇸US
-  port: 990
-  password: f8f7aCzcPKbsF8p3
-  cipher: chacha20-ietf-poly1305
 - name: 🇸🇪SE_44 | 0.57Mb
   server: 13.60.93.157
   type: ss
@@ -271,17 +245,31 @@ proxies:
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: 🇺🇸US_51 | 3.99Mb
-  server: 34.207.80.141
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
 - name: 🇸🇪SE_46 | 2.13Mb
   server: 51.21.243.75
   type: ss
   country: 🇸🇪SE
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: 🇺🇸US_50 | 2.31Mb
+  server: 64.74.163.218
+  type: ss
+  country: 🇺🇸US
+  port: 990
+  password: f8f7aCzcPKbsF8p3
+  cipher: chacha20-ietf-poly1305
+- name: 🇸🇪SE_47 | 0.83Mb
+  server: 16.171.232.205
+  type: ss
+  country: 🇸🇪SE
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: 🇺🇸US_51 | 3.99Mb
+  server: 34.207.80.141
+  type: ss
+  country: 🇺🇸US
   port: 443
   password: amazonskr05
   cipher: aes-256-cfb
@@ -292,20 +280,6 @@ proxies:
   port: 443
   password: shadowsocks
   cipher: aes-128-gcm
-- name: 🇺🇸US_55 | 2.86Mb
-  server: 156.146.38.167
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
-- name: 🇸🇪SE_47 | 0.83Mb
-  server: 16.171.232.205
-  type: ss
-  country: 🇸🇪SE
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
 - name: 🇺🇸US_52 | 6.50Mb
   server: 38.110.1.122
   type: ss
@@ -313,6 +287,29 @@ proxies:
   port: 7306
   password: FoOiGlkAA9yPEGP
   cipher: aes-256-gcm
+- name: Pool_🇭🇰HK_26 |694.00Mb
+  server: 150.107.46.21
+  type: ssr
+  country: 🇭🇰HK
+  port: 8083
+  password: iFqnzSscN
+  cipher: aes-256-cfb
+  protocol: origin
+  obfs: tls1.2_ticket_auth
+- name: 🇺🇸US_55 | 2.86Mb
+  server: 156.146.38.167
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
+- name: 🇺🇸US_57 | 3.02Mb
+  server: 54.165.208.46
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
 - name: 🇺🇸US_54 | 8.99Mb
   server: 104.192.226.106
   type: ss
@@ -320,8 +317,29 @@ proxies:
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: 🇺🇸US_57 | 3.02Mb
-  server: 54.165.208.46
+- name: 🇺🇸US_58 | 3.49Mb
+  server: 23.157.40.5
+  type: ss
+  country: 🇺🇸US
+  port: 5003
+  password: g5MeD6Ft3CWlJId
+  cipher: aes-256-gcm
+- name: 🇺🇸US_56 | 5.41Mb
+  server: 23.157.40.5
+  type: ss
+  country: 🇺🇸US
+  port: 8888
+  password: Y6R9pAtvxxzmGC
+  cipher: aes-256-gcm
+- name: 🇹🇷TR_49 | 2.27Mb
+  server: 83.217.9.64
+  type: ss
+  country: 🇹🇷TR
+  port: 443
+  password: MgEU8qSlwf53
+  cipher: chacha20-ietf-poly1305
+- name: 🇺🇸US_61 |29.95Mb
+  server: 13.59.220.8
   type: ss
   country: 🇺🇸US
   port: 443
@@ -334,26 +352,12 @@ proxies:
   port: 8080
   password: 14fFPrbezE3HDZzsMOr6
   cipher: rc4-md5
-- name: 🇺🇸US_61 |29.95Mb
-  server: 13.59.220.8
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: 🇹🇷TR_49 | 2.27Mb
-  server: 83.217.9.64
-  type: ss
-  country: 🇹🇷TR
-  port: 443
-  password: MgEU8qSlwf53
-  cipher: chacha20-ietf-poly1305
-- name: 🇺🇸US_56 | 5.41Mb
+- name: 🇺🇸US_59 | 3.11Mb
   server: 23.157.40.5
   type: ss
   country: 🇺🇸US
-  port: 8888
-  password: Y6R9pAtvxxzmGC
+  port: 6679
+  password: TEzjfAYq2IjtuoS
   cipher: aes-256-gcm
 - name: 🇸🇬SG_48 |13.35Mb
   server: 128.199.172.224
@@ -362,20 +366,6 @@ proxies:
   port: 8080
   password: 14fFPrbezE3HDZzsMOr6
   cipher: rc4-md5
-- name: 🇺🇸US_58 | 3.49Mb
-  server: 23.157.40.5
-  type: ss
-  country: 🇺🇸US
-  port: 5003
-  password: g5MeD6Ft3CWlJId
-  cipher: aes-256-gcm
-- name: 🇺🇸US_59 | 3.11Mb
-  server: 23.157.40.5
-  type: ss
-  country: 🇺🇸US
-  port: 6679
-  password: TEzjfAYq2IjtuoS
-  cipher: aes-256-gcm
 - name: 🇺🇸US_63 | 0.41Mb
   server: 54.92.201.198
   type: ss
@@ -383,8 +373,8 @@ proxies:
   port: 443
   password: amazonskr05
   cipher: aes-256-cfb
-- name: 🇺🇸US_62 |31.91Mb
-  server: 23.157.40.5
+- name: 🇺🇸US_68 |17.08Mb
+  server: 38.107.226.159
   type: ss
   country: 🇺🇸US
   port: 7307
@@ -397,13 +387,6 @@ proxies:
   port: 443
   password: shadowsocks
   cipher: aes-128-gcm
-- name: 🇺🇸US_68 |17.08Mb
-  server: 38.107.226.159
-  type: ss
-  country: 🇺🇸US
-  port: 7307
-  password: FoOiGlkAA9yPEGP
-  cipher: aes-256-gcm
 - name: 🇺🇸US_69 |27.97Mb
   server: 18.221.238.85
   type: ss
@@ -411,6 +394,20 @@ proxies:
   port: 443
   password: amazonskr05
   cipher: aes-256-cfb
+- name: 🇺🇸US_62 |31.91Mb
+  server: 23.157.40.5
+  type: ss
+  country: 🇺🇸US
+  port: 7307
+  password: FoOiGlkAA9yPEGP
+  cipher: aes-256-gcm
+- name: 🇺🇸US_67 | 5.12Mb
+  server: 212.102.47.129
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
 - name: disney_US | 1.64Mb
   server: 193.124.24.230
   type: vmess
@@ -423,12 +420,31 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: 🇺🇸US_64 |54.38Mb
+  server: pupas-shirting-unsung.freesocks.work
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: p78naCf2EfOlRSLTX0wFVx
+  cipher: chacha20-ietf-poly1305
 - name: disney_US |20.50Mb
   server: 193.124.24.230
   type: vmess
   country: 🇺🇸US
   port: 6513
   uuid: 651d7ad8-db2f-46a9-ec68-ef7054774fc0
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_US | 2.93Mb
+  server: 193.124.24.230
+  type: vmess
+  country: 🇺🇸US
+  port: 6502
+  uuid: 44e32afd-714e-4d60-f6bc-5d7a1d34080b
   alterId: 0
   cipher: auto
   network: none
@@ -442,34 +458,6 @@ proxies:
   port: 5001
   password: Y6R9pAtvxxzmGC
   cipher: aes-256-gcm
-- name: 🇺🇸US_67 | 5.12Mb
-  server: 212.102.47.129
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
-- name: Pool_🇭🇰HK_26 |694.00Mb
-  server: 150.107.46.21
-  type: ssr
-  country: 🇭🇰HK
-  port: 8083
-  password: iFqnzSscN
-  cipher: aes-256-cfb
-  protocol: origin
-  obfs: tls1.2_ticket_auth
-- name: disney_US | 2.93Mb
-  server: 193.124.24.230
-  type: vmess
-  country: 🇺🇸US
-  port: 6502
-  uuid: 44e32afd-714e-4d60-f6bc-5d7a1d34080b
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
 - name: 🇺🇸US_70 | 7.04Mb
   server: 94.131.21.174
   type: ss
@@ -488,163 +476,152 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: 🇺🇸US_64 |54.38Mb
-  server: pupas-shirting-unsung.freesocks.work
+- name: 🇧🇪BE_07 |49.64Mb
+  server: 192.71.249.71
   type: ss
-  country: 🇺🇸US
-  port: 443
-  password: p78naCf2EfOlRSLTX0wFVx
-  cipher: chacha20-ietf-poly1305
-- name: 🇷🇺RU_39 | 9.61Mb
-  server: 94.159.96.245
-  type: ss
-  country: 🇷🇺RU
-  port: 11902
-  password: JRaGZsN5QIA3wZ06Y6YkL7
-  cipher: chacha20-ietf-poly1305
+  country: 🇧🇪BE
+  port: 989
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - _05 |34.03Mb
-  - 🇧🇪BE_07 |49.64Mb
   - 🇩🇪DE_10 | 9.85Mb
-  - 🇩🇪DE_11 | 0.43Mb
+  - 🇩🇪DE_08 | 3.54Mb
   - 🇩🇪DE_09 | 0.74Mb
   - 🇩🇪DE_12 | 1.14Mb
-  - 🇩🇪DE_08 | 3.54Mb
+  - _05 |34.03Mb
+  - 🇩🇪DE_11 | 0.43Mb
+  - 🇩🇪DE_16 | 5.49Mb
   - 🇩🇪DE_13 | 5.10Mb
+  - 🇩🇪DE_15 | 2.22Mb
+  - Relay_-🇺🇸US_01 |86.41Mb
   - 🇪🇸ES_17 | 3.03Mb
   - 🇩🇪DE_14 | 2.38Mb
-  - 🇩🇪DE_15 | 2.22Mb
-  - 🇩🇪DE_16 | 5.49Mb
-  - 🇫🇮FI_19 | 9.26Mb
   - 🇫🇮FI_18 |36.21Mb
   - 🇬🇧GB_23 | 9.84Mb
-  - 🇫🇷FR_21
-  - 🇮🇪IE_29 | 3.23Mb
-  - 🇮🇪IE_28 |14.89Mb
+  - 🇫🇮FI_19 | 9.26Mb
   - 🇫🇷FR_20
-  - 🇮🇸IS_30 | 0.80Mb
+  - 🇫🇷FR_21
+  - 🇮🇪IE_28 |14.89Mb
   - 🇭🇰HK_25 |141.04Mb
+  - 🇮🇪IE_29 | 3.23Mb
+  - 🇮🇸IS_30 | 0.80Mb
   - 🇱🇹LT_32 |33.11Mb
-  - 🇮🇩ID_27 | 7.39Mb
   - 🇳🇴NO_33 | 2.17Mb
+  - 🇱🇹LT_31 | 2.29Mb
   - 🇵🇱PL_34 |33.02Mb
   - 🇵🇱PL_35 |48.89Mb
   - 🇵🇱PL_36 |37.47Mb
   - 🇵🇱PL_37 |39.56Mb
-  - 🇱🇹LT_31 | 2.29Mb
-  - Relay_-🇺🇸US_01 |86.41Mb
   - 🇵🇱PL_38 |42.28Mb
   - 🇷🇺RU_40 | 7.69Mb
   - 🇷🇺RU_41 | 1.51Mb
   - 🇸🇪SE_42 | 3.65Mb
-  - 🇺🇸US_50 | 2.31Mb
   - 🇸🇪SE_44 | 0.57Mb
   - disney_SE | 1.76Mb
-  - 🇺🇸US_51 | 3.99Mb
   - 🇸🇪SE_46 | 2.13Mb
-  - 🇺🇸US_53 | 2.50Mb
-  - 🇺🇸US_55 | 2.86Mb
+  - 🇺🇸US_50 | 2.31Mb
   - 🇸🇪SE_47 | 0.83Mb
+  - 🇺🇸US_51 | 3.99Mb
+  - 🇺🇸US_53 | 2.50Mb
   - 🇺🇸US_52 | 6.50Mb
-  - 🇺🇸US_54 | 8.99Mb
-  - 🇺🇸US_57 | 3.02Mb
-  - 🇺🇸US_60 | 6.38Mb
-  - 🇺🇸US_61 |29.95Mb
-  - 🇹🇷TR_49 | 2.27Mb
-  - 🇺🇸US_56 | 5.41Mb
-  - 🇸🇬SG_48 |13.35Mb
-  - 🇺🇸US_58 | 3.49Mb
-  - 🇺🇸US_59 | 3.11Mb
-  - 🇺🇸US_63 | 0.41Mb
-  - 🇺🇸US_62 |31.91Mb
-  - 🇺🇸US_66 | 4.80Mb
-  - 🇺🇸US_68 |17.08Mb
-  - 🇺🇸US_69 |27.97Mb
-  - disney_US | 1.64Mb
-  - disney_US |20.50Mb
-  - 🇺🇸US_65 |39.46Mb
-  - 🇺🇸US_67 | 5.12Mb
   - Pool_🇭🇰HK_26 |694.00Mb
+  - 🇺🇸US_55 | 2.86Mb
+  - 🇺🇸US_57 | 3.02Mb
+  - 🇺🇸US_54 | 8.99Mb
+  - 🇺🇸US_58 | 3.49Mb
+  - 🇺🇸US_56 | 5.41Mb
+  - 🇹🇷TR_49 | 2.27Mb
+  - 🇺🇸US_61 |29.95Mb
+  - 🇺🇸US_60 | 6.38Mb
+  - 🇺🇸US_59 | 3.11Mb
+  - 🇸🇬SG_48 |13.35Mb
+  - 🇺🇸US_63 | 0.41Mb
+  - 🇺🇸US_68 |17.08Mb
+  - 🇺🇸US_66 | 4.80Mb
+  - 🇺🇸US_69 |27.97Mb
+  - 🇺🇸US_62 |31.91Mb
+  - 🇺🇸US_67 | 5.12Mb
+  - disney_US | 1.64Mb
+  - 🇺🇸US_64 |54.38Mb
+  - disney_US |20.50Mb
   - disney_US | 2.93Mb
+  - 🇺🇸US_65 |39.46Mb
   - 🇺🇸US_70 | 7.04Mb
   - Pool_🇺🇸US_74 | 3.49Mb
-  - 🇺🇸US_64 |54.38Mb
-  - 🇷🇺RU_39 | 9.61Mb
+  - 🇧🇪BE_07 |49.64Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - _05 |34.03Mb
-  - 🇧🇪BE_07 |49.64Mb
   - 🇩🇪DE_10 | 9.85Mb
-  - 🇩🇪DE_11 | 0.43Mb
+  - 🇩🇪DE_08 | 3.54Mb
   - 🇩🇪DE_09 | 0.74Mb
   - 🇩🇪DE_12 | 1.14Mb
-  - 🇩🇪DE_08 | 3.54Mb
+  - _05 |34.03Mb
+  - 🇩🇪DE_11 | 0.43Mb
+  - 🇩🇪DE_16 | 5.49Mb
   - 🇩🇪DE_13 | 5.10Mb
+  - 🇩🇪DE_15 | 2.22Mb
+  - Relay_-🇺🇸US_01 |86.41Mb
   - 🇪🇸ES_17 | 3.03Mb
   - 🇩🇪DE_14 | 2.38Mb
-  - 🇩🇪DE_15 | 2.22Mb
-  - 🇩🇪DE_16 | 5.49Mb
-  - 🇫🇮FI_19 | 9.26Mb
   - 🇫🇮FI_18 |36.21Mb
   - 🇬🇧GB_23 | 9.84Mb
-  - 🇫🇷FR_21
-  - 🇮🇪IE_29 | 3.23Mb
-  - 🇮🇪IE_28 |14.89Mb
+  - 🇫🇮FI_19 | 9.26Mb
   - 🇫🇷FR_20
-  - 🇮🇸IS_30 | 0.80Mb
+  - 🇫🇷FR_21
+  - 🇮🇪IE_28 |14.89Mb
   - 🇭🇰HK_25 |141.04Mb
+  - 🇮🇪IE_29 | 3.23Mb
+  - 🇮🇸IS_30 | 0.80Mb
   - 🇱🇹LT_32 |33.11Mb
-  - 🇮🇩ID_27 | 7.39Mb
   - 🇳🇴NO_33 | 2.17Mb
+  - 🇱🇹LT_31 | 2.29Mb
   - 🇵🇱PL_34 |33.02Mb
   - 🇵🇱PL_35 |48.89Mb
   - 🇵🇱PL_36 |37.47Mb
   - 🇵🇱PL_37 |39.56Mb
-  - 🇱🇹LT_31 | 2.29Mb
-  - Relay_-🇺🇸US_01 |86.41Mb
   - 🇵🇱PL_38 |42.28Mb
   - 🇷🇺RU_40 | 7.69Mb
   - 🇷🇺RU_41 | 1.51Mb
   - 🇸🇪SE_42 | 3.65Mb
-  - 🇺🇸US_50 | 2.31Mb
   - 🇸🇪SE_44 | 0.57Mb
   - disney_SE | 1.76Mb
-  - 🇺🇸US_51 | 3.99Mb
   - 🇸🇪SE_46 | 2.13Mb
-  - 🇺🇸US_53 | 2.50Mb
-  - 🇺🇸US_55 | 2.86Mb
+  - 🇺🇸US_50 | 2.31Mb
   - 🇸🇪SE_47 | 0.83Mb
+  - 🇺🇸US_51 | 3.99Mb
+  - 🇺🇸US_53 | 2.50Mb
   - 🇺🇸US_52 | 6.50Mb
-  - 🇺🇸US_54 | 8.99Mb
-  - 🇺🇸US_57 | 3.02Mb
-  - 🇺🇸US_60 | 6.38Mb
-  - 🇺🇸US_61 |29.95Mb
-  - 🇹🇷TR_49 | 2.27Mb
-  - 🇺🇸US_56 | 5.41Mb
-  - 🇸🇬SG_48 |13.35Mb
-  - 🇺🇸US_58 | 3.49Mb
-  - 🇺🇸US_59 | 3.11Mb
-  - 🇺🇸US_63 | 0.41Mb
-  - 🇺🇸US_62 |31.91Mb
-  - 🇺🇸US_66 | 4.80Mb
-  - 🇺🇸US_68 |17.08Mb
-  - 🇺🇸US_69 |27.97Mb
-  - disney_US | 1.64Mb
-  - disney_US |20.50Mb
-  - 🇺🇸US_65 |39.46Mb
-  - 🇺🇸US_67 | 5.12Mb
   - Pool_🇭🇰HK_26 |694.00Mb
+  - 🇺🇸US_55 | 2.86Mb
+  - 🇺🇸US_57 | 3.02Mb
+  - 🇺🇸US_54 | 8.99Mb
+  - 🇺🇸US_58 | 3.49Mb
+  - 🇺🇸US_56 | 5.41Mb
+  - 🇹🇷TR_49 | 2.27Mb
+  - 🇺🇸US_61 |29.95Mb
+  - 🇺🇸US_60 | 6.38Mb
+  - 🇺🇸US_59 | 3.11Mb
+  - 🇸🇬SG_48 |13.35Mb
+  - 🇺🇸US_63 | 0.41Mb
+  - 🇺🇸US_68 |17.08Mb
+  - 🇺🇸US_66 | 4.80Mb
+  - 🇺🇸US_69 |27.97Mb
+  - 🇺🇸US_62 |31.91Mb
+  - 🇺🇸US_67 | 5.12Mb
+  - disney_US | 1.64Mb
+  - 🇺🇸US_64 |54.38Mb
+  - disney_US |20.50Mb
   - disney_US | 2.93Mb
+  - 🇺🇸US_65 |39.46Mb
   - 🇺🇸US_70 | 7.04Mb
   - Pool_🇺🇸US_74 | 3.49Mb
-  - 🇺🇸US_64 |54.38Mb
-  - 🇷🇺RU_39 | 9.61Mb
+  - 🇧🇪BE_07 |49.64Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
