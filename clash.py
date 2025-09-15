@@ -152,6 +152,15 @@ def write_clash_config(filtered_proxies, filename="config.yaml"):  # {{ edit_1 }
                 "proxies": [],
                 "url": "https://www.google.com/generate_204",
                 # "timeout": 5000,
+            },
+            {
+                "name": "♻️ 自动选择", # New auto-select group
+                "type": "url-test",
+                "proxies": [], # This will be filled with all filtered proxies
+                "url": "https://www.google.com/generate_204",
+                "interval": 300, # Test every 5 minutes
+                "tolerance": 50, # Optional: tolerance for latency fluctuations
+                "max-history": 10, # Optional: number of results to keep for latency history
             }
         ],
         "rules": ["GEOIP,CN,DIRECT", "MATCH,🚀 节点选择"],
@@ -167,7 +176,9 @@ def write_clash_config(filtered_proxies, filename="config.yaml"):  # {{ edit_1 }
     for group in base_config["proxy-groups"]:
         if group["name"] in ["🚀 节点选择"]:
             group["proxies"].extend(filtered_proxy_names)
-
+            group["proxies"].insert(0, "♻️ 自动选择")
+        elif group["name"] == "♻️ 自动选择":
+            group["proxies"].extend(filtered_proxy_names)
     try:
         with open(filename, "w", encoding="utf-8") as f:
             yaml.dump(base_config, f, allow_unicode=True, sort_keys=False)
