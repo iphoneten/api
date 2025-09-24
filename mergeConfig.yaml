@@ -29,9 +29,9 @@ proxy-providers:
     interval: 86400
     path: ./providers/xship.yaml
     health-check:
-      enable: false
+      enable: true
       url: 'https://www.google.com/generate_204'
-      interval: 300
+      interval: 86400
   
   aifjj:
     type: http
@@ -39,9 +39,9 @@ proxy-providers:
     interval: 86400
     path: ./providers/aifjj.yaml
     health-check:
-      enable: false
+      enable: true
       url: 'https://www.google.com/generate_204'
-      interval: 300
+      interval: 86400
 
   config:
     type: http
@@ -49,9 +49,9 @@ proxy-providers:
     interval: 86400
     path: ./providers/config.yaml
     health-check:
-      enable: false
+      enable: true
       url: 'https://www.google.com/generate_204'
-      interval: 300
+      interval: 86400
     
 rule-providers:
   AntiAd:
@@ -121,9 +121,9 @@ proxy-groups:
   - name: 负载均衡
     type: load-balance
     use: [xship, aifjj, config]
-    interval: 3000
+    interval: 300
     strategy: round-robin # 轮询方式，可选 'consistent-hashing' 'round-robin'
-    url: 'https://www.google.com/generate_204'
+    url: 'http://cp.cloudflare.com/generate_204'
     max-failed-times: 3
     timeout: 5000 
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|🔒|免费|推广)).*$
@@ -131,8 +131,8 @@ proxy-groups:
   - name: 自动选择
     type: url-test
     use: [xship, aifjj, config]
-    interval: 3000
-    url: 'https://www.google.com/generate_204'
+    interval: 300
+    url: 'http://cp.cloudflare.com/generate_204'
     max-failed-times: 3
     timeout: 5000 
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|🔒|免费|推广)).*$
@@ -143,7 +143,7 @@ proxy-groups:
       - 自动选择
       - 负载均衡
     use: [xship, aifjj, config]
-    url: 'https://www.google.com/generate_204'
+    url: 'http://cp.cloudflare.com/generate_204'
     timeout: 5000
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|🔒|免费|推广)).*$
 
