@@ -52,7 +52,17 @@ proxy-providers:
       enable: true
       url: 'https://www.google.com/generate_204'
       interval: 86400
-    
+
+  newfc:
+    type: http
+    url: "https://sub.dmit.dpdns.org/share/sub/dingyue_Center_newCF?token=RDAsvCX4jnVRs5imaSC3R"
+    interval: 86400
+    path: ./providers/newfc.yaml
+    health-check:
+      enable: true
+      url: 'https://www.google.com/generate_204'
+      interval: 86400
+         
 rule-providers:
   AntiAd:
     type: http
@@ -120,7 +130,7 @@ rule-providers:
 proxy-groups:
   - name: 负载均衡
     type: load-balance
-    use: [xship, aifjj, config]
+    use: [newcf, xship, aifjj, config]
     interval: 300
     strategy: round-robin # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'http://cp.cloudflare.com/generate_204'
@@ -130,7 +140,7 @@ proxy-groups:
 
   - name: 自动选择
     type: url-test
-    use: [xship, aifjj, config]
+    use: [newcf, xship, aifjj, config]
     interval: 300
     url: 'http://cp.cloudflare.com/generate_204'
     max-failed-times: 3
@@ -142,7 +152,7 @@ proxy-groups:
     proxies:
       - 自动选择
       - 负载均衡
-    use: [xship, aifjj, config]
+    use: [newcf, xship, aifjj, config]
     url: 'http://cp.cloudflare.com/generate_204'
     timeout: 5000
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|🔒|免费|推广)).*$
@@ -150,9 +160,9 @@ proxy-groups:
 rules:
   - RULE-SET,AD,REJECT
   - RULE-SET,adblockmihomo,REJECT
-  - RULE-SET,EasyList,REJECT
-  - RULE-SET,EasyListChina,REJECT
-  - RULE-SET,EasyPrivacy,REJECT
+  # - RULE-SET,EasyList,REJECT
+  # - RULE-SET,EasyListChina,REJECT
+  # - RULE-SET,EasyPrivacy,REJECT
   - RULE-SET,ProgramAD,REJECT
   - RULE-SET,adblock_loyal,REJECT
   - RULE-SET,banAD,REJECT
