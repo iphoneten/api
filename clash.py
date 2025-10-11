@@ -188,7 +188,7 @@ def write_clash_config(filtered_proxies, filename="config.yaml"):  # {{ edit_1 }
 
 
 if __name__ == "__main__":
-    url = "https://proxypool.dmit.dpdns.org/clash/proxies?type=vmess,hysteria2,ss,ssr,trojan&nc=CN"
+    url = "https://proxypool.dmit.dpdns.org/clash/proxies?type=vmess,hysteria2,ss,ssr,trojan&nc=CN&speed=10"
     web_content = fetch_proxies_from_url(url)
 
     if web_content:
