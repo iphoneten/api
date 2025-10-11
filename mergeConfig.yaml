@@ -22,15 +22,15 @@ profile:
 proxies:
 
 proxy-providers:
-  # xship:
-  #   type: http
-  #   url: "https://xship.top/v1/subscribe?starlink=SSYI1sE1b_KXI4PALsNsuyqQ"
-  #   interval: 86400
-  #   path: ./providers/xship.yaml
-  #   health-check:
-  #     enable: true
-  #     url: 'https://www.google.com/generate_204'
-  #     interval: 86400
+  xship:
+    type: http
+    url: "https://raw.githubusercontent.com/iphoneten/api/refs/heads/main/clash.yaml"
+    interval: 86400
+    path: ./providers/xship.yaml
+    health-check:
+      enable: true
+      url: 'https://www.google.com/generate_204'
+      interval: 86400
   # aifjj:
   #   type: http
   #   url: "https://www.a.aifjj.asia/api/v1/client/subscribe/3eddd42e9dc1e77d881326ad87da9246"
@@ -104,7 +104,7 @@ rule-providers:
 proxy-groups:
   - name: 负载均衡
     type: load-balance
-    use: [newcf, config]
+    use: [newcf, config, xship]
     interval: 300
     strategy: round-robin # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'http://cp.cloudflare.com/generate_204'
@@ -114,7 +114,7 @@ proxy-groups:
 
   - name: 自动选择
     type: url-test
-    use: [newcf, config]
+    use: [newcf, config, xship]
     interval: 300
     url: 'http://cp.cloudflare.com/generate_204'
     max-failed-times: 3
@@ -126,7 +126,7 @@ proxy-groups:
     proxies:
       - 自动选择
       - 负载均衡
-    use: [newcf, config]
+    use: [newcf, config, xship]
     url: 'http://cp.cloudflare.com/generate_204'
     timeout: 5000
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|🔒|免费|推广)).*$
