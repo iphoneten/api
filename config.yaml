@@ -12,13 +12,6 @@ proxies:
   port: 8090
   password: PCnnH6SQSnfoS27
   cipher: aes-256-gcm
-- name: 🇫🇷FR_16 |30.74Mb
-  server: 83.147.216.70
-  type: ss
-  country: 🇫🇷FR
-  port: 64519
-  password: eBzKXxEmQlAZKIBC8PhQYZ
-  cipher: chacha20-ietf-poly1305
 - name: Pool_🇭🇰HK_17 |459.00Mb
   server: 150.107.46.21
   type: ssr
@@ -28,21 +21,28 @@ proxies:
   cipher: aes-256-cfb
   protocol: origin
   obfs: tls1.2_ticket_auth
+- name: 🇫🇷FR_16 |30.74Mb
+  server: 83.147.216.70
+  type: ss
+  country: 🇫🇷FR
+  port: 64519
+  password: eBzKXxEmQlAZKIBC8PhQYZ
+  cipher: chacha20-ietf-poly1305
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇺🇸US_22 |31.37Mb
-  - 🇫🇷FR_16 |30.74Mb
   - Pool_🇭🇰HK_17 |459.00Mb
+  - 🇫🇷FR_16 |30.74Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇺🇸US_22 |31.37Mb
-  - 🇫🇷FR_16 |30.74Mb
   - Pool_🇭🇰HK_17 |459.00Mb
+  - 🇫🇷FR_16 |30.74Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
