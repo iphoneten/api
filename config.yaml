@@ -12,6 +12,13 @@ proxies:
   port: 8090
   password: PCnnH6SQSnfoS27
   cipher: aes-256-gcm
+- name: disney_DE |13.76Mb
+  server: 81.19.141.45
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: uEWM15tCrQ9BekoAVWQg0z
+  cipher: chacha20-ietf-poly1305
 - name: 🇸🇪SE_21 |12.03Mb
   server: 13.53.127.124
   type: ss
@@ -42,34 +49,27 @@ proxies:
   cipher: aes-256-cfb
   protocol: origin
   obfs: tls1.2_ticket_auth
-- name: disney_DE |13.76Mb
-  server: 81.19.141.45
-  type: ss
-  country: 🇩🇪DE
-  port: 443
-  password: uEWM15tCrQ9BekoAVWQg0z
-  cipher: chacha20-ietf-poly1305
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - 🇺🇸US_22 |37.20Mb
+  - disney_DE |13.76Mb
   - 🇸🇪SE_21 |12.03Mb
   - 🇫🇷FR_16 |30.74Mb
   - 🇩🇪DE_14 |14.12Mb
   - Pool_🇭🇰HK_17 |925.00Mb
-  - disney_DE |13.76Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - 🇺🇸US_22 |37.20Mb
+  - disney_DE |13.76Mb
   - 🇸🇪SE_21 |12.03Mb
   - 🇫🇷FR_16 |30.74Mb
   - 🇩🇪DE_14 |14.12Mb
   - Pool_🇭🇰HK_17 |925.00Mb
-  - disney_DE |13.76Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
