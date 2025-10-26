@@ -4,16 +4,278 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
-proxies: []
+proxies:
+- name: 🇺🇸US_925 |20.80Mb
+  server: 23.157.40.5
+  type: ss
+  country: 🇺🇸US
+  port: 8119
+  password: cdBIDV42DCwnfIN
+  cipher: aes-256-gcm
+- name: 🇺🇸US_886 |37.58Mb
+  server: 23.157.40.5
+  type: ss
+  country: 🇺🇸US
+  port: 8080
+  password: KixLvKzwjekG00rm
+  cipher: aes-256-gcm
+- name: 🇮🇷IR_649 |11.77Mb
+  server: 151.242.251.147
+  type: ss
+  country: 🇮🇷IR
+  port: 8080
+  password: cvII85TrW6n0OGyfpHVS1u
+  cipher: chacha20-ietf-poly1305
+- name: 🇵🇱PL_633 |162.44Mb
+  server: 77.83.246.74
+  type: ss
+  country: 🇵🇱PL
+  port: 443
+  password: VoD4FlyDLrPBPAuMLFUpUX
+  cipher: chacha20-ietf-poly1305
+- name: ' |39.45Mb'
+  server: 47.243.168.211
+  type: vmess
+  country: 🇭🇰HK
+  port: 24680
+  uuid: 33cb9737-88a5-4372-9db0-84255e243c1d
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /arki?ed=2048
+- name: ' |83.23Mb'
+  server: 47.239.81.113
+  type: vmess
+  country: 🇭🇰HK
+  port: 28421
+  uuid: 10f1cf8b-065b-49bd-9c2c-46e64ed08b3d
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /arki?ed=2048
+- name: ' |14.69Mb'
+  server: blog.aihi.uk
+  type: vmess
+  country: 🇺🇸US
+  port: 3306
+  uuid: fdf7dcdc-96f0-4d36-a412-1866c737c3fe
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: blog.aihi.uk
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /ray
+    headers:
+      HOST: blog.aihi.uk
+- name: 🇵🇱PL_672 |70.84Mb
+  server: 77.83.246.74
+  type: ss
+  country: 🇵🇱PL
+  port: 443
+  password: wh9TzuckwJLxm0REq9fx6e
+  cipher: chacha20-ietf-poly1305
+- name: Relay_🇮🇶IQ-🇮🇶IQ_505 |17.22Mb
+  server: h110vpnnl3.outlinekeys.net
+  type: ss
+  country: 🇮🇶IQ
+  port: 58080
+  password: RKwqPa0fotnJ6oaFsEpGWI
+  cipher: chacha20-ietf-poly1305
+- name: 🇺🇸US_795 |10.01Mb
+  server: 3.145.163.105
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: ' |10.14Mb'
+  server: 193.124.24.247
+  type: vmess
+  country: 🇺🇸US
+  port: 6514
+  uuid: c362d735-01a8-48eb-baa2-ae7aa63bfdc3
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: 🇬🇧GB_427 |17.60Mb
+  server: 89.185.84.185
+  type: ss
+  country: 🇬🇧GB
+  port: 443
+  password: DOOg9CAD1UgZ2iRsu5fchI
+  cipher: chacha20-ietf-poly1305
+- name: 🇱🇹LT_544 |10.02Mb
+  server: 45.87.175.188
+  type: ss
+  country: 🇱🇹LT
+  port: 8080
+  password: cvII85TrW6n0OGyfpHVS1u
+  cipher: chacha20-ietf-poly1305
+- name: ' |32.32Mb'
+  server: 103.56.115.243
+  type: vmess
+  country: 🇭🇰HK
+  port: 22187
+  uuid: 96d53558-f7a1-4ead-ad11-e57b276b3955
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /arki?ed=2048
+- name: 🇵🇱PL_603 |61.42Mb
+  server: 77.83.246.74
+  type: ss
+  country: 🇵🇱PL
+  port: 443
+  password: 9OXJ5lzLhjPA2s4rbqi9Nz
+  cipher: chacha20-ietf-poly1305
+- name: 🇬🇧GB_366 |18.71Mb
+  server: 18.175.147.245
+  type: ss
+  country: 🇬🇧GB
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: ' |11.40Mb'
+  server: 8.217.158.92
+  type: vmess
+  country: 🇭🇰HK
+  port: 50060
+  uuid: 7ecac376-1809-4f72-bd59-aa93d748a822
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /arki?ed=2048
+- name: _638 |20.43Mb
+  server: 172.105.199.111
+  type: ss
+  country: 🇯🇵JP
+  port: 8080
+  password: 14fFPrbezE3HDZzsMOr6
+  cipher: rc4-md5
+- name: 🇮🇷IR_310 |14.85Mb
+  server: 151.242.251.147
+  type: ss
+  country: 🇮🇷IR
+  port: 8080
+  password: 4a2rfixophdjffa8KVA4Aa
+  cipher: chacha20-ietf-poly1305
+- name: ' |22.21Mb'
+  server: 103.56.115.243
+  type: vmess
+  country: 🇭🇰HK
+  port: 18161
+  uuid: d8a4a88a-87ec-49ee-9a2d-871e47e0479d
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /arki?ed=2048
+- name: ' |77.40Mb'
+  server: 8.218.175.64
+  type: vmess
+  country: 🇭🇰HK
+  port: 51823
+  uuid: b8ee639c-a7ac-49fa-bc49-2510e885043f
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /arki?ed=2048
+- name: ' |13.00Mb'
+  server: 8.218.71.140
+  type: vmess
+  country: 🇭🇰HK
+  port: 63704
+  uuid: 097c2696-113a-4b7c-9ca2-f37f4d86dbc4
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /arki?ed=2048
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
+  - 🇺🇸US_925 |20.80Mb
+  - 🇺🇸US_886 |37.58Mb
+  - 🇮🇷IR_649 |11.77Mb
+  - 🇵🇱PL_633 |162.44Mb
+  - ' |39.45Mb'
+  - ' |83.23Mb'
+  - ' |14.69Mb'
+  - 🇵🇱PL_672 |70.84Mb
+  - Relay_🇮🇶IQ-🇮🇶IQ_505 |17.22Mb
+  - 🇺🇸US_795 |10.01Mb
+  - ' |10.14Mb'
+  - 🇬🇧GB_427 |17.60Mb
+  - 🇱🇹LT_544 |10.02Mb
+  - ' |32.32Mb'
+  - 🇵🇱PL_603 |61.42Mb
+  - 🇬🇧GB_366 |18.71Mb
+  - ' |11.40Mb'
+  - _638 |20.43Mb
+  - 🇮🇷IR_310 |14.85Mb
+  - ' |22.21Mb'
+  - ' |77.40Mb'
+  - ' |13.00Mb'
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
-  proxies: []
+  proxies:
+  - 🇺🇸US_925 |20.80Mb
+  - 🇺🇸US_886 |37.58Mb
+  - 🇮🇷IR_649 |11.77Mb
+  - 🇵🇱PL_633 |162.44Mb
+  - ' |39.45Mb'
+  - ' |83.23Mb'
+  - ' |14.69Mb'
+  - 🇵🇱PL_672 |70.84Mb
+  - Relay_🇮🇶IQ-🇮🇶IQ_505 |17.22Mb
+  - 🇺🇸US_795 |10.01Mb
+  - ' |10.14Mb'
+  - 🇬🇧GB_427 |17.60Mb
+  - 🇱🇹LT_544 |10.02Mb
+  - ' |32.32Mb'
+  - 🇵🇱PL_603 |61.42Mb
+  - 🇬🇧GB_366 |18.71Mb
+  - ' |11.40Mb'
+  - _638 |20.43Mb
+  - 🇮🇷IR_310 |14.85Mb
+  - ' |22.21Mb'
+  - ' |77.40Mb'
+  - ' |13.00Mb'
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
