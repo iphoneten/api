@@ -4,16 +4,332 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
-proxies: []
+proxies:
+- name: 🇨🇦CA_151 |10.04Mb
+  server: 138.197.153.10
+  type: ss
+  country: 🇨🇦CA
+  port: 8080
+  password: 14fFPrbezE3HDZzsMOr6
+  cipher: rc4-md5
+- name: Relay_🇨🇦CA-🇨🇦CA_162 |265.00Mb
+  server: ssca.irundns.net
+  type: ssr
+  country: 🇨🇦CA
+  port: 443
+  password: $$Turb0VPN$$
+  cipher: aes-128-cfb
+  protocol: auth_aes128_md5
+  obfs: http_post
+- name: _127 |34.80Mb
+  server: 138.186.142.80
+  type: ss
+  port: 990
+  udp: true
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  cipher: chacha20-ietf-poly1305
+- name: _112 |10.07Mb
+  server: 78.129.140.11
+  type: ss
+  port: 443
+  udp: true
+  password: 3528n6UdAi8rJWSsHeao9E
+  cipher: chacha20-ietf-poly1305
+- name: _118 |10.47Mb
+  server: 62.100.205.100
+  type: ss
+  port: 990
+  udp: true
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  cipher: chacha20-ietf-poly1305
+- name: 🇧🇪BE_144 |124.56Mb
+  server: 192.71.249.78
+  type: ss
+  country: 🇧🇪BE
+  port: 989
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: _128 |36.35Mb
+  server: 109.61.46.43
+  type: ss
+  port: 990
+  udp: true
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  cipher: chacha20-ietf-poly1305
+- name: _114 |13.43Mb
+  server: 176.126.83.158
+  type: ss
+  port: 990
+  udp: true
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  cipher: chacha20-ietf-poly1305
+- name: _113 |13.60Mb
+  server: 91.219.237.163
+  type: ss
+  port: 990
+  udp: true
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  cipher: chacha20-ietf-poly1305
+- name: Relay_-🇳🇱NL_117 |36.39Mb
+  server: 193.135.174.135
+  type: ss
+  port: 990
+  udp: true
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  cipher: chacha20-ietf-poly1305
+- name: Relay_🇨🇾CY-🇺🇸US_180 |321.73Mb
+  server: csgo.com
+  type: vmess
+  country: 🇨🇾CY
+  port: 2053
+  uuid: a25ff90c-964c-485a-b72a-858864a27dc0
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: cdn-node-oss-74.paofu.de
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /profile/sharenode
+    headers:
+      HOST: cdn-node-oss-74.paofu.de
+- name: 🇨🇿CZ_181 |38.46Mb
+  server: 195.181.160.6
+  type: ss
+  country: 🇨🇿CZ
+  port: 990
+  password: f8f7aCzcPKbsF8p3
+  cipher: chacha20-ietf-poly1305
+- name: 🇩🇪DE_188 |43.11Mb
+  server: 81.19.141.45
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: MrrxToZtXWAIfxUMsJlHYd
+  cipher: chacha20-ietf-poly1305
+- name: 🇩🇪DE_209 |38.40Mb
+  server: 81.19.141.45
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: yBEQFFUsBppdRu0DJ6FmAB
+  cipher: chacha20-ietf-poly1305
+- name: 🇩🇪DE_189 |48.75Mb
+  server: 35.159.233.191
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: 🇩🇪DE_210 |48.19Mb
+  server: 81.19.141.45
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: ql8iN6ChurUrd25DoZJA0n
+  cipher: chacha20-ietf-poly1305
+- name: 🇩🇪DE_211 |160.96Mb
+  server: 81.19.141.45
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: cM0e4xONCGzYr68GM821pi
+  cipher: chacha20-ietf-poly1305
+- name: 🇩🇪DE_213 |41.51Mb
+  server: 81.19.141.45
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: Dxubsrj4reAKEXeVggcH6U
+  cipher: chacha20-ietf-poly1305
+- name: 🇩🇪DE_214 |93.37Mb
+  server: 81.19.141.45
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: Q9Ufj9i6HIr5GZufTtOLke
+  cipher: chacha20-ietf-poly1305
+- name: 🇩🇪DE_212 |27.89Mb
+  server: 81.19.141.45
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: c88Bv5TfU1YjNDK3hldo8G
+  cipher: chacha20-ietf-poly1305
+- name: 🇺🇸US_743 |19.52Mb
+  server: 38.91.102.40
+  type: ss
+  country: 🇺🇸US
+  port: 5003
+  password: g5MeD6Ft3CWlJId
+  cipher: aes-256-gcm
+- name: 🇩🇪DE_215 |19.56Mb
+  server: 81.19.141.45
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: 00m6EyIWLo4YyBFeqeZkNt
+  cipher: chacha20-ietf-poly1305
+- name: 🇺🇸US_780 |559.65Mb
+  server: 15.204.103.7
+  type: vmess
+  country: 🇺🇸US
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: lammaland.org
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: linkvws
+    headers:
+      HOST: lammaland.org
+- name: 🇯🇵JP_454 |10.23Mb
+  server: 45.32.45.45
+  type: vmess
+  country: 🇯🇵JP
+  port: 14760
+  uuid: dbf7a6e4-d518-4f9b-a55e-27ef892ffac1
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: 🇩🇪DE_225 |48.80Mb
+  server: 3.79.57.79
+  type: ss
+  country: 🇩🇪DE
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: 🇺🇸US_747 |150.36Mb
+  server: 194.116.173.21
+  type: ss
+  country: 🇺🇸US
+  port: 9038
+  password: gYCYXfkUQEs2TaJQ
+  cipher: aes-256-cfb
+- name: 🇪🇸ES_287 |46.36Mb
+  server: 194.87.45.189
+  type: ss
+  country: 🇪🇸ES
+  port: 443
+  password: izQIvp0nUcXqsEie4aKqVh
+  cipher: chacha20-ietf-poly1305
+- name: 🇬🇧GB_357 |13.34Mb
+  server: 89.185.84.185
+  type: ss
+  country: 🇬🇧GB
+  port: 443
+  password: IP77QXJz3YEA90m7miLOBu
+  cipher: chacha20-ietf-poly1305
+- name: 🇺🇸US_766 |35.80Mb
+  server: 18.188.227.100
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: 🇬🇧GB_315 |11.47Mb
+  server: 18.132.10.71
+  type: ss
+  country: 🇬🇧GB
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: 🇵🇱PL_618 |69.49Mb
+  server: 77.83.246.74
+  type: ss
+  country: 🇵🇱PL
+  port: 443
+  password: ID1g0nQflmVQPZqmkEtFCe
+  cipher: chacha20-ietf-poly1305
+- name: 🇵🇾PY_646 |35.68Mb
+  server: 38.165.233.18
+  type: ss
+  country: 🇵🇾PY
+  port: 990
+  password: f8f7aCzcPKbsF8p3
+  cipher: chacha20-ietf-poly1305
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
+  - 🇨🇦CA_151 |10.04Mb
+  - Relay_🇨🇦CA-🇨🇦CA_162 |265.00Mb
+  - _127 |34.80Mb
+  - _112 |10.07Mb
+  - _118 |10.47Mb
+  - 🇧🇪BE_144 |124.56Mb
+  - _128 |36.35Mb
+  - _114 |13.43Mb
+  - _113 |13.60Mb
+  - Relay_-🇳🇱NL_117 |36.39Mb
+  - Relay_🇨🇾CY-🇺🇸US_180 |321.73Mb
+  - 🇨🇿CZ_181 |38.46Mb
+  - 🇩🇪DE_188 |43.11Mb
+  - 🇩🇪DE_209 |38.40Mb
+  - 🇩🇪DE_189 |48.75Mb
+  - 🇩🇪DE_210 |48.19Mb
+  - 🇩🇪DE_211 |160.96Mb
+  - 🇩🇪DE_213 |41.51Mb
+  - 🇩🇪DE_214 |93.37Mb
+  - 🇩🇪DE_212 |27.89Mb
+  - 🇺🇸US_743 |19.52Mb
+  - 🇩🇪DE_215 |19.56Mb
+  - 🇺🇸US_780 |559.65Mb
+  - 🇯🇵JP_454 |10.23Mb
+  - 🇩🇪DE_225 |48.80Mb
+  - 🇺🇸US_747 |150.36Mb
+  - 🇪🇸ES_287 |46.36Mb
+  - 🇬🇧GB_357 |13.34Mb
+  - 🇺🇸US_766 |35.80Mb
+  - 🇬🇧GB_315 |11.47Mb
+  - 🇵🇱PL_618 |69.49Mb
+  - 🇵🇾PY_646 |35.68Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
-  proxies: []
+  proxies:
+  - 🇨🇦CA_151 |10.04Mb
+  - Relay_🇨🇦CA-🇨🇦CA_162 |265.00Mb
+  - _127 |34.80Mb
+  - _112 |10.07Mb
+  - _118 |10.47Mb
+  - 🇧🇪BE_144 |124.56Mb
+  - _128 |36.35Mb
+  - _114 |13.43Mb
+  - _113 |13.60Mb
+  - Relay_-🇳🇱NL_117 |36.39Mb
+  - Relay_🇨🇾CY-🇺🇸US_180 |321.73Mb
+  - 🇨🇿CZ_181 |38.46Mb
+  - 🇩🇪DE_188 |43.11Mb
+  - 🇩🇪DE_209 |38.40Mb
+  - 🇩🇪DE_189 |48.75Mb
+  - 🇩🇪DE_210 |48.19Mb
+  - 🇩🇪DE_211 |160.96Mb
+  - 🇩🇪DE_213 |41.51Mb
+  - 🇩🇪DE_214 |93.37Mb
+  - 🇩🇪DE_212 |27.89Mb
+  - 🇺🇸US_743 |19.52Mb
+  - 🇩🇪DE_215 |19.56Mb
+  - 🇺🇸US_780 |559.65Mb
+  - 🇯🇵JP_454 |10.23Mb
+  - 🇩🇪DE_225 |48.80Mb
+  - 🇺🇸US_747 |150.36Mb
+  - 🇪🇸ES_287 |46.36Mb
+  - 🇬🇧GB_357 |13.34Mb
+  - 🇺🇸US_766 |35.80Mb
+  - 🇬🇧GB_315 |11.47Mb
+  - 🇵🇱PL_618 |69.49Mb
+  - 🇵🇾PY_646 |35.68Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
