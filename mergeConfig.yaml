@@ -142,6 +142,21 @@ rules:
   - RULE-SET,banAD,REJECT
   - RULE-SET,AntiAd,REJECT
 
+ # 小米系统 / 应用检测 / 上报
+  - DOMAIN-SUFFIX,miui.com,REJECT
+  - DOMAIN-SUFFIX,micloud.com,REJECT
+  - DOMAIN-SUFFIX,miwifi.com,REJECT
+  - DOMAIN-SUFFIX,micloud.net,REJECT
+  - DOMAIN-SUFFIX,app.mi.com,REJECT
+  - DOMAIN-SUFFIX,mi-img.com,REJECT
+  - DOMAIN-SUFFIX,mistat.xiaomi.com,REJECT
+  - DOMAIN-SUFFIX,mipush.com,REJECT
+  - DOMAIN-SUFFIX,mipush.net,REJECT
+  - DOMAIN-SUFFIX,mipay.com,REJECT
+  - DOMAIN-KEYWORD,sogou,REJECT
+  - DOMAIN-SUFFIX,sogou.com,REJECT
+  - DOMAIN-SUFFIX,sogo.com,REJECT
+
   # 新增的直连规则
   - DOMAIN-SUFFIX,pages.dev,DIRECT
   
