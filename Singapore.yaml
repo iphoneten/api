@@ -5,26 +5,34 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇸🇬 新加坡 1, server: 172.67.114.23, port: 443, type: trojan, password: qw6698, sni: sdgsd.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sdgsd.pages.dev}}, udp: true}
-  - {name: 🇸🇬 新加坡, server: 172.67.105.21, port: 443, type: trojan, password: qw6698, sni: sdgsd.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sdgsd.pages.dev}}, udp: true}
+  - {name: 🇸🇬 新加坡-联通, server: 172.67.105.21, port: 443, type: trojan, password: qw6698, sni: sdgsd.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sdgsd.pages.dev}}, udp: true}
+  - {name: 🇸🇬 新加坡-电信, server: 198.41.222.115, port: 443, type: trojan, password: qw6698, sni: sdgsd.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sdgsd.pages.dev}}, udp: true}
   - {name: 🇺🇸 美国-联通, server: 172.67.245.65, port: 443, udp: false, client-fingerprint: random, type: trojan, password: 9807ca2f-34e4-49f4-a628-a3480c5b1a79, sni: fanchao.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: fanchao.pages.dev}}}
-  - {name: 🇺🇸 美国,  server: 172.67.105.21, port: 80,  type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, udp: false, tls: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: long-morning-d1bb.wowoo74110.workers.dev}}}
+  - {name: 🇺🇸 美国-电信, server: 104.16.226.37, port: 443, udp: false, client-fingerprint: random, type: trojan, password: 9807ca2f-34e4-49f4-a628-a3480c5b1a79, sni: fanchao.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: fanchao.pages.dev}}}
+  - {name: 🇺🇸 美国1-联通,  server: 172.67.114.23, port: 80,  type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, udp: false, tls: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: long-morning-d1bb.wowoo74110.workers.dev}}}
+  - {name: 🇺🇸 美国1-电信,  server: 104.17.175.189, port: 80,  type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, udp: false, tls: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: long-morning-d1bb.wowoo74110.workers.dev}}}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
+      - 🇸🇬 新加坡-联通
+      - 🇸🇬 新加坡-电信
       - 🇺🇸 美国-联通
+      - 🇺🇸 美国-电信
+      - 🇺🇸 美国1-联通
+      - 🇺🇸 美国1-电信
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
+      - 🇸🇬 新加坡-联通
+      - 🇸🇬 新加坡-电信
       - 🇺🇸 美国-联通
+      - 🇺🇸 美国-电信
+      - 🇺🇸 美国1-联通
+      - 🇺🇸 美国1-电信
 rule-providers:
   AntiAd:
     type: http
@@ -50,7 +58,12 @@ rules:
   - DOMAIN-KEYWORD,sogou,REJECT
   - DOMAIN-SUFFIX,sogou.com,REJECT
   - DOMAIN-SUFFIX,sogo.com,REJECT
-
+  
+  # 新增直连
+  - DOMAIN-SUFFIX,page.dev,DIRECT
+  - DOMAIN-SUFFIX,workers.dev,DIRECT
+  - DOMAIN-SUFFIX,cloudflare.com,DIRECT
+  
   - DOMAIN-SUFFIX,local,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
