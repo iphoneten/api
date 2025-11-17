@@ -14,6 +14,7 @@ proxies:
   - {name: 🇺🇸 美国2, server: 198.41.223.138, port: 443, type: trojan, password: 9807ca2f-34e4-49f4-a628-a3480c5b1a79, sni: fanchao.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: fanchao.pages.dev}}}
   - {name: 🇺🇸 美国3, server: 172.64.156.191, port: 443, type: trojan, password: 9807ca2f-34e4-49f4-a628-a3480c5b1a79, sni: fanchao.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: fanchao.pages.dev}}}
   - {name: 🇸🇬 新加坡, server: www.visa.com.sg, port: 443, type: trojan, password: 9807ca2f-34e4-49f4-a628-a3480c5b1a79, sni: fanchao.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: fanchao.pages.dev}}}
+  - {name: 随机IP, server: 104.16.10.6, port: 443, udp: false, client-fingerprint: random, type: trojan, password: taijun, sni: taijun.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: taijun.pages.dev}}}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -30,6 +31,7 @@ proxy-groups:
       - 🇺🇸 美国2
       - 🇺🇸 美国3
       - 🇸🇬 新加坡
+      - 随机IP
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -44,6 +46,7 @@ proxy-groups:
       - 🇺🇸 美国2
       - 🇺🇸 美国3
       - 🇸🇬 新加坡
+      - 随机IP
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -58,6 +61,7 @@ proxy-groups:
       - 🇺🇸 美国2
       - 🇺🇸 美国3
       - 🇸🇬 新加坡
+      - 随机IP
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
@@ -73,6 +77,7 @@ proxy-groups:
       - 🇺🇸 美国2
       - 🇺🇸 美国3
       - 🇸🇬 新加坡
+      - 随机IP
 # rule-providers:
 #   AntiAd:
 #     type: http
