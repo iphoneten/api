@@ -10,14 +10,14 @@ proxies:
   type: ss
   port: 10011
   udp: true
-  password: 86039b71-ba82-4ca8-838e-87086ae666de
+  password: f5e5f9c5-9677-41ea-a81f-abcf015c66af
   cipher: chacha20-ietf-poly1305
 - name: disney_netflix_US
   server: 107.175.87.208
   type: ss
   port: 10011
   udp: true
-  password: f5e5f9c5-9677-41ea-a81f-abcf015c66af
+  password: 86039b71-ba82-4ca8-838e-87086ae666de
   cipher: chacha20-ietf-poly1305
 - name: disney_netflix_US
   server: 15.204.247.49
@@ -31,12 +31,6 @@ proxies:
   port: 443
   udp: true
   password: amazonskr05
-  cipher: aes-256-cfb
-- name: disney_netflix_FR
-  server: 195.154.119.77
-  type: ss
-  port: 989
-  password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
 - name: Relay_-🇭🇰HK_62
   server: 131.186.63.89
@@ -55,11 +49,10 @@ proxies:
     path: /aa
     headers:
       Host: hk.nbee.pp.ua
-- name: disney_MD
-  server: 185.153.197.5
+- name: disney_netflix_FR
+  server: 195.154.119.77
   type: ss
   port: 989
-  udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
 - name: _61
@@ -69,13 +62,13 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: _60
-  server: 213.159.66.206
+- name: disney_MD
+  server: 185.153.197.5
   type: ss
-  port: 443
+  port: 989
   udp: true
-  password: pl2XtR0pzwknQOGwewbwXtPYDw1zn9Vu
-  cipher: chacha20-ietf-poly1305
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
 - name: disney_netflix_DK
   server: 89.28.236.243
   type: trojan
@@ -94,13 +87,21 @@ proxies:
   port: 2890
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
-- name: _59
-  server: 185.231.233.112
-  type: ss
-  port: 989
+- name: disney_netflix_HK
+  server: bac52f5a-t66sg0-t7luxf-tng5.hkt.gotochinatown.net
+  type: vmess
+  port: 80
   udp: true
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
+  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
+  alterId: 2
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  ws-opts:
+    path: /
+    headers:
+      Host: broadcastlv.chat.bilibili.com
 - name: disney_netflix_GB
   server: 172.66.44.230
   type: trojan
@@ -112,6 +113,25 @@ proxies:
     path: /tro8sFW1S91B6sZrM1
     headers:
       Host: Koma-YT.PAGeS.Dev
+  network: ws
+- name: _59
+  server: 185.231.233.112
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: disney_netflix_DE
+  server: 57.129.16.72
+  type: trojan
+  port: 2053
+  udp: true
+  password: 38af00d3-7c80-49fe-b91a-34d0d8044ee2
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/57.129.16.72=2053
+    headers:
+      Host: joss.gpj1.web.id
   network: ws
 - name: disney_netflix_HK
   server: 8c41940a-t66sg0-t7kvg3-1mij.hkt.gotochinatown.net
@@ -128,18 +148,14 @@ proxies:
     path: /
     headers:
       Host: broadcastlv.chat.bilibili.com
-- name: disney_netflix_DE
-  server: 57.129.16.72
+- name: disney_netflix_US
+  server: usiys.southbyte.xyz
   type: trojan
-  port: 2053
+  port: 5897
   udp: true
-  password: 38af00d3-7c80-49fe-b91a-34d0d8044ee2
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/57.129.16.72=2053
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
+  password: fg20mtCFHy
+  sni: usiys.southbyte.xyz
+  skip-cert-verify: true
 - name: disney_netflix_US
   server: 160.16.89.176
   type: trojan
@@ -158,14 +174,6 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: disney_netflix_US
-  server: usiys.southbyte.xyz
-  type: trojan
-  port: 5897
-  udp: true
-  password: fg20mtCFHy
-  sni: usiys.southbyte.xyz
-  skip-cert-verify: true
 - name: disney_netflix_PL
   server: 217.30.10.31
   type: trojan
@@ -178,21 +186,6 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: disney_netflix_HK
-  server: bac52f5a-t66sg0-t7luxf-tng5.hkt.gotochinatown.net
-  type: vmess
-  port: 80
-  udp: true
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
-  alterId: 2
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: broadcastlv.chat.bilibili.com
 - name: disney_netflix_GB
   server: 109.169.76.23
   type: trojan
@@ -217,18 +210,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
   network: ws
-- name: disney_NL
-  server: 81.22.132.183
-  type: trojan
-  port: 443
-  udp: true
-  password: ee339912-0c35-4fac-8d85-180b65bcd49c
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/81.22.132.183=443
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
 - name: disney_netflix_IT
   server: 185.247.184.186
   type: trojan
@@ -241,29 +222,15 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: netflix_NL
-  server: 160.16.89.176
-  type: trojan
-  port: 2760
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-- name: disney_HK
-  server: 58.152.25.241
+- name: disney_NL
+  server: 81.22.132.183
   type: trojan
   port: 443
   udp: true
-  password: BxceQaOe
-  sni: t.me/ripaojiedian
-  skip-cert-verify: true
-- name: disney_netflix_FR
-  server: 51.15.210.1
-  type: trojan
-  port: 443
-  udp: true
-  password: e6f0e8b0-3dc5-4d53-a23a-86c02d5ba098
+  password: ee339912-0c35-4fac-8d85-180b65bcd49c
   sni: joss.gpj1.web.id
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/51.15.210.1=443
+    path: /Free-VPN-CF-Geo-Project/81.22.132.183=443
     headers:
       Host: joss.gpj1.web.id
   network: ws
@@ -279,12 +246,50 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
+- name: disney_netflix_FR
+  server: 51.15.210.1
+  type: trojan
+  port: 443
+  udp: true
+  password: e6f0e8b0-3dc5-4d53-a23a-86c02d5ba098
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/51.15.210.1=443
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
+- name: disney_HK
+  server: 58.152.25.241
+  type: trojan
+  port: 443
+  udp: true
+  password: BxceQaOe
+  sni: t.me/ripaojiedian
+  skip-cert-verify: true
+- name: netflix_NL
+  server: 160.16.89.176
+  type: trojan
+  port: 2760
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
 - name: Relay_-🇳🇱NL_84
   server: 160.16.214.6
   type: trojan
   port: 2760
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
+- name: disney_netflix_FR
+  server: 158.178.206.197
+  type: trojan
+  port: 8443
+  udp: true
+  password: c2de1269-17cb-41f6-ab97-f8c11a6f0f4f
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/158.178.206.197=8443
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
 - name: disney_netflix_US
   server: 74.48.14.238
   type: vmess
@@ -300,18 +305,6 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /grqf
-- name: disney_netflix_FR
-  server: 158.178.206.197
-  type: trojan
-  port: 8443
-  udp: true
-  password: c2de1269-17cb-41f6-ab97-f8c11a6f0f4f
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/158.178.206.197=8443
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
 - name: disney_netflix_EE
   server: 37.252.5.75
   type: trojan
@@ -324,15 +317,15 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: disney_netflix_US
-  server: 82.198.246.97
+- name: 🇦🇺AU_88
+  server: 54.252.214.254
   type: vmess
-  country: 🇬🇧GB
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  country: 🇦🇺AU
+  port: 1000
+  uuid: 61a9c747-cbe6-46aa-a0bb-8d5a615db8b1
   alterId: 0
   cipher: auto
-  network: tcp
+  network: none
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
@@ -348,15 +341,15 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: 🇦🇺AU_88
-  server: 54.252.214.254
+- name: disney_netflix_US
+  server: 82.198.246.97
   type: vmess
-  country: 🇦🇺AU
-  port: 1000
-  uuid: 61a9c747-cbe6-46aa-a0bb-8d5a615db8b1
+  country: 🇬🇧GB
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
-  network: none
+  network: tcp
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
@@ -403,13 +396,6 @@ proxies:
   port: 443
   password: YzH4id7ZEyKpfy39F2YcOmzCsBklGwh8
   cipher: chacha20-ietf-poly1305
-- name: netflix_IE
-  server: 3.252.162.214
-  type: ss
-  country: 🇮🇪IE
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
 - name: netflix_KZ
   server: 103.106.3.82
   type: ss
@@ -417,13 +403,6 @@ proxies:
   port: 443
   password: 4SaCIazlgumYkM8FkPzlmwjpyWBDZFBk
   cipher: chacha20-ietf-poly1305
-- name: netflix_IE
-  server: 34.245.193.205
-  type: ss
-  country: 🇮🇪IE
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
 - name: disney_HK
   server: hkt.gotochinatown.net
   type: vmess
@@ -441,6 +420,13 @@ proxies:
     path: /
     headers:
       HOST: hkt.gotochinatown.net
+- name: netflix_IE
+  server: 3.252.162.214
+  type: ss
+  country: 🇮🇪IE
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
 - name: disney_netflix_HK
   server: hkt.gotochinatown.net
   type: vmess
@@ -470,6 +456,13 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: netflix_IE
+  server: 34.245.193.205
+  type: ss
+  country: 🇮🇪IE
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
 - name: 🇯🇵JP_101
   server: cgroup.node1.s.nodelist-airport.com
   type: ss
@@ -501,21 +494,13 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_TW
-  server: levuior.missionsec.us
-  type: trojan
-  country: 🇹🇼TW
-  port: 443
-  udp: true
-  password: ZZRSKlyjjAR36CS0CD8uYFBgNODpgTeC9A7aERSp3aFaq42na8KZzuDIn3D9Yw3xX3A6e
-  skip-cert-verify: true
-- name: 🇺🇸US_106
-  server: 185.156.110.92
+- name: 🇸🇬SG_103
+  server: cgroup.node3.s.nodelist-airport.com
   type: ss
-  country: 🇺🇸US
-  port: 443
-  password: gXOXk2FJwsz9P6nXIICuDNOqF9gWX1dn
-  cipher: chacha20-ietf-poly1305
+  country: 🇸🇬SG
+  port: 16198
+  password: 8f3a835c-8a45-480d-ae35-1deb2c52dcae
+  cipher: aes-256-gcm
 - name: Relay_🇺🇸US-🇯🇵JP_109
   server: t1.620720.xyz
   type: vmess
@@ -534,13 +519,6 @@ proxies:
     path: /
     headers:
       HOST: t1.620720.xyz
-- name: 🇸🇬SG_103
-  server: cgroup.node3.s.nodelist-airport.com
-  type: ss
-  country: 🇸🇬SG
-  port: 16198
-  password: 8f3a835c-8a45-480d-ae35-1deb2c52dcae
-  cipher: aes-256-gcm
 - name: disney_netflix_US
   server: 193.124.24.247
   type: vmess
@@ -553,30 +531,20 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_US
-  server: 5.78.51.123
-  type: ss
-  port: 1080
-  password: 8tmnvX5zYuWGVIDP2jglZw
-  cipher: chacha20-ietf-poly1305
+- name: disney_TW
+  server: levuior.missionsec.us
+  type: trojan
+  country: 🇹🇼TW
+  port: 443
+  udp: true
+  password: ZZRSKlyjjAR36CS0CD8uYFBgNODpgTeC9A7aERSp3aFaq42na8KZzuDIn3D9Yw3xX3A6e
+  skip-cert-verify: true
 - name: disney_netflix_US
   server: 193.124.24.247
   type: vmess
   country: 🇺🇸US
   port: 6512
   uuid: 729bfa51-095c-4f50-a1e0-2dfc90d51ebd
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_netflix_US
-  server: 193.124.24.247
-  type: vmess
-  country: 🇺🇸US
-  port: 6508
-  uuid: b68fead5-5b0b-43a1-c34a-804467f0f368
   alterId: 0
   cipher: auto
   network: none
@@ -595,6 +563,32 @@ proxies:
   h2-opts: {}
   tls: true
   skip-cert-verify: true
+- name: 🇺🇸US_115
+  server: cgroup.node5.v.nodelist-airport.com
+  type: vmess
+  country: 🇺🇸US
+  port: 6542
+  uuid: 8f3a835c-8a45-480d-ae35-1deb2c52dcae
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+- name: disney_netflix_US
+  server: 193.124.24.247
+  type: vmess
+  country: 🇺🇸US
+  port: 6508
+  uuid: b68fead5-5b0b-43a1-c34a-804467f0f368
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: disney_netflix_US
   server: 193.124.24.247
   type: vmess
@@ -607,6 +601,13 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: 🇺🇸US_106
+  server: 185.156.110.92
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: gXOXk2FJwsz9P6nXIICuDNOqF9gWX1dn
+  cipher: chacha20-ietf-poly1305
 - name: disney_netflix_US
   server: 193.124.24.247
   type: vmess
@@ -631,20 +632,13 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: 🇺🇸US_115
-  server: cgroup.node5.v.nodelist-airport.com
-  type: vmess
-  country: 🇺🇸US
-  port: 6542
-  uuid: 8f3a835c-8a45-480d-ae35-1deb2c52dcae
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
+- name: _60
+  server: 213.159.66.206
+  type: ss
+  port: 443
+  udp: true
+  password: pl2XtR0pzwknQOGwewbwXtPYDw1zn9Vu
+  cipher: chacha20-ietf-poly1305
 - name: Relay_🇭🇰HK-🇭🇰HK_96
   server: n1744453319.lie5d.cyou
   type: vmess
@@ -672,63 +666,62 @@ proxy-groups:
   - disney_netflix_US
   - disney_netflix_US
   - _52
-  - disney_netflix_FR
   - Relay_-🇭🇰HK_62
-  - disney_MD
+  - disney_netflix_FR
   - _61
-  - _60
+  - disney_MD
   - disney_netflix_DK
   - disney_netflix_US
+  - disney_netflix_HK
+  - disney_netflix_GB
   - _59
-  - disney_netflix_GB
-  - disney_netflix_HK
   - disney_netflix_DE
-  - disney_netflix_US
-  - disney_netflix_FR
-  - disney_netflix_US
-  - disney_netflix_PL
   - disney_netflix_HK
+  - disney_netflix_US
+  - disney_netflix_US
+  - disney_netflix_FR
+  - disney_netflix_PL
   - disney_netflix_GB
   - disney_netflix_GB
-  - disney_NL
   - disney_netflix_IT
-  - netflix_NL
-  - disney_HK
-  - disney_netflix_FR
+  - disney_NL
   - disney_DE
-  - Relay_-🇳🇱NL_84
-  - disney_netflix_US
   - disney_netflix_FR
-  - disney_netflix_EE
+  - disney_HK
+  - netflix_NL
+  - Relay_-🇳🇱NL_84
+  - disney_netflix_FR
   - disney_netflix_US
-  - disney_netflix_ES
+  - disney_netflix_EE
   - 🇦🇺AU_88
+  - disney_netflix_ES
+  - disney_netflix_US
   - disney_netflix_CZ
   - netflix_JP
   - disney_netflix_FR
   - 🇦🇹AT_87
-  - netflix_IE
   - netflix_KZ
-  - netflix_IE
   - disney_HK
+  - netflix_IE
   - disney_netflix_HK
   - netflix_MX
+  - netflix_IE
   - 🇯🇵JP_101
   - disney_netflix_HK
   - disney_netflix_US
-  - disney_TW
-  - 🇺🇸US_106
-  - Relay_🇺🇸US-🇯🇵JP_109
   - 🇸🇬SG_103
+  - Relay_🇺🇸US-🇯🇵JP_109
   - disney_netflix_US
-  - disney_netflix_US
-  - disney_netflix_US
+  - disney_TW
   - disney_netflix_US
   - disney_netflix_TH
-  - disney_netflix_US
-  - disney_netflix_US
-  - disney_netflix_US
   - 🇺🇸US_115
+  - disney_netflix_US
+  - disney_netflix_US
+  - 🇺🇸US_106
+  - disney_netflix_US
+  - disney_netflix_US
+  - _60
   - Relay_🇭🇰HK-🇭🇰HK_96
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
@@ -738,63 +731,62 @@ proxy-groups:
   - disney_netflix_US
   - disney_netflix_US
   - _52
-  - disney_netflix_FR
   - Relay_-🇭🇰HK_62
-  - disney_MD
+  - disney_netflix_FR
   - _61
-  - _60
+  - disney_MD
   - disney_netflix_DK
   - disney_netflix_US
+  - disney_netflix_HK
+  - disney_netflix_GB
   - _59
-  - disney_netflix_GB
-  - disney_netflix_HK
   - disney_netflix_DE
-  - disney_netflix_US
-  - disney_netflix_FR
-  - disney_netflix_US
-  - disney_netflix_PL
   - disney_netflix_HK
+  - disney_netflix_US
+  - disney_netflix_US
+  - disney_netflix_FR
+  - disney_netflix_PL
   - disney_netflix_GB
   - disney_netflix_GB
-  - disney_NL
   - disney_netflix_IT
-  - netflix_NL
-  - disney_HK
-  - disney_netflix_FR
+  - disney_NL
   - disney_DE
-  - Relay_-🇳🇱NL_84
-  - disney_netflix_US
   - disney_netflix_FR
-  - disney_netflix_EE
+  - disney_HK
+  - netflix_NL
+  - Relay_-🇳🇱NL_84
+  - disney_netflix_FR
   - disney_netflix_US
-  - disney_netflix_ES
+  - disney_netflix_EE
   - 🇦🇺AU_88
+  - disney_netflix_ES
+  - disney_netflix_US
   - disney_netflix_CZ
   - netflix_JP
   - disney_netflix_FR
   - 🇦🇹AT_87
-  - netflix_IE
   - netflix_KZ
-  - netflix_IE
   - disney_HK
+  - netflix_IE
   - disney_netflix_HK
   - netflix_MX
+  - netflix_IE
   - 🇯🇵JP_101
   - disney_netflix_HK
   - disney_netflix_US
-  - disney_TW
-  - 🇺🇸US_106
-  - Relay_🇺🇸US-🇯🇵JP_109
   - 🇸🇬SG_103
+  - Relay_🇺🇸US-🇯🇵JP_109
   - disney_netflix_US
-  - disney_netflix_US
-  - disney_netflix_US
+  - disney_TW
   - disney_netflix_US
   - disney_netflix_TH
-  - disney_netflix_US
-  - disney_netflix_US
-  - disney_netflix_US
   - 🇺🇸US_115
+  - disney_netflix_US
+  - disney_netflix_US
+  - 🇺🇸US_106
+  - disney_netflix_US
+  - disney_netflix_US
+  - _60
   - Relay_🇭🇰HK-🇭🇰HK_96
   url: https://www.google.com/generate_204
   interval: 300
