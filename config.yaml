@@ -5,19 +5,6 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: _426
-  server: 103.75.118.125
-  type: ss
-  port: 443
-  udp: true
-  password: XLOrvLWkCBBBxLqSEe9S8lnC5PLsNfRh
-  cipher: chacha20-ietf-poly1305
-- name: _425
-  server: 141.164.45.187
-  type: ss
-  port: 7001
-  password: RexnBgU7EV5ADxG
-  cipher: aes-256-gcm
 - name: _427
   server: 18.203.127.31
   type: ss
@@ -43,11 +30,24 @@ proxies:
   port: 1080
   password: 8tmnvX5zYuWGVIDP2jglZw
   cipher: chacha20-ietf-poly1305
+- name: _426
+  server: 103.75.118.125
+  type: ss
+  port: 443
+  udp: true
+  password: XLOrvLWkCBBBxLqSEe9S8lnC5PLsNfRh
+  cipher: chacha20-ietf-poly1305
 - name: Relay_-🇬🇧GB_437
   server: 144.217.164.29
   type: ss
   port: 12000
   password: 8JCsPssfgS8tiRwiMlhARg==
+  cipher: aes-256-gcm
+- name: _425
+  server: 141.164.45.187
+  type: ss
+  port: 7001
+  password: RexnBgU7EV5ADxG
   cipher: aes-256-gcm
 - name: _441
   server: 146.19.49.251
@@ -56,6 +56,13 @@ proxies:
   udp: true
   password: ODfxioK0VkKxTdpVQJ4rv8HglAu0vzv6
   cipher: chacha20-ietf-poly1305
+- name: netflix_NL
+  server: 45.14.245.2
+  type: ss
+  port: 443
+  udp: true
+  password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP
+  cipher: chacha20-ietf-poly1305
 - name: disney_MD
   server: 185.153.197.5
   type: ss
@@ -63,19 +70,12 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: _433
-  server: 213.159.66.206
+- name: _444
+  server: 23.95.75.146
   type: ss
   port: 443
   udp: true
-  password: pl2XtR0pzwknQOGwewbwXtPYDw1zn9Vu
-  cipher: chacha20-ietf-poly1305
-- name: _439
-  server: 213.159.67.124
-  type: ss
-  port: 443
-  udp: true
-  password: mbhqsStnFQT1cTZYCdsmkugGUC6GT6rp
+  password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
   cipher: chacha20-ietf-poly1305
 - name: _436
   server: 185.231.233.112
@@ -98,12 +98,12 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: _444
-  server: 23.95.75.146
+- name: _439
+  server: 213.159.67.124
   type: ss
   port: 443
   udp: true
-  password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
+  password: mbhqsStnFQT1cTZYCdsmkugGUC6GT6rp
   cipher: chacha20-ietf-poly1305
 - name: disney_NL
   server: 213.176.16.71
@@ -112,13 +112,13 @@ proxies:
   udp: true
   password: lXOVjEMsx00jeOQzHsQrkL
   cipher: chacha20-ietf-poly1305
-- name: _434
-  server: 134.209.147.198
+- name: _433
+  server: 213.159.66.206
   type: ss
-  port: 989
+  port: 443
   udp: true
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
+  password: pl2XtR0pzwknQOGwewbwXtPYDw1zn9Vu
+  cipher: chacha20-ietf-poly1305
 - name: _445
   server: 23.95.72.81
   type: ss
@@ -128,6 +128,13 @@ proxies:
   cipher: chacha20-ietf-poly1305
 - name: _443
   server: 46.183.184.60
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: _434
+  server: 134.209.147.198
   type: ss
   port: 989
   udp: true
@@ -146,30 +153,6 @@ proxies:
   udp: true
   password: yDAMsX678XsjsESR4UJlAI
   cipher: chacha20-ietf-poly1305
-- name: disney_DK
-  server: 38.180.72.162
-  type: trojan
-  port: 2053
-  udp: true
-  password: eb7339c5-70e4-4c7b-b5ef-4128adc8136a
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/38.180.72.162=2053
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
-- name: disney_DE
-  server: 193.233.114.58
-  type: trojan
-  port: 8443
-  udp: true
-  password: d78d48df-b788-4a95-9e9f-77c9b2f69822
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/193.233.114.58=8443
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
 - name: Relay_-🇭🇰HK_451
   server: 131.186.63.89
   type: vmess
@@ -187,34 +170,24 @@ proxies:
     path: /aa
     headers:
       Host: hk.nbee.pp.ua
-- name: _449
-  server: 166.108.232.40
-  type: vmess
-  port: 8009
+- name: disney_DK
+  server: 38.180.72.162
+  type: trojan
+  port: 2053
   udp: true
-  uuid: a9a0b976-3850-4461-b3e8-cb1d6a7875be
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
+  password: eb7339c5-70e4-4c7b-b5ef-4128adc8136a
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/38.180.72.162=2053
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
 - name: Relay_-🇳🇱NL_452
   server: 160.16.204.136
   type: trojan
   port: 2890
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
-- name: disney_netflix_GB
-  server: 172.66.44.230
-  type: trojan
-  port: 8443
-  udp: true
-  password: 8r<[9'l6hAO#8ZQi
-  sni: Koma-YT.PAGeS.Dev
-  ws-opts:
-    path: /tro8sFW1S91B6sZrM1
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-  network: ws
 - name: Relay_-🇳🇱NL_453
   server: 153.121.51.29
   type: trojan
@@ -233,17 +206,62 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: Relay_-🇯🇵JP_447
-  server: xray.kk37005.tk
-  type: vmess
-  port: 55919
+- name: disney_netflix_GB
+  server: 172.66.44.230
+  type: trojan
+  port: 8443
   udp: true
-  uuid: 2e7548bb-7c5b-4d97-d64d-1b2fe4050089
+  password: 8r<[9'l6hAO#8ZQi
+  sni: Koma-YT.PAGeS.Dev
+  ws-opts:
+    path: /tro8sFW1S91B6sZrM1
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+  network: ws
+- name: disney_DE
+  server: 193.233.114.58
+  type: trojan
+  port: 8443
+  udp: true
+  password: d78d48df-b788-4a95-9e9f-77c9b2f69822
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/193.233.114.58=8443
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
+- name: _449
+  server: 166.108.232.40
+  type: vmess
+  port: 8009
+  udp: true
+  uuid: a9a0b976-3850-4461-b3e8-cb1d6a7875be
   alterId: 0
   cipher: auto
   http-opts: {}
   h2-opts: {}
-  tls: true
+- name: disney_NL
+  server: 138.124.30.8
+  type: trojan
+  port: 443
+  udp: true
+  password: 0311306e-56d4-4aa1-bde5-8cede7fcd3e4
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/138.124.30.8=443
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
+- name: Relay_-🇺🇸US_448
+  server: v24.heduian.link
+  type: vmess
+  port: 30824
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
 - name: Relay_-🇫🇷FR_461
   server: 158.178.206.197
@@ -257,38 +275,6 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: disney_NL
-  server: 138.124.30.8
-  type: trojan
-  port: 443
-  udp: true
-  password: 0311306e-56d4-4aa1-bde5-8cede7fcd3e4
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/138.124.30.8=443
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
-- name: disney_NL
-  server: 94.131.123.74
-  type: trojan
-  port: 443
-  udp: true
-  password: 94a81dc7-e8e6-46e5-838d-84ca142b88b2
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/94.131.123.74=443
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
-- name: Relay_-🇯🇵JP_458
-  server: 160.16.227.93
-  type: trojan
-  port: 1924
-  udp: true
-  password: BxceQaOe
-  sni: t.me/ripaojiedian
-  skip-cert-verify: true
 - name: disney_FR
   server: 178.33.161.196
   type: trojan
@@ -301,27 +287,35 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: disney_FR
-  server: 34.22.190.30
+- name: Relay_-🇯🇵JP_458
+  server: 160.16.227.93
+  type: trojan
+  port: 1924
+  udp: true
+  password: BxceQaOe
+  sni: t.me/ripaojiedian
+  skip-cert-verify: true
+- name: disney_NL
+  server: 94.131.123.74
   type: trojan
   port: 443
   udp: true
-  password: 0a477acf-1f95-47cb-b4a5-a627b4c57de3
+  password: 94a81dc7-e8e6-46e5-838d-84ca142b88b2
   sni: joss.gpj1.web.id
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/34.22.190.30=443
+    path: /Free-VPN-CF-Geo-Project/94.131.123.74=443
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: disney_GB
-  server: joss.gpj1.web.id
+- name: disney_FR
+  server: 141.94.204.212
   type: trojan
-  port: 443
+  port: 2053
   udp: true
-  password: 6e6191a3-9a93-4617-859a-8d0ea0fce937
+  password: 0e0c9c2a-6166-4337-bdfc-675602365807
   sni: joss.gpj1.web.id
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/81.91.214.85=443
+    path: /Free-VPN-CF-Geo-Project/141.94.204.212=2053
     headers:
       Host: joss.gpj1.web.id
   network: ws
@@ -337,18 +331,6 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
   network: ws
-- name: disney_FR
-  server: 141.94.204.212
-  type: trojan
-  port: 2053
-  udp: true
-  password: 0e0c9c2a-6166-4337-bdfc-675602365807
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/141.94.204.212=2053
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
 - name: disney_NL
   server: 89.110.120.197
   type: trojan
@@ -361,15 +343,27 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: disney_US
-  server: 47.89.150.45
-  type: trojan
-  port: 21575
+- name: Relay_-🇯🇵JP_447
+  server: xray.kk37005.tk
+  type: vmess
+  port: 55919
   udp: true
-  password: abb96ae5-8337-4719-b300-fc3b2efbd14d
+  uuid: 2e7548bb-7c5b-4d97-d64d-1b2fe4050089
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+- name: disney_FR
+  server: 34.22.190.30
+  type: trojan
+  port: 443
+  udp: true
+  password: 0a477acf-1f95-47cb-b4a5-a627b4c57de3
   sni: joss.gpj1.web.id
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/47.89.150.45=21575
+    path: /Free-VPN-CF-Geo-Project/34.22.190.30=443
     headers:
       Host: joss.gpj1.web.id
   network: ws
@@ -385,17 +379,6 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: Relay_-🇺🇸US_448
-  server: v24.heduian.link
-  type: vmess
-  port: 30824
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
 - name: disney_IT
   server: 94.177.199.119
   type: trojan
@@ -405,6 +388,36 @@ proxies:
   sni: joss.gpj1.web.id
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/94.177.199.119=8443
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
+- name: disney_US
+  server: 47.89.150.45
+  type: trojan
+  port: 21575
+  udp: true
+  password: abb96ae5-8337-4719-b300-fc3b2efbd14d
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/47.89.150.45=21575
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
+- name: Relay_-🇳🇱NL_467
+  server: 160.16.223.205
+  type: trojan
+  port: 2760
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
+- name: disney_GB
+  server: joss.gpj1.web.id
+  type: trojan
+  port: 443
+  udp: true
+  password: 6e6191a3-9a93-4617-859a-8d0ea0fce937
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/81.91.214.85=443
     headers:
       Host: joss.gpj1.web.id
   network: ws
@@ -420,24 +433,6 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: Relay_-🇳🇱NL_467
-  server: 160.16.223.205
-  type: trojan
-  port: 2760
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-- name: disney_FR
-  server: 51.15.210.1
-  type: trojan
-  port: 443
-  udp: true
-  password: e6f0e8b0-3dc5-4d53-a23a-86c02d5ba098
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/51.15.210.1=443
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
 - name: Relay_-🇺🇸US_470
   server: 160.16.124.55
   type: trojan
@@ -450,15 +445,15 @@ proxies:
   port: 2890
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
-- name: disney_NL
-  server: 86.107.197.239
+- name: disney_FR
+  server: 51.15.210.1
   type: trojan
   port: 443
   udp: true
-  password: e683d757-b855-44c3-b0b6-22586444914a
+  password: e6f0e8b0-3dc5-4d53-a23a-86c02d5ba098
   sni: joss.gpj1.web.id
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/86.107.197.239=443
+    path: /Free-VPN-CF-Geo-Project/51.15.210.1=443
     headers:
       Host: joss.gpj1.web.id
   network: ws
@@ -480,50 +475,12 @@ proxies:
   port: 3169
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
-- name: disney_FR
-  server: 34.22.190.30
+- name: Relay_-🇳🇱NL_481
+  server: 160.16.81.84
   type: trojan
-  port: 443
-  udp: true
-  password: 29ca24a5-e8aa-4cbd-9bcb-f96aba1d6f15
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/34.22.190.30=443
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
-- name: disney_FR
-  server: 34.22.190.30
-  type: trojan
-  port: 443
-  udp: true
-  password: fea8b7a7-cc83-4a78-a3fc-bbce9cc89ddb
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/34.22.190.30=443
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
-- name: Relay_-🇺🇸US_486
-  server: usiys.southbyte.xyz
-  type: trojan
-  port: 5897
-  udp: true
-  password: fg20mtCFHy
-  sni: usiys.southbyte.xyz
-  skip-cert-verify: true
-- name: Relay_-🇩🇪DE_485
-  server: 45.159.251.8
-  type: trojan
-  port: 81
-  udp: true
-  password: 6ead60c4-4321-45d5-81a9-ba4835f7c692
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/45.159.251.8=81
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
+  port: 2890
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
 - name: disney_PL
   server: 217.30.10.31
   type: trojan
@@ -548,12 +505,50 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: Relay_-🇳🇱NL_481
-  server: 160.16.81.84
+- name: Relay_-🇺🇸US_486
+  server: usiys.southbyte.xyz
   type: trojan
-  port: 2890
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
+  port: 5897
+  udp: true
+  password: fg20mtCFHy
+  sni: usiys.southbyte.xyz
+  skip-cert-verify: true
+- name: Relay_-🇩🇪DE_485
+  server: 45.159.251.8
+  type: trojan
+  port: 81
+  udp: true
+  password: 6ead60c4-4321-45d5-81a9-ba4835f7c692
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/45.159.251.8=81
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
+- name: disney_FR
+  server: 34.22.190.30
+  type: trojan
+  port: 443
+  udp: true
+  password: fea8b7a7-cc83-4a78-a3fc-bbce9cc89ddb
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/34.22.190.30=443
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
+- name: disney_FR
+  server: 34.22.190.30
+  type: trojan
+  port: 443
+  udp: true
+  password: 29ca24a5-e8aa-4cbd-9bcb-f96aba1d6f15
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/34.22.190.30=443
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
 - name: disney_CH
   server: 91.245.225.69
   type: trojan
@@ -575,6 +570,18 @@ proxies:
   sni: joss.gpj1.web.id
   ws-opts:
     path: /Free-VPN-CF-Geo-Project/212.227.144.37=8443
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
+- name: disney_NL
+  server: 86.107.197.239
+  type: trojan
+  port: 443
+  udp: true
+  password: e683d757-b855-44c3-b0b6-22586444914a
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/86.107.197.239=443
     headers:
       Host: joss.gpj1.web.id
   network: ws
@@ -602,6 +609,18 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
+- name: Relay_-🇺🇸US_489
+  server: 160.16.81.84
+  type: trojan
+  port: 702
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_492
+  server: 160.16.204.136
+  type: trojan
+  port: 1331
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
 - name: disney_DK
   server: 89.28.236.243
   type: trojan
@@ -614,12 +633,6 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: Relay_-🇺🇸US_489
-  server: 160.16.81.84
-  type: trojan
-  port: 702
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
 - name: disney_NL
   server: 81.22.132.183
   type: trojan
@@ -632,12 +645,6 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: Relay_-🇯🇵JP_492
-  server: 160.16.204.136
-  type: trojan
-  port: 1331
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
 - name: Relay_-🇯🇵JP_494
   server: 160.16.81.84
   type: trojan
@@ -658,18 +665,6 @@ proxies:
   port: 443
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
-- name: disney_ES
-  server: 45.86.229.28
-  type: trojan
-  port: 443
-  udp: true
-  password: 9ccc3e1d-3df5-4348-aa05-738310149cc3
-  sni: joss.gpj1.web.id
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/45.86.229.28=443
-    headers:
-      Host: joss.gpj1.web.id
-  network: ws
 - name: disney_CZ
   server: 81.91.214.162
   type: trojan
@@ -694,12 +689,6 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
   network: ws
-- name: Relay_-🇺🇸US_499
-  server: 160.16.89.176
-  type: trojan
-  port: 702
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
 - name: disney_US
   server: 74.48.14.238
   type: vmess
@@ -715,19 +704,30 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /grqf
+- name: disney_ES
+  server: 45.86.229.28
+  type: trojan
+  port: 443
+  udp: true
+  password: 9ccc3e1d-3df5-4348-aa05-738310149cc3
+  sni: joss.gpj1.web.id
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/45.86.229.28=443
+    headers:
+      Host: joss.gpj1.web.id
+  network: ws
+- name: Relay_-🇺🇸US_499
+  server: 160.16.89.176
+  type: trojan
+  port: 702
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
 - name: Relay_-🇯🇵JP_500
   server: 160.16.81.84
   type: trojan
   port: 1331
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
-- name: netflix_NL
-  server: 45.14.245.2
-  type: ss
-  port: 443
-  udp: true
-  password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP
-  cipher: chacha20-ietf-poly1305
 - name: disney_FR
   server: 208.76.223.218
   type: vmess
@@ -752,6 +752,18 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: 🇲🇽MX_514
+  server: 216.238.89.53
+  type: vmess
+  country: 🇲🇽MX
+  port: 57283
+  uuid: 1a5aafc0-6482-451d-fe76-6875b7818579
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: 🇧🇩BD_503
   server: 103.106.3.82
   type: ss
@@ -773,18 +785,6 @@ proxies:
   port: 443
   password: amazonskr05
   cipher: aes-256-cfb
-- name: 🇲🇽MX_514
-  server: 216.238.89.53
-  type: vmess
-  country: 🇲🇽MX
-  port: 57283
-  uuid: 1a5aafc0-6482-451d-fe76-6875b7818579
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
 - name: 🇦🇹AT_502
   server: 95.174.68.33
   type: ss
@@ -834,6 +834,18 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: 🇭🇰HK_511
+  server: 8.218.17.136
+  type: vmess
+  country: 🇭🇰HK
+  port: 52986
+  uuid: 7363d47e-ac8b-4fe0-d23e-99077999a70d
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: disney_US
   server: 193.124.24.247
   type: vmess
@@ -846,30 +858,12 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇩🇪DE-🇩🇪DE_506
-  server: node4.rtxconfigz.com
+- name: disney_US
+  server: 193.124.24.247
   type: vmess
-  country: 🇩🇪DE
-  port: 443
-  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: node4.rtxconfigz.com
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /@Malinda6104
-    headers:
-      HOST: node4.rtxconfigz.com
-- name: 🇭🇰HK_511
-  server: 8.218.17.136
-  type: vmess
-  country: 🇭🇰HK
-  port: 52986
-  uuid: 7363d47e-ac8b-4fe0-d23e-99077999a70d
+  country: 🇺🇸US
+  port: 6512
+  uuid: 729bfa51-095c-4f50-a1e0-2dfc90d51ebd
   alterId: 0
   cipher: auto
   network: none
@@ -888,6 +882,30 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: disney_US
+  server: 193.124.24.247
+  type: vmess
+  country: 🇺🇸US
+  port: 6510
+  uuid: 8f44f672-e53b-44fb-b502-c886d37107b5
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_US
+  server: 193.124.24.247
+  type: vmess
+  country: 🇺🇸US
+  port: 6513
+  uuid: 5cf7fcbc-e2c1-42c4-d0d7-79c45a7d588d
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: 🇺🇸US_517
   server: 185.156.110.92
   type: ss
@@ -895,18 +913,24 @@ proxies:
   port: 443
   password: gXOXk2FJwsz9P6nXIICuDNOqF9gWX1dn
   cipher: chacha20-ietf-poly1305
-- name: disney_US
-  server: 193.124.24.247
+- name: Relay_🇩🇪DE-🇩🇪DE_506
+  server: node4.rtxconfigz.com
   type: vmess
-  country: 🇺🇸US
-  port: 6512
-  uuid: 729bfa51-095c-4f50-a1e0-2dfc90d51ebd
+  country: 🇩🇪DE
+  port: 443
+  uuid: 44e57485-eccc-46ef-808f-cd17ac810018
   alterId: 0
   cipher: auto
-  network: none
+  network: ws
+  servername: node4.rtxconfigz.com
   http-opts: {}
   h2-opts: {}
+  tls: true
   skip-cert-verify: true
+  ws-opts:
+    path: /@Malinda6104
+    headers:
+      HOST: node4.rtxconfigz.com
 - name: Relay_🏁ZZ-🇦🇺AU_526
   server: sy4.620720.xyz
   type: vmess
@@ -925,30 +949,13 @@ proxies:
     path: /
     headers:
       HOST: sy4.620720.xyz
-- name: disney_US
-  server: 193.124.24.247
-  type: vmess
-  country: 🇺🇸US
-  port: 6513
-  uuid: 5cf7fcbc-e2c1-42c4-d0d7-79c45a7d588d
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_US
-  server: 193.124.24.247
-  type: vmess
-  country: 🇺🇸US
-  port: 6510
-  uuid: 8f44f672-e53b-44fb-b502-c886d37107b5
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
+- name: 🇸🇬SG_515
+  server: cgroup.node3.s.nodelist-airport.com
+  type: ss
+  country: 🇸🇬SG
+  port: 16198
+  password: 8f3a835c-8a45-480d-ae35-1deb2c52dcae
+  cipher: aes-256-gcm
 - name: disney_TH
   server: th0603-1.ysds168.shop
   type: vmess
@@ -961,13 +968,6 @@ proxies:
   h2-opts: {}
   tls: true
   skip-cert-verify: true
-- name: 🇸🇬SG_515
-  server: cgroup.node3.s.nodelist-airport.com
-  type: ss
-  country: 🇸🇬SG
-  port: 16198
-  password: 8f3a835c-8a45-480d-ae35-1deb2c52dcae
-  cipher: aes-256-gcm
 - name: Relay_🇭🇰HK-🇭🇰HK_510
   server: n1744453319.lie5d.cyou
   type: vmess
@@ -993,234 +993,215 @@ proxies:
   port: 443
   password: zwBLM6bBE5YxvwvnKgxAq3ErXpqMYv20
   cipher: chacha20-ietf-poly1305
-- name: Relay_-🇭🇰HK_450
-  server: n1761296886.lie5d.cyou
-  type: vmess
-  port: 443
-  udp: true
-  uuid: 697ece59-37c9-4a61-b986-705cad56057b
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: n1761296886.lie5d.cyou
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: n1761296886.lie5d.cyou
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - _426
-  - _425
   - _427
   - _428
   - disney_US
   - _429
+  - _426
   - Relay_-🇬🇧GB_437
+  - _425
   - _441
+  - netflix_NL
   - disney_MD
-  - _433
-  - _439
+  - _444
   - _436
   - disney_PY
   - _438
-  - _444
+  - _439
   - disney_NL
-  - _434
+  - _433
   - _445
   - _443
+  - _434
   - _440
   - disney_netflix_IT
-  - disney_DK
-  - disney_DE
   - Relay_-🇭🇰HK_451
-  - _449
+  - disney_DK
   - Relay_-🇳🇱NL_452
-  - disney_netflix_GB
   - Relay_-🇳🇱NL_453
   - disney_DK
-  - Relay_-🇯🇵JP_447
-  - Relay_-🇫🇷FR_461
+  - disney_netflix_GB
+  - disney_DE
+  - _449
   - disney_NL
-  - disney_NL
-  - Relay_-🇯🇵JP_458
-  - disney_FR
-  - disney_FR
-  - disney_GB
-  - disney_GB
-  - disney_FR
-  - disney_NL
-  - disney_US
-  - disney_CA
   - Relay_-🇺🇸US_448
-  - disney_IT
-  - disney_GB
-  - Relay_-🇳🇱NL_467
+  - Relay_-🇫🇷FR_461
   - disney_FR
+  - Relay_-🇯🇵JP_458
+  - disney_NL
+  - disney_FR
+  - disney_GB
+  - disney_NL
+  - Relay_-🇯🇵JP_447
+  - disney_FR
+  - disney_CA
+  - disney_IT
+  - disney_US
+  - Relay_-🇳🇱NL_467
+  - disney_GB
+  - disney_GB
   - Relay_-🇺🇸US_470
   - Relay_-🇳🇱NL_472
-  - disney_NL
+  - disney_FR
   - disney_DE
   - Relay_-🇯🇵JP_475
-  - disney_FR
-  - disney_FR
-  - Relay_-🇺🇸US_486
-  - Relay_-🇩🇪DE_485
+  - Relay_-🇳🇱NL_481
   - disney_PL
   - disney_EE
-  - Relay_-🇳🇱NL_481
+  - Relay_-🇺🇸US_486
+  - Relay_-🇩🇪DE_485
+  - disney_FR
+  - disney_FR
   - disney_CH
   - disney_ES
+  - disney_NL
   - Relay_-🇩🇪DE_490
   - disney_FI
-  - disney_DK
   - Relay_-🇺🇸US_489
-  - disney_NL
   - Relay_-🇯🇵JP_492
+  - disney_DK
+  - disney_NL
   - Relay_-🇯🇵JP_494
   - _491
   - _493
-  - disney_ES
   - disney_CZ
   - disney_RS
-  - Relay_-🇺🇸US_499
   - disney_US
+  - disney_ES
+  - Relay_-🇺🇸US_499
   - Relay_-🇯🇵JP_500
-  - netflix_NL
   - disney_FR
   - Relay_🇬🇧GB-🇺🇸US_509
+  - 🇲🇽MX_514
   - 🇧🇩BD_503
   - 🇮🇪IE_512
   - 🇮🇪IE_513
-  - 🇲🇽MX_514
   - 🇦🇹AT_502
   - Relay_🇺🇸US-🇯🇵JP_518
   - disney_US
   - disney_US
-  - disney_US
-  - Relay_🇩🇪DE-🇩🇪DE_506
   - 🇭🇰HK_511
   - disney_US
+  - disney_US
+  - disney_US
+  - disney_US
+  - disney_US
   - 🇺🇸US_517
-  - disney_US
+  - Relay_🇩🇪DE-🇩🇪DE_506
   - Relay_🏁ZZ-🇦🇺AU_526
-  - disney_US
-  - disney_US
-  - disney_TH
   - 🇸🇬SG_515
+  - disney_TH
   - Relay_🇭🇰HK-🇭🇰HK_510
   - 🇬🇧GB_508
-  - Relay_-🇭🇰HK_450
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - _426
-  - _425
   - _427
   - _428
   - disney_US
   - _429
+  - _426
   - Relay_-🇬🇧GB_437
+  - _425
   - _441
+  - netflix_NL
   - disney_MD
-  - _433
-  - _439
+  - _444
   - _436
   - disney_PY
   - _438
-  - _444
+  - _439
   - disney_NL
-  - _434
+  - _433
   - _445
   - _443
+  - _434
   - _440
   - disney_netflix_IT
-  - disney_DK
-  - disney_DE
   - Relay_-🇭🇰HK_451
-  - _449
+  - disney_DK
   - Relay_-🇳🇱NL_452
-  - disney_netflix_GB
   - Relay_-🇳🇱NL_453
   - disney_DK
-  - Relay_-🇯🇵JP_447
-  - Relay_-🇫🇷FR_461
+  - disney_netflix_GB
+  - disney_DE
+  - _449
   - disney_NL
-  - disney_NL
-  - Relay_-🇯🇵JP_458
-  - disney_FR
-  - disney_FR
-  - disney_GB
-  - disney_GB
-  - disney_FR
-  - disney_NL
-  - disney_US
-  - disney_CA
   - Relay_-🇺🇸US_448
-  - disney_IT
-  - disney_GB
-  - Relay_-🇳🇱NL_467
+  - Relay_-🇫🇷FR_461
   - disney_FR
+  - Relay_-🇯🇵JP_458
+  - disney_NL
+  - disney_FR
+  - disney_GB
+  - disney_NL
+  - Relay_-🇯🇵JP_447
+  - disney_FR
+  - disney_CA
+  - disney_IT
+  - disney_US
+  - Relay_-🇳🇱NL_467
+  - disney_GB
+  - disney_GB
   - Relay_-🇺🇸US_470
   - Relay_-🇳🇱NL_472
-  - disney_NL
+  - disney_FR
   - disney_DE
   - Relay_-🇯🇵JP_475
-  - disney_FR
-  - disney_FR
-  - Relay_-🇺🇸US_486
-  - Relay_-🇩🇪DE_485
+  - Relay_-🇳🇱NL_481
   - disney_PL
   - disney_EE
-  - Relay_-🇳🇱NL_481
+  - Relay_-🇺🇸US_486
+  - Relay_-🇩🇪DE_485
+  - disney_FR
+  - disney_FR
   - disney_CH
   - disney_ES
+  - disney_NL
   - Relay_-🇩🇪DE_490
   - disney_FI
-  - disney_DK
   - Relay_-🇺🇸US_489
-  - disney_NL
   - Relay_-🇯🇵JP_492
+  - disney_DK
+  - disney_NL
   - Relay_-🇯🇵JP_494
   - _491
   - _493
-  - disney_ES
   - disney_CZ
   - disney_RS
-  - Relay_-🇺🇸US_499
   - disney_US
+  - disney_ES
+  - Relay_-🇺🇸US_499
   - Relay_-🇯🇵JP_500
-  - netflix_NL
   - disney_FR
   - Relay_🇬🇧GB-🇺🇸US_509
+  - 🇲🇽MX_514
   - 🇧🇩BD_503
   - 🇮🇪IE_512
   - 🇮🇪IE_513
-  - 🇲🇽MX_514
   - 🇦🇹AT_502
   - Relay_🇺🇸US-🇯🇵JP_518
   - disney_US
   - disney_US
-  - disney_US
-  - Relay_🇩🇪DE-🇩🇪DE_506
   - 🇭🇰HK_511
   - disney_US
+  - disney_US
+  - disney_US
+  - disney_US
+  - disney_US
   - 🇺🇸US_517
-  - disney_US
+  - Relay_🇩🇪DE-🇩🇪DE_506
   - Relay_🏁ZZ-🇦🇺AU_526
-  - disney_US
-  - disney_US
-  - disney_TH
   - 🇸🇬SG_515
+  - disney_TH
   - Relay_🇭🇰HK-🇭🇰HK_510
   - 🇬🇧GB_508
-  - Relay_-🇭🇰HK_450
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
