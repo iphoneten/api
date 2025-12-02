@@ -5,32 +5,27 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: Relay_-🇳🇱NL_654 |255.02Mb
-  server: 151.242.251.137
-  type: ss
-  port: 8080
-  password: o5osZg269v5zHpYjr1xY9s
-  cipher: chacha20-ietf-poly1305
-- name: _656 |235.87Mb
+- name: _595 |235.87Mb
   server: 45.87.175.181
   type: ss
   port: 8080
   udp: true
   password: cvII85TrW6n0OGyfpHVS1u
   cipher: chacha20-ietf-poly1305
-- name: _661 |51.67Mb
-  server: 213.159.67.124
+- name: netflix_NL |255.02Mb
+  server: 151.242.251.137
   type: ss
-  port: 443
-  password: mbhqsStnFQT1cTZYCdsmkugGUC6GT6rp
+  port: 8080
+  password: o5osZg269v5zHpYjr1xY9s
   cipher: chacha20-ietf-poly1305
-- name: disney_PT |50.65Mb
-  server: 185.231.233.112
+- name: _601 |232.06Mb
+  server: 82.38.31.199
   type: ss
-  port: 989
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: _669 |62.47Mb
+  port: 8080
+  udp: true
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+- name: _615 |62.47Mb
   server: 47.253.197.26
   type: vmess
   port: 12056
@@ -40,28 +35,52 @@ proxies:
   network: none
   http-opts: {}
   h2-opts: {}
-- name: _657 |12.94Mb
+- name: disney_PT |50.65Mb
+  server: 185.231.233.112
+  type: ss
+  port: 989
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: _598 |51.67Mb
+  server: 213.159.67.124
+  type: ss
+  port: 443
+  password: mbhqsStnFQT1cTZYCdsmkugGUC6GT6rp
+  cipher: chacha20-ietf-poly1305
+- name: _597 |12.94Mb
   server: 45.93.95.187
   type: ss
   port: 8618
   udp: true
   password: 4lUEC91c1d8oeClzDbYpXA
   cipher: chacha20-ietf-poly1305
-- name: _655 |35.38Mb
-  server: 154.90.62.168
-  type: ss
-  port: 989
-  udp: true
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: _663 |13.41Mb
+- name: _602 |13.41Mb
   server: 103.106.3.82
   type: ss
   port: 443
   udp: true
   password: 4SaCIazlgumYkM8FkPzlmwjpyWBDZFBk
   cipher: chacha20-ietf-poly1305
-- name: _685 |107.83Mb
+- name: _594 |35.38Mb
+  server: 154.90.62.168
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: Relay_-🇯🇵JP_622 |13.15Mb
+  server: 160.16.223.205
+  type: trojan
+  port: 1331
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: Relay_-🇳🇱NL_628 |10.04Mb
+  server: 160.16.81.84
+  type: trojan
+  port: 4054
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: _619 |107.83Mb
   server: 47.243.209.146
   type: vmess
   port: 29333
@@ -73,15 +92,7 @@ proxies:
   h2-opts: {}
   ws-opts:
     path: /arki?ed=2048
-- name: disney_HK |11.61Mb
-  server: 58.152.25.20
-  type: trojan
-  port: 443
-  udp: true
-  password: BxceQaOe
-  sni: t.me/ripaojiedian
-  skip-cert-verify: true
-- name: Relay_-🇲🇾MY_665 |30.31Mb
+- name: Relay_-🇲🇾MY_610 |30.31Mb
   server: ml0724.ysds168.shop
   type: vmess
   port: 2052
@@ -93,14 +104,22 @@ proxies:
   http-opts: {}
   h2-opts: {}
   tls: true
-- name: Relay_-🇯🇵JP_694 |14.55Mb
-  server: 52.195.176.26
+- name: Relay_-🇳🇱NL_633 |10.16Mb
+  server: 160.16.236.32
   type: trojan
-  port: 2145
+  port: 4054
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_611 |12.58Mb
+  server: d0s31-g06.jp02-e3-vm0.entry.fr0528.art
+  type: vmess
+  port: 11778
   udp: true
-  password: BxceQaOe
-  sni: t.me/ripaojiedian
-  skip-cert-verify: true
+  uuid: 8e0c2bc2-705f-375f-a246-82955b5165ef
+  alterId: 1
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
 - name: disney_US |112.49Mb
   server: 23.247.137.64
   type: trojan
@@ -113,13 +132,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: db
-- name: Relay_-🇯🇵JP_695 |13.15Mb
-  server: 160.16.223.205
-  type: trojan
-  port: 1331
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-- name: Relay_-🇺🇸US_705 |11.34Mb
+- name: Relay_-🇺🇸US_651 |11.34Mb
   server: gy3.hdcloud.link
   type: trojan
   port: 443
@@ -128,20 +141,43 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: GunService
-- name: _697 |12.17Mb
+- name: _635 |11.61Mb
+  server: 58.152.25.20
+  type: trojan
+  port: 443
+  udp: true
+  password: BxceQaOe
+  sni: t.me/ripaojiedian
+  skip-cert-verify: true
+- name: Relay_-🇭🇰HK_625 |10.14Mb
+  server: green2.cdntencentmusic.com
+  type: trojan
+  port: 31102
+  udp: true
+  password: 7832727a-dce8-454a-9df0-591b642f69a9
+  sni: green2.cdntencentmusic.com
+  skip-cert-verify: true
+- name: Relay_-🇯🇵JP_640 |14.55Mb
+  server: 52.195.176.26
+  type: trojan
+  port: 2145
+  udp: true
+  password: BxceQaOe
+  sni: t.me/ripaojiedian
+  skip-cert-verify: true
+- name: Relay_-🇯🇵JP_648 |12.52Mb
+  server: 160.16.236.32
+  type: trojan
+  port: 3093
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: _637 |12.17Mb
   server: 58.152.18.192
   type: trojan
   port: 443
   password: 79314e99f0a473fe86efc7827942ad00
   sni: www.nintendogames.net
-- name: Relay_-🇰🇷KR_653 |14.52Mb
-  server: p141.panda001.net
-  type: ss
-  port: 4652
-  udp: true
-  password: qwerREWQ@@
-  cipher: aes-256-cfb
-- name: 🇧🇬BG_725 |43.51Mb
+- name: 🇧🇬BG_659 |43.51Mb
   server: 87.121.162.249
   type: ss
   country: 🇧🇬BG
@@ -160,25 +196,7 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_-🇳🇱NL_718 |10.04Mb
-  server: 160.16.81.84
-  type: trojan
-  port: 4054
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-- name: Relay_-🇳🇱NL_719 |10.16Mb
-  server: 160.16.236.32
-  type: trojan
-  port: 4054
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_721 |12.52Mb
-  server: 160.16.236.32
-  type: trojan
-  port: 3093
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-- name: 🇧🇷BR_726 |22.56Mb
+- name: 🇧🇷BR_660 |22.56Mb
   server: 38.180.16.86
   type: vmess
   country: 🇧🇷BR
@@ -190,7 +208,33 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: 🇧🇷BR_727 |20.67Mb
+- name: Relay_🇬🇧GB-🇺🇸US_667 |11.70Mb
+  server: 82.198.246.97
+  type: vmess
+  country: 🇬🇧GB
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: netflix_NL |167.53Mb
+  server: 82.38.31.184
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+- name: 🇬🇧GB_666 |224.31Mb
+  server: 82.38.31.179
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+- name: 🇧🇷BR_661 |20.67Mb
   server: 38.180.16.86
   type: vmess
   country: 🇧🇷BR
@@ -202,7 +246,7 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_-🇱🇻LV_682 |12.16Mb
+- name: Relay_-🇱🇻LV_604 |12.16Mb
   server: 31.56.117.73
   type: vmess
   port: 28573
@@ -212,28 +256,7 @@ proxies:
   network: none
   http-opts: {}
   h2-opts: {}
-- name: 🇬🇧GB_732 |224.31Mb
-  server: 82.38.31.179
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: 🇬🇧GB_733 |167.53Mb
-  server: 82.38.31.184
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: 🇮🇪IE_776 |80.25Mb
-  server: 18.203.220.111
-  type: ss
-  country: 🇮🇪IE
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: 🇲🇽MX_779 |35.11Mb
+- name: 🇲🇽MX_711 |35.11Mb
   server: 216.238.89.53
   type: vmess
   country: 🇲🇽MX
@@ -245,28 +268,37 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: 🇺🇸US_783 |14.54Mb
-  server: 23.95.75.146
+- name: 🇮🇪IE_707 |80.25Mb
+  server: 18.203.220.111
   type: ss
-  country: 🇺🇸US
+  country: 🇮🇪IE
   port: 443
-  password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
-  cipher: chacha20-ietf-poly1305
-- name: 🇬🇷GR_734 |502.43Mb
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: 🇬🇷GR_668 |502.43Mb
   server: 192.71.166.100
   type: ss
   country: 🇬🇷GR
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: 🇷🇺RU_781 |53.95Mb
+- name: 🇷🇺RU_713 |53.95Mb
   server: 109.71.246.210
   type: ss
   country: 🇷🇺RU
   port: 56689
   password: YQCSKoCF3QazW8YlvDBWA4
   cipher: chacha20-ietf-poly1305
-- name: 🇭🇰HK_769 |14.87Mb
+- name: 🇭🇰HK_706 |13.07Mb
+  server: 112.118.116.66
+  type: trojan
+  country: 🇭🇰HK
+  port: 443
+  udp: true
+  password: BxceQaOe
+  sni: t.me/ripaojiedian
+  skip-cert-verify: true
+- name: 🇭🇰HK_685 |14.87Mb
   server: 47.242.140.52
   type: vmess
   country: 🇭🇰HK
@@ -280,40 +312,7 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /arki?ed=2048
-- name: 🇭🇰HK_754 |174.55Mb
-  server: 8.218.17.136
-  type: vmess
-  country: 🇭🇰HK
-  port: 52986
-  uuid: 7363d47e-ac8b-4fe0-d23e-99077999a70d
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_HK |13.07Mb
-  server: 112.118.116.66
-  type: trojan
-  country: 🇭🇰HK
-  port: 443
-  udp: true
-  password: BxceQaOe
-  sni: t.me/ripaojiedian
-  skip-cert-verify: true
-- name: 🇺🇸US_786 |22.99Mb
-  server: 45.136.12.37
-  type: vmess
-  country: 🇺🇸US
-  port: 38141
-  uuid: fd291be6-b48d-43a1-da38-66c7f80e2f80
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: 🇲🇾MY_780 |31.30Mb
+- name: 🇲🇾MY_712 |31.30Mb
   server: 38.54.98.110
   type: vmess
   country: 🇲🇾MY
@@ -326,19 +325,26 @@ proxies:
   h2-opts: {}
   tls: true
   skip-cert-verify: true
-- name: Relay_🇭🇰HK-🇭🇰HK_751 |14.37Mb
-  server: v10.hdacd.com
+- name: 🇺🇸US_720 |22.99Mb
+  server: 45.136.12.37
   type: vmess
-  country: 🇭🇰HK
-  port: 30807
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
+  country: 🇺🇸US
+  port: 38141
+  uuid: fd291be6-b48d-43a1-da38-66c7f80e2f80
+  alterId: 0
   cipher: auto
-  network: tcp
+  network: none
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇺🇸US-🇺🇸US_787 |126.53Mb
+- name: Relay_🇭🇰HK-🇭🇰HK_672 |10.24Mb
+  server: cgroup.node4.s.nodelist-airport.com
+  type: ss
+  country: 🇭🇰HK
+  port: 32013
+  password: 8f3a835c-8a45-480d-ae35-1deb2c52dcae
+  cipher: aes-256-gcm
+- name: Relay_🇺🇸US-🇺🇸US_718 |126.53Mb
   server: sw19.sesamebuta.top
   type: vmess
   country: 🇺🇸US
@@ -353,113 +359,95 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /abcd
-- name: Relay_🏁ZZ-🇮🇷IR_789 |39.08Mb
-  server: cf.fovi.tk
-  type: vmess
-  country: 🏁ZZ
-  port: 443
-  uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: foxlux.fovi.tk
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /eisasqa
-    headers:
-      HOST: foxlux.fovi.tk
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - Relay_-🇳🇱NL_654 |255.02Mb
-  - _656 |235.87Mb
-  - _661 |51.67Mb
+  - _595 |235.87Mb
+  - netflix_NL |255.02Mb
+  - _601 |232.06Mb
+  - _615 |62.47Mb
   - disney_PT |50.65Mb
-  - _669 |62.47Mb
-  - _657 |12.94Mb
-  - _655 |35.38Mb
-  - _663 |13.41Mb
-  - _685 |107.83Mb
-  - disney_HK |11.61Mb
-  - Relay_-🇲🇾MY_665 |30.31Mb
-  - Relay_-🇯🇵JP_694 |14.55Mb
+  - _598 |51.67Mb
+  - _597 |12.94Mb
+  - _602 |13.41Mb
+  - _594 |35.38Mb
+  - Relay_-🇯🇵JP_622 |13.15Mb
+  - Relay_-🇳🇱NL_628 |10.04Mb
+  - _619 |107.83Mb
+  - Relay_-🇲🇾MY_610 |30.31Mb
+  - Relay_-🇳🇱NL_633 |10.16Mb
+  - Relay_-🇯🇵JP_611 |12.58Mb
   - disney_US |112.49Mb
-  - Relay_-🇯🇵JP_695 |13.15Mb
-  - Relay_-🇺🇸US_705 |11.34Mb
-  - _697 |12.17Mb
-  - Relay_-🇰🇷KR_653 |14.52Mb
-  - 🇧🇬BG_725 |43.51Mb
+  - Relay_-🇺🇸US_651 |11.34Mb
+  - _635 |11.61Mb
+  - Relay_-🇭🇰HK_625 |10.14Mb
+  - Relay_-🇯🇵JP_640 |14.55Mb
+  - Relay_-🇯🇵JP_648 |12.52Mb
+  - _637 |12.17Mb
+  - 🇧🇬BG_659 |43.51Mb
   - disney_FR |95.13Mb
-  - Relay_-🇳🇱NL_718 |10.04Mb
-  - Relay_-🇳🇱NL_719 |10.16Mb
-  - Relay_-🇯🇵JP_721 |12.52Mb
-  - 🇧🇷BR_726 |22.56Mb
-  - 🇧🇷BR_727 |20.67Mb
-  - Relay_-🇱🇻LV_682 |12.16Mb
-  - 🇬🇧GB_732 |224.31Mb
-  - 🇬🇧GB_733 |167.53Mb
-  - 🇮🇪IE_776 |80.25Mb
-  - 🇲🇽MX_779 |35.11Mb
-  - 🇺🇸US_783 |14.54Mb
-  - 🇬🇷GR_734 |502.43Mb
-  - 🇷🇺RU_781 |53.95Mb
-  - 🇭🇰HK_769 |14.87Mb
-  - 🇭🇰HK_754 |174.55Mb
-  - disney_HK |13.07Mb
-  - 🇺🇸US_786 |22.99Mb
-  - 🇲🇾MY_780 |31.30Mb
-  - Relay_🇭🇰HK-🇭🇰HK_751 |14.37Mb
-  - Relay_🇺🇸US-🇺🇸US_787 |126.53Mb
-  - Relay_🏁ZZ-🇮🇷IR_789 |39.08Mb
+  - 🇧🇷BR_660 |22.56Mb
+  - Relay_🇬🇧GB-🇺🇸US_667 |11.70Mb
+  - netflix_NL |167.53Mb
+  - 🇬🇧GB_666 |224.31Mb
+  - 🇧🇷BR_661 |20.67Mb
+  - Relay_-🇱🇻LV_604 |12.16Mb
+  - 🇲🇽MX_711 |35.11Mb
+  - 🇮🇪IE_707 |80.25Mb
+  - 🇬🇷GR_668 |502.43Mb
+  - 🇷🇺RU_713 |53.95Mb
+  - 🇭🇰HK_706 |13.07Mb
+  - 🇭🇰HK_685 |14.87Mb
+  - 🇲🇾MY_712 |31.30Mb
+  - 🇺🇸US_720 |22.99Mb
+  - Relay_🇭🇰HK-🇭🇰HK_672 |10.24Mb
+  - Relay_🇺🇸US-🇺🇸US_718 |126.53Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - Relay_-🇳🇱NL_654 |255.02Mb
-  - _656 |235.87Mb
-  - _661 |51.67Mb
+  - _595 |235.87Mb
+  - netflix_NL |255.02Mb
+  - _601 |232.06Mb
+  - _615 |62.47Mb
   - disney_PT |50.65Mb
-  - _669 |62.47Mb
-  - _657 |12.94Mb
-  - _655 |35.38Mb
-  - _663 |13.41Mb
-  - _685 |107.83Mb
-  - disney_HK |11.61Mb
-  - Relay_-🇲🇾MY_665 |30.31Mb
-  - Relay_-🇯🇵JP_694 |14.55Mb
+  - _598 |51.67Mb
+  - _597 |12.94Mb
+  - _602 |13.41Mb
+  - _594 |35.38Mb
+  - Relay_-🇯🇵JP_622 |13.15Mb
+  - Relay_-🇳🇱NL_628 |10.04Mb
+  - _619 |107.83Mb
+  - Relay_-🇲🇾MY_610 |30.31Mb
+  - Relay_-🇳🇱NL_633 |10.16Mb
+  - Relay_-🇯🇵JP_611 |12.58Mb
   - disney_US |112.49Mb
-  - Relay_-🇯🇵JP_695 |13.15Mb
-  - Relay_-🇺🇸US_705 |11.34Mb
-  - _697 |12.17Mb
-  - Relay_-🇰🇷KR_653 |14.52Mb
-  - 🇧🇬BG_725 |43.51Mb
+  - Relay_-🇺🇸US_651 |11.34Mb
+  - _635 |11.61Mb
+  - Relay_-🇭🇰HK_625 |10.14Mb
+  - Relay_-🇯🇵JP_640 |14.55Mb
+  - Relay_-🇯🇵JP_648 |12.52Mb
+  - _637 |12.17Mb
+  - 🇧🇬BG_659 |43.51Mb
   - disney_FR |95.13Mb
-  - Relay_-🇳🇱NL_718 |10.04Mb
-  - Relay_-🇳🇱NL_719 |10.16Mb
-  - Relay_-🇯🇵JP_721 |12.52Mb
-  - 🇧🇷BR_726 |22.56Mb
-  - 🇧🇷BR_727 |20.67Mb
-  - Relay_-🇱🇻LV_682 |12.16Mb
-  - 🇬🇧GB_732 |224.31Mb
-  - 🇬🇧GB_733 |167.53Mb
-  - 🇮🇪IE_776 |80.25Mb
-  - 🇲🇽MX_779 |35.11Mb
-  - 🇺🇸US_783 |14.54Mb
-  - 🇬🇷GR_734 |502.43Mb
-  - 🇷🇺RU_781 |53.95Mb
-  - 🇭🇰HK_769 |14.87Mb
-  - 🇭🇰HK_754 |174.55Mb
-  - disney_HK |13.07Mb
-  - 🇺🇸US_786 |22.99Mb
-  - 🇲🇾MY_780 |31.30Mb
-  - Relay_🇭🇰HK-🇭🇰HK_751 |14.37Mb
-  - Relay_🇺🇸US-🇺🇸US_787 |126.53Mb
-  - Relay_🏁ZZ-🇮🇷IR_789 |39.08Mb
+  - 🇧🇷BR_660 |22.56Mb
+  - Relay_🇬🇧GB-🇺🇸US_667 |11.70Mb
+  - netflix_NL |167.53Mb
+  - 🇬🇧GB_666 |224.31Mb
+  - 🇧🇷BR_661 |20.67Mb
+  - Relay_-🇱🇻LV_604 |12.16Mb
+  - 🇲🇽MX_711 |35.11Mb
+  - 🇮🇪IE_707 |80.25Mb
+  - 🇬🇷GR_668 |502.43Mb
+  - 🇷🇺RU_713 |53.95Mb
+  - 🇭🇰HK_706 |13.07Mb
+  - 🇭🇰HK_685 |14.87Mb
+  - 🇲🇾MY_712 |31.30Mb
+  - 🇺🇸US_720 |22.99Mb
+  - Relay_🇭🇰HK-🇭🇰HK_672 |10.24Mb
+  - Relay_🇺🇸US-🇺🇸US_718 |126.53Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
