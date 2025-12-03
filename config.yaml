@@ -5,33 +5,81 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: netflix_NL |65.66Mb
+- name: netflix_IE |62.44Mb
+  server: 18.203.220.111
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: disney_netflix_NL |274.05Mb
   server: 151.242.251.137
   type: ss
   port: 8080
   password: o5osZg269v5zHpYjr1xY9s
   cipher: chacha20-ietf-poly1305
-- name: _356 |22.27Mb
+- name: _358 |19.13Mb
   server: 103.106.3.82
   type: ss
   port: 443
   udp: true
   password: 4SaCIazlgumYkM8FkPzlmwjpyWBDZFBk
   cipher: chacha20-ietf-poly1305
-- name: disney_PT |45.75Mb
-  server: 185.231.233.112
-  type: ss
-  port: 989
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: _358 |13.68Mb
-  server: 103.36.91.32
-  type: ss
-  port: 8388
+- name: Relay_-🇭🇰HK_396 |15.22Mb
+  server: v10.hdacd.com
+  type: vmess
+  port: 30807
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+- name: Relay_-🇺🇸US_411 |10.95Mb
+  server: m.cnmjin.net
+  type: vmess
+  port: 16618
   udp: true
-  password: asd123456
-  cipher: chacha20-ietf
-- name: Relay_-🇺🇸US_371 |10.43Mb
+  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  ws-opts:
+    path: /
+    headers:
+      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
+- name: disney_TW |13.03Mb
+  server: m.cnmjin.net
+  type: vmess
+  port: 16616
+  udp: true
+  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  ws-opts:
+    path: /
+    headers:
+      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
+- name: disney_HK |24.29Mb
+  server: m.cnmjin.net
+  type: vmess
+  port: 16622
+  udp: true
+  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  ws-opts:
+    path: /
+    headers:
+      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
+- name: Relay_-🇺🇸US_374 |10.43Mb
   server: planb.mojcn.com
   type: vmess
   port: 16648
@@ -46,7 +94,7 @@ proxies:
     path: /
     headers:
       Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: Relay_-🇯🇵JP_394 |11.37Mb
+- name: Relay_-🇯🇵JP_423 |11.37Mb
   server: planb.mojcn.com
   type: vmess
   port: 16617
@@ -61,7 +109,22 @@ proxies:
     path: /
     headers:
       Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: disney_HK |24.10Mb
+- name: _445 |15.88Mb
+  server: 74.117.196.232
+  type: vmess
+  port: 37934
+  udp: true
+  uuid: 27104fae-f047-4993-902a-9368d8a3e9bc
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: imafake.locker
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  ws-opts:
+    path: /speedtest
+- name: disney_HK |24.35Mb
   server: planb.mojcn.com
   type: vmess
   port: 16632
@@ -76,7 +139,211 @@ proxies:
     path: /
     headers:
       Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: disney_netflix_US |46.72Mb
+- name: disney_netflix_DE |240.38Mb
+  server: uk2-2.998998.best
+  type: vmess
+  port: 443
+  udp: true
+  uuid: b376015d-77d9-4482-9aa9-051be76aac65
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: b376015d-77d9-4482-9aa9-051be76aac65.placeunaorder.fun
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /logcatxiouerd34try9
+    headers:
+      Host: b376015d-77d9-4482-9aa9-051be76aac65.placeunaorder.fun
+- name: disney_netflix_PT |81.78Mb
+  server: 185.231.233.112
+  type: ss
+  port: 989
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: _474 |10.34Mb
+  server: 74.117.196.232
+  type: vmess
+  port: 37934
+  udp: true
+  uuid: b01d1e26-2f84-48da-88a1-1d06a77857f3
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: imafake.locker
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /speedtest
+- name: disney_HK |23.90Mb
+  server: planb.mojcn.com
+  type: vmess
+  port: 16622
+  udp: true
+  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  ws-opts:
+    path: /
+    headers:
+      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
+- name: Relay_-🇯🇵JP_454 |11.20Mb
+  server: m.cnmjin.net
+  type: vmess
+  port: 16617
+  udp: true
+  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  ws-opts:
+    path: /
+    headers:
+      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
+- name: disney_TW |13.23Mb
+  server: planb.mojcn.com
+  type: vmess
+  port: 16616
+  udp: true
+  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  ws-opts:
+    path: /
+    headers:
+      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
+- name: Relay_-🇮🇳IN_473 |27.07Mb
+  server: planb.mojcn.com
+  type: vmess
+  port: 16626
+  udp: true
+  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  ws-opts:
+    path: /
+    headers:
+      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
+- name: disney_HK |24.15Mb
+  server: m.cnmjin.net
+  type: vmess
+  port: 16632
+  udp: true
+  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  ws-opts:
+    path: /
+    headers:
+      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
+- name: Relay_-🇳🇱NL_478 |21.04Mb
+  server: 160.16.81.84
+  type: trojan
+  port: 4054
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: disney_netflix_US |28.45Mb
+  server: us5.998998.best
+  type: vmess
+  port: 443
+  udp: true
+  uuid: b376015d-77d9-4482-9aa9-051be76aac65
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: b376015d-77d9-4482-9aa9-051be76aac65.fasleangles.fun
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /androirfdsreoightrjh
+    headers:
+      Host: b376015d-77d9-4482-9aa9-051be76aac65.fasleangles.fun
+- name: Relay_-🇯🇵JP_480 |23.26Mb
+  server: 153.121.51.29
+  type: trojan
+  port: 3169
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: Relay_-🇳🇱NL_487 |10.83Mb
+  server: 160.16.124.55
+  type: trojan
+  port: 4054
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_483 |18.00Mb
+  server: 52.195.176.26
+  type: trojan
+  port: 2145
+  udp: true
+  password: BxceQaOe
+  sni: t.me/ripaojiedian
+  skip-cert-verify: true
+- name: Relay_-🇳🇱NL_488 |11.84Mb
+  server: 160.16.124.55
+  type: trojan
+  port: 2760
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: Relay_-🇸🇬SG_489 |22.11Mb
+  server: 153.121.51.29
+  type: trojan
+  port: 127
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: disney_HK |21.76Mb
+  server: 58.152.25.20
+  type: trojan
+  port: 443
+  udp: true
+  password: BxceQaOe
+  sni: t.me/ripaojiedian
+  skip-cert-verify: true
+- name: disney_HK |20.40Mb
+  server: 58.152.18.192
+  type: trojan
+  port: 443
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: disney_FR |149.43Mb
+  server: 208.76.223.218
+  type: vmess
+  country: 🇪🇸ES
+  port: 27092
+  uuid: a0596ba6-72a3-4366-8992-77088da65bd8
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_NL |73.95Mb
+  server: 82.38.31.179
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_US |44.66Mb
   server: us19-25.998998.best
   type: vmess
   port: 443
@@ -94,232 +361,37 @@ proxies:
     path: /saoihgreg9384gh8934
     headers:
       Host: b376015d-77d9-4482-9aa9-051be76aac65.mihomo.baby
-- name: Relay_-🇹🇼TW_417 |18.72Mb
-  server: planb.mojcn.com
+- name: 🇧🇷BR_494 |11.91Mb
+  server: 38.180.16.86
   type: vmess
-  port: 16616
-  udp: true
-  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: _429 |19.78Mb
-  server: 74.117.196.232
-  type: vmess
-  port: 37934
-  udp: true
-  uuid: 254551f6-ec28-4938-ad0e-0aa4aa1965ec
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /speedtest
-- name: Relay_-🇹🇼TW_381 |20.84Mb
-  server: m.cnmjin.net
-  type: vmess
-  port: 16616
-  udp: true
-  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: disney_HK |23.86Mb
-  server: m.cnmjin.net
-  type: vmess
-  port: 16622
-  udp: true
-  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: disney_SG |10.95Mb
-  server: m.cnmjin.net
-  type: vmess
-  port: 16618
-  udp: true
-  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: disney_HK |24.04Mb
-  server: planb.mojcn.com
-  type: vmess
-  port: 16622
-  udp: true
-  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: Relay_-🇭🇰HK_390 |11.14Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  port: 16632
-  udp: true
-  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: Relay_-🇭🇰HK_396 |11.02Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  port: 16622
-  udp: true
-  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: Relay_-🇸🇬SG_404 |11.40Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  port: 16618
-  udp: true
-  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: Relay_-🇯🇵JP_426 |11.20Mb
-  server: m.cnmjin.net
-  type: vmess
-  port: 16617
-  udp: true
-  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: disney_HK |24.07Mb
-  server: m.cnmjin.net
-  type: vmess
-  port: 16632
-  udp: true
-  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: Relay_-🇯🇵JP_444 |11.95Mb
-  server: 52.195.176.26
-  type: trojan
-  port: 2145
-  udp: true
-  password: BxceQaOe
-  sni: t.me/ripaojiedian
-  skip-cert-verify: true
-- name: Relay_-🇮🇳IN_438 |27.48Mb
-  server: planb.mojcn.com
-  type: vmess
-  port: 16626
-  udp: true
-  uuid: 77439561-dcef-4e45-803a-743cfa7d20c2
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: 9e97d6c9e2e0ad3444cbf96d3709366d.mobgslb.tbcache.com
-- name: Relay_-🇳🇱NL_445 |13.12Mb
-  server: 160.16.124.55
-  type: trojan
-  port: 2760
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_450 |22.28Mb
-  server: 160.16.138.24
-  type: trojan
-  port: 1331
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-- name: Relay_-🇳🇱NL_454 |45.52Mb
-  server: 160.16.81.84
-  type: trojan
-  port: 4054
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-- name: disney_FR |42.99Mb
-  server: 208.76.223.218
-  type: vmess
-  country: 🇪🇸ES
-  port: 27092
-  uuid: a0596ba6-72a3-4366-8992-77088da65bd8
+  country: 🇧🇷BR
+  port: 36104
+  uuid: E146A8CB-9D2F-449C-ADCA-8736FB
   alterId: 0
   cipher: auto
   network: none
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_HK |29.33Mb
-  server: 58.152.25.20
+- name: Relay_-🇳🇱NL_491 |10.49Mb
+  server: 160.16.63.16
   type: trojan
+  port: 4054
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_492 |21.96Mb
+  server: 160.16.138.24
+  type: trojan
+  port: 1331
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+- name: netflix_AL |32.59Mb
+  server: 87.121.162.249
+  type: ss
+  country: 🇭🇰HK
   port: 443
-  udp: true
-  password: BxceQaOe
-  sni: t.me/ripaojiedian
-  skip-cert-verify: true
+  password: JGv616hMWdjfuZ00jYfq7XkBHJZrOBrg
+  cipher: chacha20-ietf-poly1305
 - name: disney_HK |14.19Mb
   server: 58.152.18.95
   type: trojan
@@ -328,34 +400,19 @@ proxies:
   password: BxceQaOe
   sni: t.me/ripaojiedian
   skip-cert-verify: true
-- name: disney_HK |23.30Mb
-  server: 58.152.18.192
-  type: trojan
-  port: 443
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-- name: netflix_NL |251.07Mb
-  server: 82.38.31.190
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: 🇬🇧GB_461 |19.52Mb
-  server: 82.38.31.179
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: 🇭🇰HK_462 |37.27Mb
-  server: 87.121.162.249
-  type: ss
-  country: 🇭🇰HK
-  port: 443
-  password: JGv616hMWdjfuZ00jYfq7XkBHJZrOBrg
-  cipher: chacha20-ietf-poly1305
-- name: 🇲🇽MX_478 |243.26Mb
+- name: 🇦🇺AU_493 |10.25Mb
+  server: 54.252.240.128
+  type: vmess
+  country: 🇦🇺AU
+  port: 1000
+  uuid: ca26a9fd-fef8-4ea7-d194-450ce4e0c67a
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: 🇲🇽MX_512 |35.51Mb
   server: 216.238.89.53
   type: vmess
   country: 🇲🇽MX
@@ -367,19 +424,21 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: 🇭🇰HK_468 |20.40Mb
-  server: 8.218.116.26
-  type: vmess
-  country: 🇭🇰HK
-  port: 32228
-  uuid: e4767e9f-ed00-4f31-a984-a918bdd9b09c
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: 🇭🇰HK_469 |29.58Mb
+- name: netflix_IL |13.24Mb
+  server: 45.93.95.187
+  type: ss
+  country: 🇮🇱IL
+  port: 8618
+  password: 4lUEC91c1d8oeClzDbYpXA
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_NL |233.43Mb
+  server: 45.87.175.166
+  type: ss
+  country: 🇱🇹LT
+  port: 443
+  password: 1RWwXhwfAB5gAEozU4G2Pg
+  cipher: chacha20-ietf-poly1305
+- name: 🇭🇰HK_501 |29.58Mb
   server: 47.242.162.148
   type: vmess
   country: 🇭🇰HK
@@ -393,7 +452,42 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /arki?ed=2048
-- name: 🇭🇰HK_470 |30.46Mb
+- name: 🇭🇰HK_502 |23.84Mb
+  server: 47.242.125.104
+  type: vmess
+  country: 🇭🇰HK
+  port: 58424
+  uuid: 80016399-3178-472e-86e3-129aab31a025
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /arki?ed=2048
+- name: disney_netflix_US |50.81Mb
+  server: 100.25.219.192
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: 🇭🇰HK_503 |81.44Mb
+  server: 8.210.134.183
+  type: vmess
+  country: 🇭🇰HK
+  port: 3721
+  uuid: e72f5c6b-220f-40b3-a115-2d81473458cf
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+- name: 🇭🇰HK_504 |30.31Mb
   server: 47.243.51.237
   type: vmess
   country: 🇭🇰HK
@@ -407,73 +501,54 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /arki?ed=2048
-- name: netflix_NL |63.97Mb
-  server: 45.87.175.166
-  type: ss
-  country: 🇱🇹LT
-  port: 443
-  password: 1RWwXhwfAB5gAEozU4G2Pg
-  cipher: chacha20-ietf-poly1305
-- name: 🇰🇷KR_476 |10.08Mb
-  server: 146.56.112.110
+- name: 🇭🇰HK_506 |130.51Mb
+  server: 47.242.162.235
   type: vmess
-  country: 🇰🇷KR
-  port: 8888
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: netflix_IL |73.18Mb
-  server: 45.93.95.187
-  type: ss
-  country: 🇮🇱IL
-  port: 8618
-  password: 4lUEC91c1d8oeClzDbYpXA
-  cipher: chacha20-ietf-poly1305
-- name: 🇺🇸US_487 |10.82Mb
-  server: 74.117.196.232
-  type: vmess
-  country: 🇺🇸US
-  port: 37934
-  uuid: f1a513d2-c32a-49dc-8e64-d4f8a2f1e001
+  country: 🇭🇰HK
+  port: 3787
+  uuid: e748fe05-2678-4c31-84c6-14ed825b92b4
   alterId: 0
   cipher: auto
   network: ws
   http-opts: {}
   h2-opts: {}
-  tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /speedtest
-- name: 🇺🇸US_485 |41.87Mb
-  server: 100.25.219.192
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: 🇺🇸US_490 |10.08Mb
-  server: 74.117.196.232
+    path: /arki?ed=2048
+- name: 🇭🇰HK_507 |21.71Mb
+  server: 47.242.140.52
   type: vmess
-  country: 🇺🇸US
-  port: 37934
-  uuid: 35f332d0-0b05-4cc6-91cb-ec0d4465055f
+  country: 🇭🇰HK
+  port: 48219
+  uuid: 006893c6-79b1-4c44-94ff-b8bbea065f1f
   alterId: 0
   cipher: auto
   network: ws
-  servername: imafake.locker
   http-opts: {}
   h2-opts: {}
-  tls: true
   skip-cert-verify: true
   ws-opts:
-    path: /speedtest
-    headers:
-      HOST: imafake.locker
-- name: 🇺🇸US_491 |16.11Mb
+    path: /arki?ed=2048
+- name: 🇷🇺RU_515 |13.42Mb
+  server: 45.139.26.173
+  type: ss
+  country: 🇷🇺RU
+  port: 57456
+  password: d3837224ed465f00
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_US |19.05Mb
+  server: 38.84.201.21
+  type: vmess
+  country: 🇺🇸US
+  port: 53487
+  uuid: c3c1ec05-df2c-4975-9b42-e9b007564eb1
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: 🇺🇸US_523 |21.05Mb
   server: 74.117.196.232
   type: vmess
   country: 🇺🇸US
@@ -491,19 +566,22 @@ proxies:
     path: /speedtest
     headers:
       HOST: imafake.locker
-- name: disney_netflix_US |20.66Mb
-  server: 38.84.201.21
+- name: 🇺🇸US_524 |22.56Mb
+  server: 74.117.196.232
   type: vmess
   country: 🇺🇸US
-  port: 53487
-  uuid: c3c1ec05-df2c-4975-9b42-e9b007564eb1
+  port: 37934
+  uuid: e1cc26b3-df0b-477b-afb0-53659a25e978
   alterId: 0
   cipher: auto
-  network: none
+  network: ws
   http-opts: {}
   h2-opts: {}
+  tls: true
   skip-cert-verify: true
-- name: 🇺🇸US_493 |18.70Mb
+  ws-opts:
+    path: /speedtest
+- name: 🇺🇸US_525 |14.41Mb
   server: 74.117.196.232
   type: vmess
   country: 🇺🇸US
@@ -521,7 +599,14 @@ proxies:
     path: /speedtest
     headers:
       HOST: imafake.locker
-- name: 🇲🇾MY_479 |30.84Mb
+- name: disney_TR |21.87Mb
+  server: 185.39.204.161
+  type: ss
+  country: 🇹🇷TR
+  port: 33563
+  password: bSlgCoGhApOb55tIMD0zxY
+  cipher: chacha20-ietf-poly1305
+- name: 🇲🇾MY_513 |18.75Mb
   server: 38.54.98.110
   type: vmess
   country: 🇲🇾MY
@@ -534,7 +619,14 @@ proxies:
   h2-opts: {}
   tls: true
   skip-cert-verify: true
-- name: 🇸🇬SG_482 |11.05Mb
+- name: disney_netflix_TR |19.35Mb
+  server: tr-1.stunnel.cc
+  type: ss
+  country: 🇹🇷TR
+  port: 8444
+  password: tunnel-fbrof
+  cipher: chacha20-ietf-poly1305
+- name: 🇸🇬SG_516 |11.24Mb
   server: 68.183.178.131
   type: vmess
   country: 🇸🇬SG
@@ -552,14 +644,7 @@ proxies:
     path: /
     headers:
       HOST: www.12333.monster
-- name: disney_TR |31.63Mb
-  server: tr-1.stunnel.cc
-  type: ss
-  country: 🇹🇷TR
-  port: 8444
-  password: tunnel-fbrof
-  cipher: chacha20-ietf-poly1305
-- name: disney_HK |20.50Mb
+- name: disney_HK |25.27Mb
   server: 45.136.12.37
   type: vmess
   country: 🇺🇸US
@@ -571,7 +656,7 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_US |33.72Mb
+- name: disney_netflix_US |20.17Mb
   server: cf.fovi.tk
   type: vmess
   country: 🇺🇸US
@@ -594,108 +679,126 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - netflix_NL |65.66Mb
-  - _356 |22.27Mb
-  - disney_PT |45.75Mb
-  - _358 |13.68Mb
-  - Relay_-🇺🇸US_371 |10.43Mb
-  - Relay_-🇯🇵JP_394 |11.37Mb
-  - disney_HK |24.10Mb
-  - disney_netflix_US |46.72Mb
-  - Relay_-🇹🇼TW_417 |18.72Mb
-  - _429 |19.78Mb
-  - Relay_-🇹🇼TW_381 |20.84Mb
-  - disney_HK |23.86Mb
-  - disney_SG |10.95Mb
-  - disney_HK |24.04Mb
-  - Relay_-🇭🇰HK_390 |11.14Mb
-  - Relay_-🇭🇰HK_396 |11.02Mb
-  - Relay_-🇸🇬SG_404 |11.40Mb
-  - Relay_-🇯🇵JP_426 |11.20Mb
-  - disney_HK |24.07Mb
-  - Relay_-🇯🇵JP_444 |11.95Mb
-  - Relay_-🇮🇳IN_438 |27.48Mb
-  - Relay_-🇳🇱NL_445 |13.12Mb
-  - Relay_-🇯🇵JP_450 |22.28Mb
-  - Relay_-🇳🇱NL_454 |45.52Mb
-  - disney_FR |42.99Mb
-  - disney_HK |29.33Mb
+  - netflix_IE |62.44Mb
+  - disney_netflix_NL |274.05Mb
+  - _358 |19.13Mb
+  - Relay_-🇭🇰HK_396 |15.22Mb
+  - Relay_-🇺🇸US_411 |10.95Mb
+  - disney_TW |13.03Mb
+  - disney_HK |24.29Mb
+  - Relay_-🇺🇸US_374 |10.43Mb
+  - Relay_-🇯🇵JP_423 |11.37Mb
+  - _445 |15.88Mb
+  - disney_HK |24.35Mb
+  - disney_netflix_DE |240.38Mb
+  - disney_netflix_PT |81.78Mb
+  - _474 |10.34Mb
+  - disney_HK |23.90Mb
+  - Relay_-🇯🇵JP_454 |11.20Mb
+  - disney_TW |13.23Mb
+  - Relay_-🇮🇳IN_473 |27.07Mb
+  - disney_HK |24.15Mb
+  - Relay_-🇳🇱NL_478 |21.04Mb
+  - disney_netflix_US |28.45Mb
+  - Relay_-🇯🇵JP_480 |23.26Mb
+  - Relay_-🇳🇱NL_487 |10.83Mb
+  - Relay_-🇯🇵JP_483 |18.00Mb
+  - Relay_-🇳🇱NL_488 |11.84Mb
+  - Relay_-🇸🇬SG_489 |22.11Mb
+  - disney_HK |21.76Mb
+  - disney_HK |20.40Mb
+  - disney_FR |149.43Mb
+  - disney_netflix_NL |73.95Mb
+  - disney_netflix_US |44.66Mb
+  - 🇧🇷BR_494 |11.91Mb
+  - Relay_-🇳🇱NL_491 |10.49Mb
+  - Relay_-🇯🇵JP_492 |21.96Mb
+  - netflix_AL |32.59Mb
   - disney_HK |14.19Mb
-  - disney_HK |23.30Mb
-  - netflix_NL |251.07Mb
-  - 🇬🇧GB_461 |19.52Mb
-  - 🇭🇰HK_462 |37.27Mb
-  - 🇲🇽MX_478 |243.26Mb
-  - 🇭🇰HK_468 |20.40Mb
-  - 🇭🇰HK_469 |29.58Mb
-  - 🇭🇰HK_470 |30.46Mb
-  - netflix_NL |63.97Mb
-  - 🇰🇷KR_476 |10.08Mb
-  - netflix_IL |73.18Mb
-  - 🇺🇸US_487 |10.82Mb
-  - 🇺🇸US_485 |41.87Mb
-  - 🇺🇸US_490 |10.08Mb
-  - 🇺🇸US_491 |16.11Mb
-  - disney_netflix_US |20.66Mb
-  - 🇺🇸US_493 |18.70Mb
-  - 🇲🇾MY_479 |30.84Mb
-  - 🇸🇬SG_482 |11.05Mb
-  - disney_TR |31.63Mb
-  - disney_HK |20.50Mb
-  - disney_netflix_US |33.72Mb
+  - 🇦🇺AU_493 |10.25Mb
+  - 🇲🇽MX_512 |35.51Mb
+  - netflix_IL |13.24Mb
+  - disney_netflix_NL |233.43Mb
+  - 🇭🇰HK_501 |29.58Mb
+  - 🇭🇰HK_502 |23.84Mb
+  - disney_netflix_US |50.81Mb
+  - 🇭🇰HK_503 |81.44Mb
+  - 🇭🇰HK_504 |30.31Mb
+  - 🇭🇰HK_506 |130.51Mb
+  - 🇭🇰HK_507 |21.71Mb
+  - 🇷🇺RU_515 |13.42Mb
+  - disney_netflix_US |19.05Mb
+  - 🇺🇸US_523 |21.05Mb
+  - 🇺🇸US_524 |22.56Mb
+  - 🇺🇸US_525 |14.41Mb
+  - disney_TR |21.87Mb
+  - 🇲🇾MY_513 |18.75Mb
+  - disney_netflix_TR |19.35Mb
+  - 🇸🇬SG_516 |11.24Mb
+  - disney_HK |25.27Mb
+  - disney_netflix_US |20.17Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - netflix_NL |65.66Mb
-  - _356 |22.27Mb
-  - disney_PT |45.75Mb
-  - _358 |13.68Mb
-  - Relay_-🇺🇸US_371 |10.43Mb
-  - Relay_-🇯🇵JP_394 |11.37Mb
-  - disney_HK |24.10Mb
-  - disney_netflix_US |46.72Mb
-  - Relay_-🇹🇼TW_417 |18.72Mb
-  - _429 |19.78Mb
-  - Relay_-🇹🇼TW_381 |20.84Mb
-  - disney_HK |23.86Mb
-  - disney_SG |10.95Mb
-  - disney_HK |24.04Mb
-  - Relay_-🇭🇰HK_390 |11.14Mb
-  - Relay_-🇭🇰HK_396 |11.02Mb
-  - Relay_-🇸🇬SG_404 |11.40Mb
-  - Relay_-🇯🇵JP_426 |11.20Mb
-  - disney_HK |24.07Mb
-  - Relay_-🇯🇵JP_444 |11.95Mb
-  - Relay_-🇮🇳IN_438 |27.48Mb
-  - Relay_-🇳🇱NL_445 |13.12Mb
-  - Relay_-🇯🇵JP_450 |22.28Mb
-  - Relay_-🇳🇱NL_454 |45.52Mb
-  - disney_FR |42.99Mb
-  - disney_HK |29.33Mb
+  - netflix_IE |62.44Mb
+  - disney_netflix_NL |274.05Mb
+  - _358 |19.13Mb
+  - Relay_-🇭🇰HK_396 |15.22Mb
+  - Relay_-🇺🇸US_411 |10.95Mb
+  - disney_TW |13.03Mb
+  - disney_HK |24.29Mb
+  - Relay_-🇺🇸US_374 |10.43Mb
+  - Relay_-🇯🇵JP_423 |11.37Mb
+  - _445 |15.88Mb
+  - disney_HK |24.35Mb
+  - disney_netflix_DE |240.38Mb
+  - disney_netflix_PT |81.78Mb
+  - _474 |10.34Mb
+  - disney_HK |23.90Mb
+  - Relay_-🇯🇵JP_454 |11.20Mb
+  - disney_TW |13.23Mb
+  - Relay_-🇮🇳IN_473 |27.07Mb
+  - disney_HK |24.15Mb
+  - Relay_-🇳🇱NL_478 |21.04Mb
+  - disney_netflix_US |28.45Mb
+  - Relay_-🇯🇵JP_480 |23.26Mb
+  - Relay_-🇳🇱NL_487 |10.83Mb
+  - Relay_-🇯🇵JP_483 |18.00Mb
+  - Relay_-🇳🇱NL_488 |11.84Mb
+  - Relay_-🇸🇬SG_489 |22.11Mb
+  - disney_HK |21.76Mb
+  - disney_HK |20.40Mb
+  - disney_FR |149.43Mb
+  - disney_netflix_NL |73.95Mb
+  - disney_netflix_US |44.66Mb
+  - 🇧🇷BR_494 |11.91Mb
+  - Relay_-🇳🇱NL_491 |10.49Mb
+  - Relay_-🇯🇵JP_492 |21.96Mb
+  - netflix_AL |32.59Mb
   - disney_HK |14.19Mb
-  - disney_HK |23.30Mb
-  - netflix_NL |251.07Mb
-  - 🇬🇧GB_461 |19.52Mb
-  - 🇭🇰HK_462 |37.27Mb
-  - 🇲🇽MX_478 |243.26Mb
-  - 🇭🇰HK_468 |20.40Mb
-  - 🇭🇰HK_469 |29.58Mb
-  - 🇭🇰HK_470 |30.46Mb
-  - netflix_NL |63.97Mb
-  - 🇰🇷KR_476 |10.08Mb
-  - netflix_IL |73.18Mb
-  - 🇺🇸US_487 |10.82Mb
-  - 🇺🇸US_485 |41.87Mb
-  - 🇺🇸US_490 |10.08Mb
-  - 🇺🇸US_491 |16.11Mb
-  - disney_netflix_US |20.66Mb
-  - 🇺🇸US_493 |18.70Mb
-  - 🇲🇾MY_479 |30.84Mb
-  - 🇸🇬SG_482 |11.05Mb
-  - disney_TR |31.63Mb
-  - disney_HK |20.50Mb
-  - disney_netflix_US |33.72Mb
+  - 🇦🇺AU_493 |10.25Mb
+  - 🇲🇽MX_512 |35.51Mb
+  - netflix_IL |13.24Mb
+  - disney_netflix_NL |233.43Mb
+  - 🇭🇰HK_501 |29.58Mb
+  - 🇭🇰HK_502 |23.84Mb
+  - disney_netflix_US |50.81Mb
+  - 🇭🇰HK_503 |81.44Mb
+  - 🇭🇰HK_504 |30.31Mb
+  - 🇭🇰HK_506 |130.51Mb
+  - 🇭🇰HK_507 |21.71Mb
+  - 🇷🇺RU_515 |13.42Mb
+  - disney_netflix_US |19.05Mb
+  - 🇺🇸US_523 |21.05Mb
+  - 🇺🇸US_524 |22.56Mb
+  - 🇺🇸US_525 |14.41Mb
+  - disney_TR |21.87Mb
+  - 🇲🇾MY_513 |18.75Mb
+  - disney_netflix_TR |19.35Mb
+  - 🇸🇬SG_516 |11.24Mb
+  - disney_HK |25.27Mb
+  - disney_netflix_US |20.17Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
