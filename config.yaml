@@ -32,12 +32,18 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_FR |205.78Mb
-  server: 208.76.223.218
+- name: _54 |24.28Mb
+  server: 107.174.114.71
+  type: ss
+  port: 443
+  password: 595HLF3fHUuw0McM51tpvPygSIB1uf4D
+  cipher: chacha20-ietf-poly1305
+- name: netflix_MX |38.65Mb
+  server: 216.238.89.53
   type: vmess
-  country: 🇪🇸ES
-  port: 27092
-  uuid: a0596ba6-72a3-4366-8992-77088da65bd8
+  country: 🇲🇽MX
+  port: 57283
+  uuid: 1a5aafc0-6482-451d-fe76-6875b7818579
   alterId: 0
   cipher: auto
   network: none
@@ -56,6 +62,18 @@ proxies:
   port: 1331
   password: 76d630f2af6619c4a5de0ef953df3c6a
   sni: www.nintendogames.net
+- name: disney_netflix_FR |205.78Mb
+  server: 208.76.223.218
+  type: vmess
+  country: 🇪🇸ES
+  port: 27092
+  uuid: a0596ba6-72a3-4366-8992-77088da65bd8
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: disney_netflix_US |40.15Mb
   server: 38.14.99.163
   type: vmess
@@ -69,6 +87,13 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: 🇺🇸US_97 |31.22Mb
+  server: 45.83.22.118
+  type: ss
+  country: 🇺🇸US
+  port: 8443
+  password: 6af24790-76c9-49d3-bbe0-01285239e57d
+  cipher: aes-256-gcm
 - name: disney_netflix_HK |22.34Mb
   server: 45.136.12.37
   type: vmess
@@ -81,31 +106,6 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_US |28.39Mb
-  server: cf.fovi.tk
-  type: vmess
-  country: 🏁ZZ
-  port: 443
-  uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: foxlux.fovi.tk
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /eisasqa
-    headers:
-      HOST: foxlux.fovi.tk
-- name: 🇺🇸US_111 |31.22Mb
-  server: 45.83.22.118
-  type: ss
-  country: 🇺🇸US
-  port: 8443
-  password: 6af24790-76c9-49d3-bbe0-01285239e57d
-  cipher: aes-256-gcm
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -113,26 +113,28 @@ proxy-groups:
   - ♻️ 自动选择
   - disney_netflix_US |58.02Mb
   - disney_netflix_FR |137.71Mb
-  - disney_netflix_FR |205.78Mb
+  - _54 |24.28Mb
+  - netflix_MX |38.65Mb
   - netflix_JP |20.50Mb
   - netflix_JP |19.37Mb
+  - disney_netflix_FR |205.78Mb
   - disney_netflix_US |40.15Mb
+  - 🇺🇸US_97 |31.22Mb
   - disney_netflix_HK |22.34Mb
-  - disney_netflix_US |28.39Mb
-  - 🇺🇸US_111 |31.22Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - disney_netflix_US |58.02Mb
   - disney_netflix_FR |137.71Mb
-  - disney_netflix_FR |205.78Mb
+  - _54 |24.28Mb
+  - netflix_MX |38.65Mb
   - netflix_JP |20.50Mb
   - netflix_JP |19.37Mb
+  - disney_netflix_FR |205.78Mb
   - disney_netflix_US |40.15Mb
+  - 🇺🇸US_97 |31.22Mb
   - disney_netflix_HK |22.34Mb
-  - disney_netflix_US |28.39Mb
-  - 🇺🇸US_111 |31.22Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
