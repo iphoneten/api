@@ -5,44 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: disney_netflix_US |40.32Mb
-  server: 38.14.99.163
-  type: vmess
-  country: 🇺🇸US
-  port: 59807
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 0
-  cipher: auto
-  network: tcp
-  servername: 38.14.99.163
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: netflix_MX |40.31Mb
-  server: 216.238.89.53
-  type: vmess
-  country: 🇲🇽MX
-  port: 57283
-  uuid: 1a5aafc0-6482-451d-fe76-6875b7818579
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_netflix_US |71.41Mb
-  server: 47.253.197.26
-  type: vmess
-  country: 🇺🇸US
-  port: 12056
-  uuid: dd7be7f1-38ff-45e6-f1e5-b20c2190f527
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_netflix_US |57.80Mb
+- name: disney_netflix_US |58.02Mb
   server: 45.150.52.40
   type: vmess
   port: 443
@@ -57,19 +20,7 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /c31777a1
-- name: netflix_JP |16.09Mb
-  server: 153.121.73.102
-  type: trojan
-  port: 1331
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
-- name: netflix_JP |11.63Mb
-  server: 160.16.242.183
-  type: trojan
-  port: 1331
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
-- name: disney_netflix_FR |27.50Mb
+- name: disney_netflix_FR |137.71Mb
   server: 208.76.223.218
   type: vmess
   country: 🇪🇸ES
@@ -81,7 +32,7 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_FR |186.42Mb
+- name: disney_netflix_FR |205.78Mb
   server: 208.76.223.218
   type: vmess
   country: 🇪🇸ES
@@ -93,7 +44,32 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: 🇺🇸US_109 |22.34Mb
+- name: netflix_JP |20.50Mb
+  server: 153.121.73.102
+  type: trojan
+  port: 1331
+  password: 76d630f2af6619c4a5de0ef953df3c6a
+  sni: www.nintendogames.net
+- name: netflix_JP |19.37Mb
+  server: 160.16.242.183
+  type: trojan
+  port: 1331
+  password: 76d630f2af6619c4a5de0ef953df3c6a
+  sni: www.nintendogames.net
+- name: disney_netflix_US |40.15Mb
+  server: 38.14.99.163
+  type: vmess
+  country: 🇺🇸US
+  port: 59807
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 0
+  cipher: auto
+  network: tcp
+  servername: 38.14.99.163
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_HK |22.34Mb
   server: 45.136.12.37
   type: vmess
   country: 🇺🇸US
@@ -105,33 +81,58 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: disney_netflix_US |28.39Mb
+  server: cf.fovi.tk
+  type: vmess
+  country: 🏁ZZ
+  port: 443
+  uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: foxlux.fovi.tk
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /eisasqa
+    headers:
+      HOST: foxlux.fovi.tk
+- name: 🇺🇸US_111 |31.22Mb
+  server: 45.83.22.118
+  type: ss
+  country: 🇺🇸US
+  port: 8443
+  password: 6af24790-76c9-49d3-bbe0-01285239e57d
+  cipher: aes-256-gcm
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - disney_netflix_US |40.32Mb
-  - netflix_MX |40.31Mb
-  - disney_netflix_US |71.41Mb
-  - disney_netflix_US |57.80Mb
-  - netflix_JP |16.09Mb
-  - netflix_JP |11.63Mb
-  - disney_netflix_FR |27.50Mb
-  - disney_netflix_FR |186.42Mb
-  - 🇺🇸US_109 |22.34Mb
+  - disney_netflix_US |58.02Mb
+  - disney_netflix_FR |137.71Mb
+  - disney_netflix_FR |205.78Mb
+  - netflix_JP |20.50Mb
+  - netflix_JP |19.37Mb
+  - disney_netflix_US |40.15Mb
+  - disney_netflix_HK |22.34Mb
+  - disney_netflix_US |28.39Mb
+  - 🇺🇸US_111 |31.22Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - disney_netflix_US |40.32Mb
-  - netflix_MX |40.31Mb
-  - disney_netflix_US |71.41Mb
-  - disney_netflix_US |57.80Mb
-  - netflix_JP |16.09Mb
-  - netflix_JP |11.63Mb
-  - disney_netflix_FR |27.50Mb
-  - disney_netflix_FR |186.42Mb
-  - 🇺🇸US_109 |22.34Mb
+  - disney_netflix_US |58.02Mb
+  - disney_netflix_FR |137.71Mb
+  - disney_netflix_FR |205.78Mb
+  - netflix_JP |20.50Mb
+  - netflix_JP |19.37Mb
+  - disney_netflix_US |40.15Mb
+  - disney_netflix_HK |22.34Mb
+  - disney_netflix_US |28.39Mb
+  - 🇺🇸US_111 |31.22Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
