@@ -5,6 +5,15 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+- name: _199 |186.06Mb
+  server: 172.235.33.114
+  type: vmess
+  port: 10001
+  uuid: 442a3923-eca1-4af0-b3ff-24a7ce0af68f
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
 - name: disney_netflix_US |39.85Mb
   server: 163.192.49.195
   type: vmess
@@ -29,15 +38,22 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: _199 |186.06Mb
-  server: 172.235.33.114
+- name: Relay_-🇭🇰HK_219 |17.20Mb
+  server: www.zhoubowen.vip
   type: vmess
-  port: 10001
-  uuid: 442a3923-eca1-4af0-b3ff-24a7ce0af68f
+  port: 443
+  uuid: 71b2655e-07d9-4dad-a770-a2b08275142b
   alterId: 0
   cipher: auto
+  network: ws
+  servername: www.zhoubowen.vip
   http-opts: {}
   h2-opts: {}
+  tls: true
+  ws-opts:
+    path: /biutefor.icu
+    headers:
+      Host: www.zhoubowen.vip
 - name: _204 |28.04Mb
   server: 51.79.102.253
   type: vmess
@@ -52,12 +68,6 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-- name: _188 |11.83Mb
-  server: 45.14.245.2
-  type: ss
-  port: 443
-  password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP
-  cipher: chacha20-ietf-poly1305
 - name: _193 |155.54Mb
   server: 85.195.101.122
   type: vmess
@@ -67,11 +77,17 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: _213 |22.68Mb
-  server: 91.99.27.55
+- name: _188 |11.83Mb
+  server: 45.14.245.2
+  type: ss
+  port: 443
+  password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP
+  cipher: chacha20-ietf-poly1305
+- name: _218 |11.69Mb
+  server: 45.136.12.37
   type: vmess
-  port: 8880
-  uuid: f3025961-167b-4f49-e4e3-86505fe980fd
+  port: 38141
+  uuid: fd291be6-b48d-43a1-da38-66c7f80e2f80
   alterId: 0
   cipher: auto
   http-opts: {}
@@ -92,15 +108,6 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: _218 |11.69Mb
-  server: 45.136.12.37
-  type: vmess
-  port: 38141
-  uuid: fd291be6-b48d-43a1-da38-66c7f80e2f80
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
 - name: disney_SG |11.56Mb
   server: 165.154.195.38
   type: vmess
@@ -110,36 +117,15 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: Relay_-🇧🇷BR_189 |73.02Mb
-  server: pq-brazil1.09vpn.com
+- name: _231 |24.92Mb
+  server: 8.218.105.196
   type: vmess
-  port: 80
-  uuid: c04c3b34-70fd-4fec-963e-c12d09f36bef
+  port: 52752
+  uuid: 925bdbf5-72be-4437-bebf-441c61089f6b
   alterId: 0
   cipher: auto
-  network: ws
   http-opts: {}
   h2-opts: {}
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: pq-brazil1.09vpn.com
-- name: Relay_-🇭🇰HK_219 |17.20Mb
-  server: www.zhoubowen.vip
-  type: vmess
-  port: 443
-  uuid: 71b2655e-07d9-4dad-a770-a2b08275142b
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: www.zhoubowen.vip
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  ws-opts:
-    path: /biutefor.icu
-    headers:
-      Host: www.zhoubowen.vip
 - name: _222 |37.98Mb
   server: 89.31.120.192
   type: vmess
@@ -158,24 +144,6 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: _245 |10.38Mb
-  server: 146.56.112.110
-  type: vmess
-  port: 8888
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: _231 |24.92Mb
-  server: 8.218.105.196
-  type: vmess
-  port: 52752
-  uuid: 925bdbf5-72be-4437-bebf-441c61089f6b
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
 - name: _244 |19.15Mb
   server: 47.242.140.52
   type: vmess
@@ -188,18 +156,30 @@ proxies:
   h2-opts: {}
   ws-opts:
     path: /arki
-- name: _255 |159.41Mb
-  server: 38.96.254.102
-  type: trojan
-  port: 18509
-  password: .ie4rghJuMkcf0oF
-  sni: shoppingmall.electricbanana.click
+- name: _245 |10.38Mb
+  server: 146.56.112.110
+  type: vmess
+  port: 8888
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
 - name: _249 |11.29Mb
   server: 160.16.236.32
   type: trojan
   port: 4054
   password: 76d630f2af6619c4a5de0ef953df3c6a
   sni: www.nintendogames.net
+- name: _246 |11.61Mb
+  server: 130.162.152.253
+  type: vmess
+  port: 56867
+  uuid: 5206bb9f-2cbc-44ac-de2a-471439a23707
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
 - name: _247 |11.03Mb
   server: 140.238.2.250
   type: vmess
@@ -215,15 +195,12 @@ proxies:
   port: 3093
   password: 76d630f2af6619c4a5de0ef953df3c6a
   sni: www.nintendogames.net
-- name: _246 |11.61Mb
-  server: 130.162.152.253
-  type: vmess
-  port: 56867
-  uuid: 5206bb9f-2cbc-44ac-de2a-471439a23707
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
+- name: _255 |159.41Mb
+  server: 38.96.254.102
+  type: trojan
+  port: 18509
+  password: .ie4rghJuMkcf0oF
+  sni: shoppingmall.electricbanana.click
 - name: Relay_-🇸🇬SG_252 |10.95Mb
   server: 160.16.153.13
   type: trojan
@@ -248,6 +225,12 @@ proxies:
   port: 2890
   password: 76d630f2af6619c4a5de0ef953df3c6a
   sni: www.nintendogames.net
+- name: _261 |55.52Mb
+  server: 160.16.214.6
+  type: trojan
+  port: 2890
+  password: 76d630f2af6619c4a5de0ef953df3c6a
+  sni: www.nintendogames.net
 - name: _262 |56.75Mb
   server: 160.16.124.55
   type: trojan
@@ -260,18 +243,6 @@ proxies:
   port: 507
   password: 76d630f2af6619c4a5de0ef953df3c6a
   sni: www.nintendogames.net
-- name: _261 |55.52Mb
-  server: 160.16.214.6
-  type: trojan
-  port: 2890
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
-- name: _265 |11.22Mb
-  server: 153.121.53.187
-  type: trojan
-  port: 3093
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
 - name: disney_HK |11.46Mb
   server: 219.78.209.224
   type: trojan
@@ -280,6 +251,18 @@ proxies:
   password: BxceQaOe
   sni: t.me/ripaojiedian
   skip-cert-verify: true
+- name: _265 |11.22Mb
+  server: 153.121.53.187
+  type: trojan
+  port: 3093
+  password: 76d630f2af6619c4a5de0ef953df3c6a
+  sni: www.nintendogames.net
+- name: disney_HK |18.76Mb
+  server: 112.118.116.127
+  type: trojan
+  port: 443
+  password: 76d630f2af6619c4a5de0ef953df3c6a
+  sni: www.nintendogames.net
 - name: Pool__266 |182.29Mb
   server: 70.34.218.149
   type: trojan
@@ -292,24 +275,6 @@ proxies:
   country: 🇪🇸ES
   port: 27092
   uuid: a0596ba6-72a3-4366-8992-77088da65bd8
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_HK |18.76Mb
-  server: 112.118.116.127
-  type: trojan
-  port: 443
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
-- name: 🇺🇸US_281 |12.86Mb
-  server: 47.253.197.26
-  type: vmess
-  country: 🇺🇸US
-  port: 12056
-  uuid: dd7be7f1-38ff-45e6-f1e5-b20c2190f527
   alterId: 0
   cipher: auto
   network: none
@@ -372,42 +337,39 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
+  - _199 |186.06Mb
   - disney_netflix_US |39.85Mb
   - disney_netflix_US |35.37Mb
-  - _199 |186.06Mb
+  - Relay_-🇭🇰HK_219 |17.20Mb
   - _204 |28.04Mb
-  - _188 |11.83Mb
   - _193 |155.54Mb
-  - _213 |22.68Mb
+  - _188 |11.83Mb
+  - _218 |11.69Mb
   - disney_MD |203.59Mb
   - _223 |16.11Mb
-  - _218 |11.69Mb
   - disney_SG |11.56Mb
-  - Relay_-🇧🇷BR_189 |73.02Mb
-  - Relay_-🇭🇰HK_219 |17.20Mb
+  - _231 |24.92Mb
   - _222 |37.98Mb
   - _243 |10.35Mb
-  - _245 |10.38Mb
-  - _231 |24.92Mb
   - _244 |19.15Mb
-  - _255 |159.41Mb
+  - _245 |10.38Mb
   - _249 |11.29Mb
+  - _246 |11.61Mb
   - _247 |11.03Mb
   - _250 |23.58Mb
-  - _246 |11.61Mb
+  - _255 |159.41Mb
   - Relay_-🇸🇬SG_252 |10.95Mb
   - _253 |19.96Mb
   - _258 |45.99Mb
   - _259 |22.46Mb
+  - _261 |55.52Mb
   - _262 |56.75Mb
   - Relay_-🇸🇬SG_264 |10.98Mb
-  - _261 |55.52Mb
-  - _265 |11.22Mb
   - disney_HK |11.46Mb
+  - _265 |11.22Mb
+  - disney_HK |18.76Mb
   - Pool__266 |182.29Mb
   - 🇪🇸ES_267 |228.69Mb
-  - disney_HK |18.76Mb
-  - 🇺🇸US_281 |12.86Mb
   - netflix_NL |106.77Mb
   - 🇬🇧GB_269 |103.93Mb
   - netflix_NL |93.87Mb
@@ -417,42 +379,39 @@ proxy-groups:
 - name: ♻️ 自动选择
   type: url-test
   proxies:
+  - _199 |186.06Mb
   - disney_netflix_US |39.85Mb
   - disney_netflix_US |35.37Mb
-  - _199 |186.06Mb
+  - Relay_-🇭🇰HK_219 |17.20Mb
   - _204 |28.04Mb
-  - _188 |11.83Mb
   - _193 |155.54Mb
-  - _213 |22.68Mb
+  - _188 |11.83Mb
+  - _218 |11.69Mb
   - disney_MD |203.59Mb
   - _223 |16.11Mb
-  - _218 |11.69Mb
   - disney_SG |11.56Mb
-  - Relay_-🇧🇷BR_189 |73.02Mb
-  - Relay_-🇭🇰HK_219 |17.20Mb
+  - _231 |24.92Mb
   - _222 |37.98Mb
   - _243 |10.35Mb
-  - _245 |10.38Mb
-  - _231 |24.92Mb
   - _244 |19.15Mb
-  - _255 |159.41Mb
+  - _245 |10.38Mb
   - _249 |11.29Mb
+  - _246 |11.61Mb
   - _247 |11.03Mb
   - _250 |23.58Mb
-  - _246 |11.61Mb
+  - _255 |159.41Mb
   - Relay_-🇸🇬SG_252 |10.95Mb
   - _253 |19.96Mb
   - _258 |45.99Mb
   - _259 |22.46Mb
+  - _261 |55.52Mb
   - _262 |56.75Mb
   - Relay_-🇸🇬SG_264 |10.98Mb
-  - _261 |55.52Mb
-  - _265 |11.22Mb
   - disney_HK |11.46Mb
+  - _265 |11.22Mb
+  - disney_HK |18.76Mb
   - Pool__266 |182.29Mb
   - 🇪🇸ES_267 |228.69Mb
-  - disney_HK |18.76Mb
-  - 🇺🇸US_281 |12.86Mb
   - netflix_NL |106.77Mb
   - 🇬🇧GB_269 |103.93Mb
   - netflix_NL |93.87Mb
