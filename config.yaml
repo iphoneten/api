@@ -5,29 +5,8 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: disney_netflix_US |62.62Mb
-  server: 54.91.94.165
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
 - name: _162 |63.71Mb
   server: 3.93.196.82
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: _164 |63.46Mb
-  server: 54.159.62.233
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: _163 |64.53Mb
-  server: 54.227.38.247
   type: ss
   port: 443
   udp: true
@@ -40,8 +19,22 @@ proxies:
   udp: true
   password: amazonskr05
   cipher: aes-256-cfb
-- name: disney_netflix_US |65.09Mb
-  server: 54.144.64.227
+- name: _163 |64.53Mb
+  server: 54.227.38.247
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: disney_netflix_US |62.62Mb
+  server: 54.91.94.165
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: _164 |63.46Mb
+  server: 54.159.62.233
   type: ss
   port: 443
   udp: true
@@ -54,8 +47,8 @@ proxies:
   udp: true
   password: amazonskr05
   cipher: aes-256-cfb
-- name: netflix_IE |62.49Mb
-  server: 3.250.105.240
+- name: disney_netflix_US |65.09Mb
+  server: 54.144.64.227
   type: ss
   port: 443
   udp: true
@@ -68,22 +61,8 @@ proxies:
   udp: true
   password: amazonskr05
   cipher: aes-256-cfb
-- name: _170 |58.80Mb
-  server: 34.251.86.159
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: netflix_SE |138.44Mb
-  server: 13.61.13.231
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: _168 |144.34Mb
-  server: 13.61.180.46
+- name: disney_netflix_US |62.60Mb
+  server: 13.218.107.141
   type: ss
   port: 443
   udp: true
@@ -96,43 +75,8 @@ proxies:
   udp: true
   password: amazonskr05
   cipher: aes-256-cfb
-- name: disney_netflix_US |62.60Mb
-  server: 13.218.107.141
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: disney_netflix_US |59.09Mb
-  server: 13.222.155.147
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: disney_netflix_US |58.54Mb
-  server: 50.19.46.248
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: netflix_IE |62.50Mb
-  server: 3.253.99.197
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: _187 |64.72Mb
-  server: 98.89.32.62
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: netflix_IE |48.04Mb
-  server: 54.246.35.116
+- name: netflix_IE |62.49Mb
+  server: 3.250.105.240
   type: ss
   port: 443
   udp: true
@@ -153,13 +97,6 @@ proxies:
       Host:
       - a.189.cn
   h2-opts: {}
-- name: _179 |147.60Mb
-  server: 51.20.125.235
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
 - name: disney_US |44.80Mb
   server: 165.140.216.141
   type: vmess
@@ -169,6 +106,41 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
+- name: netflix_SE |138.44Mb
+  server: 13.61.13.231
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: disney_netflix_US |59.09Mb
+  server: 13.222.155.147
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: _187 |64.72Mb
+  server: 98.89.32.62
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: _168 |144.34Mb
+  server: 13.61.180.46
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: disney_netflix_US |58.54Mb
+  server: 50.19.46.248
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
 - name: disney_netflix_US |12.90Mb
   server: 192.204.47.79
   type: vmess
@@ -179,18 +151,34 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: _205 |10.22Mb
-  server: 15.235.41.200
-  type: vmess
-  port: 80
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /IOebhLMhl1CTbFHbL95myfRX2
+- name: netflix_IE |62.50Mb
+  server: 3.253.99.197
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: _170 |58.80Mb
+  server: 34.251.86.159
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: netflix_IE |48.04Mb
+  server: 54.246.35.116
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: _179 |147.60Mb
+  server: 51.20.125.235
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
 - name: _202 |11.30Mb
   server: 51.79.102.253
   type: vmess
@@ -205,12 +193,6 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-- name: netflix_CA |24.56Mb
-  server: 38.96.254.102
-  type: trojan
-  port: 18509
-  password: .ie4rghJuMkcf0oF
-  sni: shoppingmall.electricbanana.click
 - name: Relay_-🇺🇸US_215 |28.83Mb
   server: 20251118.yixianled.com
   type: vmess
@@ -229,6 +211,24 @@ proxies:
     path: /happy
     headers:
       Host: 20251118.yixianled.com
+- name: netflix_CA |24.56Mb
+  server: 38.96.254.102
+  type: trojan
+  port: 18509
+  password: .ie4rghJuMkcf0oF
+  sni: shoppingmall.electricbanana.click
+- name: _205 |10.22Mb
+  server: 15.235.41.200
+  type: vmess
+  port: 80
+  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  ws-opts:
+    path: /IOebhLMhl1CTbFHbL95myfRX2
 - name: disney_SG |11.88Mb
   server: 165.154.195.38
   type: vmess
@@ -247,20 +247,20 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: _198 |40.13Mb
-  server: 89.31.120.192
+- name: _209 |11.78Mb
+  server: 130.162.152.253
   type: vmess
-  port: 443
-  uuid: 44537595-9ccc-4b83-8936-5f9ad3229019
+  port: 56867
+  uuid: 5206bb9f-2cbc-44ac-de2a-471439a23707
   alterId: 0
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: _220 |21.13Mb
-  server: 38.180.16.86
+- name: _211 |11.73Mb
+  server: 140.238.2.250
   type: vmess
-  port: 36236
-  uuid: a58bc1a5-8c18-49ff-9453-c331b52f45dc
+  port: 443
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
   alterId: 0
   cipher: auto
   http-opts: {}
@@ -277,20 +277,11 @@ proxies:
     headers:
       Host: reDfRee8.REDFree8.ir
   network: ws
-- name: _209 |11.78Mb
-  server: 130.162.152.253
+- name: _220 |21.13Mb
+  server: 38.180.16.86
   type: vmess
-  port: 56867
-  uuid: 5206bb9f-2cbc-44ac-de2a-471439a23707
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: _211 |11.73Mb
-  server: 140.238.2.250
-  type: vmess
-  port: 443
-  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  port: 36236
+  uuid: a58bc1a5-8c18-49ff-9453-c331b52f45dc
   alterId: 0
   cipher: auto
   http-opts: {}
@@ -310,18 +301,21 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: Pool__236 |16.85Mb
-  server: 70.34.218.149
-  type: trojan
-  port: 11930
-  password: BaeSzHdfJIR13l67
-  sni: softpillow.silentrocket.click
 - name: _224 |24.93Mb
   server: 160.16.124.55
   type: trojan
   port: 2890
   password: 76d630f2af6619c4a5de0ef953df3c6a
   sni: www.nintendogames.net
+- name: _198 |40.13Mb
+  server: 89.31.120.192
+  type: vmess
+  port: 443
+  uuid: 44537595-9ccc-4b83-8936-5f9ad3229019
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
 - name: _227 |25.43Mb
   server: 160.16.236.32
   type: trojan
@@ -358,52 +352,18 @@ proxies:
   port: 3093
   password: 76d630f2af6619c4a5de0ef953df3c6a
   sni: www.nintendogames.net
-- name: disney_netflix_US |65.15Mb
-  server: 18.207.122.59
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
 - name: _237 |20.36Mb
   server: 153.121.65.107
   type: trojan
   port: 3093
   password: 76d630f2af6619c4a5de0ef953df3c6a
   sni: www.nintendogames.net
-- name: 🇬🇧GB_251 |102.61Mb
-  server: 82.38.31.217
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: netflix_IE |62.51Mb
-  server: 52.50.200.2
-  type: ss
-  country: 🇮🇪IE
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: 🇬🇧GB_252 |109.95Mb
-  server: 82.38.31.194
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: 🇲🇽MX_266 |39.07Mb
-  server: 216.238.87.47
-  type: vmess
-  country: 🇲🇽MX
-  port: 27502
-  uuid: b8155ce4-7e08-4c40-800f-8671312b7124
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
+- name: Pool__236 |16.85Mb
+  server: 70.34.218.149
+  type: trojan
+  port: 11930
+  password: BaeSzHdfJIR13l67
+  sni: softpillow.silentrocket.click
 - name: _239 |16.19Mb
   server: 160.16.196.59
   type: trojan
@@ -416,13 +376,58 @@ proxies:
   port: 2890
   password: 76d630f2af6619c4a5de0ef953df3c6a
   sni: www.nintendogames.net
-- name: 🇺🇸US_268 |17.84Mb
-  server: 45.12.136.170
+- name: 🇲🇽MX_266 |39.07Mb
+  server: 216.238.87.47
+  type: vmess
+  country: 🇲🇽MX
+  port: 27502
+  uuid: b8155ce4-7e08-4c40-800f-8671312b7124
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: 🇬🇧GB_251 |102.61Mb
+  server: 82.38.31.217
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_US |65.15Mb
+  server: 18.207.122.59
   type: ss
   country: 🇺🇸US
   port: 443
-  password: l668XHPejoSNNuD66BYzyehaCpZexiF7
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: 🇬🇧GB_252 |109.95Mb
+  server: 82.38.31.194
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
   cipher: chacha20-ietf-poly1305
+- name: netflix_IE |62.51Mb
+  server: 52.50.200.2
+  type: ss
+  country: 🇮🇪IE
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: disney_HK |11.61Mb
+  server: 45.207.157.29
+  type: vmess
+  country: 🇭🇰HK
+  port: 13852
+  uuid: 845764df-ecb3-4b13-bed2-bf1551b68e9a
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: 🇰🇷KR_265 |10.92Mb
   server: 49.128.204.85
   type: vmess
@@ -437,137 +442,141 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /sfgjmero45
-- name: disney_HK |11.61Mb
-  server: 45.207.157.29
-  type: vmess
-  country: 🇭🇰HK
-  port: 13852
-  uuid: 845764df-ecb3-4b13-bed2-bf1551b68e9a
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
+- name: disney_KZ |33.62Mb
+  server: 31.3.209.183
+  type: ss
+  country: 🇬🇧GB
+  port: 28212
+  password: Kmn7dHPw5wNfkqQMPcGWQA
+  cipher: chacha20-ietf-poly1305
+- name: 🇺🇸US_268 |17.84Mb
+  server: 45.12.136.170
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: l668XHPejoSNNuD66BYzyehaCpZexiF7
+  cipher: chacha20-ietf-poly1305
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - disney_netflix_US |62.62Mb
   - _162 |63.71Mb
-  - _164 |63.46Mb
-  - _163 |64.53Mb
   - _165 |62.82Mb
-  - disney_netflix_US |65.09Mb
+  - _163 |64.53Mb
+  - disney_netflix_US |62.62Mb
+  - _164 |63.46Mb
   - _167 |58.39Mb
-  - netflix_IE |62.49Mb
+  - disney_netflix_US |65.09Mb
   - disney_netflix_US |67.53Mb
-  - _170 |58.80Mb
-  - netflix_SE |138.44Mb
-  - _168 |144.34Mb
-  - disney_netflix_US |65.90Mb
   - disney_netflix_US |62.60Mb
-  - disney_netflix_US |59.09Mb
-  - disney_netflix_US |58.54Mb
-  - netflix_IE |62.50Mb
-  - _187 |64.72Mb
-  - netflix_IE |48.04Mb
+  - disney_netflix_US |65.90Mb
+  - netflix_IE |62.49Mb
   - disney_netflix_US |41.81Mb
-  - _179 |147.60Mb
   - disney_US |44.80Mb
+  - netflix_SE |138.44Mb
+  - disney_netflix_US |59.09Mb
+  - _187 |64.72Mb
+  - _168 |144.34Mb
+  - disney_netflix_US |58.54Mb
   - disney_netflix_US |12.90Mb
-  - _205 |10.22Mb
+  - netflix_IE |62.50Mb
+  - _170 |58.80Mb
+  - netflix_IE |48.04Mb
+  - _179 |147.60Mb
   - _202 |11.30Mb
-  - netflix_CA |24.56Mb
   - Relay_-🇺🇸US_215 |28.83Mb
+  - netflix_CA |24.56Mb
+  - _205 |10.22Mb
   - disney_SG |11.88Mb
   - _200 |21.23Mb
-  - _198 |40.13Mb
-  - _220 |21.13Mb
-  - disney_GB |169.79Mb
   - _209 |11.78Mb
   - _211 |11.73Mb
+  - disney_GB |169.79Mb
+  - _220 |21.13Mb
   - Relay_-🇸🇬SG_222 |50.58Mb
   - _221 |10.07Mb
-  - Pool__236 |16.85Mb
   - _224 |24.93Mb
+  - _198 |40.13Mb
   - _227 |25.43Mb
   - _228 |10.42Mb
   - _230 |13.72Mb
   - _231 |23.00Mb
   - _234 |13.85Mb
   - _235 |13.86Mb
-  - disney_netflix_US |65.15Mb
   - _237 |20.36Mb
-  - 🇬🇧GB_251 |102.61Mb
-  - netflix_IE |62.51Mb
-  - 🇬🇧GB_252 |109.95Mb
-  - 🇲🇽MX_266 |39.07Mb
+  - Pool__236 |16.85Mb
   - _239 |16.19Mb
   - _241 |49.27Mb
-  - 🇺🇸US_268 |17.84Mb
-  - 🇰🇷KR_265 |10.92Mb
+  - 🇲🇽MX_266 |39.07Mb
+  - 🇬🇧GB_251 |102.61Mb
+  - disney_netflix_US |65.15Mb
+  - 🇬🇧GB_252 |109.95Mb
+  - netflix_IE |62.51Mb
   - disney_HK |11.61Mb
+  - 🇰🇷KR_265 |10.92Mb
+  - disney_KZ |33.62Mb
+  - 🇺🇸US_268 |17.84Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - disney_netflix_US |62.62Mb
   - _162 |63.71Mb
-  - _164 |63.46Mb
-  - _163 |64.53Mb
   - _165 |62.82Mb
-  - disney_netflix_US |65.09Mb
+  - _163 |64.53Mb
+  - disney_netflix_US |62.62Mb
+  - _164 |63.46Mb
   - _167 |58.39Mb
-  - netflix_IE |62.49Mb
+  - disney_netflix_US |65.09Mb
   - disney_netflix_US |67.53Mb
-  - _170 |58.80Mb
-  - netflix_SE |138.44Mb
-  - _168 |144.34Mb
-  - disney_netflix_US |65.90Mb
   - disney_netflix_US |62.60Mb
-  - disney_netflix_US |59.09Mb
-  - disney_netflix_US |58.54Mb
-  - netflix_IE |62.50Mb
-  - _187 |64.72Mb
-  - netflix_IE |48.04Mb
+  - disney_netflix_US |65.90Mb
+  - netflix_IE |62.49Mb
   - disney_netflix_US |41.81Mb
-  - _179 |147.60Mb
   - disney_US |44.80Mb
+  - netflix_SE |138.44Mb
+  - disney_netflix_US |59.09Mb
+  - _187 |64.72Mb
+  - _168 |144.34Mb
+  - disney_netflix_US |58.54Mb
   - disney_netflix_US |12.90Mb
-  - _205 |10.22Mb
+  - netflix_IE |62.50Mb
+  - _170 |58.80Mb
+  - netflix_IE |48.04Mb
+  - _179 |147.60Mb
   - _202 |11.30Mb
-  - netflix_CA |24.56Mb
   - Relay_-🇺🇸US_215 |28.83Mb
+  - netflix_CA |24.56Mb
+  - _205 |10.22Mb
   - disney_SG |11.88Mb
   - _200 |21.23Mb
-  - _198 |40.13Mb
-  - _220 |21.13Mb
-  - disney_GB |169.79Mb
   - _209 |11.78Mb
   - _211 |11.73Mb
+  - disney_GB |169.79Mb
+  - _220 |21.13Mb
   - Relay_-🇸🇬SG_222 |50.58Mb
   - _221 |10.07Mb
-  - Pool__236 |16.85Mb
   - _224 |24.93Mb
+  - _198 |40.13Mb
   - _227 |25.43Mb
   - _228 |10.42Mb
   - _230 |13.72Mb
   - _231 |23.00Mb
   - _234 |13.85Mb
   - _235 |13.86Mb
-  - disney_netflix_US |65.15Mb
   - _237 |20.36Mb
-  - 🇬🇧GB_251 |102.61Mb
-  - netflix_IE |62.51Mb
-  - 🇬🇧GB_252 |109.95Mb
-  - 🇲🇽MX_266 |39.07Mb
+  - Pool__236 |16.85Mb
   - _239 |16.19Mb
   - _241 |49.27Mb
-  - 🇺🇸US_268 |17.84Mb
-  - 🇰🇷KR_265 |10.92Mb
+  - 🇲🇽MX_266 |39.07Mb
+  - 🇬🇧GB_251 |102.61Mb
+  - disney_netflix_US |65.15Mb
+  - 🇬🇧GB_252 |109.95Mb
+  - netflix_IE |62.51Mb
   - disney_HK |11.61Mb
+  - 🇰🇷KR_265 |10.92Mb
+  - disney_KZ |33.62Mb
+  - 🇺🇸US_268 |17.84Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
