@@ -17,18 +17,6 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_JP |20.95Mb
-  server: 160.16.72.33
-  type: trojan
-  port: 3093
-  password: e2722c0fb503f8a592436c12bce0509a
-  sni: www.nintendogames.net
-- name: netflix_NL |122.94Mb
-  server: 45.14.245.2
-  type: ss
-  port: 443
-  password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP
-  cipher: chacha20-ietf-poly1305
 - name: netflix_DE |79.10Mb
   server: 45.80.188.48
   type: vmess
@@ -39,6 +27,12 @@ proxies:
   network: none
   http-opts: {}
   h2-opts: {}
+- name: netflix_NL |122.94Mb
+  server: 45.14.245.2
+  type: ss
+  port: 443
+  password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP
+  cipher: chacha20-ietf-poly1305
 - name: _41 |163.53Mb
   server: 38.165.233.93
   type: ss
@@ -46,6 +40,12 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
+- name: disney_netflix_JP |20.95Mb
+  server: 160.16.72.33
+  type: trojan
+  port: 3093
+  password: e2722c0fb503f8a592436c12bce0509a
+  sni: www.nintendogames.net
 - name: netflix_NG |47.14Mb
   server: 176.97.192.4
   type: vmess
@@ -62,20 +62,20 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - netflix_MX |170.60Mb
-  - disney_netflix_JP |20.95Mb
-  - netflix_NL |122.94Mb
   - netflix_DE |79.10Mb
+  - netflix_NL |122.94Mb
   - _41 |163.53Mb
+  - disney_netflix_JP |20.95Mb
   - netflix_NG |47.14Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - netflix_MX |170.60Mb
-  - disney_netflix_JP |20.95Mb
-  - netflix_NL |122.94Mb
   - netflix_DE |79.10Mb
+  - netflix_NL |122.94Mb
   - _41 |163.53Mb
+  - disney_netflix_JP |20.95Mb
   - netflix_NG |47.14Mb
   url: https://www.google.com/generate_204
   interval: 300
