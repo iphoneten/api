@@ -5,6 +5,12 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+- name: Relay_-🇯🇵JP_301 |22.05Mb
+  server: 153.121.45.139
+  type: trojan
+  port: 3093
+  password: e2722c0fb503f8a592436c12bce0509a
+  sni: www.nintendogames.net
 - name: _297 |14.61Mb
   server: 160.16.72.33
   type: trojan
@@ -15,6 +21,12 @@ proxies:
   server: 160.16.87.174
   type: trojan
   port: 3169
+  password: e2722c0fb503f8a592436c12bce0509a
+  sni: www.nintendogames.net
+- name: _303 |12.61Mb
+  server: 160.16.204.136
+  type: trojan
+  port: 2890
   password: e2722c0fb503f8a592436c12bce0509a
   sni: www.nintendogames.net
 - name: _282 |12.29Mb
@@ -56,18 +68,6 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: Relay_-🇯🇵JP_301 |22.05Mb
-  server: 153.121.45.139
-  type: trojan
-  port: 3093
-  password: e2722c0fb503f8a592436c12bce0509a
-  sni: www.nintendogames.net
-- name: _303 |12.61Mb
-  server: 160.16.204.136
-  type: trojan
-  port: 2890
-  password: e2722c0fb503f8a592436c12bce0509a
-  sni: www.nintendogames.net
 - name: disney_PY |16.48Mb
   server: 38.165.233.93
   type: ss
@@ -89,6 +89,12 @@ proxies:
   password: e2722c0fb503f8a592436c12bce0509a
   sni: www.nintendogames.net
   skip-cert-verify: true
+- name: Relay_-🇯🇵JP_308 |21.75Mb
+  server: 160.16.117.182
+  type: trojan
+  port: 3169
+  password: e2722c0fb503f8a592436c12bce0509a
+  sni: www.nintendogames.net
 - name: Relay_🇺🇸US-🇺🇸US_332 |174.00Mb
   server: 38.14.99.163
   type: vmess
@@ -108,18 +114,16 @@ proxies:
   port: 2890
   password: e2722c0fb503f8a592436c12bce0509a
   sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_308 |21.75Mb
-  server: 160.16.117.182
+- name: Relay_🇺🇸US-🇺🇸US_333 |18.79Mb
+  server: gy3.hdcloud.link
   type: trojan
-  port: 3169
-  password: e2722c0fb503f8a592436c12bce0509a
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_309 |14.19Mb
-  server: 160.16.117.182
-  type: trojan
-  port: 3093
-  password: e2722c0fb503f8a592436c12bce0509a
-  sni: www.nintendogames.net
+  country: 🇺🇸US
+  port: 443
+  udp: true
+  password: 168f29a7-6922-4558-8296-61a69cf6a5a2
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
 - name: 🇲🇽MX_324 |38.49Mb
   server: 216.238.87.47
   type: vmess
@@ -132,16 +136,12 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇺🇸US-🇺🇸US_333 |18.79Mb
-  server: gy3.hdcloud.link
+- name: Relay_-🇯🇵JP_309 |14.19Mb
+  server: 160.16.117.182
   type: trojan
-  country: 🇺🇸US
-  port: 443
-  udp: true
-  password: 168f29a7-6922-4558-8296-61a69cf6a5a2
-  network: grpc
-  grpc-opts:
-    grpc-service-name: GunService
+  port: 3093
+  password: e2722c0fb503f8a592436c12bce0509a
+  sni: www.nintendogames.net
 - name: 🇭🇰HK_318 |107.48Mb
   server: 8.218.116.26
   type: vmess
@@ -196,24 +196,24 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
+  - Relay_-🇯🇵JP_301 |22.05Mb
   - _297 |14.61Mb
   - Relay_-🇯🇵JP_299 |20.42Mb
+  - _303 |12.61Mb
   - _282 |12.29Mb
   - netflix_NL |222.63Mb
   - _289 |113.91Mb
   - disney_HK |69.54Mb
   - _284 |472.43Mb
-  - Relay_-🇯🇵JP_301 |22.05Mb
-  - _303 |12.61Mb
   - disney_PY |16.48Mb
   - _304 |10.41Mb
   - _306 |10.95Mb
+  - Relay_-🇯🇵JP_308 |21.75Mb
   - Relay_🇺🇸US-🇺🇸US_332 |174.00Mb
   - _307 |43.05Mb
-  - Relay_-🇯🇵JP_308 |21.75Mb
-  - Relay_-🇯🇵JP_309 |14.19Mb
-  - 🇲🇽MX_324 |38.49Mb
   - Relay_🇺🇸US-🇺🇸US_333 |18.79Mb
+  - 🇲🇽MX_324 |38.49Mb
+  - Relay_-🇯🇵JP_309 |14.19Mb
   - 🇭🇰HK_318 |107.48Mb
   - 🇭🇰HK_320 |120.78Mb
   - disney_DE |45.39Mb
@@ -222,24 +222,24 @@ proxy-groups:
 - name: ♻️ 自动选择
   type: url-test
   proxies:
+  - Relay_-🇯🇵JP_301 |22.05Mb
   - _297 |14.61Mb
   - Relay_-🇯🇵JP_299 |20.42Mb
+  - _303 |12.61Mb
   - _282 |12.29Mb
   - netflix_NL |222.63Mb
   - _289 |113.91Mb
   - disney_HK |69.54Mb
   - _284 |472.43Mb
-  - Relay_-🇯🇵JP_301 |22.05Mb
-  - _303 |12.61Mb
   - disney_PY |16.48Mb
   - _304 |10.41Mb
   - _306 |10.95Mb
+  - Relay_-🇯🇵JP_308 |21.75Mb
   - Relay_🇺🇸US-🇺🇸US_332 |174.00Mb
   - _307 |43.05Mb
-  - Relay_-🇯🇵JP_308 |21.75Mb
-  - Relay_-🇯🇵JP_309 |14.19Mb
-  - 🇲🇽MX_324 |38.49Mb
   - Relay_🇺🇸US-🇺🇸US_333 |18.79Mb
+  - 🇲🇽MX_324 |38.49Mb
+  - Relay_-🇯🇵JP_309 |14.19Mb
   - 🇭🇰HK_318 |107.48Mb
   - 🇭🇰HK_320 |120.78Mb
   - disney_DE |45.39Mb
