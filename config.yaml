@@ -5,6 +5,12 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+- name: ' |17.06Mb'
+  server: 160.16.204.136
+  type: trojan
+  port: 2890
+  password: e2722c0fb503f8a592436c12bce0509a
+  sni: www.nintendogames.net
 - name: ' |105.87Mb'
   server: 185.82.73.212
   type: ss
@@ -12,25 +18,18 @@ proxies:
   udp: true
   password: _bypfvq6ra7g4n5yCCR9DoVeGya2XUUS
   cipher: chacha20-ietf-poly1305
+- name: ' |104.49Mb'
+  server: 45.14.245.2
+  type: ss
+  port: 443
+  password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP
+  cipher: chacha20-ietf-poly1305
 - name: ' |108.34Mb'
   server: 82.38.31.199
   type: ss
   port: 8080
   udp: true
   password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_ES |223.79Mb
-  server: 145.249.109.121
-  type: ss
-  port: 25512
-  udp: true
-  password: smSMfR9jqLgMkHuQtxSIWh
-  cipher: chacha20-ietf-poly1305
-- name: ' |104.49Mb'
-  server: 45.14.245.2
-  type: ss
-  port: 443
-  password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP
   cipher: chacha20-ietf-poly1305
 - name: ' |25.39Mb'
   server: 194.59.183.134
@@ -46,12 +45,19 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: Relay_ |22.08Mb
-  server: 91.221.37.30
+- name: _302 |26.73Mb
+  server: 103.149.182.86
   type: ss
-  port: 1234
+  port: 8388
   udp: true
-  password: cPzFh2p9MWXvVYWs5hX55e5BZFty7ke-
+  password: asd123456
+  cipher: chacha20-ietf
+- name: disney_netflix_ES |223.79Mb
+  server: 145.249.109.121
+  type: ss
+  port: 25512
+  udp: true
+  password: smSMfR9jqLgMkHuQtxSIWh
   cipher: chacha20-ietf-poly1305
 - name: disney_PY |16.67Mb
   server: 38.165.233.93
@@ -60,35 +66,23 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: ' |17.06Mb'
-  server: 160.16.204.136
-  type: trojan
-  port: 2890
-  password: e2722c0fb503f8a592436c12bce0509a
-  sni: www.nintendogames.net
-- name: _302 |26.73Mb
-  server: 103.149.182.86
-  type: ss
-  port: 8388
-  udp: true
-  password: asd123456
-  cipher: chacha20-ietf
 - name: Relay_ |18.75Mb
   server: 160.16.117.182
   type: trojan
   port: 3169
   password: e2722c0fb503f8a592436c12bce0509a
   sni: www.nintendogames.net
+- name: Relay_ |22.08Mb
+  server: 91.221.37.30
+  type: ss
+  port: 1234
+  udp: true
+  password: cPzFh2p9MWXvVYWs5hX55e5BZFty7ke-
+  cipher: chacha20-ietf-poly1305
 - name: Relay_ |11.37Mb
   server: 160.16.153.13
   type: trojan
   port: 3145
-  password: e2722c0fb503f8a592436c12bce0509a
-  sni: www.nintendogames.net
-- name: ' |17.85Mb'
-  server: 160.16.72.33
-  type: trojan
-  port: 3093
   password: e2722c0fb503f8a592436c12bce0509a
   sni: www.nintendogames.net
 - name: ' |11.12Mb'
@@ -104,40 +98,10 @@ proxies:
   port: 2890
   password: e2722c0fb503f8a592436c12bce0509a
   sni: www.nintendogames.net
-- name: 🇺🇸US_339 |60.15Mb
-  server: 47.253.197.26
-  type: vmess
-  country: 🇺🇸US
-  port: 12056
-  uuid: dd7be7f1-38ff-45e6-f1e5-b20c2190f527
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: Relay_ |17.51Mb
-  server: 160.16.132.158
+- name: ' |17.85Mb'
+  server: 160.16.72.33
   type: trojan
-  port: 1507
-  password: e2722c0fb503f8a592436c12bce0509a
-  sni: www.nintendogames.net
-- name: ' |39.71Mb'
-  server: 216.238.87.47
-  type: vmess
-  country: 🇲🇽MX
-  port: 27502
-  uuid: b8155ce4-7e08-4c40-800f-8671312b7124
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: Relay_ |16.59Mb
-  server: 160.16.196.59
-  type: trojan
-  port: 1507
+  port: 3093
   password: e2722c0fb503f8a592436c12bce0509a
   sni: www.nintendogames.net
 - name: Relay_ |40.52Mb
@@ -153,18 +117,54 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: Relay_ |16.59Mb
+  server: 160.16.196.59
+  type: trojan
+  port: 1507
+  password: e2722c0fb503f8a592436c12bce0509a
+  sni: www.nintendogames.net
+- name: Relay_ |17.51Mb
+  server: 160.16.132.158
+  type: trojan
+  port: 1507
+  password: e2722c0fb503f8a592436c12bce0509a
+  sni: www.nintendogames.net
 - name: Relay_ |20.89Mb
   server: 160.16.117.182
   type: trojan
   port: 3093
   password: e2722c0fb503f8a592436c12bce0509a
   sni: www.nintendogames.net
+- name: ' |39.71Mb'
+  server: 216.238.87.47
+  type: vmess
+  country: 🇲🇽MX
+  port: 27502
+  uuid: b8155ce4-7e08-4c40-800f-8671312b7124
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: Relay_ |22.06Mb
   server: 153.121.45.139
   type: trojan
   port: 3093
   password: e2722c0fb503f8a592436c12bce0509a
   sni: www.nintendogames.net
+- name: 🇺🇸US_339 |60.15Mb
+  server: 47.253.197.26
+  type: vmess
+  country: 🇺🇸US
+  port: 12056
+  uuid: dd7be7f1-38ff-45e6-f1e5-b20c2190f527
+  alterId: 0
+  cipher: auto
+  network: none
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: Relay_ |12.19Mb
   server: cf.fovi.tk
   type: vmess
@@ -195,56 +195,56 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
+  - ' |17.06Mb'
   - ' |105.87Mb'
-  - ' |108.34Mb'
-  - disney_netflix_ES |223.79Mb
   - ' |104.49Mb'
+  - ' |108.34Mb'
   - ' |25.39Mb'
   - ' |709.25Mb'
-  - Relay_ |22.08Mb
-  - disney_PY |16.67Mb
-  - ' |17.06Mb'
   - _302 |26.73Mb
+  - disney_netflix_ES |223.79Mb
+  - disney_PY |16.67Mb
   - Relay_ |18.75Mb
+  - Relay_ |22.08Mb
   - Relay_ |11.37Mb
-  - ' |17.85Mb'
   - ' |11.12Mb'
   - ' |15.24Mb'
-  - 🇺🇸US_339 |60.15Mb
-  - Relay_ |17.51Mb
-  - ' |39.71Mb'
-  - Relay_ |16.59Mb
+  - ' |17.85Mb'
   - Relay_ |40.52Mb
+  - Relay_ |16.59Mb
+  - Relay_ |17.51Mb
   - Relay_ |20.89Mb
+  - ' |39.71Mb'
   - Relay_ |22.06Mb
+  - 🇺🇸US_339 |60.15Mb
   - Relay_ |12.19Mb
   - 🇨🇭CH_332 |40.00Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
+  - ' |17.06Mb'
   - ' |105.87Mb'
-  - ' |108.34Mb'
-  - disney_netflix_ES |223.79Mb
   - ' |104.49Mb'
+  - ' |108.34Mb'
   - ' |25.39Mb'
   - ' |709.25Mb'
-  - Relay_ |22.08Mb
-  - disney_PY |16.67Mb
-  - ' |17.06Mb'
   - _302 |26.73Mb
+  - disney_netflix_ES |223.79Mb
+  - disney_PY |16.67Mb
   - Relay_ |18.75Mb
+  - Relay_ |22.08Mb
   - Relay_ |11.37Mb
-  - ' |17.85Mb'
   - ' |11.12Mb'
   - ' |15.24Mb'
-  - 🇺🇸US_339 |60.15Mb
-  - Relay_ |17.51Mb
-  - ' |39.71Mb'
-  - Relay_ |16.59Mb
+  - ' |17.85Mb'
   - Relay_ |40.52Mb
+  - Relay_ |16.59Mb
+  - Relay_ |17.51Mb
   - Relay_ |20.89Mb
+  - ' |39.71Mb'
   - Relay_ |22.06Mb
+  - 🇺🇸US_339 |60.15Mb
   - Relay_ |12.19Mb
   - 🇨🇭CH_332 |40.00Mb
   url: https://www.google.com/generate_204
