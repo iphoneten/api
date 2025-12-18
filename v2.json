@@ -1,380 +1,172 @@
 {
-  "log": {
-    "loglevel": "warning"
-  },
-
-  "dns": {
-    "servers": [
-      "223.5.5.5",
-      "1.1.1.1",
-      "8.8.8.8"
-    ]
-  },
-
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-
-      {
-        "type": "field",
-        "domain": [
-          "geosite:category-ads-all",
-          "adservice.google.com",
-          "dl.ads...",
-          "tracking",
-          "analytics"
-        ],
-        "outboundTag": "block"
-      },
-
-      {
-        "type": "field",
-        "ip": [
-          "geoip:cn",
-          "192.168.0.0/16",
-          "172.16.0.0/12",
-          "10.0.0.0/8",
-          "127.0.0.1/8"
-        ],
-        "outboundTag": "direct"
-      },
-
-      {
-        "type": "field",
-        "domain": [
-          "geosite:cn"
-        ],
-        "outboundTag": "direct"
-      }
-
-    ]
-  },
-
-  "inbounds": [
+  "proxies": [
     {
-      "tag": "socks-in",
-      "port": 10808,
-      "listen": "127.0.0.1",
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true
-      }
+      "name": "🇸🇬 新加坡-联通",
+      "type": "trojan",
+      "server": "172.64.32.204",
+      "port": 443,
+      "password": "qw6698",
+      "network": "ws",
+      "tls": true,
+      "sni": "sdgsd.pages.dev",
+      "skip-cert-verify": true,
+      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"sdgsd.pages.dev"}},
+      "udp": true,
+      "tag": "auto"
     },
     {
-      "tag": "http-in",
-      "port": 10809,
-      "listen": "127.0.0.1",
-      "protocol": "http"
+      "name": "🇸🇬 新加坡-电信",
+      "type": "trojan",
+      "server": "108.162.198.154",
+      "port": 443,
+      "password": "qw6698",
+      "network": "ws",
+      "tls": true,
+      "sni": "sdgsd.pages.dev",
+      "skip-cert-verify": true,
+      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"sdgsd.pages.dev"}},
+      "udp": true,
+      "tag": "auto"
+    },
+    {
+      "name": "🇺🇸 美国-联通",
+      "type": "trojan",
+      "server": "172.64.229.162",
+      "port": 443,
+      "password": "9807ca2f-34e4-49f4-a628-a3480c5b1a79",
+      "network": "ws",
+      "tls": true,
+      "sni": "fanchao.pages.dev",
+      "skip-cert-verify": true,
+      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"fanchao.pages.dev"}},
+      "udp": false,
+      "tag": "auto"
+    },
+    {
+      "name": "🇺🇸 美国-电信",
+      "type": "trojan",
+      "server": "www.visa.com",
+      "port": 443,
+      "password": "9807ca2f-34e4-49f4-a628-a3480c5b1a79",
+      "network": "ws",
+      "tls": true,
+      "sni": "fanchao.pages.dev",
+      "skip-cert-verify": true,
+      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"fanchao.pages.dev"}},
+      "udp": false,
+      "tag": "auto"
+    },
+    {
+      "name": "🇺🇸 美国2",
+      "type": "trojan",
+      "server": "172.64.52.57",
+      "port": 443,
+      "password": "9807ca2f-34e4-49f4-a628-a3480c5b1a79",
+      "network": "ws",
+      "tls": true,
+      "sni": "fanchao.pages.dev",
+      "skip-cert-verify": true,
+      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"fanchao.pages.dev"}},
+      "tag": "auto"
+    },
+    {
+      "name": "🇺🇸 美国3",
+      "type": "trojan",
+      "server": "162.159.44.140",
+      "port": 443,
+      "password": "9807ca2f-34e4-49f4-a628-a3480c5b1a79",
+      "network": "ws",
+      "tls": true,
+      "sni": "fanchao.pages.dev",
+      "skip-cert-verify": true,
+      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"fanchao.pages.dev"}},
+      "tag": "auto"
+    },
+    {
+      "name": "🇸🇬 新加坡",
+      "type": "trojan",
+      "server": "162.159.62.205",
+      "port": 443,
+      "password": "9807ca2f-34e4-49f4-a628-a3480c5b1a79",
+      "network": "ws",
+      "tls": true,
+      "sni": "fanchao.pages.dev",
+      "skip-cert-verify": true,
+      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"fanchao.pages.dev"}},
+      "tag": "auto"
+    },
+    {
+      "name": "🇺🇸 美国1-联通",
+      "type": "vless",
+      "server": "162.159.39.186",
+      "port": 80,
+      "uuid": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "network": "ws",
+      "tls": false,
+      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"long-morning-d1bb.wowoo74110.workers.dev"}},
+      "tag": "auto"
+    },
+    {
+      "name": "🇺🇸 美国1-电信",
+      "type": "vless",
+      "server": "www.visa.cn",
+      "port": 80,
+      "uuid": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "network": "ws",
+      "tls": false,
+      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"long-morning-d1bb.wowoo74110.workers.dev"}},
+      "tag": "auto"
+    },
+    {
+      "name": "随机IP",
+      "type": "vless",
+      "server": "162.159.23.44",
+      "port": 80,
+      "uuid": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "network": "ws",
+      "tls": true,
+      "serverName": "long-morning-d1bb.wowoo74110.workers.dev",
+      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"long-morning-d1bb.wowoo74110.workers.dev"}},
+      "tag": "auto"
+    },
+    {
+      "name": "taijun",
+      "type": "trojan",
+      "server": "162.159.39.182",
+      "port": 443,
+      "password": "taijun",
+      "network": "ws",
+      "tls": true,
+      "sni": "taijun.pages.dev",
+      "skip-cert-verify": true,
+      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"taijun.pages.dev"}},
+      "tag": "auto"
     }
   ],
-
-  "outbounds": [
-
+  "proxy-groups": [
     {
-      "protocol": "freedom",
-      "tag": "direct"
+      "name": "自动测速",
+      "type": "url-test",
+      "proxies": ["auto"],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300
     },
-
     {
-      "protocol": "blackhole",
-      "tag": "block"
-    },
-
-    {
-      "tag": "auto",
-      "protocol": "selector",
-      "settings": {
-        "default": "🇸🇬 新加坡-联通",
-        "outbounds": [
-          "🇸🇬 新加坡-联通",
-          "🇸🇬 新加坡-电信",
-          "🇺🇸 美国-联通",
-          "🇺🇸 美国-电信",
-          "🇺🇸 美国2",
-          "🇺🇸 美国3",
-          "🇸🇬 新加坡",
-          "🇺🇸 美国1-联通",
-          "🇺🇸 美国1-电信",
-          "随机IP",
-          "taijun"
-        ]
-      }
-    },
-
-    {
-      "tag": "manual",
-      "protocol": "selector",
-      "settings": {
-        "outbounds": [
-          "🇸🇬 新加坡-联通",
-          "🇸🇬 新加坡-电信",
-          "🇺🇸 美国-联通",
-          "🇺🇸 美国-电信",
-          "🇺🇸 美国2",
-          "🇺🇸 美国3",
-          "🇸🇬 新加坡",
-          "🇺🇸 美国1-联通",
-          "🇺🇸 美国1-电信",
-          "随机IP",
-          "taijun"
-        ]
-      }
-    },
-
-    {
-      "tag": "🇸🇬 新加坡-联通",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "172.64.32.204",
-            "port": 443,
-            "password": "qw6698"
-          }
-        ]
-      },
-      "streamSettings": {
-        "security": "tls",
-        "tlsSettings": { "serverName": "sdgsd.pages.dev", "allowInsecure": true },
-        "network": "ws",
-        "wsSettings": {
-          "path": "/?ed=2560",
-          "headers": { "Host": "sdgsd.pages.dev" }
-        }
-      }
-    },
-
-    {
-      "tag": "🇸🇬 新加坡-电信",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "108.162.198.154",
-            "port": 443,
-            "password": "qw6698"
-          }
-        ]
-      },
-      "streamSettings": {
-        "security": "tls",
-        "tlsSettings": { "serverName": "sdgsd.pages.dev", "allowInsecure": true },
-        "network": "ws",
-        "wsSettings": {
-          "path": "/?ed=2560",
-          "headers": { "Host": "sdgsd.pages.dev" }
-        }
-      }
-    },
-
-    {
-      "tag": "🇺🇸 美国-联通",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "172.64.229.162",
-            "port": 443,
-            "password": "9807ca2f-34e4-49f4-a628-a3480c5b1a79"
-          }
-        ]
-      },
-      "streamSettings": {
-        "security": "tls",
-        "tlsSettings": { "serverName": "fanchao.pages.dev", "allowInsecure": true },
-        "network": "ws",
-        "wsSettings": {
-          "path": "/?ed=2560",
-          "headers": { "Host": "fanchao.pages.dev" }
-        }
-      }
-    },
-
-    {
-      "tag": "🇺🇸 美国-电信",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "www.visa.com",
-            "port": 443,
-            "password": "9807ca2f-34e4-49f4-a628-a3480c5b1a79"
-          }
-        ]
-      },
-      "streamSettings": {
-        "security": "tls",
-        "tlsSettings": { "serverName": "fanchao.pages.dev", "allowInsecure": true },
-        "network": "ws",
-        "wsSettings": { "path": "/?ed=2560","headers": { "Host": "fanchao.pages.dev" } }
-      }
-    },
-
-    {
-      "tag": "🇺🇸 美国2",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "172.64.52.57",
-            "port": 443,
-            "password": "9807ca2f..."
-          }
-        ]
-      },
-      "streamSettings": {
-        "security": "tls",
-        "tlsSettings": { "serverName": "fanchao.pages.dev", "allowInsecure": true },
-        "network": "ws",
-        "wsSettings": { "path": "/?ed=2560","headers": { "Host": "fanchao.pages.dev" } }
-      }
-    },
-
-    {
-      "tag": "🇺🇸 美国3",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "162.159.44.140",
-            "port": 443,
-            "password": "9807ca2f..."
-          }
-        ]
-      },
-      "streamSettings": {
-        "security": "tls",
-        "tlsSettings": { "serverName": "fanchao.pages.dev", "allowInsecure": true },
-        "network": "ws",
-        "wsSettings": { "path": "/?ed=2560","headers": { "Host": "fanchao.pages.dev" } }
-      }
-    },
-
-    {
-      "tag": "🇸🇬 新加坡",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "162.159.62.205",
-            "port": 443,
-            "password": "9807ca2f..."
-          }
-        ]
-      },
-      "streamSettings": {
-        "security": "tls",
-        "tlsSettings": { "serverName": "fanchao.pages.dev", "allowInsecure": true },
-        "network": "ws",
-        "wsSettings": { "path": "/?ed=2560","headers": { "Host": "fanchao.pages.dev" } }
-      }
-    },
-
-    {
-      "tag": "🇺🇸 美国1-联通",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "162.159.39.186",
-            "port": 80,
-            "users": [
-              {
-                "id": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "none",
-        "wsSettings": {
-          "path": "/?ed=2560",
-          "headers": { "Host": "long-morning-d1bb.wowoo74110.workers.dev" }
-        }
-      }
-    },
-
-    {
-      "tag": "🇺🇸 美国1-电信",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "www.visa.cn",
-            "port": 80,
-            "users": [
-              {
-                "id": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "none",
-        "wsSettings": {
-          "path": "/?ed=2560",
-          "headers": { "Host": "long-morning-d1bb.wowoo74110.workers.dev" }
-        }
-      }
-    },
-
-    {
-      "tag": "随机IP",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "162.159.23.44",
-            "port": 80,
-            "users": [
-              {
-                "id": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": { "serverName": "long-morning-d1bb.wowoo74110.workers.dev" },
-        "wsSettings": {
-          "path": "/?ed=2560",
-          "headers": { "Host": "long-morning-d1bb.wowoo74110.workers.dev" }
-        }
-      }
-    },
-
-    {
-      "tag": "taijun",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "162.159.39.182",
-            "port": 443,
-            "password": "taijun"
-          }
-        ]
-      },
-      "streamSettings": {
-        "security": "tls",
-        "tlsSettings": { "serverName": "taijun.pages.dev", "allowInsecure": true },
-        "network": "ws",
-        "wsSettings": {
-          "path": "/?ed=2560",
-          "headers": { "Host": "taijun.pages.dev" }
-        }
-      }
+      "name": "手动选择",
+      "type": "select",
+      "proxies": ["auto"]
     }
-
+  ],
+  "rules": [
+    {
+      "type": "field",
+      "domain": ["geosite:category-ads-all"],
+      "outboundTag": "block"
+    },
+    {
+      "type": "field",
+      "ip": ["geoip:cn","192.168.0.0/16","10.0.0.0/8","172.16.0.0/12","127.0.0.1/8"],
+      "outboundTag": "direct"
+    }
   ]
 }
