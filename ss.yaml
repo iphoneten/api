@@ -37,7 +37,7 @@ proxy-groups:
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 120
     proxies:
       - 🇸🇬 新加坡-联通
       - 🇸🇬 新加坡-电信
@@ -53,7 +53,7 @@ proxy-groups:
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
-    interval: 180
+    interval: 120
     proxies:
       - 🇸🇬 新加坡-联通
       - 🇸🇬 新加坡-电信
@@ -70,7 +70,7 @@ proxy-groups:
     type: load-balance
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
-    interval: 180
+    interval: 120
     proxies:
       - 🇸🇬 新加坡-联通
       - 🇸🇬 新加坡-电信
