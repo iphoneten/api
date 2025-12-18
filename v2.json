@@ -10,9 +10,11 @@
       "tls": true,
       "sni": "sdgsd.pages.dev",
       "skip-cert-verify": true,
-      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"sdgsd.pages.dev"}},
-      "udp": true,
-      "tag": "auto"
+      "ws-opts": {
+        "path": "/?ed=2560",
+        "headers": { "Host": "sdgsd.pages.dev" }
+      },
+      "udp": true
     },
     {
       "name": "🇸🇬 新加坡-电信",
@@ -24,9 +26,11 @@
       "tls": true,
       "sni": "sdgsd.pages.dev",
       "skip-cert-verify": true,
-      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"sdgsd.pages.dev"}},
-      "udp": true,
-      "tag": "auto"
+      "ws-opts": {
+        "path": "/?ed=2560",
+        "headers": { "Host": "sdgsd.pages.dev" }
+      },
+      "udp": true
     },
     {
       "name": "🇺🇸 美国-联通",
@@ -38,9 +42,11 @@
       "tls": true,
       "sni": "fanchao.pages.dev",
       "skip-cert-verify": true,
-      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"fanchao.pages.dev"}},
-      "udp": false,
-      "tag": "auto"
+      "ws-opts": {
+        "path": "/?ed=2560",
+        "headers": { "Host": "fanchao.pages.dev" }
+      },
+      "udp": false
     },
     {
       "name": "🇺🇸 美国-电信",
@@ -52,9 +58,11 @@
       "tls": true,
       "sni": "fanchao.pages.dev",
       "skip-cert-verify": true,
-      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"fanchao.pages.dev"}},
-      "udp": false,
-      "tag": "auto"
+      "ws-opts": {
+        "path": "/?ed=2560",
+        "headers": { "Host": "fanchao.pages.dev" }
+      },
+      "udp": false
     },
     {
       "name": "🇺🇸 美国2",
@@ -66,8 +74,10 @@
       "tls": true,
       "sni": "fanchao.pages.dev",
       "skip-cert-verify": true,
-      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"fanchao.pages.dev"}},
-      "tag": "auto"
+      "ws-opts": {
+        "path": "/?ed=2560",
+        "headers": { "Host": "fanchao.pages.dev" }
+      }
     },
     {
       "name": "🇺🇸 美国3",
@@ -79,8 +89,10 @@
       "tls": true,
       "sni": "fanchao.pages.dev",
       "skip-cert-verify": true,
-      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"fanchao.pages.dev"}},
-      "tag": "auto"
+      "ws-opts": {
+        "path": "/?ed=2560",
+        "headers": { "Host": "fanchao.pages.dev" }
+      }
     },
     {
       "name": "🇸🇬 新加坡",
@@ -92,8 +104,10 @@
       "tls": true,
       "sni": "fanchao.pages.dev",
       "skip-cert-verify": true,
-      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"fanchao.pages.dev"}},
-      "tag": "auto"
+      "ws-opts": {
+        "path": "/?ed=2560",
+        "headers": { "Host": "fanchao.pages.dev" }
+      }
     },
     {
       "name": "🇺🇸 美国1-联通",
@@ -103,8 +117,10 @@
       "uuid": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
       "network": "ws",
       "tls": false,
-      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"long-morning-d1bb.wowoo74110.workers.dev"}},
-      "tag": "auto"
+      "ws-opts": {
+        "path": "/?ed=2560",
+        "headers": { "Host": "long-morning-d1bb.wowoo74110.workers.dev" }
+      }
     },
     {
       "name": "🇺🇸 美国1-电信",
@@ -114,8 +130,10 @@
       "uuid": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
       "network": "ws",
       "tls": false,
-      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"long-morning-d1bb.wowoo74110.workers.dev"}},
-      "tag": "auto"
+      "ws-opts": {
+        "path": "/?ed=2560",
+        "headers": { "Host": "long-morning-d1bb.wowoo74110.workers.dev" }
+      }
     },
     {
       "name": "随机IP",
@@ -126,8 +144,10 @@
       "network": "ws",
       "tls": true,
       "serverName": "long-morning-d1bb.wowoo74110.workers.dev",
-      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"long-morning-d1bb.wowoo74110.workers.dev"}},
-      "tag": "auto"
+      "ws-opts": {
+        "path": "/?ed=2560",
+        "headers": { "Host": "long-morning-d1bb.wowoo74110.workers.dev" }
+      }
     },
     {
       "name": "taijun",
@@ -139,34 +159,10 @@
       "tls": true,
       "sni": "taijun.pages.dev",
       "skip-cert-verify": true,
-      "ws-opts": {"path": "/?ed=2560","headers":{"Host":"taijun.pages.dev"}},
-      "tag": "auto"
-    }
-  ],
-  "proxy-groups": [
-    {
-      "name": "自动测速",
-      "type": "url-test",
-      "proxies": ["auto"],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300
-    },
-    {
-      "name": "手动选择",
-      "type": "select",
-      "proxies": ["auto"]
-    }
-  ],
-  "rules": [
-    {
-      "type": "field",
-      "domain": ["geosite:category-ads-all"],
-      "outboundTag": "block"
-    },
-    {
-      "type": "field",
-      "ip": ["geoip:cn","192.168.0.0/16","10.0.0.0/8","172.16.0.0/12","127.0.0.1/8"],
-      "outboundTag": "direct"
+      "ws-opts": {
+        "path": "/?ed=2560",
+        "headers": { "Host": "taijun.pages.dev" }
+      }
     }
   ]
 }
