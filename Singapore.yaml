@@ -85,10 +85,17 @@ rule-providers:
     url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml"
     path: ./ruleset/AntiAd.yaml
     interval: 86400
+    
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
+    path: ./ruleset/ProgramAD.yaml
+    interval: 86400
 rules:
   # 广告拦截
   - RULE-SET,AntiAd,REJECT
-
+  - RULE-SET,BanProgramAD,REJECT
    # 小米系统 / 应用检测 / 上报
   - DOMAIN-SUFFIX,miui.com,REJECT
   - DOMAIN-SUFFIX,micloud.com,REJECT
