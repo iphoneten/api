@@ -16,6 +16,11 @@ proxies:
   - {name: 🇺🇸 美国1-电信,  server: www.visa.cn, port: 80,  type: vless, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, udp: false, tls: false, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: long-morning-d1bb.wowoo74110.workers.dev}}}
   - {name: 随机IP, type: vless, server: 162.159.23.44, port: 80, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40,  encryption: none, tls: true, udp: true, servername: long-morning-d1bb.wowoo74110.workers.dev, network: ws, client-fingerprint: random, ws-opts: {"/?ed=2560", headers: { Host: long-morning-d1bb.wowoo74110.workers.dev }}}
   - {name: taijun, server: 162.159.39.182, port: 443, udp: false, client-fingerprint: random, type: trojan, password: taijun, sni: taijun.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: taijun.pages.dev}}}
+  - { name: 🇯🇵【亚洲】日本三网06丨直连【2x】, server: jp03.poke-mon.xyz, port: 443, udp: true, skip-cert-verify: true, sni: www.bing.com, type: hysteria2, password: 70487b4a-1b7f-49cd-991f-c9b936eba513 }
+  - { name: 🇯🇵【亚洲】日本三网07丨直连【2x】, server: jp03.poke-mon.xyz, port: 443, udp: true, skip-cert-verify: true, sni: www.bing.com, type: hysteria2, password: 70487b4a-1b7f-49cd-991f-c9b936eba513 }
+  - { name: 🇯🇵【亚洲】日本三网08丨直连【2x】, server: jp03.poke-mon.xyz, port: 443, udp: true, skip-cert-verify: true, sni: www.bing.com, type: hysteria2, password: 70487b4a-1b7f-49cd-991f-c9b936eba513 }
+  - { name: 🇺🇸【北美洲】美国01丨直连, server: us01zl.poke-mon.xyz, port: 443, udp: true, skip-cert-verify: true, sni: bing.com, type: hysteria2, password: 70487b4a-1b7f-49cd-991f-c9b936eba513 }
+  - { name: 🇺🇸【北美洲】美国02丨直连, server: us01zl.poke-mon.xyz, port: 443, udp: true, skip-cert-verify: true, sni: bing.com, type: hysteria2, password: 70487b4a-1b7f-49cd-991f-c9b936eba513 }
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -34,6 +39,11 @@ proxy-groups:
       - 🇸🇬 新加坡
       - 随机IP
       - taijun
+      - 🇯🇵【亚洲】日本三网06丨直连【2x】
+      - 🇯🇵【亚洲】日本三网07丨直连【2x】
+      - 🇯🇵【亚洲】日本三网08丨直连【2x】
+      - 🇺🇸【北美洲】美国01丨直连
+      - 🇺🇸【北美洲】美国02丨直连
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -50,6 +60,11 @@ proxy-groups:
       - 🇸🇬 新加坡
       - 随机IP
       - taijun
+      - 🇯🇵【亚洲】日本三网06丨直连【2x】
+      - 🇯🇵【亚洲】日本三网07丨直连【2x】
+      - 🇯🇵【亚洲】日本三网08丨直连【2x】
+      - 🇺🇸【北美洲】美国01丨直连
+      - 🇺🇸【北美洲】美国02丨直连
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -66,6 +81,11 @@ proxy-groups:
       - 🇸🇬 新加坡
       - 随机IP
       - taijun
+      - 🇯🇵【亚洲】日本三网06丨直连【2x】
+      - 🇯🇵【亚洲】日本三网07丨直连【2x】
+      - 🇯🇵【亚洲】日本三网08丨直连【2x】
+      - 🇺🇸【北美洲】美国01丨直连
+      - 🇺🇸【北美洲】美国02丨直连
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
@@ -83,6 +103,11 @@ proxy-groups:
       - 🇸🇬 新加坡
       - 随机IP
       - taijun
+      - 🇯🇵【亚洲】日本三网06丨直连【2x】
+      - 🇯🇵【亚洲】日本三网07丨直连【2x】
+      - 🇯🇵【亚洲】日本三网08丨直连【2x】
+      - 🇺🇸【北美洲】美国01丨直连
+      - 🇺🇸【北美洲】美国02丨直连
 # rule-providers:
 #   AntiAd:
 #     type: http
