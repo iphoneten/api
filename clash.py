@@ -140,8 +140,8 @@ def write_clash_config(filtered_proxies, filename="config.yaml"):  # {{ edit_1 }
     base_config = {
         "port": 7890,
         "socks-port": 7891,
-        "allow-lan": True,
-        "mode": "Rule",
+        "allow-lan": true,
+        "mode": "rule",
         "log-level": "info",
         "external-controller": ":9090",
         "proxies": [],
