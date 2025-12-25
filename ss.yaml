@@ -15,6 +15,9 @@ proxies:
   - {name: 🇺🇸 CF 8, server: 162.159.39.182, port: 443, udp: false, client-fingerprint: random, type: trojan, password: taijun, sni: taijun.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: taijun.pages.dev}}}
   - {name: 🇺🇸 CF 9, server: 104.19.69.202, port: 443, udp: false, client-fingerprint: random, type: trojan, password: taijun, sni: taijun.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: taijun.pages.dev}}}
   - {name: 🇺🇸 CF 10, server: 104.18.183.145, port: 443, udp: false, client-fingerprint: random, type: trojan, password: taijun, sni: taijun.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: taijun.pages.dev}}}
+  - {name: 🇺🇸 CF 11, server: 1024.cloudflare.182682.xyz, port: 443, udp: false, client-fingerprint: random, type: trojan, password: 2048, sni: cf1024.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: cf1024.pages.dev}}}
+  - {name: 🇺🇸 CF 12, server: cf1024.cloudfront.182682.xyz, port: 443, udp: false, client-fingerprint: random, type: trojan, password: 2048, sni: cf1024.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: cf1024.pages.dev}}}
+  - {name: 🇺🇸 CF 13, server: cf1024.edgeone.182682.xyz, port: 443, udp: false, client-fingerprint: random, type: trojan, password: 2048, sni: cf1024.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: cf1024.pages.dev}}}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -32,6 +35,9 @@ proxy-groups:
       - 🇺🇸 CF 8
       - 🇺🇸 CF 9
       - 🇺🇸 CF 10
+      - 🇺🇸 CF 11
+      - 🇺🇸 CF 12
+      - 🇺🇸 CF 13
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -47,6 +53,9 @@ proxy-groups:
       - 🇺🇸 CF 8
       - 🇺🇸 CF 9
       - 🇺🇸 CF 10
+      - 🇺🇸 CF 11
+      - 🇺🇸 CF 12
+      - 🇺🇸 CF 13
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -62,6 +71,9 @@ proxy-groups:
       - 🇺🇸 CF 8
       - 🇺🇸 CF 9
       - 🇺🇸 CF 10
+      - 🇺🇸 CF 11
+      - 🇺🇸 CF 12
+      - 🇺🇸 CF 13
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
@@ -78,6 +90,9 @@ proxy-groups:
       - 🇺🇸 CF 8
       - 🇺🇸 CF 9
       - 🇺🇸 CF 10
+      - 🇺🇸 CF 11
+      - 🇺🇸 CF 12
+      - 🇺🇸 CF 13
 # rule-providers:
 #   AntiAd:
 #     type: http
