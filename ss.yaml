@@ -18,6 +18,10 @@ proxies:
   - {name: 🇺🇸 CF 11, server: 1024.cloudflare.182682.xyz, port: 443, udp: false, client-fingerprint: random, type: trojan, password: 2048, sni: cf1024.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: cf1024.pages.dev}}}
   - {name: 🇺🇸 CF 12, server: 104.18.32.163, port: 443, udp: false, client-fingerprint: random, type: trojan, password: 2048, sni: cf1024.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: cf1024.pages.dev}}}
   - {name: 🇺🇸 CF 13, server: 172.64.159.228, port: 443, udp: false, client-fingerprint: random, type: trojan, password: 2048, sni: cf1024.pages.dev, alpn: [h3], skip-cert-verify: true, network: ws, ws-opts: {path: '/?ed=2560', headers: {Host: cf1024.pages.dev}}}
+  - {name: 🇰🇷 CF 14, server: kr.333.cc.cd, port: 443, type: vless, uuid: 3161ba7b-5d18-45c2-b1ca-f59c8c5140c6, tls: true, tfo: false, skip-cert-verify: false, servername: qq123456.pages.dev, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: qq123456.pages.dev}}}
+  - {name: 🇸🇬 CF 15, server: sg.444.cc.cd, port: 443, type: vless, uuid: 3161ba7b-5d18-45c2-b1ca-f59c8c5140c6, tls: true, tfo: false, skip-cert-verify: false, servername: qq123456.pages.dev, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: qq123456.pages.dev}}}
+  - {name: 🇺🇸 CF 16, server: us.555.cc.cd, port: 443, type: vless, uuid: 3161ba7b-5d18-45c2-b1ca-f59c8c5140c6, tls: true, tfo: false, skip-cert-verify: false, servername: qq123456.pages.dev, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: qq123456.pages.dev}}}
+  - {name: 🇬🇧 CF 17, server: uk.777.cc.cd, port: 443, type: vless, uuid: 3161ba7b-5d18-45c2-b1ca-f59c8c5140c6, tls: true, tfo: false, skip-cert-verify: false, servername: qq123456.pages.dev, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: qq123456.pages.dev}}}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -38,6 +42,10 @@ proxy-groups:
       - 🇺🇸 CF 11
       - 🇺🇸 CF 12
       - 🇺🇸 CF 13
+      - 🇺🇸 CF 14
+      - 🇺🇸 CF 15
+      - 🇺🇸 CF 16
+      - 🇺🇸 CF 17
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -56,6 +64,10 @@ proxy-groups:
       - 🇺🇸 CF 11
       - 🇺🇸 CF 12
       - 🇺🇸 CF 13
+      - 🇺🇸 CF 14
+      - 🇺🇸 CF 15
+      - 🇺🇸 CF 16
+      - 🇺🇸 CF 17
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -74,6 +86,10 @@ proxy-groups:
       - 🇺🇸 CF 11
       - 🇺🇸 CF 12
       - 🇺🇸 CF 13
+      - 🇺🇸 CF 14
+      - 🇺🇸 CF 15
+      - 🇺🇸 CF 16
+      - 🇺🇸 CF 17
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
@@ -93,6 +109,10 @@ proxy-groups:
       - 🇺🇸 CF 11
       - 🇺🇸 CF 12
       - 🇺🇸 CF 13
+      - 🇺🇸 CF 14
+      - 🇺🇸 CF 15
+      - 🇺🇸 CF 16
+      - 🇺🇸 CF 17
 # rule-providers:
 #   AntiAd:
 #     type: http
