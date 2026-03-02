@@ -22,38 +22,20 @@ profile:
 proxies:
 
 proxy-providers:
-  xship:
+  星币:
     type: http
-    url: "https://raw.githubusercontent.com/iphoneten/api/refs/heads/main/clash.yaml"
+    url: "https://198.16.63.200/xbsub?token=bcfe2f9aae891e181f908bd8142e31ce"
     interval: 86400
-    path: ./providers/xship.yaml
+    path: ./providers/星币.yaml
     health-check:
       enable: true
       url: 'https://www.google.com/generate_204'
       interval: 86400
-  # aifjj:
-  #   type: http
-  #   url: "https://www.a.aifjj.asia/api/v1/client/subscribe/3eddd42e9dc1e77d881326ad87da9246"
-  #   interval: 86400
-  #   path: ./providers/aifjj.yaml
-  #   health-check:
-  #     enable: true
-  #     url: 'https://www.google.com/generate_204'
-  #     interval: 86400
   config:
     type: http
-    url: "https://raw.githubusercontent.com/iphoneten/api/refs/heads/main/config.yaml"
+    url: "https://raw.githubusercontent.com/iphoneten/api/main/ss.yaml"
     interval: 86400
     path: ./providers/config.yaml
-    health-check:
-      enable: true
-      url: 'https://www.google.com/generate_204'
-      interval: 86400
-  newcf:
-    type: http
-    url: "https://long-morning-d1bb.wowoo74110.workers.dev/86c50e3a-5b87-49dd-bd20-03c7f2735e40/cl"
-    interval: 86400
-    path: ./providers/newcf.yaml
     health-check:
       enable: true
       url: 'https://www.google.com/generate_204'
@@ -104,7 +86,7 @@ rule-providers:
 proxy-groups:
   - name: 负载均衡
     type: load-balance
-    use: [newcf, config, xship]
+    use: [星币, config]
     interval: 300
     strategy: round-robin # 轮询方式，可选 'consistent-hashing' 'round-robin'
     url: 'http://cp.cloudflare.com/generate_204'
@@ -114,7 +96,7 @@ proxy-groups:
 
   - name: 自动选择
     type: url-test
-    use: [newcf, config, xship]
+    use: [星币, config]
     interval: 300
     url: 'http://cp.cloudflare.com/generate_204'
     max-failed-times: 3
@@ -126,7 +108,7 @@ proxy-groups:
     proxies:
       - 自动选择
       - 负载均衡
-    use: [newcf, config, xship]
+    use: [星币, config]
     url: 'http://cp.cloudflare.com/generate_204'
     timeout: 5000
     filter: ^(?!.*(剩余流量|套餐到期|距离下次|本站|关注|海外|官网|群组|🔒|免费|推广)).*$
