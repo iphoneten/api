@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: Relay_-🇫🇷FR_273 |131.11Mb
-  server: 104.18.11.110
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.multiplydose.com
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-  network: ws
 - name: disney_SG |17.24Mb
   server: 104.18.185.26
   type: trojan
@@ -29,98 +17,79 @@ proxies:
     headers:
       Host: null.us1234567891.xyz
   network: ws
+- name: Relay_-🇫🇷FR_255 |131.11Mb
+  server: 104.18.11.110
+  type: trojan
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.multiplydose.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+  network: ws
 - name: disney_netflix_US |73.24Mb
   server: 194.116.173.21
   type: ss
   port: 9038
   password: gYCYXfkUQEs2TaJQ
   cipher: aes-256-cfb
-- name: disney_netflix_US |65.81Mb
+- name: disney_US |65.81Mb
   server: tinkered-pennies-puppies.freesocks.work
   type: ss
   port: 443
   udp: true
   password: hbGrpfvNrJsUmKmPbR3iY2
   cipher: chacha20-ietf-poly1305
-- name: Relay_-🇯🇵JP_278 |19.72Mb
-  server: 160.16.106.99
-  type: trojan
-  port: 34818
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇸🇬SG_275 |11.08Mb
+- name: Relay_-🇸🇬SG_268 |11.08Mb
   server: 160.16.85.33
   type: trojan
   port: 4674
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_272 |14.94Mb
+- name: Relay_-🇯🇵JP_263 |19.72Mb
+  server: 160.16.106.99
+  type: trojan
+  port: 34818
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_269 |17.26Mb
   server: 153.121.45.139
   type: trojan
-  port: 4937
+  port: 34818
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_271 |89.04Mb
-  server: 160.16.85.33
-  type: trojan
-  port: 4937
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_🇳🇬NG-🇮🇩ID_311 |18.79Mb
-  server: 83.229.121.113
+- name: disney_HK |63.88Mb
+  server: 103.149.182.105
+  type: ss
+  port: 8388
+  udp: true
+  password: asd123456
+  cipher: chacha20-ietf
+- name: disney_netflix_NL |57.86Mb
+  server: 141.11.21.219
   type: vmess
-  country: 🇳🇬NG
-  port: 443
-  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  country: 🇫🇷FR
+  port: 50521
+  uuid: 7b4c6795-3be5-4a4e-b234-07a46f580c45
   alterId: 0
   cipher: auto
-  network: ws
-  servername: mn1ray.jagoanvip.xyz
+  network: tcp
   http-opts: {}
   h2-opts: {}
   tls: true
   skip-cert-verify: true
-  ws-opts:
-    path: /vvip
-    headers:
-      HOST: mn1ray.jagoanvip.xyz
-- name: Relay_🇸🇬SG-🇮🇩ID_314 |22.03Mb
-  server: 8.223.63.189
+- name: Relay_-🇭🇰HK_254 |30.23Mb
+  server: v10.hdacd.com
   type: vmess
-  country: 🇸🇬SG
-  port: 443
-  uuid: 462d9694-62b5-4781-a287-61a422b920e8
-  alterId: 0
+  port: 30807
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
   cipher: auto
-  network: ws
-  servername: mn1ray.jagoanvip.xyz
   http-opts: {}
   h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vvip
-    headers:
-      HOST: mn1ray.jagoanvip.xyz
-- name: Relay_🇺🇸US-🇮🇩ID_315 |18.35Mb
-  server: 38.55.193.199
-  type: vmess
-  country: 🇺🇸US
-  port: 443
-  uuid: 462d9694-62b5-4781-a287-61a422b920e8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: mn1ray.jagoanvip.xyz
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vvip
-    headers:
-      HOST: mn1ray.jagoanvip.xyz
-- name: Relay_🇭🇰HK-🇮🇩ID_309 |16.96Mb
+- name: Relay_🇭🇰HK-🇮🇩ID_304 |16.96Mb
   server: 38.55.193.78
   type: vmess
   country: 🇭🇰HK
@@ -138,7 +107,52 @@ proxies:
     path: /vvip
     headers:
       HOST: mn1ray.jagoanvip.xyz
-- name: Relay_🇭🇰HK-🇮🇩ID_310 |21.88Mb
+- name: Relay_🇳🇬NG-🇮🇩ID_306 |18.79Mb
+  server: 83.229.121.113
+  type: vmess
+  country: 🇳🇬NG
+  port: 443
+  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mn1ray.jagoanvip.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vvip
+    headers:
+      HOST: mn1ray.jagoanvip.xyz
+- name: Relay_🇸🇬SG-🇮🇩ID_308 |22.03Mb
+  server: 8.223.63.189
+  type: vmess
+  country: 🇸🇬SG
+  port: 443
+  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mn1ray.jagoanvip.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vvip
+    headers:
+      HOST: mn1ray.jagoanvip.xyz
+- name: Relay_-🇺🇸US_145 |34.31Mb
+  server: svt1.fq.ito8.com
+  type: hysteria2
+  port: 8080
+  udp: true
+  password: 1ae9f3fa-46a3-4ccf-ac29-990ec9673022
+  auth: 1ae9f3fa-46a3-4ccf-ac29-990ec9673022
+  sni: svt1.fq.ito8.com
+  skip-cert-verify: false
+- name: Relay_🇭🇰HK-🇮🇩ID_305 |21.88Mb
   server: 47.57.182.141
   type: vmess
   country: 🇭🇰HK
@@ -156,75 +170,7 @@ proxies:
     path: /vvip
     headers:
       HOST: mn1ray.jagoanvip.xyz
-- name: Relay_-🇩🇪DE_284 |93.85Mb
-  server: cool-lioness.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: ZY07256934
-  sni: cool-lioness.rooster465.autos
-- name: Relay_-🇭🇰HK_266 |30.23Mb
-  server: v10.hdacd.com
-  type: vmess
-  port: 30807
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: Relay_🇫🇷FR-🇭🇰HK_295 |10.55Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: 38207de1-de96-4f78-867b-7be6b41ef1dd
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 3dfc06a29f8ae09dec34988159d21bee.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 3dfc06a29f8ae09dec34988159d21bee.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_300 |13.48Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 38207de1-de96-4f78-867b-7be6b41ef1dd
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 3dfc06a29f8ae09dec34988159d21bee.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 3dfc06a29f8ae09dec34988159d21bee.mobgslb.tbcache.com
-- name: Relay_🇺🇸US-🇮🇩ID_319 |19.82Mb
-  server: 149.104.30.17
-  type: vmess
-  country: 🇺🇸US
-  port: 443
-  uuid: 462d9694-62b5-4781-a287-61a422b920e8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: mn1ray.jagoanvip.xyz
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vvip
-    headers:
-      HOST: mn1ray.jagoanvip.xyz
-- name: Relay_🇺🇸US-🇮🇩ID_320 |18.31Mb
+- name: Relay_🇺🇸US-🇮🇩ID_311 |18.31Mb
   server: 38.55.194.87
   type: vmess
   country: 🇺🇸US
@@ -242,6 +188,101 @@ proxies:
     path: /vvip
     headers:
       HOST: mn1ray.jagoanvip.xyz
+- name: Relay_🇫🇷FR-🇯🇵JP_281 |13.48Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16617
+  uuid: 38207de1-de96-4f78-867b-7be6b41ef1dd
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 3dfc06a29f8ae09dec34988159d21bee.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 3dfc06a29f8ae09dec34988159d21bee.mobgslb.tbcache.com
+- name: Relay_🇺🇸US-🇮🇩ID_313 |18.35Mb
+  server: 38.55.193.199
+  type: vmess
+  country: 🇺🇸US
+  port: 443
+  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mn1ray.jagoanvip.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vvip
+    headers:
+      HOST: mn1ray.jagoanvip.xyz
+- name: Relay_-🇩🇪DE_262 |93.85Mb
+  server: cool-lioness.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: ZY07256934
+  sni: cool-lioness.rooster465.autos
+- name: Relay_🇺🇸US-🇮🇩ID_314 |19.82Mb
+  server: 149.104.30.17
+  type: vmess
+  country: 🇺🇸US
+  port: 443
+  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mn1ray.jagoanvip.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vvip
+    headers:
+      HOST: mn1ray.jagoanvip.xyz
+- name: Relay_🇺🇸US-🇮🇩ID_312 |10.80Mb
+  server: 47.130.9.238
+  type: vmess
+  country: 🇺🇸US
+  port: 443
+  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mn1ray.jagoanvip.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vvip
+    headers:
+      HOST: mn1ray.jagoanvip.xyz
+- name: disney_HK |10.55Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16632
+  uuid: 38207de1-de96-4f78-867b-7be6b41ef1dd
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 3dfc06a29f8ae09dec34988159d21bee.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 3dfc06a29f8ae09dec34988159d21bee.mobgslb.tbcache.com
 - name: disney_ID |15.54Mb
   server: 34.143.159.175
   type: vmess
@@ -260,84 +301,61 @@ proxies:
     path: /vvip
     headers:
       HOST: mn1ray.jagoanvip.xyz
-- name: Relay_🇺🇸US-🇮🇩ID_318 |10.80Mb
-  server: 47.130.9.238
-  type: vmess
-  country: 🇺🇸US
-  port: 443
-  uuid: 462d9694-62b5-4781-a287-61a422b920e8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: mn1ray.jagoanvip.xyz
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vvip
-    headers:
-      HOST: mn1ray.jagoanvip.xyz
-- name: disney_HK |63.88Mb
-  server: 103.149.182.105
-  type: ss
-  port: 8388
-  udp: true
-  password: asd123456
-  cipher: chacha20-ietf
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - Relay_-🇫🇷FR_273 |131.11Mb
   - disney_SG |17.24Mb
+  - Relay_-🇫🇷FR_255 |131.11Mb
   - disney_netflix_US |73.24Mb
-  - disney_netflix_US |65.81Mb
-  - Relay_-🇯🇵JP_278 |19.72Mb
-  - Relay_-🇸🇬SG_275 |11.08Mb
-  - Relay_-🇯🇵JP_272 |14.94Mb
-  - Relay_-🇯🇵JP_271 |89.04Mb
-  - Relay_🇳🇬NG-🇮🇩ID_311 |18.79Mb
-  - Relay_🇸🇬SG-🇮🇩ID_314 |22.03Mb
-  - Relay_🇺🇸US-🇮🇩ID_315 |18.35Mb
-  - Relay_🇭🇰HK-🇮🇩ID_309 |16.96Mb
-  - Relay_🇭🇰HK-🇮🇩ID_310 |21.88Mb
-  - Relay_-🇩🇪DE_284 |93.85Mb
-  - Relay_-🇭🇰HK_266 |30.23Mb
-  - Relay_🇫🇷FR-🇭🇰HK_295 |10.55Mb
-  - Relay_🇫🇷FR-🇯🇵JP_300 |13.48Mb
-  - Relay_🇺🇸US-🇮🇩ID_319 |19.82Mb
-  - Relay_🇺🇸US-🇮🇩ID_320 |18.31Mb
-  - disney_ID |15.54Mb
-  - Relay_🇺🇸US-🇮🇩ID_318 |10.80Mb
+  - disney_US |65.81Mb
+  - Relay_-🇸🇬SG_268 |11.08Mb
+  - Relay_-🇯🇵JP_263 |19.72Mb
+  - Relay_-🇯🇵JP_269 |17.26Mb
   - disney_HK |63.88Mb
+  - disney_netflix_NL |57.86Mb
+  - Relay_-🇭🇰HK_254 |30.23Mb
+  - Relay_🇭🇰HK-🇮🇩ID_304 |16.96Mb
+  - Relay_🇳🇬NG-🇮🇩ID_306 |18.79Mb
+  - Relay_🇸🇬SG-🇮🇩ID_308 |22.03Mb
+  - Relay_-🇺🇸US_145 |34.31Mb
+  - Relay_🇭🇰HK-🇮🇩ID_305 |21.88Mb
+  - Relay_🇺🇸US-🇮🇩ID_311 |18.31Mb
+  - Relay_🇫🇷FR-🇯🇵JP_281 |13.48Mb
+  - Relay_🇺🇸US-🇮🇩ID_313 |18.35Mb
+  - Relay_-🇩🇪DE_262 |93.85Mb
+  - Relay_🇺🇸US-🇮🇩ID_314 |19.82Mb
+  - Relay_🇺🇸US-🇮🇩ID_312 |10.80Mb
+  - disney_HK |10.55Mb
+  - disney_ID |15.54Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - Relay_-🇫🇷FR_273 |131.11Mb
   - disney_SG |17.24Mb
+  - Relay_-🇫🇷FR_255 |131.11Mb
   - disney_netflix_US |73.24Mb
-  - disney_netflix_US |65.81Mb
-  - Relay_-🇯🇵JP_278 |19.72Mb
-  - Relay_-🇸🇬SG_275 |11.08Mb
-  - Relay_-🇯🇵JP_272 |14.94Mb
-  - Relay_-🇯🇵JP_271 |89.04Mb
-  - Relay_🇳🇬NG-🇮🇩ID_311 |18.79Mb
-  - Relay_🇸🇬SG-🇮🇩ID_314 |22.03Mb
-  - Relay_🇺🇸US-🇮🇩ID_315 |18.35Mb
-  - Relay_🇭🇰HK-🇮🇩ID_309 |16.96Mb
-  - Relay_🇭🇰HK-🇮🇩ID_310 |21.88Mb
-  - Relay_-🇩🇪DE_284 |93.85Mb
-  - Relay_-🇭🇰HK_266 |30.23Mb
-  - Relay_🇫🇷FR-🇭🇰HK_295 |10.55Mb
-  - Relay_🇫🇷FR-🇯🇵JP_300 |13.48Mb
-  - Relay_🇺🇸US-🇮🇩ID_319 |19.82Mb
-  - Relay_🇺🇸US-🇮🇩ID_320 |18.31Mb
-  - disney_ID |15.54Mb
-  - Relay_🇺🇸US-🇮🇩ID_318 |10.80Mb
+  - disney_US |65.81Mb
+  - Relay_-🇸🇬SG_268 |11.08Mb
+  - Relay_-🇯🇵JP_263 |19.72Mb
+  - Relay_-🇯🇵JP_269 |17.26Mb
   - disney_HK |63.88Mb
+  - disney_netflix_NL |57.86Mb
+  - Relay_-🇭🇰HK_254 |30.23Mb
+  - Relay_🇭🇰HK-🇮🇩ID_304 |16.96Mb
+  - Relay_🇳🇬NG-🇮🇩ID_306 |18.79Mb
+  - Relay_🇸🇬SG-🇮🇩ID_308 |22.03Mb
+  - Relay_-🇺🇸US_145 |34.31Mb
+  - Relay_🇭🇰HK-🇮🇩ID_305 |21.88Mb
+  - Relay_🇺🇸US-🇮🇩ID_311 |18.31Mb
+  - Relay_🇫🇷FR-🇯🇵JP_281 |13.48Mb
+  - Relay_🇺🇸US-🇮🇩ID_313 |18.35Mb
+  - Relay_-🇩🇪DE_262 |93.85Mb
+  - Relay_🇺🇸US-🇮🇩ID_314 |19.82Mb
+  - Relay_🇺🇸US-🇮🇩ID_312 |10.80Mb
+  - disney_HK |10.55Mb
+  - disney_ID |15.54Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
