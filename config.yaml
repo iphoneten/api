@@ -4,16 +4,139 @@ allow-lan: true
 mode: rule
 log-level: info
 external-controller: :9090
-proxies: []
+proxies:
+- name: disney_netflix_NL |364.54Mb
+  server: 104.18.11.110
+  type: trojan
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.multiplydose.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+  network: ws
+- name: disney_SG |12.83Mb
+  server: 104.18.185.26
+  type: trojan
+  port: 443
+  udp: true
+  password: 36639485-60a0-4853-856c-40ac05f4b00d
+  sni: null.us1234567891.xyz
+  ws-opts:
+    path: /music
+    headers:
+      Host: null.us1234567891.xyz
+  network: ws
+- name: netflix_US |362.79Mb
+  server: 194.116.173.21
+  type: ss
+  port: 9038
+  password: gYCYXfkUQEs2TaJQ
+  cipher: aes-256-cfb
+- name: disney_US |11.67Mb
+  server: tinkered-pennies-puppies.freesocks.work
+  type: ss
+  port: 443
+  udp: true
+  password: hbGrpfvNrJsUmKmPbR3iY2
+  cipher: chacha20-ietf-poly1305
+- name: Relay_-🇩🇪DE_225 |82.41Mb
+  server: cool-lioness.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: ZY07256934
+  sni: cool-lioness.rooster465.autos
+- name: Relay_-🇯🇵JP_233 |89.04Mb
+  server: 160.16.85.33
+  type: trojan
+  port: 4937
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇳🇱NL_235 |16.41Mb
+  server: 153.121.45.139
+  type: trojan
+  port: 3057
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_241 |17.26Mb
+  server: 153.121.45.139
+  type: trojan
+  port: 34818
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇸🇬SG_238 |11.16Mb
+  server: 160.16.85.33
+  type: trojan
+  port: 4674
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_224 |14.94Mb
+  server: 153.121.45.139
+  type: trojan
+  port: 4937
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_🇺🇸US-🇮🇩ID_251 |16.10Mb
+  server: 149.104.30.17
+  type: vmess
+  country: 🇺🇸US
+  port: 443
+  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mn1ray.jagoanvip.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vvip
+    headers:
+      HOST: mn1ray.jagoanvip.xyz
+- name: 🇦🇺AU_244 |11.25Mb
+  server: download.riferoser.icu
+  type: ss
+  country: 🇦🇺AU
+  port: 56594
+  password: q2jToxsx4vTevqrFiLGuwRx96SXM3C96id1MWpnSECHq3MaTWnEV76aN5PYEigRfqf7rxAcuAMWUzYNxrYRG6QhMcYw5QnqL
+  cipher: chacha20-ietf-poly1305
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
+  - disney_netflix_NL |364.54Mb
+  - disney_SG |12.83Mb
+  - netflix_US |362.79Mb
+  - disney_US |11.67Mb
+  - Relay_-🇩🇪DE_225 |82.41Mb
+  - Relay_-🇯🇵JP_233 |89.04Mb
+  - Relay_-🇳🇱NL_235 |16.41Mb
+  - Relay_-🇯🇵JP_241 |17.26Mb
+  - Relay_-🇸🇬SG_238 |11.16Mb
+  - Relay_-🇯🇵JP_224 |14.94Mb
+  - Relay_🇺🇸US-🇮🇩ID_251 |16.10Mb
+  - 🇦🇺AU_244 |11.25Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
-  proxies: []
+  proxies:
+  - disney_netflix_NL |364.54Mb
+  - disney_SG |12.83Mb
+  - netflix_US |362.79Mb
+  - disney_US |11.67Mb
+  - Relay_-🇩🇪DE_225 |82.41Mb
+  - Relay_-🇯🇵JP_233 |89.04Mb
+  - Relay_-🇳🇱NL_235 |16.41Mb
+  - Relay_-🇯🇵JP_241 |17.26Mb
+  - Relay_-🇸🇬SG_238 |11.16Mb
+  - Relay_-🇯🇵JP_224 |14.94Mb
+  - Relay_🇺🇸US-🇮🇩ID_251 |16.10Mb
+  - 🇦🇺AU_244 |11.25Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
