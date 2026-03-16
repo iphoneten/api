@@ -5,119 +5,35 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: Pool__307 |205.64Mb
+- name: disney_netflix_US |205.64Mb
   server: 104.192.227.163
   type: ss
   port: 443
   udp: true
   password: 9dgO6FtPF294wDrhPIqTrc
   cipher: chacha20-ietf-poly1305
-- name: _313 |24.33Mb
+- name: _333 |24.33Mb
   server: 137.184.174.93
   type: ss
   port: 8080
   udp: true
   password: 14fFPrbezE3HDZzsMOr6
   cipher: rc4-md5
-- name: disney_US |57.18Mb
+- name: disney_netflix_US |57.18Mb
   server: tinkered-pennies-puppies.freesocks.work
   type: ss
   port: 443
   udp: true
   password: hbGrpfvNrJsUmKmPbR3iY2
   cipher: chacha20-ietf-poly1305
-- name: _319 |16.39Mb
-  server: 5.188.181.201
-  type: ss
-  port: 9005
-  udp: true
-  password: ZET59LF6DvCC8KVt
-  cipher: aes-256-cfb
-- name: _310 |32.73Mb
+- name: disney_netflix_NL |32.73Mb
   server: 82.38.31.189
   type: ss
   port: 8080
   udp: true
   password: k1dBOmOB4oqi7Ump37a1bQ
   cipher: chacha20-ietf-poly1305
-- name: Relay_-🇺🇸US_327 |14.46Mb
-  server: 82.198.246.97
-  type: vmess
-  port: 180
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: _309 |152.81Mb
-  server: 38.54.20.59
-  type: ss
-  port: 8881
-  udp: true
-  password: kDWvXYZoTBcGkC4
-  cipher: aes-256-gcm
-- name: _316 |26.06Mb
-  server: 195.66.25.220
-  type: ss
-  port: 8388
-  udp: true
-  password: yhrHMDgZ2egKftvrecvkpUPqpUTyac7q
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇫🇷FR_337 |79.09Mb
-  server: 104.18.11.110
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.multiplydose.com
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-  network: ws
-- name: _317 |57.79Mb
-  server: 141.164.45.187
-  type: ss
-  port: 5001
-  udp: true
-  password: Y6R9pAtvxxzmGC
-  cipher: aes-256-gcm
-- name: _314 |33.65Mb
-  server: 141.164.45.187
-  type: ss
-  port: 2376
-  udp: true
-  password: faBAoD54k87UJG7
-  cipher: aes-256-gcm
-- name: _318 |13.91Mb
-  server: 141.164.45.187
-  type: ss
-  port: 6697
-  udp: true
-  password: TEzjfAYq2IjtuoS
-  cipher: aes-256-gcm
-- name: _308 |70.36Mb
-  server: 141.164.45.187
-  type: ss
-  port: 8008
-  udp: true
-  password: XKFKl2rULjIp74
-  cipher: aes-256-gcm
-- name: Relay_-🇺🇸US_339 |28.07Mb
-  server: 104.18.185.26
-  type: trojan
-  port: 443
-  udp: true
-  password: 36639485-60a0-4853-856c-40ac05f4b00d
-  sni: null.us1234567891.xyz
-  ws-opts:
-    path: /music
-    headers:
-      Host: null.us1234567891.xyz
-  network: ws
-- name: _335 |231.76Mb
+- name: _344 |231.76Mb
   server: 164.92.245.167
   type: vmess
   port: 2096
@@ -131,17 +47,79 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /
-- name: Relay_-🇨🇭CH_325 |36.07Mb
-  server: cn02.365cloud5878.com
-  type: vmess
-  port: 6041
+- name: _329 |26.06Mb
+  server: 195.66.25.220
+  type: ss
+  port: 8388
   udp: true
-  uuid: 9f1ecfca-13a9-488d-ac84-aaeb73a8d574
+  password: yhrHMDgZ2egKftvrecvkpUPqpUTyac7q
+  cipher: chacha20-ietf-poly1305
+- name: _327 |152.81Mb
+  server: 38.54.20.59
+  type: ss
+  port: 8881
+  udp: true
+  password: kDWvXYZoTBcGkC4
+  cipher: aes-256-gcm
+- name: Relay_-🇺🇸US_350 |14.46Mb
+  server: 82.198.246.97
+  type: vmess
+  port: 180
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: Relay_-🇯🇵JP_334 |50.03Mb
+  skip-cert-verify: true
+- name: _339 |70.36Mb
+  server: 141.164.45.187
+  type: ss
+  port: 8008
+  udp: true
+  password: XKFKl2rULjIp74
+  cipher: aes-256-gcm
+- name: _337 |57.79Mb
+  server: 141.164.45.187
+  type: ss
+  port: 5001
+  udp: true
+  password: Y6R9pAtvxxzmGC
+  cipher: aes-256-gcm
+- name: _341 |13.91Mb
+  server: 141.164.45.187
+  type: ss
+  port: 6697
+  udp: true
+  password: TEzjfAYq2IjtuoS
+  cipher: aes-256-gcm
+- name: disney_SG |14.26Mb
+  server: 103.36.91.32
+  type: ss
+  port: 8388
+  udp: true
+  password: asd123456
+  cipher: chacha20-ietf
+- name: _335 |33.65Mb
+  server: 141.164.45.187
+  type: ss
+  port: 2376
+  udp: true
+  password: faBAoD54k87UJG7
+  cipher: aes-256-gcm
+- name: Relay_-🇺🇸US_354 |55.63Mb
+  server: 153.121.65.107
+  type: trojan
+  port: 4019
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇸🇬SG_353 |11.48Mb
+  server: 160.16.85.33
+  type: trojan
+  port: 4674
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_348 |50.03Mb
   server: cn02.365cloud5878.com
   type: vmess
   port: 6003
@@ -151,74 +129,13 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: Relay_-🇯🇵JP_336 |65.57Mb
-  server: 160.16.106.99
-  type: trojan
-  port: 34818
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇺🇸US_338 |55.63Mb
-  server: 153.121.65.107
+- name: Relay_-🇺🇸US_355 |53.95Mb
+  server: 160.16.130.21
   type: trojan
   port: 4019
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_340 |14.75Mb
-  server: 153.121.38.213
-  type: trojan
-  port: 34818
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_341 |22.98Mb
-  server: 160.16.85.33
-  type: trojan
-  port: 4937
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇸🇬SG_342 |11.48Mb
-  server: 160.16.85.33
-  type: trojan
-  port: 4674
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇳🇱NL_343 |11.59Mb
-  server: 160.16.132.38
-  type: trojan
-  port: 3419
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_345 |23.33Mb
-  server: 57.180.28.65
-  type: trojan
-  port: 2001
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_346 |89.11Mb
-  server: 160.16.124.17
-  type: trojan
-  port: 34818
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_347 |13.08Mb
-  server: 160.16.106.99
-  type: trojan
-  port: 4937
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: disney_netflix_DE |260.79Mb
-  server: cool-lioness.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: ZY07256934
-  sni: cool-lioness.rooster465.autos
-- name: Relay_-🇸🇬SG_348 |11.60Mb
-  server: 160.16.106.99
-  type: trojan
-  port: 4674
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇺🇸US_330 |33.43Mb
+- name: Relay_-🇺🇸US_345 |33.43Mb
   server: hb.seacloudmachinery.com
   type: vmess
   port: 2086
@@ -235,44 +152,31 @@ proxies:
     path: /telegram id @rootface
     headers:
       Host: hb.seacloudmachinery.com
-- name: Relay_-🇺🇸US_352 |53.95Mb
-  server: 160.16.130.21
+- name: disney_netflix_NL |79.09Mb
+  server: 104.18.11.110
   type: trojan
-  port: 4019
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.multiplydose.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+  network: ws
+- name: Relay_-🇯🇵JP_356 |14.75Mb
+  server: 153.121.38.213
+  type: trojan
+  port: 34818
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_350 |91.43Mb
+- name: Relay_-🇯🇵JP_358 |91.43Mb
   server: 153.121.45.139
   type: trojan
   port: 34818
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: Relay_-🇳🇱NL_354 |47.47Mb
-  server: 153.121.45.139
-  type: trojan
-  port: 3057
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇸🇬SG_355 |11.43Mb
-  server: 153.121.45.139
-  type: trojan
-  port: 4674
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_356 |66.58Mb
-  server: 153.121.45.139
-  type: trojan
-  port: 4937
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇳🇱NL_353 |11.06Mb
-  server: nl-4.tr202512.com
-  type: trojan
-  port: 443
-  udp: true
-  password: M08tvzYWtUEJNtbpHp
-  skip-cert-verify: true
-- name: Relay_-🇳🇱NL_358 |25.01Mb
+- name: Relay_-🇳🇱NL_357 |25.01Mb
   server: 160.16.214.104
   type: trojan
   port: 3057
@@ -284,31 +188,117 @@ proxies:
   port: 4674
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: Relay_-🇳🇱NL_360 |56.92Mb
-  server: 160.16.72.205
+- name: Relay_-🇳🇱NL_360 |11.59Mb
+  server: 160.16.132.38
+  type: trojan
+  port: 3419
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_361 |14.77Mb
+  server: 160.16.132.38
+  type: trojan
+  port: 4937
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇸🇬SG_362 |11.43Mb
+  server: 153.121.45.139
+  type: trojan
+  port: 4674
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇳🇱NL_364 |47.47Mb
+  server: 153.121.45.139
   type: trojan
   port: 3057
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: Relay_-🇳🇱NL_361 |60.33Mb
+- name: Relay_-🇳🇱NL_365 |60.33Mb
   server: 160.16.106.99
   type: trojan
   port: 3057
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_362 |59.68Mb
+- name: Relay_-🇯🇵JP_367 |66.58Mb
+  server: 153.121.45.139
+  type: trojan
+  port: 4937
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇳🇱NL_368 |56.92Mb
+  server: 160.16.72.205
+  type: trojan
+  port: 3057
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_369 |22.98Mb
+  server: 160.16.85.33
+  type: trojan
+  port: 4937
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_370 |59.68Mb
   server: 160.16.214.104
   type: trojan
   port: 4937
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_363 |23.12Mb
+- name: Relay_-🇺🇸US_380 |28.07Mb
+  server: 104.18.185.26
+  type: trojan
+  port: 443
+  udp: true
+  password: 36639485-60a0-4853-856c-40ac05f4b00d
+  sni: null.us1234567891.xyz
+  ws-opts:
+    path: /music
+    headers:
+      Host: null.us1234567891.xyz
+  network: ws
+- name: Relay_-🇸🇬SG_372 |11.60Mb
+  server: 160.16.106.99
+  type: trojan
+  port: 4674
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_371 |23.12Mb
   server: 160.16.214.104
   type: trojan
   port: 2001
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: 🇫🇷FR_396 |67.19Mb
+- name: Relay_-🇯🇵JP_374 |89.11Mb
+  server: 160.16.124.17
+  type: trojan
+  port: 34818
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇳🇱NL_373 |11.06Mb
+  server: nl-4.tr202512.com
+  type: trojan
+  port: 443
+  udp: true
+  password: M08tvzYWtUEJNtbpHp
+  skip-cert-verify: true
+- name: Relay_-🇯🇵JP_376 |23.33Mb
+  server: 57.180.28.65
+  type: trojan
+  port: 2001
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇩🇪DE_378 |260.79Mb
+  server: cool-lioness.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: ZY07256934
+  sni: cool-lioness.rooster465.autos
+- name: Relay_-🇯🇵JP_377 |65.57Mb
+  server: 160.16.106.99
+  type: trojan
+  port: 34818
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: 🇫🇷FR_392 |67.19Mb
   server: 141.11.21.219
   type: vmess
   country: 🇫🇷FR
@@ -321,40 +311,33 @@ proxies:
   h2-opts: {}
   tls: true
   skip-cert-verify: true
-- name: Relay_🇫🇷FR-🇯🇵JP_373 |58.97Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 074c3ea9-c977-470e-8835-bba1483d5c02
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_410 |20.86Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
+- name: 🇭🇰 HK_413 |148.99Mb
+  server: 154.223.16.212
+  type: ss
+  country: 🇭🇰 HK
+  port: 989
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: Relay_-🇯🇵JP_379 |13.08Mb
+  server: 160.16.106.99
+  type: trojan
+  port: 4937
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: disney_netflix_NL |101.58Mb
+  server: 82.38.31.191
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+- name: netflix_PL |56.37Mb
+  server: 144.31.130.99
+  type: ss
+  country: 🇺🇸US
+  port: 9443
+  password: p1R3hJEWeQJGJL42SaYy22CC21uFt_0y
+  cipher: chacha20-ietf-poly1305
 - name: disney_HK |16.49Mb
   server: planb.mojcn.com
   type: vmess
@@ -372,8 +355,8 @@ proxies:
     path: /
     headers:
       HOST: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_379 |62.41Mb
-  server: t.cnmjcn.cyou
+- name: Relay_🇫🇷FR-🇯🇵JP_384 |58.97Mb
+  server: planb.mojcn.com
   type: vmess
   country: 🇫🇷FR
   port: 16617
@@ -389,91 +372,13 @@ proxies:
     path: /
     headers:
       HOST: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
-- name: disney_HK |15.69Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_413 |15.05Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇺🇸US_409 |10.90Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16648
-  uuid: 074c3ea9-c977-470e-8835-bba1483d5c02
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_380 |54.13Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 074c3ea9-c977-470e-8835-bba1483d5c02
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_406 |17.95Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
+- name: Relay_🇺🇸US-🇺🇸US_415 |57.87Mb
+  server: auto.poland.ray-vpn.ru
+  type: ss
+  country: 🇺🇸US
+  port: 4495
+  password: 2Z9ba3GwDL-rn6DSQ0N-awHNhcuxaHP3
+  cipher: chacha20-ietf-poly1305
 - name: disney_HK |10.48Mb
   server: m.cnmjin.net
   type: vmess
@@ -491,165 +396,170 @@ proxies:
     path: /
     headers:
       HOST: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
-- name: 🇭🇰 HK_426 |148.99Mb
-  server: 154.223.16.212
-  type: ss
-  country: 🇭🇰 HK
-  port: 989
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: Relay_🇬🇧GB-🇳🇱NL_425 |101.58Mb
-  server: 82.38.31.191
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: disney_US |13.52Mb
-  server: t.cnmjcn.cyou
+- name: Relay_🇫🇷FR-🇯🇵JP_406 |54.13Mb
+  server: m.cnmjin.net
   type: vmess
   country: 🇫🇷FR
-  port: 16648
-  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
+  port: 16617
+  uuid: 074c3ea9-c977-470e-8835-bba1483d5c02
   alterId: 0
   cipher: auto
   network: ws
-  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
+  servername: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
   ws-opts:
     path: /
     headers:
-      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-- name: 🇺🇸US_457 |56.37Mb
-  server: 144.31.130.99
-  type: ss
-  country: 🇺🇸US
-  port: 9443
-  password: p1R3hJEWeQJGJL42SaYy22CC21uFt_0y
-  cipher: chacha20-ietf-poly1305
+      HOST: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR-🇺🇸US_401 |10.90Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: 074c3ea9-c977-470e-8835-bba1483d5c02
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR-🇯🇵JP_405 |62.41Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16617
+  uuid: 074c3ea9-c977-470e-8835-bba1483d5c02
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: ea6aff21b5514f17a25b7866d1f65910.mobgslb.tbcache.com
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - Pool__307 |205.64Mb
-  - _313 |24.33Mb
-  - disney_US |57.18Mb
-  - _319 |16.39Mb
-  - _310 |32.73Mb
-  - Relay_-🇺🇸US_327 |14.46Mb
-  - _309 |152.81Mb
-  - _316 |26.06Mb
-  - Relay_-🇫🇷FR_337 |79.09Mb
-  - _317 |57.79Mb
-  - _314 |33.65Mb
-  - _318 |13.91Mb
-  - _308 |70.36Mb
-  - Relay_-🇺🇸US_339 |28.07Mb
-  - _335 |231.76Mb
-  - Relay_-🇨🇭CH_325 |36.07Mb
-  - Relay_-🇯🇵JP_334 |50.03Mb
-  - Relay_-🇯🇵JP_336 |65.57Mb
-  - Relay_-🇺🇸US_338 |55.63Mb
-  - Relay_-🇯🇵JP_340 |14.75Mb
-  - Relay_-🇯🇵JP_341 |22.98Mb
-  - Relay_-🇸🇬SG_342 |11.48Mb
-  - Relay_-🇳🇱NL_343 |11.59Mb
-  - Relay_-🇯🇵JP_345 |23.33Mb
-  - Relay_-🇯🇵JP_346 |89.11Mb
-  - Relay_-🇯🇵JP_347 |13.08Mb
-  - disney_netflix_DE |260.79Mb
-  - Relay_-🇸🇬SG_348 |11.60Mb
-  - Relay_-🇺🇸US_330 |33.43Mb
-  - Relay_-🇺🇸US_352 |53.95Mb
-  - Relay_-🇯🇵JP_350 |91.43Mb
-  - Relay_-🇳🇱NL_354 |47.47Mb
-  - Relay_-🇸🇬SG_355 |11.43Mb
-  - Relay_-🇯🇵JP_356 |66.58Mb
-  - Relay_-🇳🇱NL_353 |11.06Mb
-  - Relay_-🇳🇱NL_358 |25.01Mb
+  - disney_netflix_US |205.64Mb
+  - _333 |24.33Mb
+  - disney_netflix_US |57.18Mb
+  - disney_netflix_NL |32.73Mb
+  - _344 |231.76Mb
+  - _329 |26.06Mb
+  - _327 |152.81Mb
+  - Relay_-🇺🇸US_350 |14.46Mb
+  - _339 |70.36Mb
+  - _337 |57.79Mb
+  - _341 |13.91Mb
+  - disney_SG |14.26Mb
+  - _335 |33.65Mb
+  - Relay_-🇺🇸US_354 |55.63Mb
+  - Relay_-🇸🇬SG_353 |11.48Mb
+  - Relay_-🇯🇵JP_348 |50.03Mb
+  - Relay_-🇺🇸US_355 |53.95Mb
+  - Relay_-🇺🇸US_345 |33.43Mb
+  - disney_netflix_NL |79.09Mb
+  - Relay_-🇯🇵JP_356 |14.75Mb
+  - Relay_-🇯🇵JP_358 |91.43Mb
+  - Relay_-🇳🇱NL_357 |25.01Mb
   - Relay_-🇸🇬SG_359 |11.25Mb
-  - Relay_-🇳🇱NL_360 |56.92Mb
-  - Relay_-🇳🇱NL_361 |60.33Mb
-  - Relay_-🇯🇵JP_362 |59.68Mb
-  - Relay_-🇯🇵JP_363 |23.12Mb
-  - 🇫🇷FR_396 |67.19Mb
-  - Relay_🇫🇷FR-🇯🇵JP_373 |58.97Mb
-  - Relay_🇫🇷FR-🇯🇵JP_410 |20.86Mb
+  - Relay_-🇳🇱NL_360 |11.59Mb
+  - Relay_-🇯🇵JP_361 |14.77Mb
+  - Relay_-🇸🇬SG_362 |11.43Mb
+  - Relay_-🇳🇱NL_364 |47.47Mb
+  - Relay_-🇳🇱NL_365 |60.33Mb
+  - Relay_-🇯🇵JP_367 |66.58Mb
+  - Relay_-🇳🇱NL_368 |56.92Mb
+  - Relay_-🇯🇵JP_369 |22.98Mb
+  - Relay_-🇯🇵JP_370 |59.68Mb
+  - Relay_-🇺🇸US_380 |28.07Mb
+  - Relay_-🇸🇬SG_372 |11.60Mb
+  - Relay_-🇯🇵JP_371 |23.12Mb
+  - Relay_-🇯🇵JP_374 |89.11Mb
+  - Relay_-🇳🇱NL_373 |11.06Mb
+  - Relay_-🇯🇵JP_376 |23.33Mb
+  - Relay_-🇩🇪DE_378 |260.79Mb
+  - Relay_-🇯🇵JP_377 |65.57Mb
+  - 🇫🇷FR_392 |67.19Mb
+  - 🇭🇰 HK_413 |148.99Mb
+  - Relay_-🇯🇵JP_379 |13.08Mb
+  - disney_netflix_NL |101.58Mb
+  - netflix_PL |56.37Mb
   - disney_HK |16.49Mb
-  - Relay_🇫🇷FR-🇯🇵JP_379 |62.41Mb
-  - disney_HK |15.69Mb
-  - Relay_🇫🇷FR-🇯🇵JP_413 |15.05Mb
-  - Relay_🇫🇷FR-🇺🇸US_409 |10.90Mb
-  - Relay_🇫🇷FR-🇯🇵JP_380 |54.13Mb
-  - Relay_🇫🇷FR-🇯🇵JP_406 |17.95Mb
+  - Relay_🇫🇷FR-🇯🇵JP_384 |58.97Mb
+  - Relay_🇺🇸US-🇺🇸US_415 |57.87Mb
   - disney_HK |10.48Mb
-  - 🇭🇰 HK_426 |148.99Mb
-  - Relay_🇬🇧GB-🇳🇱NL_425 |101.58Mb
-  - disney_US |13.52Mb
-  - 🇺🇸US_457 |56.37Mb
+  - Relay_🇫🇷FR-🇯🇵JP_406 |54.13Mb
+  - Relay_🇫🇷FR-🇺🇸US_401 |10.90Mb
+  - Relay_🇫🇷FR-🇯🇵JP_405 |62.41Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - Pool__307 |205.64Mb
-  - _313 |24.33Mb
-  - disney_US |57.18Mb
-  - _319 |16.39Mb
-  - _310 |32.73Mb
-  - Relay_-🇺🇸US_327 |14.46Mb
-  - _309 |152.81Mb
-  - _316 |26.06Mb
-  - Relay_-🇫🇷FR_337 |79.09Mb
-  - _317 |57.79Mb
-  - _314 |33.65Mb
-  - _318 |13.91Mb
-  - _308 |70.36Mb
-  - Relay_-🇺🇸US_339 |28.07Mb
-  - _335 |231.76Mb
-  - Relay_-🇨🇭CH_325 |36.07Mb
-  - Relay_-🇯🇵JP_334 |50.03Mb
-  - Relay_-🇯🇵JP_336 |65.57Mb
-  - Relay_-🇺🇸US_338 |55.63Mb
-  - Relay_-🇯🇵JP_340 |14.75Mb
-  - Relay_-🇯🇵JP_341 |22.98Mb
-  - Relay_-🇸🇬SG_342 |11.48Mb
-  - Relay_-🇳🇱NL_343 |11.59Mb
-  - Relay_-🇯🇵JP_345 |23.33Mb
-  - Relay_-🇯🇵JP_346 |89.11Mb
-  - Relay_-🇯🇵JP_347 |13.08Mb
-  - disney_netflix_DE |260.79Mb
-  - Relay_-🇸🇬SG_348 |11.60Mb
-  - Relay_-🇺🇸US_330 |33.43Mb
-  - Relay_-🇺🇸US_352 |53.95Mb
-  - Relay_-🇯🇵JP_350 |91.43Mb
-  - Relay_-🇳🇱NL_354 |47.47Mb
-  - Relay_-🇸🇬SG_355 |11.43Mb
-  - Relay_-🇯🇵JP_356 |66.58Mb
-  - Relay_-🇳🇱NL_353 |11.06Mb
-  - Relay_-🇳🇱NL_358 |25.01Mb
+  - disney_netflix_US |205.64Mb
+  - _333 |24.33Mb
+  - disney_netflix_US |57.18Mb
+  - disney_netflix_NL |32.73Mb
+  - _344 |231.76Mb
+  - _329 |26.06Mb
+  - _327 |152.81Mb
+  - Relay_-🇺🇸US_350 |14.46Mb
+  - _339 |70.36Mb
+  - _337 |57.79Mb
+  - _341 |13.91Mb
+  - disney_SG |14.26Mb
+  - _335 |33.65Mb
+  - Relay_-🇺🇸US_354 |55.63Mb
+  - Relay_-🇸🇬SG_353 |11.48Mb
+  - Relay_-🇯🇵JP_348 |50.03Mb
+  - Relay_-🇺🇸US_355 |53.95Mb
+  - Relay_-🇺🇸US_345 |33.43Mb
+  - disney_netflix_NL |79.09Mb
+  - Relay_-🇯🇵JP_356 |14.75Mb
+  - Relay_-🇯🇵JP_358 |91.43Mb
+  - Relay_-🇳🇱NL_357 |25.01Mb
   - Relay_-🇸🇬SG_359 |11.25Mb
-  - Relay_-🇳🇱NL_360 |56.92Mb
-  - Relay_-🇳🇱NL_361 |60.33Mb
-  - Relay_-🇯🇵JP_362 |59.68Mb
-  - Relay_-🇯🇵JP_363 |23.12Mb
-  - 🇫🇷FR_396 |67.19Mb
-  - Relay_🇫🇷FR-🇯🇵JP_373 |58.97Mb
-  - Relay_🇫🇷FR-🇯🇵JP_410 |20.86Mb
+  - Relay_-🇳🇱NL_360 |11.59Mb
+  - Relay_-🇯🇵JP_361 |14.77Mb
+  - Relay_-🇸🇬SG_362 |11.43Mb
+  - Relay_-🇳🇱NL_364 |47.47Mb
+  - Relay_-🇳🇱NL_365 |60.33Mb
+  - Relay_-🇯🇵JP_367 |66.58Mb
+  - Relay_-🇳🇱NL_368 |56.92Mb
+  - Relay_-🇯🇵JP_369 |22.98Mb
+  - Relay_-🇯🇵JP_370 |59.68Mb
+  - Relay_-🇺🇸US_380 |28.07Mb
+  - Relay_-🇸🇬SG_372 |11.60Mb
+  - Relay_-🇯🇵JP_371 |23.12Mb
+  - Relay_-🇯🇵JP_374 |89.11Mb
+  - Relay_-🇳🇱NL_373 |11.06Mb
+  - Relay_-🇯🇵JP_376 |23.33Mb
+  - Relay_-🇩🇪DE_378 |260.79Mb
+  - Relay_-🇯🇵JP_377 |65.57Mb
+  - 🇫🇷FR_392 |67.19Mb
+  - 🇭🇰 HK_413 |148.99Mb
+  - Relay_-🇯🇵JP_379 |13.08Mb
+  - disney_netflix_NL |101.58Mb
+  - netflix_PL |56.37Mb
   - disney_HK |16.49Mb
-  - Relay_🇫🇷FR-🇯🇵JP_379 |62.41Mb
-  - disney_HK |15.69Mb
-  - Relay_🇫🇷FR-🇯🇵JP_413 |15.05Mb
-  - Relay_🇫🇷FR-🇺🇸US_409 |10.90Mb
-  - Relay_🇫🇷FR-🇯🇵JP_380 |54.13Mb
-  - Relay_🇫🇷FR-🇯🇵JP_406 |17.95Mb
+  - Relay_🇫🇷FR-🇯🇵JP_384 |58.97Mb
+  - Relay_🇺🇸US-🇺🇸US_415 |57.87Mb
   - disney_HK |10.48Mb
-  - 🇭🇰 HK_426 |148.99Mb
-  - Relay_🇬🇧GB-🇳🇱NL_425 |101.58Mb
-  - disney_US |13.52Mb
-  - 🇺🇸US_457 |56.37Mb
+  - Relay_🇫🇷FR-🇯🇵JP_406 |54.13Mb
+  - Relay_🇫🇷FR-🇺🇸US_401 |10.90Mb
+  - Relay_🇫🇷FR-🇯🇵JP_405 |62.41Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
