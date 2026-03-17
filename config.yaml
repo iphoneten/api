@@ -5,56 +5,52 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: Pool__367 |163.94Mb
+- name: netflix_US |54.93Mb
   server: 104.192.227.163
   type: ss
   port: 443
   udp: true
   password: 9dgO6FtPF294wDrhPIqTrc
   cipher: chacha20-ietf-poly1305
-- name: _375 |17.53Mb
+- name: ' |24.29Mb'
   server: 137.184.174.93
   type: ss
   port: 8080
   udp: true
   password: 14fFPrbezE3HDZzsMOr6
   cipher: rc4-md5
-- name: _372 |15.68Mb
+- name: Relay_-🇺🇸US_360 |29.96Mb
+  server: 104.18.185.26
+  type: trojan
+  port: 443
+  udp: true
+  password: 36639485-60a0-4853-856c-40ac05f4b00d
+  sni: null.us1234567891.xyz
+  ws-opts:
+    path: /music
+    headers:
+      Host: null.us1234567891.xyz
+  network: ws
+- name: Relay_-🇫🇷FR_361 |118.14Mb
+  server: 104.18.11.110
+  type: trojan
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.multiplydose.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+  network: ws
+- name: ' |15.68Mb'
   server: 5.188.181.201
   type: ss
   port: 9005
   udp: true
   password: ZET59LF6DvCC8KVt
   cipher: aes-256-cfb
-- name: disney_netflix_NL |159.08Mb
-  server: 82.38.31.189
-  type: ss
-  port: 8080
-  udp: true
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: _378 |25.32Mb
-  server: 38.54.20.59
-  type: ss
-  port: 8881
-  udp: true
-  password: kDWvXYZoTBcGkC4
-  cipher: aes-256-gcm
-- name: _380 |72.15Mb
-  server: 195.66.25.220
-  type: ss
-  port: 8388
-  udp: true
-  password: yhrHMDgZ2egKftvrecvkpUPqpUTyac7q
-  cipher: chacha20-ietf-poly1305
-- name: disney_US |76.40Mb
-  server: tinkered-pennies-puppies.freesocks.work
-  type: ss
-  port: 443
-  udp: true
-  password: hbGrpfvNrJsUmKmPbR3iY2
-  cipher: chacha20-ietf-poly1305
-- name: _385 |260.83Mb
+- name: ' |222.01Mb'
   server: 164.92.245.167
   type: vmess
   port: 2096
@@ -68,122 +64,131 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /
-- name: Relay_-🇩🇪DE_390 |293.15Mb
-  server: cool-lioness.rooster465.autos
-  type: trojan
-  port: 443
+- name: netflix_NL |52.99Mb
+  server: 82.38.31.189
+  type: ss
+  port: 8080
   udp: true
-  password: ZY07256934
-  sni: cool-lioness.rooster465.autos
-- name: disney_netflix_NL |273.52Mb
-  server: 104.18.11.110
-  type: trojan
-  port: 443
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+- name: ' |26.84Mb'
+  server: 38.54.20.59
+  type: ss
+  port: 8881
   udp: true
-  password: humanity
-  sni: www.multiplydose.com
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-  network: ws
-- name: Relay_-🇺🇸US_394 |28.18Mb
-  server: 104.18.185.26
-  type: trojan
-  port: 443
-  udp: true
-  password: 36639485-60a0-4853-856c-40ac05f4b00d
-  sni: null.us1234567891.xyz
-  ws-opts:
-    path: /music
-    headers:
-      Host: null.us1234567891.xyz
-  network: ws
-- name: Relay_-🇳🇱NL_392 |61.06Mb
-  server: 160.16.72.33
-  type: trojan
-  port: 3057
-  password: 86e150eb21c6faee48e81d496d7f61c2
-  sni: www.nintendogames.net
-- name: Relay_-🇹🇼TW_384 |41.35Mb
-  server: cn02.365cloud5878.com
-  type: vmess
-  port: 6002
-  udp: true
-  uuid: 9f1ecfca-13a9-488d-ac84-aaeb73a8d574
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: Relay_-🇦🇺AU_383 |15.14Mb
-  server: cn02.365cloud5878.com
-  type: vmess
-  port: 6004
-  udp: true
-  uuid: 9f1ecfca-13a9-488d-ac84-aaeb73a8d574
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: Relay_-🇺🇸US_387 |24.38Mb
-  server: hb.seacloudmachinery.com
-  type: vmess
-  port: 2086
-  udp: true
-  uuid: 82b0e3ab-e5ba-5fe0-bd05-df6f5d49a563
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: hb.seacloudmachinery.com
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  ws-opts:
-    path: /telegram id @rootface
-    headers:
-      Host: hb.seacloudmachinery.com
-- name: Relay_-🇯🇵JP_395 |10.26Mb
-  server: 160.16.72.33
-  type: trojan
-  port: 2001
-  password: 86e150eb21c6faee48e81d496d7f61c2
-  sni: www.nintendogames.net
-- name: Relay_-🇺🇸US_397 |54.11Mb
-  server: 160.16.130.21
-  type: trojan
-  port: 4019
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇺🇸US_398 |53.20Mb
-  server: 153.121.65.107
-  type: trojan
-  port: 4019
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇸🇬SG_399 |11.07Mb
-  server: 18.183.223.166
-  type: trojan
-  port: 4674
-  password: 86e150eb21c6faee48e81d496d7f61c2
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_402 |89.28Mb
-  server: 160.16.70.180
-  type: trojan
-  port: 4937
-  password: 86e150eb21c6faee48e81d496d7f61c2
-  sni: www.nintendogames.net
-- name: Relay_-🇳🇱NL_400 |336.17Mb
+  password: kDWvXYZoTBcGkC4
+  cipher: aes-256-gcm
+- name: Relay_-🇳🇱NL_359 |50.26Mb
   server: nl-4.tr202512.com
   type: trojan
   port: 443
   udp: true
   password: M08tvzYWtUEJNtbpHp
   skip-cert-verify: true
-- name: Relay_🇫🇷FR-🇮🇳IN_441 |17.86Mb
-  server: planb.mojcn.com
+- name: Relay_-🇯🇵JP_355 |62.98Mb
+  server: 160.16.72.33
+  type: trojan
+  port: 2001
+  password: 86e150eb21c6faee48e81d496d7f61c2
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_358 |16.77Mb
+  server: 160.16.70.180
+  type: trojan
+  port: 4937
+  password: 86e150eb21c6faee48e81d496d7f61c2
+  sni: www.nintendogames.net
+- name: Relay_-🇺🇸US_356 |23.36Mb
+  server: 160.16.130.21
+  type: trojan
+  port: 4019
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇺🇸US_365 |22.88Mb
+  server: 153.121.65.107
+  type: trojan
+  port: 4019
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_-🇩🇪DE_368 |285.15Mb
+  server: cool-lioness.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: ZY07256934
+  sni: cool-lioness.rooster465.autos
+- name: disney_HK |16.25Mb
+  server: t.cnmjcn.cyou
   type: vmess
   country: 🇫🇷FR
-  port: 16626
+  port: 16632
+  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR-🇺🇸US_486 |13.52Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |35.84Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: dbe3102c-5e26-4b5f-82eb-493ae07e758c
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |11.05Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16622
+  uuid: 6bcea42f-4f70-49e5-8ed8-8067338ee7b3
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |12.74Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16616
   uuid: d95d95c5-8222-43a8-a7f9-ab2b1be317a6
   alterId: 0
   cipher: auto
@@ -196,675 +201,79 @@ proxies:
     path: /
     headers:
       HOST: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_437 |80.01Mb
+- name: disney_HK |11.86Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16632
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |41.25Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: dbe3102c-5e26-4b5f-82eb-493ae07e758c
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |20.39Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |14.25Mb
   server: planb.mojcn.com
   type: vmess
   country: 🇫🇷FR
   port: 16617
-  uuid: d95d95c5-8222-43a8-a7f9-ab2b1be317a6
+  uuid: 7c098127-e62b-4229-93b2-5342c9052b13
   alterId: 0
   cipher: auto
   network: ws
-  servername: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
+  servername: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
   ws-opts:
     path: /
     headers:
-      HOST: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_432 |10.49Mb
+      HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |11.32Mb
   server: m.cnmjin.net
   type: vmess
   country: 🇫🇷FR
   port: 16622
-  uuid: d95d95c5-8222-43a8-a7f9-ab2b1be317a6
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_436 |78.39Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: d95d95c5-8222-43a8-a7f9-ab2b1be317a6
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇮🇳IN_446 |15.47Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16626
-  uuid: dbe3102c-5e26-4b5f-82eb-493ae07e758c
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_448 |76.14Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_443 |63.90Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: d95d95c5-8222-43a8-a7f9-ab2b1be317a6
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_453 |85.90Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_452 |82.42Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: dbe3102c-5e26-4b5f-82eb-493ae07e758c
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_454 |87.25Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: dbe3102c-5e26-4b5f-82eb-493ae07e758c
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_456 |86.31Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: dbe3102c-5e26-4b5f-82eb-493ae07e758c
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_461 |16.28Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_462 |10.56Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_475 |82.06Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇮🇳IN_477 |11.37Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16626
-  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_479 |13.28Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: 7c098127-e62b-4229-93b2-5342c9052b13
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_485 |75.27Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_486 |17.31Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: d95d95c5-8222-43a8-a7f9-ab2b1be317a6
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_487 |13.22Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: d95d95c5-8222-43a8-a7f9-ab2b1be317a6
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_488 |86.28Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 7c098127-e62b-4229-93b2-5342c9052b13
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_493 |82.49Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_491 |82.03Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 7c098127-e62b-4229-93b2-5342c9052b13
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_494 |18.17Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: dbe3102c-5e26-4b5f-82eb-493ae07e758c
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_495 |10.72Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-- name: _370 |89.92Mb
-  server: 141.164.45.187
-  type: ss
-  port: 2376
-  udp: true
-  password: faBAoD54k87UJG7
-  cipher: aes-256-gcm
-- name: _376 |87.75Mb
-  server: 141.164.45.187
-  type: ss
-  port: 8091
-  udp: true
-  password: PCnnH6SQSnfoS27
-  cipher: aes-256-gcm
-- name: _379 |107.82Mb
-  server: 141.164.45.187
-  type: ss
-  port: 5001
-  udp: true
-  password: Y6R9pAtvxxzmGC
-  cipher: aes-256-gcm
-- name: _374 |106.21Mb
-  server: 141.164.45.187
-  type: ss
-  port: 6697
-  udp: true
-  password: TEzjfAYq2IjtuoS
-  cipher: aes-256-gcm
-- name: _377 |106.47Mb
-  server: 141.164.45.187
-  type: ss
-  port: 8008
-  udp: true
-  password: XKFKl2rULjIp74
-  cipher: aes-256-gcm
-- name: Relay_🇫🇷FR-🇯🇵JP_501 |89.12Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇮🇳IN_504 |11.33Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16626
-  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_506 |18.79Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_507 |11.94Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_508 |17.64Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_509 |15.36Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_510 |16.07Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇮🇳IN_513 |19.00Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16626
-  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_511 |10.03Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_514 |17.20Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: 7c098127-e62b-4229-93b2-5342c9052b13
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_515 |11.35Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_516 |39.72Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇹🇼TW_520 |12.43Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16616
-  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_540 |20.86Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇮🇳IN_531 |11.13Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16626
   uuid: 6bcea42f-4f70-49e5-8ed8-8067338ee7b3
   alterId: 0
   cipher: auto
@@ -877,623 +286,8 @@ proxies:
     path: /
     headers:
       HOST: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_524 |37.30Mb
+- name: Relay_🇫🇷FR |37.66Mb
   server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: 6bcea42f-4f70-49e5-8ed8-8067338ee7b3
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_541 |15.05Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_551 |15.69Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-- name: disney_HK |14.05Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: dbe3102c-5e26-4b5f-82eb-493ae07e758c
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_554 |10.67Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: d95d95c5-8222-43a8-a7f9-ab2b1be317a6
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_555 |10.10Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: d95d95c5-8222-43a8-a7f9-ab2b1be317a6
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 8f0265a9fe8497203bee1c343489f105.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_560 |20.01Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_563 |23.70Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: 7c098127-e62b-4229-93b2-5342c9052b13
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-- name: disney_HK |19.00Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: 7c098127-e62b-4229-93b2-5342c9052b13
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_564 |16.06Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: 6bcea42f-4f70-49e5-8ed8-8067338ee7b3
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_565 |20.94Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-- name: disney_HK |13.63Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_567 |12.52Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_568 |20.42Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: dbe3102c-5e26-4b5f-82eb-493ae07e758c
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 437dfed94cb7943bb6f7f93ccf00a561.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_570 |13.65Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_571 |25.34Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_572 |18.60Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇭🇰HK_573 |14.29Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: 6bcea42f-4f70-49e5-8ed8-8067338ee7b3
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-- name: disney_HK |17.88Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16632
-  uuid: 6bcea42f-4f70-49e5-8ed8-8067338ee7b3
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇯🇵JP_578 |17.95Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16617
-  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇸🇬SG_579 |19.27Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-- name: disney_SG |17.69Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 6bcea42f-4f70-49e5-8ed8-8067338ee7b3
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-- name: disney_SG |15.34Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-- name: disney_SG |19.24Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇸🇬SG_585 |21.97Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇸🇬SG_587 |21.44Mb
-  server: t.cnmjcn.cyou
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇸🇬SG_588 |21.50Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇸🇬SG_591 |12.79Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-- name: disney_SG |14.81Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-- name: disney_SG |17.30Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 7c098127-e62b-4229-93b2-5342c9052b13
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇸🇬SG_595 |12.51Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 6bcea42f-4f70-49e5-8ed8-8067338ee7b3
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
-- name: disney_SG |14.28Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇸🇬SG_598 |12.76Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 7c098127-e62b-4229-93b2-5342c9052b13
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-- name: disney_SG |18.52Mb
-  server: planb.mojcn.com
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
-- name: 🇭🇰 HK_621 |12.63Mb
-  server: 154.223.16.212
-  type: ss
-  country: 🇭🇰 HK
-  port: 989
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: Relay_🇫🇷FR-🇸🇬SG_602 |15.49Mb
-  server: m.cnmjin.net
-  type: vmess
-  country: 🇫🇷FR
-  port: 16618
-  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
-- name: 🇫🇷FR_603 |56.25Mb
-  server: 141.11.21.219
-  type: vmess
-  country: 🇫🇷FR
-  port: 50521
-  uuid: 7b4c6795-3be5-4a4e-b234-07a46f580c45
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-- name: Relay_🇫🇷FR-🇺🇸US_604 |10.66Mb
-  server: planb.mojcn.com
   type: vmess
   country: 🇫🇷FR
   port: 16648
@@ -1509,8 +303,42 @@ proxies:
     path: /
     headers:
       HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇺🇸US_612 |10.74Mb
+- name: Relay_🇫🇷FR |51.13Mb
   server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |12.19Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |32.84Mb
+  server: m.cnmjin.net
   type: vmess
   country: 🇫🇷FR
   port: 16648
@@ -1526,18 +354,137 @@ proxies:
     path: /
     headers:
       HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-- name: Relay_🇬🇧GB-🇳🇱NL_620 |157.34Mb
+- name: Relay_🇫🇷FR |15.45Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16622
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |31.32Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |38.82Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: 6bcea42f-4f70-49e5-8ed8-8067338ee7b3
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |11.49Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16617
+  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |10.22Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: 6bcea42f-4f70-49e5-8ed8-8067338ee7b3
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9f212577fc1fa9a13ccf657f03a1a20f.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |11.62Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16617
+  uuid: fcad95ed-9d9c-4621-9b1a-21fd5dde3f83
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: ac9761292953f408ccdba1b1b4953c3c.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |14.97Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16622
+  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
+- name: Relay_🇬🇧GB |97.88Mb
   server: 82.38.31.191
   type: ss
   country: 🇬🇧GB
   port: 8080
   password: k1dBOmOB4oqi7Ump37a1bQ
   cipher: chacha20-ietf-poly1305
-- name: Relay_🇫🇷FR-🇺🇸US_617 |10.04Mb
-  server: t.cnmjcn.cyou
+- name: Relay_🇫🇷FR |22.79Mb
+  server: m.cnmjin.net
   type: vmess
   country: 🇫🇷FR
-  port: 16648
+  port: 16622
   uuid: 0bc2e282-126d-4519-8cb8-ade27c35bd46
   alterId: 0
   cipher: auto
@@ -1550,11 +497,42 @@ proxies:
     path: /
     headers:
       HOST: 36fcadc98196aae7004669b1c147cc95.mobgslb.tbcache.com
-- name: Relay_🇫🇷FR-🇮🇳IN_483 |14.29Mb
-  server: planb.mojcn.com
+- name: 🇺🇸US |59.49Mb
+  server: 144.31.130.99
+  type: ss
+  country: 🇺🇸US
+  port: 9443
+  password: p1R3hJEWeQJGJL42SaYy22CC21uFt_0y
+  cipher: chacha20-ietf-poly1305
+- name: Relay_🇺🇸US |101.41Mb
+  server: auto.poland.ray-vpn.ru
+  type: ss
+  country: 🇺🇸US
+  port: 4495
+  password: 2Z9ba3GwDL-rn6DSQ0N-awHNhcuxaHP3
+  cipher: chacha20-ietf-poly1305
+- name: Relay_🇫🇷FR |28.33Mb
+  server: m.cnmjin.net
   type: vmess
   country: 🇫🇷FR
-  port: 16626
+  port: 16648
+  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |34.07Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
   uuid: 7c098127-e62b-4229-93b2-5342c9052b13
   alterId: 0
   cipher: auto
@@ -1567,247 +545,192 @@ proxies:
     path: /
     headers:
       HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
-- name: 🇺🇸US_624 |53.60Mb
-  server: 144.31.130.99
-  type: ss
-  country: 🇺🇸US
-  port: 9443
-  password: p1R3hJEWeQJGJL42SaYy22CC21uFt_0y
-  cipher: chacha20-ietf-poly1305
-- name: Relay_🇺🇸US-🇺🇸US_623 |181.22Mb
-  server: auto.poland.ray-vpn.ru
-  type: ss
-  country: 🇺🇸US
-  port: 4495
-  password: 2Z9ba3GwDL-rn6DSQ0N-awHNhcuxaHP3
-  cipher: chacha20-ietf-poly1305
+- name: Relay_🇫🇷FR |22.09Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: 7c098127-e62b-4229-93b2-5342c9052b13
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: e057dd8edb70f00d7829026f7444db46.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |27.55Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |10.61Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: 36b421c6-1e81-49de-932e-4032f5b675f8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: e5a24b62a2b3c725e68f0bad277243da.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |38.38Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: Relay_🇫🇷FR |17.66Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16622
+  uuid: bb569882-779a-4b5e-9dbf-abc428a80cb9
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: ecd43b0076ced4a5030f17593ac3b4ae.mobgslb.tbcache.com
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - Pool__367 |163.94Mb
-  - _375 |17.53Mb
-  - _372 |15.68Mb
-  - disney_netflix_NL |159.08Mb
-  - _378 |25.32Mb
-  - _380 |72.15Mb
-  - disney_US |76.40Mb
-  - _385 |260.83Mb
-  - Relay_-🇩🇪DE_390 |293.15Mb
-  - disney_netflix_NL |273.52Mb
-  - Relay_-🇺🇸US_394 |28.18Mb
-  - Relay_-🇳🇱NL_392 |61.06Mb
-  - Relay_-🇹🇼TW_384 |41.35Mb
-  - Relay_-🇦🇺AU_383 |15.14Mb
-  - Relay_-🇺🇸US_387 |24.38Mb
-  - Relay_-🇯🇵JP_395 |10.26Mb
-  - Relay_-🇺🇸US_397 |54.11Mb
-  - Relay_-🇺🇸US_398 |53.20Mb
-  - Relay_-🇸🇬SG_399 |11.07Mb
-  - Relay_-🇯🇵JP_402 |89.28Mb
-  - Relay_-🇳🇱NL_400 |336.17Mb
-  - Relay_🇫🇷FR-🇮🇳IN_441 |17.86Mb
-  - Relay_🇫🇷FR-🇯🇵JP_437 |80.01Mb
-  - Relay_🇫🇷FR-🇭🇰HK_432 |10.49Mb
-  - Relay_🇫🇷FR-🇯🇵JP_436 |78.39Mb
-  - Relay_🇫🇷FR-🇮🇳IN_446 |15.47Mb
-  - Relay_🇫🇷FR-🇯🇵JP_448 |76.14Mb
-  - Relay_🇫🇷FR-🇯🇵JP_443 |63.90Mb
-  - Relay_🇫🇷FR-🇯🇵JP_453 |85.90Mb
-  - Relay_🇫🇷FR-🇯🇵JP_452 |82.42Mb
-  - Relay_🇫🇷FR-🇯🇵JP_454 |87.25Mb
-  - Relay_🇫🇷FR-🇯🇵JP_456 |86.31Mb
-  - Relay_🇫🇷FR-🇹🇼TW_461 |16.28Mb
-  - Relay_🇫🇷FR-🇹🇼TW_462 |10.56Mb
-  - Relay_🇫🇷FR-🇯🇵JP_475 |82.06Mb
-  - Relay_🇫🇷FR-🇮🇳IN_477 |11.37Mb
-  - Relay_🇫🇷FR-🇹🇼TW_479 |13.28Mb
-  - Relay_🇫🇷FR-🇯🇵JP_485 |75.27Mb
-  - Relay_🇫🇷FR-🇹🇼TW_486 |17.31Mb
-  - Relay_🇫🇷FR-🇹🇼TW_487 |13.22Mb
-  - Relay_🇫🇷FR-🇯🇵JP_488 |86.28Mb
-  - Relay_🇫🇷FR-🇯🇵JP_493 |82.49Mb
-  - Relay_🇫🇷FR-🇯🇵JP_491 |82.03Mb
-  - Relay_🇫🇷FR-🇹🇼TW_494 |18.17Mb
-  - Relay_🇫🇷FR-🇯🇵JP_495 |10.72Mb
-  - _370 |89.92Mb
-  - _376 |87.75Mb
-  - _379 |107.82Mb
-  - _374 |106.21Mb
-  - _377 |106.47Mb
-  - Relay_🇫🇷FR-🇯🇵JP_501 |89.12Mb
-  - Relay_🇫🇷FR-🇮🇳IN_504 |11.33Mb
-  - Relay_🇫🇷FR-🇹🇼TW_506 |18.79Mb
-  - Relay_🇫🇷FR-🇹🇼TW_507 |11.94Mb
-  - Relay_🇫🇷FR-🇹🇼TW_508 |17.64Mb
-  - Relay_🇫🇷FR-🇯🇵JP_509 |15.36Mb
-  - Relay_🇫🇷FR-🇹🇼TW_510 |16.07Mb
-  - Relay_🇫🇷FR-🇮🇳IN_513 |19.00Mb
-  - Relay_🇫🇷FR-🇹🇼TW_511 |10.03Mb
-  - Relay_🇫🇷FR-🇹🇼TW_514 |17.20Mb
-  - Relay_🇫🇷FR-🇹🇼TW_515 |11.35Mb
-  - Relay_🇫🇷FR-🇯🇵JP_516 |39.72Mb
-  - Relay_🇫🇷FR-🇹🇼TW_520 |12.43Mb
-  - Relay_🇫🇷FR-🇯🇵JP_540 |20.86Mb
-  - Relay_🇫🇷FR-🇮🇳IN_531 |11.13Mb
-  - Relay_🇫🇷FR-🇯🇵JP_524 |37.30Mb
-  - Relay_🇫🇷FR-🇯🇵JP_541 |15.05Mb
-  - Relay_🇫🇷FR-🇭🇰HK_551 |15.69Mb
-  - disney_HK |14.05Mb
-  - Relay_🇫🇷FR-🇭🇰HK_554 |10.67Mb
-  - Relay_🇫🇷FR-🇭🇰HK_555 |10.10Mb
-  - Relay_🇫🇷FR-🇭🇰HK_560 |20.01Mb
-  - Relay_🇫🇷FR-🇭🇰HK_563 |23.70Mb
-  - disney_HK |19.00Mb
-  - Relay_🇫🇷FR-🇭🇰HK_564 |16.06Mb
-  - Relay_🇫🇷FR-🇭🇰HK_565 |20.94Mb
-  - disney_HK |13.63Mb
-  - Relay_🇫🇷FR-🇭🇰HK_567 |12.52Mb
-  - Relay_🇫🇷FR-🇭🇰HK_568 |20.42Mb
-  - Relay_🇫🇷FR-🇭🇰HK_570 |13.65Mb
-  - Relay_🇫🇷FR-🇭🇰HK_571 |25.34Mb
-  - Relay_🇫🇷FR-🇭🇰HK_572 |18.60Mb
-  - Relay_🇫🇷FR-🇭🇰HK_573 |14.29Mb
-  - disney_HK |17.88Mb
-  - Relay_🇫🇷FR-🇯🇵JP_578 |17.95Mb
-  - Relay_🇫🇷FR-🇸🇬SG_579 |19.27Mb
-  - disney_SG |17.69Mb
-  - disney_SG |15.34Mb
-  - disney_SG |19.24Mb
-  - Relay_🇫🇷FR-🇸🇬SG_585 |21.97Mb
-  - Relay_🇫🇷FR-🇸🇬SG_587 |21.44Mb
-  - Relay_🇫🇷FR-🇸🇬SG_588 |21.50Mb
-  - Relay_🇫🇷FR-🇸🇬SG_591 |12.79Mb
-  - disney_SG |14.81Mb
-  - disney_SG |17.30Mb
-  - Relay_🇫🇷FR-🇸🇬SG_595 |12.51Mb
-  - disney_SG |14.28Mb
-  - Relay_🇫🇷FR-🇸🇬SG_598 |12.76Mb
-  - disney_SG |18.52Mb
-  - 🇭🇰 HK_621 |12.63Mb
-  - Relay_🇫🇷FR-🇸🇬SG_602 |15.49Mb
-  - 🇫🇷FR_603 |56.25Mb
-  - Relay_🇫🇷FR-🇺🇸US_604 |10.66Mb
-  - Relay_🇫🇷FR-🇺🇸US_612 |10.74Mb
-  - Relay_🇬🇧GB-🇳🇱NL_620 |157.34Mb
-  - Relay_🇫🇷FR-🇺🇸US_617 |10.04Mb
-  - Relay_🇫🇷FR-🇮🇳IN_483 |14.29Mb
-  - 🇺🇸US_624 |53.60Mb
-  - Relay_🇺🇸US-🇺🇸US_623 |181.22Mb
+  - netflix_US |54.93Mb
+  - ' |24.29Mb'
+  - Relay_-🇺🇸US_360 |29.96Mb
+  - Relay_-🇫🇷FR_361 |118.14Mb
+  - ' |15.68Mb'
+  - ' |222.01Mb'
+  - netflix_NL |52.99Mb
+  - ' |26.84Mb'
+  - Relay_-🇳🇱NL_359 |50.26Mb
+  - Relay_-🇯🇵JP_355 |62.98Mb
+  - Relay_-🇯🇵JP_358 |16.77Mb
+  - Relay_-🇺🇸US_356 |23.36Mb
+  - Relay_-🇺🇸US_365 |22.88Mb
+  - Relay_-🇩🇪DE_368 |285.15Mb
+  - disney_HK |16.25Mb
+  - Relay_🇫🇷FR-🇺🇸US_486 |13.52Mb
+  - Relay_🇫🇷FR |35.84Mb
+  - Relay_🇫🇷FR |11.05Mb
+  - Relay_🇫🇷FR |12.74Mb
+  - disney_HK |11.86Mb
+  - Relay_🇫🇷FR |41.25Mb
+  - Relay_🇫🇷FR |20.39Mb
+  - Relay_🇫🇷FR |14.25Mb
+  - Relay_🇫🇷FR |11.32Mb
+  - Relay_🇫🇷FR |37.66Mb
+  - Relay_🇫🇷FR |51.13Mb
+  - Relay_🇫🇷FR |12.19Mb
+  - Relay_🇫🇷FR |32.84Mb
+  - Relay_🇫🇷FR |15.45Mb
+  - Relay_🇫🇷FR |31.32Mb
+  - Relay_🇫🇷FR |38.82Mb
+  - Relay_🇫🇷FR |11.49Mb
+  - Relay_🇫🇷FR |10.22Mb
+  - Relay_🇫🇷FR |11.62Mb
+  - Relay_🇫🇷FR |14.97Mb
+  - Relay_🇬🇧GB |97.88Mb
+  - Relay_🇫🇷FR |22.79Mb
+  - 🇺🇸US |59.49Mb
+  - Relay_🇺🇸US |101.41Mb
+  - Relay_🇫🇷FR |28.33Mb
+  - Relay_🇫🇷FR |34.07Mb
+  - Relay_🇫🇷FR |22.09Mb
+  - Relay_🇫🇷FR |27.55Mb
+  - Relay_🇫🇷FR |10.61Mb
+  - Relay_🇫🇷FR |38.38Mb
+  - Relay_🇫🇷FR |17.66Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - Pool__367 |163.94Mb
-  - _375 |17.53Mb
-  - _372 |15.68Mb
-  - disney_netflix_NL |159.08Mb
-  - _378 |25.32Mb
-  - _380 |72.15Mb
-  - disney_US |76.40Mb
-  - _385 |260.83Mb
-  - Relay_-🇩🇪DE_390 |293.15Mb
-  - disney_netflix_NL |273.52Mb
-  - Relay_-🇺🇸US_394 |28.18Mb
-  - Relay_-🇳🇱NL_392 |61.06Mb
-  - Relay_-🇹🇼TW_384 |41.35Mb
-  - Relay_-🇦🇺AU_383 |15.14Mb
-  - Relay_-🇺🇸US_387 |24.38Mb
-  - Relay_-🇯🇵JP_395 |10.26Mb
-  - Relay_-🇺🇸US_397 |54.11Mb
-  - Relay_-🇺🇸US_398 |53.20Mb
-  - Relay_-🇸🇬SG_399 |11.07Mb
-  - Relay_-🇯🇵JP_402 |89.28Mb
-  - Relay_-🇳🇱NL_400 |336.17Mb
-  - Relay_🇫🇷FR-🇮🇳IN_441 |17.86Mb
-  - Relay_🇫🇷FR-🇯🇵JP_437 |80.01Mb
-  - Relay_🇫🇷FR-🇭🇰HK_432 |10.49Mb
-  - Relay_🇫🇷FR-🇯🇵JP_436 |78.39Mb
-  - Relay_🇫🇷FR-🇮🇳IN_446 |15.47Mb
-  - Relay_🇫🇷FR-🇯🇵JP_448 |76.14Mb
-  - Relay_🇫🇷FR-🇯🇵JP_443 |63.90Mb
-  - Relay_🇫🇷FR-🇯🇵JP_453 |85.90Mb
-  - Relay_🇫🇷FR-🇯🇵JP_452 |82.42Mb
-  - Relay_🇫🇷FR-🇯🇵JP_454 |87.25Mb
-  - Relay_🇫🇷FR-🇯🇵JP_456 |86.31Mb
-  - Relay_🇫🇷FR-🇹🇼TW_461 |16.28Mb
-  - Relay_🇫🇷FR-🇹🇼TW_462 |10.56Mb
-  - Relay_🇫🇷FR-🇯🇵JP_475 |82.06Mb
-  - Relay_🇫🇷FR-🇮🇳IN_477 |11.37Mb
-  - Relay_🇫🇷FR-🇹🇼TW_479 |13.28Mb
-  - Relay_🇫🇷FR-🇯🇵JP_485 |75.27Mb
-  - Relay_🇫🇷FR-🇹🇼TW_486 |17.31Mb
-  - Relay_🇫🇷FR-🇹🇼TW_487 |13.22Mb
-  - Relay_🇫🇷FR-🇯🇵JP_488 |86.28Mb
-  - Relay_🇫🇷FR-🇯🇵JP_493 |82.49Mb
-  - Relay_🇫🇷FR-🇯🇵JP_491 |82.03Mb
-  - Relay_🇫🇷FR-🇹🇼TW_494 |18.17Mb
-  - Relay_🇫🇷FR-🇯🇵JP_495 |10.72Mb
-  - _370 |89.92Mb
-  - _376 |87.75Mb
-  - _379 |107.82Mb
-  - _374 |106.21Mb
-  - _377 |106.47Mb
-  - Relay_🇫🇷FR-🇯🇵JP_501 |89.12Mb
-  - Relay_🇫🇷FR-🇮🇳IN_504 |11.33Mb
-  - Relay_🇫🇷FR-🇹🇼TW_506 |18.79Mb
-  - Relay_🇫🇷FR-🇹🇼TW_507 |11.94Mb
-  - Relay_🇫🇷FR-🇹🇼TW_508 |17.64Mb
-  - Relay_🇫🇷FR-🇯🇵JP_509 |15.36Mb
-  - Relay_🇫🇷FR-🇹🇼TW_510 |16.07Mb
-  - Relay_🇫🇷FR-🇮🇳IN_513 |19.00Mb
-  - Relay_🇫🇷FR-🇹🇼TW_511 |10.03Mb
-  - Relay_🇫🇷FR-🇹🇼TW_514 |17.20Mb
-  - Relay_🇫🇷FR-🇹🇼TW_515 |11.35Mb
-  - Relay_🇫🇷FR-🇯🇵JP_516 |39.72Mb
-  - Relay_🇫🇷FR-🇹🇼TW_520 |12.43Mb
-  - Relay_🇫🇷FR-🇯🇵JP_540 |20.86Mb
-  - Relay_🇫🇷FR-🇮🇳IN_531 |11.13Mb
-  - Relay_🇫🇷FR-🇯🇵JP_524 |37.30Mb
-  - Relay_🇫🇷FR-🇯🇵JP_541 |15.05Mb
-  - Relay_🇫🇷FR-🇭🇰HK_551 |15.69Mb
-  - disney_HK |14.05Mb
-  - Relay_🇫🇷FR-🇭🇰HK_554 |10.67Mb
-  - Relay_🇫🇷FR-🇭🇰HK_555 |10.10Mb
-  - Relay_🇫🇷FR-🇭🇰HK_560 |20.01Mb
-  - Relay_🇫🇷FR-🇭🇰HK_563 |23.70Mb
-  - disney_HK |19.00Mb
-  - Relay_🇫🇷FR-🇭🇰HK_564 |16.06Mb
-  - Relay_🇫🇷FR-🇭🇰HK_565 |20.94Mb
-  - disney_HK |13.63Mb
-  - Relay_🇫🇷FR-🇭🇰HK_567 |12.52Mb
-  - Relay_🇫🇷FR-🇭🇰HK_568 |20.42Mb
-  - Relay_🇫🇷FR-🇭🇰HK_570 |13.65Mb
-  - Relay_🇫🇷FR-🇭🇰HK_571 |25.34Mb
-  - Relay_🇫🇷FR-🇭🇰HK_572 |18.60Mb
-  - Relay_🇫🇷FR-🇭🇰HK_573 |14.29Mb
-  - disney_HK |17.88Mb
-  - Relay_🇫🇷FR-🇯🇵JP_578 |17.95Mb
-  - Relay_🇫🇷FR-🇸🇬SG_579 |19.27Mb
-  - disney_SG |17.69Mb
-  - disney_SG |15.34Mb
-  - disney_SG |19.24Mb
-  - Relay_🇫🇷FR-🇸🇬SG_585 |21.97Mb
-  - Relay_🇫🇷FR-🇸🇬SG_587 |21.44Mb
-  - Relay_🇫🇷FR-🇸🇬SG_588 |21.50Mb
-  - Relay_🇫🇷FR-🇸🇬SG_591 |12.79Mb
-  - disney_SG |14.81Mb
-  - disney_SG |17.30Mb
-  - Relay_🇫🇷FR-🇸🇬SG_595 |12.51Mb
-  - disney_SG |14.28Mb
-  - Relay_🇫🇷FR-🇸🇬SG_598 |12.76Mb
-  - disney_SG |18.52Mb
-  - 🇭🇰 HK_621 |12.63Mb
-  - Relay_🇫🇷FR-🇸🇬SG_602 |15.49Mb
-  - 🇫🇷FR_603 |56.25Mb
-  - Relay_🇫🇷FR-🇺🇸US_604 |10.66Mb
-  - Relay_🇫🇷FR-🇺🇸US_612 |10.74Mb
-  - Relay_🇬🇧GB-🇳🇱NL_620 |157.34Mb
-  - Relay_🇫🇷FR-🇺🇸US_617 |10.04Mb
-  - Relay_🇫🇷FR-🇮🇳IN_483 |14.29Mb
-  - 🇺🇸US_624 |53.60Mb
-  - Relay_🇺🇸US-🇺🇸US_623 |181.22Mb
+  - netflix_US |54.93Mb
+  - ' |24.29Mb'
+  - Relay_-🇺🇸US_360 |29.96Mb
+  - Relay_-🇫🇷FR_361 |118.14Mb
+  - ' |15.68Mb'
+  - ' |222.01Mb'
+  - netflix_NL |52.99Mb
+  - ' |26.84Mb'
+  - Relay_-🇳🇱NL_359 |50.26Mb
+  - Relay_-🇯🇵JP_355 |62.98Mb
+  - Relay_-🇯🇵JP_358 |16.77Mb
+  - Relay_-🇺🇸US_356 |23.36Mb
+  - Relay_-🇺🇸US_365 |22.88Mb
+  - Relay_-🇩🇪DE_368 |285.15Mb
+  - disney_HK |16.25Mb
+  - Relay_🇫🇷FR-🇺🇸US_486 |13.52Mb
+  - Relay_🇫🇷FR |35.84Mb
+  - Relay_🇫🇷FR |11.05Mb
+  - Relay_🇫🇷FR |12.74Mb
+  - disney_HK |11.86Mb
+  - Relay_🇫🇷FR |41.25Mb
+  - Relay_🇫🇷FR |20.39Mb
+  - Relay_🇫🇷FR |14.25Mb
+  - Relay_🇫🇷FR |11.32Mb
+  - Relay_🇫🇷FR |37.66Mb
+  - Relay_🇫🇷FR |51.13Mb
+  - Relay_🇫🇷FR |12.19Mb
+  - Relay_🇫🇷FR |32.84Mb
+  - Relay_🇫🇷FR |15.45Mb
+  - Relay_🇫🇷FR |31.32Mb
+  - Relay_🇫🇷FR |38.82Mb
+  - Relay_🇫🇷FR |11.49Mb
+  - Relay_🇫🇷FR |10.22Mb
+  - Relay_🇫🇷FR |11.62Mb
+  - Relay_🇫🇷FR |14.97Mb
+  - Relay_🇬🇧GB |97.88Mb
+  - Relay_🇫🇷FR |22.79Mb
+  - 🇺🇸US |59.49Mb
+  - Relay_🇺🇸US |101.41Mb
+  - Relay_🇫🇷FR |28.33Mb
+  - Relay_🇫🇷FR |34.07Mb
+  - Relay_🇫🇷FR |22.09Mb
+  - Relay_🇫🇷FR |27.55Mb
+  - Relay_🇫🇷FR |10.61Mb
+  - Relay_🇫🇷FR |38.38Mb
+  - Relay_🇫🇷FR |17.66Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
