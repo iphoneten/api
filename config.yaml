@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
+- name: netflix_SG |10.31Mb
+  server: 160.16.132.38
+  type: trojan
+  port: 4674
+  password: 86e150eb21c6faee48e81d496d7f61c2
+  sni: www.nintendogames.net
+- name: netflix_JP |15.31Mb
+  server: 160.16.132.38
+  type: trojan
+  port: 34818
+  password: 86e150eb21c6faee48e81d496d7f61c2
+  sni: www.nintendogames.net
 - name: disney_ES |21.48Mb
   server: 85.90.217.42
   type: vmess
@@ -16,35 +28,33 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: netflix_SG |10.79Mb
-  server: 160.16.132.38
-  type: trojan
-  port: 4674
-  password: 86e150eb21c6faee48e81d496d7f61c2
-  sni: www.nintendogames.net
-- name: netflix_JP |22.69Mb
-  server: 160.16.132.38
-  type: trojan
-  port: 34818
-  password: 86e150eb21c6faee48e81d496d7f61c2
-  sni: www.nintendogames.net
-- name: disney_PL |416.73Mb
-  server: fluent-stingray.crayfish192.xyz
-  type: trojan
-  country: 🇭🇺HU
-  port: 443
-  udp: true
-  password: IL37892054
-  sni: fluent-stingray.crayfish192.xyz
-  skip-cert-verify: true
-- name: netflix_SG |22.43Mb
+- name: netflix_SG |22.30Mb
   server: 68.183.227.4
   type: ss
   port: 8080
   udp: true
   password: 14fFPrbezE3HDZzsMOr6
   cipher: rc4-md5
-- name: Relay_🇧🇬 BG-🇦🇺AU_34 |11.40Mb
+- name: disney_PL |17.30Mb
+  server: outgoing-ladybird.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: IL37892054
+  sni: outgoing-ladybird.rooster465.autos
+- name: Relay_🇭🇰 HK-🇺🇸US_36 |52.36Mb
+  server: v4.hdacd.com
+  type: vmess
+  country: 🇭🇰 HK
+  port: 30804
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🇧🇬 BG-🇦🇺AU_35 |11.34Mb
   server: enhanced-crayfish.rooster465.autos
   type: trojan
   country: 🇧🇬 BG
@@ -52,7 +62,7 @@ proxies:
   udp: true
   password: IL37892054
   skip-cert-verify: true
-- name: 🏁 ZZ_38 |12.83Mb
+- name: 🏁 ZZ_38 |41.96Mb
   server: 185.231.233.112
   type: ss
   country: 🏁 ZZ
@@ -64,24 +74,26 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
+  - netflix_SG |10.31Mb
+  - netflix_JP |15.31Mb
   - disney_ES |21.48Mb
-  - netflix_SG |10.79Mb
-  - netflix_JP |22.69Mb
-  - disney_PL |416.73Mb
-  - netflix_SG |22.43Mb
-  - Relay_🇧🇬 BG-🇦🇺AU_34 |11.40Mb
-  - 🏁 ZZ_38 |12.83Mb
+  - netflix_SG |22.30Mb
+  - disney_PL |17.30Mb
+  - Relay_🇭🇰 HK-🇺🇸US_36 |52.36Mb
+  - Relay_🇧🇬 BG-🇦🇺AU_35 |11.34Mb
+  - 🏁 ZZ_38 |41.96Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
+  - netflix_SG |10.31Mb
+  - netflix_JP |15.31Mb
   - disney_ES |21.48Mb
-  - netflix_SG |10.79Mb
-  - netflix_JP |22.69Mb
-  - disney_PL |416.73Mb
-  - netflix_SG |22.43Mb
-  - Relay_🇧🇬 BG-🇦🇺AU_34 |11.40Mb
-  - 🏁 ZZ_38 |12.83Mb
+  - netflix_SG |22.30Mb
+  - disney_PL |17.30Mb
+  - Relay_🇭🇰 HK-🇺🇸US_36 |52.36Mb
+  - Relay_🇧🇬 BG-🇦🇺AU_35 |11.34Mb
+  - 🏁 ZZ_38 |41.96Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
