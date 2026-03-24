@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: disney_netflix_GB |154.26Mb
+- name: disney_netflix_GB |180.76Mb
   server: 172.66.44.230
   type: trojan
   port: 8443
@@ -17,7 +17,7 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
   network: ws
-- name: Relay_🇺🇸US |27.40Mb
+- name: Relay_🇺🇸US-🇯🇵JP_47 |27.40Mb
   server: t1.620720.xyz
   type: vmess
   country: 🇺🇸US
@@ -32,44 +32,33 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /
-- name: netflix_DK |25.28Mb
+- name: disney_netflix_SG |11.40Mb
+  server: 160.16.124.17
+  type: trojan
+  port: 1524
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: netflix_JP |70.02Mb
+  server: 160.16.124.17
+  type: trojan
+  port: 34818
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: netflix_DK |27.02Mb
   server: 192.36.27.94
   type: ss
   country: 🇸🇪 SE
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: Relay_🏁ZZ |48.16Mb
-  server: c7.620720.xyz
-  type: vmess
-  country: 🏁ZZ
-  port: 8443
-  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: c7.620720.xyz
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: c7.620720.xyz
-- name: netflix_JP |15.24Mb
-  server: 160.16.124.17
-  type: trojan
-  port: 34818
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: disney_netflix_SG |11.33Mb
-  server: 160.16.124.17
-  type: trojan
-  port: 1524
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: disney_netflix_NL |265.25Mb
+- name: disney_netflix_SG |19.90Mb
+  server: 68.183.227.4
+  type: ss
+  port: 8080
+  udp: true
+  password: 14fFPrbezE3HDZzsMOr6
+  cipher: rc4-md5
+- name: disney_netflix_NL |248.98Mb
   server: nl-4.tr202512.com
   type: trojan
   port: 443
@@ -77,39 +66,7 @@ proxies:
   password: M08tvzYWtUEJNtbpHp
   sni: nl-4.tr202512.com
   skip-cert-verify: true
-- name: 🏁 ZZ |100.89Mb
-  server: 185.231.233.112
-  type: ss
-  country: 🏁 ZZ
-  port: 989
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: disney_netflix_ID |20.98Mb
-  server: 47.57.182.141
-  type: vmess
-  country: 🇭🇰HK
-  port: 443
-  uuid: 462d9694-62b5-4781-a287-61a422b920e8
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: mn1ray.jagoanvip.xyz
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vvip
-    headers:
-      HOST: mn1ray.jagoanvip.xyz
-- name: disney_netflix_SG |13.71Mb
-  server: 68.183.227.4
-  type: ss
-  port: 8080
-  udp: true
-  password: 14fFPrbezE3HDZzsMOr6
-  cipher: rc4-md5
-- name: Relay_🇧🇬 BG |11.28Mb
+- name: Relay_🇧🇬 BG-🇦🇺AU_37 |11.44Mb
   server: enhanced-crayfish.rooster465.autos
   type: trojan
   country: 🇧🇬 BG
@@ -117,7 +74,7 @@ proxies:
   udp: true
   password: IL37892054
   skip-cert-verify: true
-- name: Relay_🇭🇰 HK-🇺🇸US_38 |41.23Mb
+- name: Relay_🇭🇰 HK |41.23Mb
   server: v4.hdacd.com
   type: vmess
   country: 🇭🇰 HK
@@ -129,48 +86,33 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_PL |23.69Mb
-  server: outgoing-ladybird.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: IL37892054
-  sni: outgoing-ladybird.rooster465.autos
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - disney_netflix_GB |154.26Mb
-  - Relay_🇺🇸US |27.40Mb
-  - netflix_DK |25.28Mb
-  - Relay_🏁ZZ |48.16Mb
-  - netflix_JP |15.24Mb
-  - disney_netflix_SG |11.33Mb
-  - disney_netflix_NL |265.25Mb
-  - 🏁 ZZ |100.89Mb
-  - disney_netflix_ID |20.98Mb
-  - disney_netflix_SG |13.71Mb
-  - Relay_🇧🇬 BG |11.28Mb
-  - Relay_🇭🇰 HK-🇺🇸US_38 |41.23Mb
-  - disney_netflix_PL |23.69Mb
+  - disney_netflix_GB |180.76Mb
+  - Relay_🇺🇸US-🇯🇵JP_47 |27.40Mb
+  - disney_netflix_SG |11.40Mb
+  - netflix_JP |70.02Mb
+  - netflix_DK |27.02Mb
+  - disney_netflix_SG |19.90Mb
+  - disney_netflix_NL |248.98Mb
+  - Relay_🇧🇬 BG-🇦🇺AU_37 |11.44Mb
+  - Relay_🇭🇰 HK |41.23Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - disney_netflix_GB |154.26Mb
-  - Relay_🇺🇸US |27.40Mb
-  - netflix_DK |25.28Mb
-  - Relay_🏁ZZ |48.16Mb
-  - netflix_JP |15.24Mb
-  - disney_netflix_SG |11.33Mb
-  - disney_netflix_NL |265.25Mb
-  - 🏁 ZZ |100.89Mb
-  - disney_netflix_ID |20.98Mb
-  - disney_netflix_SG |13.71Mb
-  - Relay_🇧🇬 BG |11.28Mb
-  - Relay_🇭🇰 HK-🇺🇸US_38 |41.23Mb
-  - disney_netflix_PL |23.69Mb
+  - disney_netflix_GB |180.76Mb
+  - Relay_🇺🇸US-🇯🇵JP_47 |27.40Mb
+  - disney_netflix_SG |11.40Mb
+  - netflix_JP |70.02Mb
+  - netflix_DK |27.02Mb
+  - disney_netflix_SG |19.90Mb
+  - disney_netflix_NL |248.98Mb
+  - Relay_🇧🇬 BG-🇦🇺AU_37 |11.44Mb
+  - Relay_🇭🇰 HK |41.23Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
