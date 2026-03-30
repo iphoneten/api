@@ -5,8 +5,8 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: disney_US |23.12Mb
-  server: 134.195.101.115
+- name: disney_netflix_US |35.86Mb
+  server: 134.195.101.125
   type: ss
   port: 2377
   udp: true
@@ -16,8 +16,8 @@ proxies:
   plugin-opts:
     host: 817aa69.default.nintendo.com:112719
     mode: tls
-- name: disney_netflix_US |35.86Mb
-  server: 134.195.101.125
+- name: disney_netflix_US |23.12Mb
+  server: 134.195.101.115
   type: ss
   port: 2377
   udp: true
@@ -45,20 +45,6 @@ proxies:
   udp: true
   password: k1dBOmOB4oqi7Ump37a1bQ
   cipher: chacha20-ietf-poly1305
-- name: netflix_SE |154.37Mb
-  server: 13.63.166.122
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: netflix_SE |174.46Mb
-  server: 13.61.195.4
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
 - name: Relay_-🇿🇦ZA_122 |29.80Mb
   server: 102.133.165.160
   type: ss
@@ -66,29 +52,36 @@ proxies:
   udp: true
   password: Xsy8Ox4yOV3xLlpxtjzs3X
   cipher: chacha20-ietf-poly1305
-- name: _124 |20.91Mb
+- name: _129 |20.91Mb
   server: 68.183.227.4
   type: ss
   port: 8080
   udp: true
   password: 14fFPrbezE3HDZzsMOr6
   cipher: rc4-md5
-- name: _139 |33.37Mb
-  server: 103.47.225.69
-  type: ss
-  port: 443
-  udp: true
-  password: 899c7e30-50c7-4b63-a0a0-f26ac572d4f9
-  cipher: aes-256-gcm
-- name: Relay_-🇹🇼TW_134 |15.03Mb
-  server: n8mrcg005961xa6.cybervena.com
+- name: disney_TW |10.57Mb
+  server: r3mrcg007153btm.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW |10.17Mb
-  server: n8mrcg005988a7z.cybervena.com
+- name: disney_TW |10.91Mb
+  server: r3mrcg001287h3p.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |10.09Mb
+  server: namrcg001662wgh.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: Relay_-🇹🇼TW_137 |15.03Mb
+  server: n8mrcg005961xa6.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -101,15 +94,36 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW |10.67Mb
-  server: r3mrcg0011606bh.cybervena.com
+- name: _154 |154.37Mb
+  server: 13.63.166.122
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: disney_netflix_SE |174.46Mb
+  server: 13.61.195.4
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: Relay_-🇹🇼TW_141 |10.17Mb
+  server: n8mrcg005988a7z.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW |10.09Mb
-  server: namrcg001662wgh.cybervena.com
+- name: Relay_-🇹🇼TW_138 |21.69Mb
+  server: nbmrcg003449jp6.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |10.87Mb
+  server: n8mrcg004676x9e.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -125,14 +139,14 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: Relay_-🇹🇼TW_155 |10.87Mb
-  server: n8mrcg004676x9e.cybervena.com
+- name: Relay_-🇹🇼TW_150 |10.67Mb
+  server: r3mrcg0011606bh.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_ES |181.17Mb
+- name: disney_netflix_ES |181.17Mb
   server: 85.90.217.42
   type: vmess
   port: 22324
@@ -150,33 +164,38 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: _168 |18.00Mb
-  server: 185.189.160.105
-  type: ss
-  port: 41632
-  udp: true
-  password: qwerREWQ@@
-  cipher: aes-256-cfb
-- name: disney_TW |17.62Mb
+- name: Relay_-🇹🇼TW_156 |17.62Mb
   server: r3mrcg007134n4g.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_GB |147.45Mb
-  server: 172.66.44.230
-  type: trojan
-  port: 8443
+- name: disney_TW |10.51Mb
+  server: n8mrcg0059867fh.cybervena.com
+  type: ss
+  port: 50099
   udp: true
-  password: 8r<[9'l6hAO#8ZQi
-  sni: Koma-YT.PAGeS.Dev
-  ws-opts:
-    path: /tro8sFW1S91B6sZrM1?ed=2560
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-  network: ws
-- name: Relay_-🇫🇷FR_191 |295.59Mb
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: _174 |18.00Mb
+  server: 185.189.160.105
+  type: ss
+  port: 41632
+  udp: true
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
+- name: _183 |11.75Mb
+  server: 20.6.128.4
+  type: vmess
+  port: 6788
+  udp: true
+  uuid: bfff8306-6102-4fde-8a7f-f025e94f7a53
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+- name: disney_netflix_NL |295.59Mb
   server: 104.18.11.110
   type: trojan
   port: 443
@@ -188,8 +207,8 @@ proxies:
     headers:
       Host: www.multiplydose.com
   network: ws
-- name: disney_TW |10.51Mb
-  server: n8mrcg0059867fh.cybervena.com
+- name: disney_TW |24.11Mb
+  server: r3mrcg001233myh.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -202,124 +221,40 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW |10.57Mb
-  server: r3mrcg007153btm.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_US |15.95Mb
-  server: 38.76.206.31
-  type: vmess
-  port: 443
-  udp: true
-  uuid: 0c31416e-f2dc-4fdd-9a1e-2eaa403e2e6e
-  alterId: 0
-  cipher: auto
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-  h2-opts: {}
-- name: disney_netflix_US |39.91Mb
-  server: alert-sunbird.crayfish192.xyz
+- name: disney_netflix_IE |324.56Mb
+  server: eternal-serval.rooster465.autos
   type: trojan
   port: 443
   password: WF42809561
-  sni: alert-sunbird.crayfish192.xyz
-- name: _184 |11.75Mb
-  server: 20.6.128.4
-  type: vmess
-  port: 6788
-  udp: true
-  uuid: bfff8306-6102-4fde-8a7f-f025e94f7a53
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: disney_US |14.34Mb
-  server: 38.76.206.31
-  type: vmess
-  port: 8080
-  udp: true
-  uuid: 912f1899-c436-4b35-ef7f-134795329e01
-  alterId: 0
-  cipher: auto
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-  h2-opts: {}
-- name: Relay_-🇯🇵JP_195 |15.45Mb
-  server: 153.121.38.213
-  type: trojan
-  port: 4937
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: disney_netflix_US |15.47Mb
-  server: n2.chateditimage.com
+  sni: eternal-serval.rooster465.autos
+- name: disney_netflix_US |36.18Mb
+  server: n3.chateditimage.com
   type: trojan
   port: 443
   udp: true
-  password: de7d6444-a7a8-4b3a-bf26-bc6939bb0279
-  sni: n2.chateditimage.com
+  password: 4123ae62-0999-4984-8ead-091630e594a9
+  sni: n3.chateditimage.com
   skip-cert-verify: true
-- name: Relay_-🇯🇵JP_196 |21.03Mb
-  server: 160.16.106.99
-  type: trojan
-  port: 4937
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: _206 |22.98Mb
-  server: 94.131.105.125
-  type: trojan
-  port: 4443
-  udp: true
-  password: strong-secret-pass-777
-  skip-cert-verify: true
-- name: Relay_-🇸🇬SG_204 |10.81Mb
-  server: 160.16.214.104
-  type: trojan
-  port: 4674
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: Relay_-🇦🇺AU_188 |11.38Mb
-  server: evolving-kangaroo.rooster465.autos
+- name: disney_KR |13.18Mb
+  server: powerful-squid.rooster465.autos
   type: trojan
   port: 443
-  udp: true
   password: WF42809561
-  sni: evolving-kangaroo.rooster465.autos
-- name: Relay_-🇯🇵JP_207 |20.20Mb
+  sni: powerful-squid.rooster465.autos
+- name: Relay_-🇬🇧GB_191 |10.52Mb
+  server: touching-pigeon.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: touching-pigeon.rooster465.autos
+- name: disney_KR |10.56Mb
+  server: amused-peacock.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: amused-peacock.rooster465.autos
+- name: Relay_-🇯🇵JP_198 |20.20Mb
   server: 153.121.45.139
-  type: trojan
-  port: 34818
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: Relay_-🇦🇺AU_194 |11.26Mb
-  server: premium-lab.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: premium-lab.rooster465.autos
-- name: disney_PL |139.51Mb
-  server: outgoing-ladybird.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: IL37892054
-  sni: outgoing-ladybird.rooster465.autos
-- name: disney_netflix_IE |371.98Mb
-  server: grown-goldfish.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: grown-goldfish.rooster465.autos
-- name: Relay_-🇯🇵JP_209 |19.26Mb
-  server: 160.16.124.17
   type: trojan
   port: 34818
   password: 6d29eb2f74293cb01a19b32cf08ad2e9
@@ -330,13 +265,41 @@ proxies:
   port: 443
   password: WF42809561
   sni: sterling-fowl.rooster465.autos
-- name: Relay_-🇺🇸US_212 |10.06Mb
-  server: 160.16.70.180
+- name: disney_netflix_US |15.47Mb
+  server: n2.chateditimage.com
   type: trojan
-  port: 3700
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_178 |51.46Mb
+  port: 443
+  udp: true
+  password: de7d6444-a7a8-4b3a-bf26-bc6939bb0279
+  sni: n2.chateditimage.com
+  skip-cert-verify: true
+- name: Relay_-🇺🇸US_202 |39.91Mb
+  server: alert-sunbird.crayfish192.xyz
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: alert-sunbird.crayfish192.xyz
+- name: disney_netflix_PL |139.51Mb
+  server: outgoing-ladybird.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: IL37892054
+  sni: outgoing-ladybird.rooster465.autos
+- name: Relay_-🇦🇺AU_199 |11.26Mb
+  server: premium-lab.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: premium-lab.rooster465.autos
+- name: _208 |22.98Mb
+  server: 94.131.105.125
+  type: trojan
+  port: 4443
+  udp: true
+  password: strong-secret-pass-777
+  skip-cert-verify: true
+- name: Relay_-🇯🇵JP_184 |51.46Mb
   server: v6.hdacd.com
   type: vmess
   port: 30806
@@ -346,7 +309,43 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: disney_netflix_US |37.31Mb
+- name: disney_netflix_DE |201.46Mb
+  server: dynamic-tiger.crayfish192.xyz
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: dynamic-tiger.crayfish192.xyz
+- name: disney_US |10.06Mb
+  server: 160.16.70.180
+  type: trojan
+  port: 3700
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: Relay_-🇮🇪IE_214 |317.41Mb
+  server: optimal-dane.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: optimal-dane.rooster465.autos
+- name: disney_GB |147.45Mb
+  server: 172.66.44.230
+  type: trojan
+  port: 8443
+  udp: true
+  password: 8r<[9'l6hAO#8ZQi
+  sni: Koma-YT.PAGeS.Dev
+  ws-opts:
+    path: /tro8sFW1S91B6sZrM1?ed=2560
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+  network: ws
+- name: Relay_-🇸🇬SG_212 |10.81Mb
+  server: 160.16.214.104
+  type: trojan
+  port: 4674
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: Relay_-🇺🇸US_221 |37.31Mb
   server: n3.chateditimage.com
   type: trojan
   port: 443
@@ -354,64 +353,36 @@ proxies:
   password: de7d6444-a7a8-4b3a-bf26-bc6939bb0279
   sni: n3.chateditimage.com
   skip-cert-verify: true
-- name: Relay_-🇺🇸US_215 |36.18Mb
-  server: n3.chateditimage.com
+- name: disney_PL |17.58Mb
+  server: funky-platypus.rooster465.autos
   type: trojan
   port: 443
-  udp: true
-  password: 4123ae62-0999-4984-8ead-091630e594a9
-  sni: n3.chateditimage.com
+  password: WF42809561
+  sni: funky-platypus.rooster465.autos
+- name: Relay_-🇯🇵JP_218 |19.26Mb
+  server: 160.16.124.17
+  type: trojan
+  port: 34818
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: Relay_🇬🇧GB-🇺🇸US_231 |136.21Mb
+  server: 82.198.246.97
+  type: vmess
+  country: 🇬🇧GB
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
-- name: Relay_-🇭🇰HK_208 |23.41Mb
-  server: ready-monarch.rooster465.autos
+- name: Relay_-🇯🇵JP_224 |15.45Mb
+  server: 153.121.38.213
   type: trojan
-  port: 443
-  udp: true
-  password: WF42809561
-  sni: ready-monarch.rooster465.autos
-- name: disney_NL |10.52Mb
-  server: touching-pigeon.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: touching-pigeon.rooster465.autos
-- name: disney_netflix_IE |324.56Mb
-  server: eternal-serval.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: eternal-serval.rooster465.autos
-- name: disney_netflix_IE |309.13Mb
-  server: saving-anemone.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: saving-anemone.rooster465.autos
-- name: disney_netflix_DE |201.46Mb
-  server: dynamic-tiger.crayfish192.xyz
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: dynamic-tiger.crayfish192.xyz
-- name: disney_KR |10.56Mb
-  server: amused-peacock.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: amused-peacock.rooster465.autos
-- name: disney_netflix_IE |317.41Mb
-  server: optimal-dane.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: optimal-dane.rooster465.autos
-- name: netflix_DK |13.33Mb
-  server: 192.36.27.94
-  type: ss
-  country: 🇸🇪 SE
-  port: 989
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
+  port: 4937
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
 - name: disney_PL |126.70Mb
   server: fluent-stingray.crayfish192.xyz
   type: trojan
@@ -421,21 +392,39 @@ proxies:
   password: IL37892054
   sni: fluent-stingray.crayfish192.xyz
   skip-cert-verify: true
-- name: disney_PL |17.58Mb
-  server: funky-platypus.rooster465.autos
+- name: disney_netflix_IE |371.98Mb
+  server: grown-goldfish.rooster465.autos
   type: trojan
   port: 443
   password: WF42809561
-  sni: funky-platypus.rooster465.autos
-- name: disney_netflix_US |20.74Mb
-  server: n2.chateditimage.com
+  sni: grown-goldfish.rooster465.autos
+- name: Relay_-🇭🇰HK_222 |23.41Mb
+  server: ready-monarch.rooster465.autos
   type: trojan
-  country: 🇺🇸 US
   port: 443
   udp: true
-  password: 4123ae62-0999-4984-8ead-091630e594a9
-  skip-cert-verify: true
-- name: Relay_🇧🇬 BG-🇦🇺AU_229 |11.39Mb
+  password: WF42809561
+  sni: ready-monarch.rooster465.autos
+- name: Relay_-🇮🇪IE_217 |309.13Mb
+  server: saving-anemone.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: saving-anemone.rooster465.autos
+- name: disney_KR |14.76Mb
+  server: ready-lion.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: ready-lion.rooster465.autos
+- name: Relay_-🇦🇺AU_219 |11.38Mb
+  server: evolving-kangaroo.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: WF42809561
+  sni: evolving-kangaroo.rooster465.autos
+- name: Relay_🇧🇬 BG-🇦🇺AU_226 |11.39Mb
   server: enhanced-crayfish.rooster465.autos
   type: trojan
   country: 🇧🇬 BG
@@ -443,41 +432,91 @@ proxies:
   udp: true
   password: IL37892054
   skip-cert-verify: true
-- name: disney_KR |13.18Mb
-  server: powerful-squid.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: powerful-squid.rooster465.autos
-- name: disney_netflix_US |39.59Mb
-  server: healthy-ewe.rooster465.autos
-  type: trojan
-  country: 🇺🇸US
-  port: 443
-  udp: true
-  password: IL37892054
-  sni: healthy-ewe.rooster465.autos
-  skip-cert-verify: true
-- name: disney_KR |14.76Mb
-  server: ready-lion.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: ready-lion.rooster465.autos
-- name: disney_TW |10.23Mb
-  server: r3mrcg0071643p7.cybervena.com
+- name: disney_US |12.27Mb
+  server: daxo.owwoedu.com
   type: ss
-  country: 🇹🇼 TW
-  port: 50099
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_PT |127.01Mb
-  server: 185.231.233.112
+  country: 🇮🇷IR
+  port: 38321
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: Relay_🇮🇷IR-🇯🇵JP_242 |25.72Mb
+  server: daxo.owwoedu.com
   type: ss
-  country: 🏁 ZZ
+  country: 🇮🇷IR
+  port: 38305
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: Relay_🇮🇷IR-🇨🇦CA_240 |12.05Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38313
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: Relay_🇮🇷IR-🇭🇰HK_243 |27.79Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38301
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: disney_VN |153.60Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38320
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: disney_TW |29.39Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38303
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: Relay_🇮🇷IR-🇺🇸US_241 |21.99Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38312
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: disney_TW |28.16Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38304
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: Relay_🇮🇷IR-🇮🇳IN_238 |26.17Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38311
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: 🇸🇪 SE_257 |13.33Mb
+  server: 192.36.27.94
+  type: ss
+  country: 🇸🇪 SE
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
+- name: Relay_🇺🇸 US-🇺🇸US_271 |20.74Mb
+  server: n2.chateditimage.com
+  type: trojan
+  country: 🇺🇸 US
+  port: 443
+  udp: true
+  password: 4123ae62-0999-4984-8ead-091630e594a9
+  skip-cert-verify: true
+- name: Relay_🇮🇷IR-🇭🇰HK_248 |28.86Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38319
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
 - name: disney_KR |11.19Mb
   server: positive-bear.rooster465.autos
   type: trojan
@@ -487,141 +526,231 @@ proxies:
   password: IL37892054
   sni: positive-bear.rooster465.autos
   skip-cert-verify: true
+- name: Relay_🇺🇸US-🇺🇸US_273 |39.59Mb
+  server: healthy-ewe.rooster465.autos
+  type: trojan
+  country: 🇺🇸US
+  port: 443
+  udp: true
+  password: IL37892054
+  sni: healthy-ewe.rooster465.autos
+  skip-cert-verify: true
+- name: disney_TW |10.23Mb
+  server: r3mrcg0071643p7.cybervena.com
+  type: ss
+  country: 🇹🇼 TW
+  port: 50099
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: Relay_🇰🇷KR-🇰🇷KR_255 |49.12Mb
+  server: chuncheon03.zgjok.com
+  type: vmess
+  country: 🇰🇷KR
+  port: 443
+  uuid: 81d5cac4-d039-4874-9a20-c391f580012d
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: chuncheon03.zgjok.com
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: chuncheon03.zgjok.com
+- name: Relay_🇮🇷IR-🇺🇸US_250 |24.97Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38306
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: disney_SG |27.69Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38318
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: disney_SG |27.64Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38310
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
+- name: disney_TW |29.48Mb
+  server: daxo.owwoedu.com
+  type: ss
+  country: 🇮🇷IR
+  port: 38308
+  password: f3c8dab7-3cc3-4e35-874c-22bdff8df563
+  cipher: aes-128-gcm
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - disney_US |23.12Mb
   - disney_netflix_US |35.86Mb
+  - disney_netflix_US |23.12Mb
   - disney_netflix_US |36.38Mb
   - disney_netflix_NL |108.69Mb
-  - netflix_SE |154.37Mb
-  - netflix_SE |174.46Mb
   - Relay_-🇿🇦ZA_122 |29.80Mb
-  - _124 |20.91Mb
-  - _139 |33.37Mb
-  - Relay_-🇹🇼TW_134 |15.03Mb
-  - disney_TW |10.17Mb
-  - disney_TW |11.04Mb
-  - disney_TW |10.67Mb
-  - disney_TW |10.09Mb
-  - Relay_-🇺🇸US_177 |196.24Mb
-  - Relay_-🇹🇼TW_155 |10.87Mb
-  - disney_ES |181.17Mb
-  - disney_TW |10.05Mb
-  - _168 |18.00Mb
-  - disney_TW |17.62Mb
-  - disney_GB |147.45Mb
-  - Relay_-🇫🇷FR_191 |295.59Mb
-  - disney_TW |10.51Mb
-  - disney_TW |10.23Mb
+  - _129 |20.91Mb
   - disney_TW |10.57Mb
-  - disney_US |15.95Mb
-  - disney_netflix_US |39.91Mb
-  - _184 |11.75Mb
-  - disney_US |14.34Mb
-  - Relay_-🇯🇵JP_195 |15.45Mb
-  - disney_netflix_US |15.47Mb
-  - Relay_-🇯🇵JP_196 |21.03Mb
-  - _206 |22.98Mb
-  - Relay_-🇸🇬SG_204 |10.81Mb
-  - Relay_-🇦🇺AU_188 |11.38Mb
-  - Relay_-🇯🇵JP_207 |20.20Mb
-  - Relay_-🇦🇺AU_194 |11.26Mb
-  - disney_PL |139.51Mb
-  - disney_netflix_IE |371.98Mb
-  - Relay_-🇯🇵JP_209 |19.26Mb
-  - disney_KR |10.50Mb
-  - Relay_-🇺🇸US_212 |10.06Mb
-  - Relay_-🇯🇵JP_178 |51.46Mb
-  - disney_netflix_US |37.31Mb
-  - Relay_-🇺🇸US_215 |36.18Mb
-  - Relay_-🇭🇰HK_208 |23.41Mb
-  - disney_NL |10.52Mb
-  - disney_netflix_IE |324.56Mb
-  - disney_netflix_IE |309.13Mb
-  - disney_netflix_DE |201.46Mb
-  - disney_KR |10.56Mb
-  - disney_netflix_IE |317.41Mb
-  - netflix_DK |13.33Mb
-  - disney_PL |126.70Mb
-  - disney_PL |17.58Mb
-  - disney_netflix_US |20.74Mb
-  - Relay_🇧🇬 BG-🇦🇺AU_229 |11.39Mb
-  - disney_KR |13.18Mb
-  - disney_netflix_US |39.59Mb
-  - disney_KR |14.76Mb
+  - disney_TW |10.91Mb
+  - disney_TW |10.09Mb
+  - Relay_-🇹🇼TW_137 |15.03Mb
+  - disney_TW |11.04Mb
+  - _154 |154.37Mb
+  - disney_netflix_SE |174.46Mb
+  - Relay_-🇹🇼TW_141 |10.17Mb
+  - Relay_-🇹🇼TW_138 |21.69Mb
+  - disney_TW |10.87Mb
+  - Relay_-🇺🇸US_177 |196.24Mb
+  - Relay_-🇹🇼TW_150 |10.67Mb
+  - disney_netflix_ES |181.17Mb
+  - disney_TW |10.05Mb
+  - Relay_-🇹🇼TW_156 |17.62Mb
+  - disney_TW |10.51Mb
+  - _174 |18.00Mb
+  - _183 |11.75Mb
+  - disney_netflix_NL |295.59Mb
+  - disney_TW |24.11Mb
   - disney_TW |10.23Mb
-  - disney_PT |127.01Mb
+  - disney_netflix_IE |324.56Mb
+  - disney_netflix_US |36.18Mb
+  - disney_KR |13.18Mb
+  - Relay_-🇬🇧GB_191 |10.52Mb
+  - disney_KR |10.56Mb
+  - Relay_-🇯🇵JP_198 |20.20Mb
+  - disney_KR |10.50Mb
+  - disney_netflix_US |15.47Mb
+  - Relay_-🇺🇸US_202 |39.91Mb
+  - disney_netflix_PL |139.51Mb
+  - Relay_-🇦🇺AU_199 |11.26Mb
+  - _208 |22.98Mb
+  - Relay_-🇯🇵JP_184 |51.46Mb
+  - disney_netflix_DE |201.46Mb
+  - disney_US |10.06Mb
+  - Relay_-🇮🇪IE_214 |317.41Mb
+  - disney_GB |147.45Mb
+  - Relay_-🇸🇬SG_212 |10.81Mb
+  - Relay_-🇺🇸US_221 |37.31Mb
+  - disney_PL |17.58Mb
+  - Relay_-🇯🇵JP_218 |19.26Mb
+  - Relay_🇬🇧GB-🇺🇸US_231 |136.21Mb
+  - Relay_-🇯🇵JP_224 |15.45Mb
+  - disney_PL |126.70Mb
+  - disney_netflix_IE |371.98Mb
+  - Relay_-🇭🇰HK_222 |23.41Mb
+  - Relay_-🇮🇪IE_217 |309.13Mb
+  - disney_KR |14.76Mb
+  - Relay_-🇦🇺AU_219 |11.38Mb
+  - Relay_🇧🇬 BG-🇦🇺AU_226 |11.39Mb
+  - disney_US |12.27Mb
+  - Relay_🇮🇷IR-🇯🇵JP_242 |25.72Mb
+  - Relay_🇮🇷IR-🇨🇦CA_240 |12.05Mb
+  - Relay_🇮🇷IR-🇭🇰HK_243 |27.79Mb
+  - disney_VN |153.60Mb
+  - disney_TW |29.39Mb
+  - Relay_🇮🇷IR-🇺🇸US_241 |21.99Mb
+  - disney_TW |28.16Mb
+  - Relay_🇮🇷IR-🇮🇳IN_238 |26.17Mb
+  - 🇸🇪 SE_257 |13.33Mb
+  - Relay_🇺🇸 US-🇺🇸US_271 |20.74Mb
+  - Relay_🇮🇷IR-🇭🇰HK_248 |28.86Mb
   - disney_KR |11.19Mb
+  - Relay_🇺🇸US-🇺🇸US_273 |39.59Mb
+  - disney_TW |10.23Mb
+  - Relay_🇰🇷KR-🇰🇷KR_255 |49.12Mb
+  - Relay_🇮🇷IR-🇺🇸US_250 |24.97Mb
+  - disney_SG |27.69Mb
+  - disney_SG |27.64Mb
+  - disney_TW |29.48Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - disney_US |23.12Mb
   - disney_netflix_US |35.86Mb
+  - disney_netflix_US |23.12Mb
   - disney_netflix_US |36.38Mb
   - disney_netflix_NL |108.69Mb
-  - netflix_SE |154.37Mb
-  - netflix_SE |174.46Mb
   - Relay_-🇿🇦ZA_122 |29.80Mb
-  - _124 |20.91Mb
-  - _139 |33.37Mb
-  - Relay_-🇹🇼TW_134 |15.03Mb
-  - disney_TW |10.17Mb
-  - disney_TW |11.04Mb
-  - disney_TW |10.67Mb
-  - disney_TW |10.09Mb
-  - Relay_-🇺🇸US_177 |196.24Mb
-  - Relay_-🇹🇼TW_155 |10.87Mb
-  - disney_ES |181.17Mb
-  - disney_TW |10.05Mb
-  - _168 |18.00Mb
-  - disney_TW |17.62Mb
-  - disney_GB |147.45Mb
-  - Relay_-🇫🇷FR_191 |295.59Mb
-  - disney_TW |10.51Mb
-  - disney_TW |10.23Mb
+  - _129 |20.91Mb
   - disney_TW |10.57Mb
-  - disney_US |15.95Mb
-  - disney_netflix_US |39.91Mb
-  - _184 |11.75Mb
-  - disney_US |14.34Mb
-  - Relay_-🇯🇵JP_195 |15.45Mb
-  - disney_netflix_US |15.47Mb
-  - Relay_-🇯🇵JP_196 |21.03Mb
-  - _206 |22.98Mb
-  - Relay_-🇸🇬SG_204 |10.81Mb
-  - Relay_-🇦🇺AU_188 |11.38Mb
-  - Relay_-🇯🇵JP_207 |20.20Mb
-  - Relay_-🇦🇺AU_194 |11.26Mb
-  - disney_PL |139.51Mb
-  - disney_netflix_IE |371.98Mb
-  - Relay_-🇯🇵JP_209 |19.26Mb
-  - disney_KR |10.50Mb
-  - Relay_-🇺🇸US_212 |10.06Mb
-  - Relay_-🇯🇵JP_178 |51.46Mb
-  - disney_netflix_US |37.31Mb
-  - Relay_-🇺🇸US_215 |36.18Mb
-  - Relay_-🇭🇰HK_208 |23.41Mb
-  - disney_NL |10.52Mb
-  - disney_netflix_IE |324.56Mb
-  - disney_netflix_IE |309.13Mb
-  - disney_netflix_DE |201.46Mb
-  - disney_KR |10.56Mb
-  - disney_netflix_IE |317.41Mb
-  - netflix_DK |13.33Mb
-  - disney_PL |126.70Mb
-  - disney_PL |17.58Mb
-  - disney_netflix_US |20.74Mb
-  - Relay_🇧🇬 BG-🇦🇺AU_229 |11.39Mb
-  - disney_KR |13.18Mb
-  - disney_netflix_US |39.59Mb
-  - disney_KR |14.76Mb
+  - disney_TW |10.91Mb
+  - disney_TW |10.09Mb
+  - Relay_-🇹🇼TW_137 |15.03Mb
+  - disney_TW |11.04Mb
+  - _154 |154.37Mb
+  - disney_netflix_SE |174.46Mb
+  - Relay_-🇹🇼TW_141 |10.17Mb
+  - Relay_-🇹🇼TW_138 |21.69Mb
+  - disney_TW |10.87Mb
+  - Relay_-🇺🇸US_177 |196.24Mb
+  - Relay_-🇹🇼TW_150 |10.67Mb
+  - disney_netflix_ES |181.17Mb
+  - disney_TW |10.05Mb
+  - Relay_-🇹🇼TW_156 |17.62Mb
+  - disney_TW |10.51Mb
+  - _174 |18.00Mb
+  - _183 |11.75Mb
+  - disney_netflix_NL |295.59Mb
+  - disney_TW |24.11Mb
   - disney_TW |10.23Mb
-  - disney_PT |127.01Mb
+  - disney_netflix_IE |324.56Mb
+  - disney_netflix_US |36.18Mb
+  - disney_KR |13.18Mb
+  - Relay_-🇬🇧GB_191 |10.52Mb
+  - disney_KR |10.56Mb
+  - Relay_-🇯🇵JP_198 |20.20Mb
+  - disney_KR |10.50Mb
+  - disney_netflix_US |15.47Mb
+  - Relay_-🇺🇸US_202 |39.91Mb
+  - disney_netflix_PL |139.51Mb
+  - Relay_-🇦🇺AU_199 |11.26Mb
+  - _208 |22.98Mb
+  - Relay_-🇯🇵JP_184 |51.46Mb
+  - disney_netflix_DE |201.46Mb
+  - disney_US |10.06Mb
+  - Relay_-🇮🇪IE_214 |317.41Mb
+  - disney_GB |147.45Mb
+  - Relay_-🇸🇬SG_212 |10.81Mb
+  - Relay_-🇺🇸US_221 |37.31Mb
+  - disney_PL |17.58Mb
+  - Relay_-🇯🇵JP_218 |19.26Mb
+  - Relay_🇬🇧GB-🇺🇸US_231 |136.21Mb
+  - Relay_-🇯🇵JP_224 |15.45Mb
+  - disney_PL |126.70Mb
+  - disney_netflix_IE |371.98Mb
+  - Relay_-🇭🇰HK_222 |23.41Mb
+  - Relay_-🇮🇪IE_217 |309.13Mb
+  - disney_KR |14.76Mb
+  - Relay_-🇦🇺AU_219 |11.38Mb
+  - Relay_🇧🇬 BG-🇦🇺AU_226 |11.39Mb
+  - disney_US |12.27Mb
+  - Relay_🇮🇷IR-🇯🇵JP_242 |25.72Mb
+  - Relay_🇮🇷IR-🇨🇦CA_240 |12.05Mb
+  - Relay_🇮🇷IR-🇭🇰HK_243 |27.79Mb
+  - disney_VN |153.60Mb
+  - disney_TW |29.39Mb
+  - Relay_🇮🇷IR-🇺🇸US_241 |21.99Mb
+  - disney_TW |28.16Mb
+  - Relay_🇮🇷IR-🇮🇳IN_238 |26.17Mb
+  - 🇸🇪 SE_257 |13.33Mb
+  - Relay_🇺🇸 US-🇺🇸US_271 |20.74Mb
+  - Relay_🇮🇷IR-🇭🇰HK_248 |28.86Mb
   - disney_KR |11.19Mb
+  - Relay_🇺🇸US-🇺🇸US_273 |39.59Mb
+  - disney_TW |10.23Mb
+  - Relay_🇰🇷KR-🇰🇷KR_255 |49.12Mb
+  - Relay_🇮🇷IR-🇺🇸US_250 |24.97Mb
+  - disney_SG |27.69Mb
+  - disney_SG |27.64Mb
+  - disney_TW |29.48Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
