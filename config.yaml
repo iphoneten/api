@@ -17,12 +17,6 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: netflix_SG |11.18Mb
-  server: 160.16.124.17
-  type: trojan
-  port: 4674
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
 - name: netflix_MT |99.16Mb
   server: 171.22.254.17
   type: ss
@@ -30,34 +24,65 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: disney_netflix_US |42.22Mb
-  server: 52f3ce1.e6.gladns.com
-  type: ss
-  port: 2377
-  udp: true
-  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
-  cipher: chacha20-ietf-poly1305
-  plugin: obfs
-  plugin-opts:
-    host: 52f3ce1.default.fastly.net:148842
-    mode: tls
+- name: netflix_SG |11.18Mb
+  server: 160.16.124.17
+  type: trojan
+  port: 4674
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: Relay_🇹🇼TW-🇭🇰HK_32 |10.88Mb
+  server: aflzzul.meiquankongjian.com
+  type: vmess
+  country: 🇹🇼TW
+  port: 52511
+  uuid: 342bacfd-2b8f-3f49-a16e-439db5b0b9d5
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: aflzzul.meiquankongjian.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /564dfa20/
+    headers:
+      HOST: aflzzul.meiquankongjian.com
+- name: disney_netflix_HK |11.03Mb
+  server: aflzzul.meiquankongjian.com
+  type: vmess
+  country: 🇹🇼TW
+  port: 51515
+  uuid: 342bacfd-2b8f-3f49-a16e-439db5b0b9d5
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: aflzzul.meiquankongjian.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /564dfa20/
+    headers:
+      HOST: aflzzul.meiquankongjian.com
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - disney_netflix_US |22.79Mb
-  - netflix_SG |11.18Mb
   - netflix_MT |99.16Mb
-  - disney_netflix_US |42.22Mb
+  - netflix_SG |11.18Mb
+  - Relay_🇹🇼TW-🇭🇰HK_32 |10.88Mb
+  - disney_netflix_HK |11.03Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - disney_netflix_US |22.79Mb
-  - netflix_SG |11.18Mb
   - netflix_MT |99.16Mb
-  - disney_netflix_US |42.22Mb
+  - netflix_SG |11.18Mb
+  - Relay_🇹🇼TW-🇭🇰HK_32 |10.88Mb
+  - disney_netflix_HK |11.03Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
