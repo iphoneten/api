@@ -17,41 +17,10 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: netflix_NL |10.07Mb
-  server: 160.16.106.99
-  type: trojan
-  port: 3057
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
-- name: disney_netflix_JP |87.92Mb
-  server: 160.16.106.99
-  type: trojan
-  port: 2001
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
-- name: netflix_SG |18.11Mb
-  server: 160.16.106.99
-  type: trojan
-  port: 4674
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
-- name: netflix_SG |11.21Mb
-  server: 160.16.124.17
-  type: trojan
-  port: 4674
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
 - name: netflix_DK |20.36Mb
   server: 192.36.27.94
   type: ss
   country: 🇸🇪 SE
-  port: 989
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: netflix_GR |10.37Mb
-  server: 192.71.166.100
-  type: ss
-  country: 🇬🇷 GR
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
@@ -62,31 +31,62 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
+- name: netflix_GR |10.37Mb
+  server: 192.71.166.100
+  type: ss
+  country: 🇬🇷 GR
+  port: 989
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: netflix_SG |11.21Mb
+  server: 160.16.124.17
+  type: trojan
+  port: 4674
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: netflix_JP |87.92Mb
+  server: 160.16.106.99
+  type: trojan
+  port: 2001
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: netflix_NL |10.07Mb
+  server: 160.16.106.99
+  type: trojan
+  port: 3057
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: netflix_SG |18.11Mb
+  server: 160.16.106.99
+  type: trojan
+  port: 4674
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - disney_netflix_US |21.50Mb
-  - netflix_NL |10.07Mb
-  - disney_netflix_JP |87.92Mb
-  - netflix_SG |18.11Mb
-  - netflix_SG |11.21Mb
   - netflix_DK |20.36Mb
-  - netflix_GR |10.37Mb
   - netflix_MT |87.51Mb
+  - netflix_GR |10.37Mb
+  - netflix_SG |11.21Mb
+  - netflix_JP |87.92Mb
+  - netflix_NL |10.07Mb
+  - netflix_SG |18.11Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - disney_netflix_US |21.50Mb
-  - netflix_NL |10.07Mb
-  - disney_netflix_JP |87.92Mb
-  - netflix_SG |18.11Mb
-  - netflix_SG |11.21Mb
   - netflix_DK |20.36Mb
-  - netflix_GR |10.37Mb
   - netflix_MT |87.51Mb
+  - netflix_GR |10.37Mb
+  - netflix_SG |11.21Mb
+  - netflix_JP |87.92Mb
+  - netflix_NL |10.07Mb
+  - netflix_SG |18.11Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
