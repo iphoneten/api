@@ -5,6 +5,15 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
+- name: disney_netflix_NL |175.00Mb
+  server: nl-4.tr202513.com
+  type: trojan
+  country: 🇳🇱NL
+  port: 443
+  udp: true
+  password: s7R5MgmN6UrFWjxwYh
+  sni: nl-4.tr202513.com
+  skip-cert-verify: true
 - name: netflix_JP |20.55Mb
   server: 160.16.72.205
   type: trojan
@@ -24,16 +33,7 @@ proxies:
   port: 921
   password: 9f7d5cb76d1645101994d9b25891e3b7
   sni: www.nintendogames.net
-- name: disney_netflix_NL |175.00Mb
-  server: nl-4.tr202513.com
-  type: trojan
-  country: 🇳🇱NL
-  port: 443
-  udp: true
-  password: s7R5MgmN6UrFWjxwYh
-  sni: nl-4.tr202513.com
-  skip-cert-verify: true
-- name: Relay_🇭🇰 HK-🇺🇸US_41 |39.84Mb
+- name: Relay_🇭🇰 HK-🇺🇸US_42 |39.84Mb
   server: v4.hdacd.com
   type: vmess
   country: 🇭🇰 HK
@@ -58,21 +58,21 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
+  - disney_netflix_NL |175.00Mb
   - netflix_JP |20.55Mb
   - netflix_TW |11.11Mb
   - disney_netflix_HK |28.04Mb
-  - disney_netflix_NL |175.00Mb
-  - Relay_🇭🇰 HK-🇺🇸US_41 |39.84Mb
+  - Relay_🇭🇰 HK-🇺🇸US_42 |39.84Mb
   - disney_US |10.53Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
+  - disney_netflix_NL |175.00Mb
   - netflix_JP |20.55Mb
   - netflix_TW |11.11Mb
   - disney_netflix_HK |28.04Mb
-  - disney_netflix_NL |175.00Mb
-  - Relay_🇭🇰 HK-🇺🇸US_41 |39.84Mb
+  - Relay_🇭🇰 HK-🇺🇸US_42 |39.84Mb
   - disney_US |10.53Mb
   url: https://www.google.com/generate_204
   interval: 300
