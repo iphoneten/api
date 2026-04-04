@@ -5,7 +5,197 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: disney_netflix_US |136.91Mb
+- name: disney_netflix_US |32.68Mb
+  server: 82.198.246.250
+  type: vmess
+  port: 180
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_NL |147.42Mb
+  server: 51.15.17.169
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: disney_netflix_NL |10.84Mb
+  server: 94.131.105.125
+  type: trojan
+  port: 4443
+  udp: true
+  password: strong-secret-pass-777
+  skip-cert-verify: true
+- name: disney_netflix_SG |10.83Mb
+  server: 160.16.72.205
+  type: trojan
+  port: 4674
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: disney_netflix_HK |27.54Mb
+  server: 16.162.33.118
+  type: trojan
+  port: 921
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: netflix_IN |76.72Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16626
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_TW |27.24Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16616
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_HK |27.11Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16632
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_TW |22.71Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16616
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: netflix_JP |12.12Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16617
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: netflix_JP |11.66Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16617
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_HK |31.16Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16622
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_HK |27.55Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16632
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_US |10.03Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16648
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_US |13.23Mb
   server: 82.198.246.46
   type: vmess
   country: 🇬🇧 GB
@@ -17,26 +207,143 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_NL |248.35Mb
-  server: 51.15.17.169
-  type: ss
-  port: 989
-  udp: true
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: netflix_SG |10.17Mb
-  server: 160.16.72.205
-  type: trojan
-  port: 4674
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
-- name: netflix_JP |21.30Mb
-  server: 160.16.72.205
-  type: trojan
-  port: 4937
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
-- name: disney_netflix_NL |194.46Mb
+- name: disney_netflix_HK |30.50Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16622
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_HK |27.06Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16632
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_TW |23.21Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16616
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_HK |31.04Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16622
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_SG |29.33Mb
+  server: m.cnmjin.net
+  type: vmess
+  country: 🇫🇷FR
+  port: 16618
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_SG |29.21Mb
+  server: t.cnmjcn.cyou
+  type: vmess
+  country: 🇫🇷FR
+  port: 16618
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_SG |29.36Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16618
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: netflix_JP |22.05Mb
+  server: planb.mojcn.com
+  type: vmess
+  country: 🇫🇷FR
+  port: 16617
+  uuid: 861f9ab1-8191-42d6-9586-a2465fa92480
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: 9e3d3e5074b0178dc40cdd3a1e9717ca.mobgslb.tbcache.com
+- name: disney_netflix_NL |422.48Mb
   server: nl-4.tr202513.com
   type: trojan
   country: 🇳🇱NL
@@ -45,34 +352,22 @@ proxies:
   password: s7R5MgmN6UrFWjxwYh
   sni: nl-4.tr202513.com
   skip-cert-verify: true
-- name: netflix_TW |17.49Mb
-  server: 185.189.160.105
+- name: netflix_IN |137.22Mb
+  server: 134.209.147.198
   type: ss
-  port: 41632
-  udp: true
-  password: qwerREWQ@@
+  country: 🇮🇳 IN
+  port: 989
+  password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: disney_netflix_HK |27.83Mb
-  server: 16.162.33.118
+- name: disney_netflix_US |10.82Mb
+  server: fbxt0765gh0pielsss.ftisthebest.com
   type: trojan
-  port: 921
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
-- name: disney_netflix_HK |10.29Mb
-  server: sv3.wy888.us
-  type: vmess
-  country: 🇭🇰HK
-  port: 44302
-  uuid: 703fe06c-9f00-4308-8fe3-1e2f27da316b
-  alterId: 0
-  cipher: auto
-  network: tcp
-  servername: sv3.wy888.us
-  http-opts: {}
-  h2-opts: {}
-  tls: true
+  port: 56251
+  udp: true
+  password: e4895ea3-7b4a-3f46-ba5a-44ac4a691635
+  sni: fbxt0765gh0pielsss.ftisthebest.com
   skip-cert-verify: true
-- name: Relay_🇮🇷IR-🇺🇸US_50 |40.33Mb
+- name: disney_netflix_GB |13.68Mb
   server: v36.hdacd.com
   type: vmess
   country: 🇮🇷IR
@@ -84,43 +379,69 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_US |19.93Mb
-  server: fbxt0765gh0pielsss.ftisthebest.com
-  type: trojan
-  port: 56251
-  udp: true
-  password: e4895ea3-7b4a-3f46-ba5a-44ac4a691635
-  sni: fbxt0765gh0pielsss.ftisthebest.com
-  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
-  - disney_netflix_US |136.91Mb
-  - disney_netflix_NL |248.35Mb
-  - netflix_SG |10.17Mb
-  - netflix_JP |21.30Mb
-  - disney_netflix_NL |194.46Mb
-  - netflix_TW |17.49Mb
-  - disney_netflix_HK |27.83Mb
-  - disney_netflix_HK |10.29Mb
-  - Relay_🇮🇷IR-🇺🇸US_50 |40.33Mb
-  - disney_netflix_US |19.93Mb
+  - disney_netflix_US |32.68Mb
+  - disney_netflix_NL |147.42Mb
+  - disney_netflix_NL |10.84Mb
+  - disney_netflix_SG |10.83Mb
+  - disney_netflix_HK |27.54Mb
+  - netflix_IN |76.72Mb
+  - disney_netflix_TW |27.24Mb
+  - disney_netflix_HK |27.11Mb
+  - disney_netflix_TW |22.71Mb
+  - netflix_JP |12.12Mb
+  - netflix_JP |11.66Mb
+  - disney_netflix_HK |31.16Mb
+  - disney_netflix_HK |27.55Mb
+  - disney_netflix_US |10.03Mb
+  - disney_netflix_US |13.23Mb
+  - disney_netflix_HK |30.50Mb
+  - disney_netflix_HK |27.06Mb
+  - disney_netflix_TW |23.21Mb
+  - disney_netflix_HK |31.04Mb
+  - disney_netflix_SG |29.33Mb
+  - disney_netflix_SG |29.21Mb
+  - disney_netflix_SG |29.36Mb
+  - netflix_JP |22.05Mb
+  - disney_netflix_NL |422.48Mb
+  - netflix_IN |137.22Mb
+  - disney_netflix_US |10.82Mb
+  - disney_netflix_GB |13.68Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - disney_netflix_US |136.91Mb
-  - disney_netflix_NL |248.35Mb
-  - netflix_SG |10.17Mb
-  - netflix_JP |21.30Mb
-  - disney_netflix_NL |194.46Mb
-  - netflix_TW |17.49Mb
-  - disney_netflix_HK |27.83Mb
-  - disney_netflix_HK |10.29Mb
-  - Relay_🇮🇷IR-🇺🇸US_50 |40.33Mb
-  - disney_netflix_US |19.93Mb
+  - disney_netflix_US |32.68Mb
+  - disney_netflix_NL |147.42Mb
+  - disney_netflix_NL |10.84Mb
+  - disney_netflix_SG |10.83Mb
+  - disney_netflix_HK |27.54Mb
+  - netflix_IN |76.72Mb
+  - disney_netflix_TW |27.24Mb
+  - disney_netflix_HK |27.11Mb
+  - disney_netflix_TW |22.71Mb
+  - netflix_JP |12.12Mb
+  - netflix_JP |11.66Mb
+  - disney_netflix_HK |31.16Mb
+  - disney_netflix_HK |27.55Mb
+  - disney_netflix_US |10.03Mb
+  - disney_netflix_US |13.23Mb
+  - disney_netflix_HK |30.50Mb
+  - disney_netflix_HK |27.06Mb
+  - disney_netflix_TW |23.21Mb
+  - disney_netflix_HK |31.04Mb
+  - disney_netflix_SG |29.33Mb
+  - disney_netflix_SG |29.21Mb
+  - disney_netflix_SG |29.36Mb
+  - netflix_JP |22.05Mb
+  - disney_netflix_NL |422.48Mb
+  - netflix_IN |137.22Mb
+  - disney_netflix_US |10.82Mb
+  - disney_netflix_GB |13.68Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
