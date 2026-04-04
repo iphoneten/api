@@ -17,18 +17,6 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: netflix_JP |21.30Mb
-  server: 160.16.72.205
-  type: trojan
-  port: 4937
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
-- name: netflix_SG |10.17Mb
-  server: 160.16.72.205
-  type: trojan
-  port: 4674
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
 - name: disney_netflix_NL |248.35Mb
   server: 51.15.17.169
   type: ss
@@ -36,6 +24,27 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
+- name: netflix_SG |10.17Mb
+  server: 160.16.72.205
+  type: trojan
+  port: 4674
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: netflix_JP |21.30Mb
+  server: 160.16.72.205
+  type: trojan
+  port: 4937
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: disney_netflix_NL |194.46Mb
+  server: nl-4.tr202513.com
+  type: trojan
+  country: 🇳🇱NL
+  port: 443
+  udp: true
+  password: s7R5MgmN6UrFWjxwYh
+  sni: nl-4.tr202513.com
+  skip-cert-verify: true
 - name: netflix_TW |17.49Mb
   server: 185.189.160.105
   type: ss
@@ -63,15 +72,6 @@ proxies:
   h2-opts: {}
   tls: true
   skip-cert-verify: true
-- name: disney_netflix_NL |194.46Mb
-  server: nl-4.tr202513.com
-  type: trojan
-  country: 🇳🇱NL
-  port: 443
-  udp: true
-  password: s7R5MgmN6UrFWjxwYh
-  sni: nl-4.tr202513.com
-  skip-cert-verify: true
 - name: Relay_🇮🇷IR-🇺🇸US_50 |40.33Mb
   server: v36.hdacd.com
   type: vmess
@@ -98,13 +98,13 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - disney_netflix_US |136.91Mb
-  - netflix_JP |21.30Mb
-  - netflix_SG |10.17Mb
   - disney_netflix_NL |248.35Mb
+  - netflix_SG |10.17Mb
+  - netflix_JP |21.30Mb
+  - disney_netflix_NL |194.46Mb
   - netflix_TW |17.49Mb
   - disney_netflix_HK |27.83Mb
   - disney_netflix_HK |10.29Mb
-  - disney_netflix_NL |194.46Mb
   - Relay_🇮🇷IR-🇺🇸US_50 |40.33Mb
   - disney_netflix_US |19.93Mb
   url: https://www.google.com/generate_204
@@ -112,13 +112,13 @@ proxy-groups:
   type: url-test
   proxies:
   - disney_netflix_US |136.91Mb
-  - netflix_JP |21.30Mb
-  - netflix_SG |10.17Mb
   - disney_netflix_NL |248.35Mb
+  - netflix_SG |10.17Mb
+  - netflix_JP |21.30Mb
+  - disney_netflix_NL |194.46Mb
   - netflix_TW |17.49Mb
   - disney_netflix_HK |27.83Mb
   - disney_netflix_HK |10.29Mb
-  - disney_netflix_NL |194.46Mb
   - Relay_🇮🇷IR-🇺🇸US_50 |40.33Mb
   - disney_netflix_US |19.93Mb
   url: https://www.google.com/generate_204
