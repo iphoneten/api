@@ -5,24 +5,29 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
+- name: disney_netflix_US |183.40Mb
+  server: 82.198.246.250
+  type: vmess
+  port: 180
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: netflix_JP |12.41Mb
+  server: 160.16.72.205
+  type: trojan
+  port: 4937
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
 - name: disney_netflix_HK |27.28Mb
   server: 16.162.33.118
   type: trojan
   port: 921
   password: 9f7d5cb76d1645101994d9b25891e3b7
   sni: www.nintendogames.net
-- name: disney_netflix_PE |31.58Mb
-  server: pe1.bctuo.top
-  type: vmess
-  country: 🇵🇪PE
-  port: 443
-  uuid: 31801968-9877-4ef5-be87-56503c34a69d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
 - name: disney_netflix_US |47.44Mb
   server: fbxt0765gh0pielsss.ftisthebest.com
   type: trojan
@@ -31,21 +36,37 @@ proxies:
   password: e4895ea3-7b4a-3f46-ba5a-44ac4a691635
   sni: fbxt0765gh0pielsss.ftisthebest.com
   skip-cert-verify: true
+- name: Relay_🇮🇷IR-🇺🇸US_43 |71.44Mb
+  server: v36.hdacd.com
+  type: vmess
+  country: 🇮🇷IR
+  port: 30836
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
+  - disney_netflix_US |183.40Mb
+  - netflix_JP |12.41Mb
   - disney_netflix_HK |27.28Mb
-  - disney_netflix_PE |31.58Mb
   - disney_netflix_US |47.44Mb
+  - Relay_🇮🇷IR-🇺🇸US_43 |71.44Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
+  - disney_netflix_US |183.40Mb
+  - netflix_JP |12.41Mb
   - disney_netflix_HK |27.28Mb
-  - disney_netflix_PE |31.58Mb
   - disney_netflix_US |47.44Mb
+  - Relay_🇮🇷IR-🇺🇸US_43 |71.44Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
