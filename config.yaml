@@ -5,6 +5,17 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxies:
+- name: disney_netflix_US |37.07Mb
+  server: 82.198.246.250
+  type: vmess
+  port: 180
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: disney_netflix_US |158.09Mb
   server: 82.198.246.46
   type: vmess
@@ -17,29 +28,6 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_US |37.07Mb
-  server: 82.198.246.250
-  type: vmess
-  port: 180
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: netflix_SG |11.67Mb
-  server: 160.16.72.205
-  type: trojan
-  port: 4674
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
-- name: disney_netflix_JP |22.19Mb
-  server: 160.16.72.205
-  type: trojan
-  port: 4937
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
 - name: disney_netflix_NL |322.40Mb
   server: 51.15.17.169
   type: ss
@@ -47,13 +35,18 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: _67 |19.01Mb
-  server: 58.152.25.253
+- name: disney_netflix_JP |22.19Mb
+  server: 160.16.72.205
   type: trojan
-  port: 443
-  udp: true
-  password: BxceQaOe
-  skip-cert-verify: true
+  port: 4937
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: netflix_SG |11.67Mb
+  server: 160.16.72.205
+  type: trojan
+  port: 4674
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
 - name: disney_netflix_NL |459.60Mb
   server: nl-4.tr202513.com
   type: trojan
@@ -62,6 +55,13 @@ proxies:
   udp: true
   password: s7R5MgmN6UrFWjxwYh
   sni: nl-4.tr202513.com
+  skip-cert-verify: true
+- name: _67 |19.01Mb
+  server: 58.152.25.253
+  type: trojan
+  port: 443
+  udp: true
+  password: BxceQaOe
   skip-cert-verify: true
 - name: Relay_🇮🇷IR-🇺🇸US_81 |22.71Mb
   server: v36.hdacd.com
@@ -80,25 +80,25 @@ proxy-groups:
   type: select
   proxies:
   - ♻️ 自动选择
-  - disney_netflix_US |158.09Mb
   - disney_netflix_US |37.07Mb
-  - netflix_SG |11.67Mb
-  - disney_netflix_JP |22.19Mb
+  - disney_netflix_US |158.09Mb
   - disney_netflix_NL |322.40Mb
-  - _67 |19.01Mb
+  - disney_netflix_JP |22.19Mb
+  - netflix_SG |11.67Mb
   - disney_netflix_NL |459.60Mb
+  - _67 |19.01Mb
   - Relay_🇮🇷IR-🇺🇸US_81 |22.71Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - disney_netflix_US |158.09Mb
   - disney_netflix_US |37.07Mb
-  - netflix_SG |11.67Mb
-  - disney_netflix_JP |22.19Mb
+  - disney_netflix_US |158.09Mb
   - disney_netflix_NL |322.40Mb
-  - _67 |19.01Mb
+  - disney_netflix_JP |22.19Mb
+  - netflix_SG |11.67Mb
   - disney_netflix_NL |459.60Mb
+  - _67 |19.01Mb
   - Relay_🇮🇷IR-🇺🇸US_81 |22.71Mb
   url: https://www.google.com/generate_204
   interval: 300
