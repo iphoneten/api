@@ -17,7 +17,7 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
   network: ws
-- name: disney_netflix_US |12.31Mb
+- name: _61 |12.31Mb
   server: 43.153.79.68
   type: vmess
   port: 39567
@@ -47,16 +47,16 @@ proxies:
   udp: true
   password: strong-secret-pass-777
   skip-cert-verify: true
+- name: Relay_-🇸🇬SG_74 |11.34Mb
+  server: 160.16.72.205
+  type: trojan
+  port: 4674
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
 - name: disney_netflix_JP |15.14Mb
   server: 160.16.72.205
   type: trojan
   port: 4937
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
-- name: disney_netflix_SG |11.34Mb
-  server: 160.16.72.205
-  type: trojan
-  port: 4674
   password: 9f7d5cb76d1645101994d9b25891e3b7
   sni: www.nintendogames.net
 - name: disney_netflix_TW |18.41Mb
@@ -66,59 +66,31 @@ proxies:
   udp: true
   password: qwerREWQ@@
   cipher: aes-256-cfb
-- name: Relay_-🇫🇷FR_64 |52.28Mb
-  server: nl-v2ray.ipracevpn.com
-  type: vmess
-  port: 80
-  uuid: 2d6c940b-ff48-4269-ba8b-5c63951de091
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /cdn-cgi/trace
-- name: disney_netflix_PE |10.05Mb
-  server: pe1.bctuo.top
-  type: vmess
-  country: 🇵🇪PE
-  port: 443
-  uuid: 31801968-9877-4ef5-be87-56503c34a69d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - disney_netflix_GB |169.61Mb
-  - disney_netflix_US |12.31Mb
+  - _61 |12.31Mb
   - disney_netflix_NL |587.46Mb
   - disney_netflix_NL |735.99Mb
   - disney_netflix_NL |269.33Mb
+  - Relay_-🇸🇬SG_74 |11.34Mb
   - disney_netflix_JP |15.14Mb
-  - disney_netflix_SG |11.34Mb
   - disney_netflix_TW |18.41Mb
-  - Relay_-🇫🇷FR_64 |52.28Mb
-  - disney_netflix_PE |10.05Mb
   url: https://www.google.com/generate_204
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - disney_netflix_GB |169.61Mb
-  - disney_netflix_US |12.31Mb
+  - _61 |12.31Mb
   - disney_netflix_NL |587.46Mb
   - disney_netflix_NL |735.99Mb
   - disney_netflix_NL |269.33Mb
+  - Relay_-🇸🇬SG_74 |11.34Mb
   - disney_netflix_JP |15.14Mb
-  - disney_netflix_SG |11.34Mb
   - disney_netflix_TW |18.41Mb
-  - Relay_-🇫🇷FR_64 |52.28Mb
-  - disney_netflix_PE |10.05Mb
   url: https://www.google.com/generate_204
   interval: 300
   tolerance: 50
